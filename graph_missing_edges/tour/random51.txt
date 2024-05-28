@@ -1,0 +1,59 @@
+NAME : random51.542.tour
+COMMENT : Length = 542
+COMMENT : Found by LKH [Keld Helsgaun] Tue May  7 16:07:14 2024
+TYPE : TOUR
+DIMENSION : 51
+TOUR_SECTION
+1
+29
+45
+25
+10
+8
+33
+32
+6
+26
+9
+15
+31
+47
+4
+28
+43
+19
+34
+2
+30
+38
+44
+21
+20
+42
+23
+3
+18
+50
+14
+17
+27
+36
+35
+11
+46
+12
+13
+48
+40
+5
+39
+37
+16
+24
+7
+49
+22
+41
+51
+-1
+EOF

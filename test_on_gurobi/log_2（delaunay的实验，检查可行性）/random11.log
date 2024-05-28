@@ -1,0 +1,54 @@
+
+Gurobi 11.0.0 (linux64) logging started Wed Apr 10 16:09:55 2024
+
+Set parameter LogFile to value "log_2/random11.log"
+Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (linux64 - "Ubuntu 22.04.3 LTS")
+
+CPU model: Intel(R) Xeon(R) Platinum 8358 CPU @ 2.60GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 64 physical cores, 64 logical processors, using up to 32 threads
+
+Optimize a model with 0 rows, 121 columns and 0 nonzeros
+Model fingerprint: 0x2350edce
+Model has 2541 quadratic objective terms
+Variable types: 0 continuous, 121 integer (121 binary)
+Coefficient statistics:
+  Matrix range     [0e+00, 0e+00]
+  Objective range  [3e+02, 3e+02]
+  QObjective range [1e+01, 3e+02]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [0e+00, 0e+00]
+Found heuristic solution: objective 1650.0000000
+Found heuristic solution: objective 451.0000000
+Found heuristic solution: objective 383.0000000
+Presolve time: 0.02s
+Presolved: 0 rows, 121 columns, 0 nonzeros
+Presolved model has 2541 quadratic objective terms
+Variable types: 0 continuous, 121 integer (121 binary)
+
+Root relaxation: objective -1.710975e+03, 119 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 -1710.9746    0  119  383.00000 -1710.9746   547%     -    0s
+     0     0 -1710.9746    0  119  383.00000 -1710.9746   547%     -    0s
+H    0     0                     375.0000000 -1710.9746   556%     -    0s
+     0     2 -1710.9746    0  119  375.00000 -1710.9746   556%     -    0s
+H   19    32                     345.0000000 -1442.4258   518%  13.3    0s
+H   45    64                     332.0000000 -1433.1741   532%   9.9    0s
+H  101   128                     323.0000000 -1410.9950   537%   7.8    0s
+H  247   311                     318.0000000 -1410.9950   544%   5.6    0s
+
+Cutting planes:
+  Gomory: 3
+  Flow cover: 1
+  RLT: 129
+
+Explored 9735 nodes (119106 simplex iterations) in 1.67 seconds (1.29 work units)
+Thread count was 32 (of 64 available processors)
+
+Solution count 8: 318 323 332 ... 1650
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 3.180000000000e+02, best bound 3.180000000000e+02, gap 0.0000%
+city broken:0,time broken:0[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1][0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0][0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0][0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0][0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0][0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0][0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0][0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0][0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0][1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0][0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0]

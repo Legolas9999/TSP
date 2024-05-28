@@ -1,0 +1,16 @@
+NAME : random8.246.tour
+COMMENT : Length = 246
+COMMENT : Found by LKH [Keld Helsgaun] Tue May  7 16:06:53 2024
+TYPE : TOUR
+DIMENSION : 8
+TOUR_SECTION
+1
+2
+8
+3
+4
+5
+6
+7
+-1
+EOF

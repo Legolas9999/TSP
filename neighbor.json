@@ -1,0 +1,866 @@
+{
+    "5": {
+        "de_edges": 9,
+        "de_lambda": 72,
+        "add_de_edges": 10,
+        "add_de_lambda": 72,
+        "all_de_edges": 10,
+        "all_de_lambda": 72,
+        "is_subgraph": true
+    },
+    "6": {
+        "de_edges": 11,
+        "de_lambda": 70,
+        "add_de_edges": 15,
+        "add_de_lambda": 87,
+        "all_de_edges": 15,
+        "all_de_lambda": 87,
+        "is_subgraph": true
+    },
+    "7": {
+        "de_edges": 13,
+        "de_lambda": 70,
+        "add_de_edges": 19,
+        "add_de_lambda": 89,
+        "all_de_edges": 21,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "8": {
+        "de_edges": 17,
+        "de_lambda": 70,
+        "add_de_edges": 24,
+        "add_de_lambda": 73,
+        "all_de_edges": 28,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "9": {
+        "de_edges": 18,
+        "de_lambda": 73,
+        "add_de_edges": 27,
+        "add_de_lambda": 99,
+        "all_de_edges": 36,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "10": {
+        "de_edges": 21,
+        "de_lambda": 67,
+        "add_de_edges": 33,
+        "add_de_lambda": 83,
+        "all_de_edges": 45,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "11": {
+        "de_edges": 22,
+        "de_lambda": 75,
+        "add_de_edges": 33,
+        "add_de_lambda": 80,
+        "all_de_edges": 55,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "12": {
+        "de_edges": 26,
+        "de_lambda": 87,
+        "add_de_edges": 43,
+        "add_de_lambda": 97,
+        "all_de_edges": 65,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "13": {
+        "de_edges": 29,
+        "de_lambda": 86,
+        "add_de_edges": 46,
+        "add_de_lambda": 98,
+        "all_de_edges": 76,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "14": {
+        "de_edges": 33,
+        "de_lambda": 51,
+        "add_de_edges": 54,
+        "add_de_lambda": 54,
+        "all_de_edges": 86,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "15": {
+        "de_edges": 33,
+        "de_lambda": 68,
+        "add_de_edges": 57,
+        "add_de_lambda": 76,
+        "all_de_edges": 105,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "16": {
+        "de_edges": 38,
+        "de_lambda": 69,
+        "add_de_edges": 61,
+        "add_de_lambda": 72,
+        "all_de_edges": 114,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "17": {
+        "de_edges": 42,
+        "de_lambda": 81,
+        "add_de_edges": 72,
+        "add_de_lambda": 87,
+        "all_de_edges": 121,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "18": {
+        "de_edges": 44,
+        "de_lambda": 57,
+        "add_de_edges": 73,
+        "add_de_lambda": 67,
+        "all_de_edges": 138,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "19": {
+        "de_edges": 45,
+        "de_lambda": 67,
+        "add_de_edges": 74,
+        "add_de_lambda": 77,
+        "all_de_edges": 160,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "20": {
+        "de_edges": 50,
+        "de_lambda": 66,
+        "add_de_edges": 83,
+        "add_de_lambda": 73,
+        "all_de_edges": 171,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "21": {
+        "de_edges": 53,
+        "de_lambda": 65,
+        "add_de_edges": 90,
+        "add_de_lambda": 65,
+        "all_de_edges": 173,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "22": {
+        "de_edges": 55,
+        "de_lambda": 60,
+        "add_de_edges": 94,
+        "add_de_lambda": 70,
+        "all_de_edges": 191,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "23": {
+        "de_edges": 60,
+        "de_lambda": 82,
+        "add_de_edges": 100,
+        "add_de_lambda": 86,
+        "all_de_edges": 186,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "24": {
+        "de_edges": 61,
+        "de_lambda": 80,
+        "add_de_edges": 108,
+        "add_de_lambda": 88,
+        "all_de_edges": 219,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "25": {
+        "de_edges": 65,
+        "de_lambda": 55,
+        "add_de_edges": 107,
+        "add_de_lambda": 65,
+        "all_de_edges": 225,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "26": {
+        "de_edges": 67,
+        "de_lambda": 72,
+        "add_de_edges": 119,
+        "add_de_lambda": 78,
+        "all_de_edges": 234,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "27": {
+        "de_edges": 69,
+        "de_lambda": 68,
+        "add_de_edges": 123,
+        "add_de_lambda": 72,
+        "all_de_edges": 263,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "28": {
+        "de_edges": 70,
+        "de_lambda": 59,
+        "add_de_edges": 119,
+        "add_de_lambda": 67,
+        "all_de_edges": 312,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "29": {
+        "de_edges": 77,
+        "de_lambda": 91,
+        "add_de_edges": 138,
+        "add_de_lambda": 91,
+        "all_de_edges": 253,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "30": {
+        "de_edges": 79,
+        "de_lambda": 67,
+        "add_de_edges": 142,
+        "add_de_lambda": 67,
+        "all_de_edges": 281,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "31": {
+        "de_edges": 81,
+        "de_lambda": 58,
+        "add_de_edges": 139,
+        "add_de_lambda": 73,
+        "all_de_edges": 318,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "32": {
+        "de_edges": 81,
+        "de_lambda": 39,
+        "add_de_edges": 144,
+        "add_de_lambda": 48,
+        "all_de_edges": 372,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "33": {
+        "de_edges": 88,
+        "de_lambda": 76,
+        "add_de_edges": 151,
+        "add_de_lambda": 90,
+        "all_de_edges": 321,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "34": {
+        "de_edges": 91,
+        "de_lambda": 69,
+        "add_de_edges": 164,
+        "add_de_lambda": 75,
+        "all_de_edges": 333,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "35": {
+        "de_edges": 94,
+        "de_lambda": 57,
+        "add_de_edges": 162,
+        "add_de_lambda": 57,
+        "all_de_edges": 350,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "36": {
+        "de_edges": 96,
+        "de_lambda": 81,
+        "add_de_edges": 169,
+        "add_de_lambda": 81,
+        "all_de_edges": 371,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "37": {
+        "de_edges": 97,
+        "de_lambda": 49,
+        "add_de_edges": 171,
+        "add_de_lambda": 67,
+        "all_de_edges": 425,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "38": {
+        "de_edges": 103,
+        "de_lambda": 70,
+        "add_de_edges": 184,
+        "add_de_lambda": 73,
+        "all_de_edges": 367,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "39": {
+        "de_edges": 107,
+        "de_lambda": 76,
+        "add_de_edges": 194,
+        "add_de_lambda": 77,
+        "all_de_edges": 365,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "40": {
+        "de_edges": 106,
+        "de_lambda": 52,
+        "add_de_edges": 181,
+        "add_de_lambda": 53,
+        "all_de_edges": 456,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "41": {
+        "de_edges": 111,
+        "de_lambda": 49,
+        "add_de_edges": 205,
+        "add_de_lambda": 49,
+        "all_de_edges": 425,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "42": {
+        "de_edges": 110,
+        "de_lambda": 73,
+        "add_de_edges": 195,
+        "add_de_lambda": 84,
+        "all_de_edges": 501,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "43": {
+        "de_edges": 117,
+        "de_lambda": 82,
+        "add_de_edges": 213,
+        "add_de_lambda": 82,
+        "all_de_edges": 454,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "44": {
+        "de_edges": 119,
+        "de_lambda": 56,
+        "add_de_edges": 215,
+        "add_de_lambda": 68,
+        "all_de_edges": 483,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "45": {
+        "de_edges": 122,
+        "de_lambda": 59,
+        "add_de_edges": 224,
+        "add_de_lambda": 74,
+        "all_de_edges": 494,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "46": {
+        "de_edges": 124,
+        "de_lambda": 54,
+        "add_de_edges": 219,
+        "add_de_lambda": 62,
+        "all_de_edges": 532,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "47": {
+        "de_edges": 127,
+        "de_lambda": 52,
+        "add_de_edges": 225,
+        "add_de_lambda": 56,
+        "all_de_edges": 538,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "48": {
+        "de_edges": 133,
+        "de_lambda": 68,
+        "add_de_edges": 247,
+        "add_de_lambda": 78,
+        "all_de_edges": 477,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "49": {
+        "de_edges": 133,
+        "de_lambda": 72,
+        "add_de_edges": 249,
+        "add_de_lambda": 86,
+        "all_de_edges": 544,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "50": {
+        "de_edges": 135,
+        "de_lambda": 61,
+        "add_de_edges": 244,
+        "add_de_lambda": 61,
+        "all_de_edges": 588,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "51": {
+        "de_edges": 139,
+        "de_lambda": 50,
+        "add_de_edges": 242,
+        "add_de_lambda": 52,
+        "all_de_edges": 614,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "52": {
+        "de_edges": 146,
+        "de_lambda": 74,
+        "add_de_edges": 267,
+        "add_de_lambda": 81,
+        "all_de_edges": 509,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "53": {
+        "de_edges": 146,
+        "de_lambda": 67,
+        "add_de_edges": 257,
+        "add_de_lambda": 69,
+        "all_de_edges": 600,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "54": {
+        "de_edges": 149,
+        "de_lambda": 61,
+        "add_de_edges": 277,
+        "add_de_lambda": 63,
+        "all_de_edges": 597,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "55": {
+        "de_edges": 148,
+        "de_lambda": 43,
+        "add_de_edges": 264,
+        "add_de_lambda": 50,
+        "all_de_edges": 730,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "56": {
+        "de_edges": 155,
+        "de_lambda": 65,
+        "add_de_edges": 280,
+        "add_de_lambda": 72,
+        "all_de_edges": 622,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "57": {
+        "de_edges": 158,
+        "de_lambda": 61,
+        "add_de_edges": 294,
+        "add_de_lambda": 68,
+        "all_de_edges": 619,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "58": {
+        "de_edges": 160,
+        "de_lambda": 61,
+        "add_de_edges": 293,
+        "add_de_lambda": 72,
+        "all_de_edges": 655,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "59": {
+        "de_edges": 163,
+        "de_lambda": 51,
+        "add_de_edges": 300,
+        "add_de_lambda": 59,
+        "all_de_edges": 665,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "60": {
+        "de_edges": 166,
+        "de_lambda": 49,
+        "add_de_edges": 303,
+        "add_de_lambda": 63,
+        "all_de_edges": 687,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "61": {
+        "de_edges": 172,
+        "de_lambda": 86,
+        "add_de_edges": 318,
+        "add_de_lambda": 89,
+        "all_de_edges": 622,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "62": {
+        "de_edges": 168,
+        "de_lambda": 49,
+        "add_de_edges": 301,
+        "add_de_lambda": 59,
+        "all_de_edges": 840,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "63": {
+        "de_edges": 178,
+        "de_lambda": 76,
+        "add_de_edges": 323,
+        "add_de_lambda": 82,
+        "all_de_edges": 662,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "64": {
+        "de_edges": 179,
+        "de_lambda": 83,
+        "add_de_edges": 328,
+        "add_de_lambda": 83,
+        "all_de_edges": 680,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "65": {
+        "de_edges": 183,
+        "de_lambda": 67,
+        "add_de_edges": 331,
+        "add_de_lambda": 79,
+        "all_de_edges": 731,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "66": {
+        "de_edges": 181,
+        "de_lambda": 45,
+        "add_de_edges": 332,
+        "add_de_lambda": 52,
+        "all_de_edges": 851,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "67": {
+        "de_edges": 187,
+        "de_lambda": 64,
+        "add_de_edges": 335,
+        "add_de_lambda": 68,
+        "all_de_edges": 752,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "68": {
+        "de_edges": 192,
+        "de_lambda": 71,
+        "add_de_edges": 352,
+        "add_de_lambda": 83,
+        "all_de_edges": 726,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "69": {
+        "de_edges": 193,
+        "de_lambda": 69,
+        "add_de_edges": 351,
+        "add_de_lambda": 76,
+        "all_de_edges": 789,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "70": {
+        "de_edges": 197,
+        "de_lambda": 72,
+        "add_de_edges": 363,
+        "add_de_lambda": 79,
+        "all_de_edges": 759,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "71": {
+        "de_edges": 197,
+        "de_lambda": 44,
+        "add_de_edges": 361,
+        "add_de_lambda": 48,
+        "all_de_edges": 881,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "72": {
+        "de_edges": 204,
+        "de_lambda": 53,
+        "add_de_edges": 368,
+        "add_de_lambda": 57,
+        "all_de_edges": 792,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "73": {
+        "de_edges": 203,
+        "de_lambda": 46,
+        "add_de_edges": 369,
+        "add_de_lambda": 56,
+        "all_de_edges": 899,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "74": {
+        "de_edges": 209,
+        "de_lambda": 57,
+        "add_de_edges": 392,
+        "add_de_lambda": 58,
+        "all_de_edges": 813,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "75": {
+        "de_edges": 210,
+        "de_lambda": 76,
+        "add_de_edges": 379,
+        "add_de_lambda": 77,
+        "all_de_edges": 887,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "76": {
+        "de_edges": 213,
+        "de_lambda": 46,
+        "add_de_edges": 389,
+        "add_de_lambda": 54,
+        "all_de_edges": 911,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "77": {
+        "de_edges": 220,
+        "de_lambda": 84,
+        "add_de_edges": 401,
+        "add_de_lambda": 89,
+        "all_de_edges": 789,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "78": {
+        "de_edges": 221,
+        "de_lambda": 71,
+        "add_de_edges": 407,
+        "add_de_lambda": 74,
+        "all_de_edges": 847,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "79": {
+        "de_edges": 223,
+        "de_lambda": 52,
+        "add_de_edges": 406,
+        "add_de_lambda": 56,
+        "all_de_edges": 879,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "80": {
+        "de_edges": 224,
+        "de_lambda": 46,
+        "add_de_edges": 414,
+        "add_de_lambda": 46,
+        "all_de_edges": 988,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "81": {
+        "de_edges": 227,
+        "de_lambda": 52,
+        "add_de_edges": 420,
+        "add_de_lambda": 63,
+        "all_de_edges": 964,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "82": {
+        "de_edges": 230,
+        "de_lambda": 71,
+        "add_de_edges": 422,
+        "add_de_lambda": 73,
+        "all_de_edges": 1017,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "83": {
+        "de_edges": 231,
+        "de_lambda": 50,
+        "add_de_edges": 427,
+        "add_de_lambda": 56,
+        "all_de_edges": 1021,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "84": {
+        "de_edges": 236,
+        "de_lambda": 59,
+        "add_de_edges": 439,
+        "add_de_lambda": 74,
+        "all_de_edges": 987,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "85": {
+        "de_edges": 240,
+        "de_lambda": 51,
+        "add_de_edges": 448,
+        "add_de_lambda": 52,
+        "all_de_edges": 981,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "86": {
+        "de_edges": 245,
+        "de_lambda": 73,
+        "add_de_edges": 458,
+        "add_de_lambda": 80,
+        "all_de_edges": 935,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "87": {
+        "de_edges": 247,
+        "de_lambda": 77,
+        "add_de_edges": 466,
+        "add_de_lambda": 79,
+        "all_de_edges": 981,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "88": {
+        "de_edges": 245,
+        "de_lambda": 49,
+        "add_de_edges": 452,
+        "add_de_lambda": 63,
+        "all_de_edges": 1196,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "89": {
+        "de_edges": 252,
+        "de_lambda": 52,
+        "add_de_edges": 466,
+        "add_de_lambda": 54,
+        "all_de_edges": 1062,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "90": {
+        "de_edges": 256,
+        "de_lambda": 53,
+        "add_de_edges": 474,
+        "add_de_lambda": 60,
+        "all_de_edges": 1026,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "91": {
+        "de_edges": 260,
+        "de_lambda": 72,
+        "add_de_edges": 483,
+        "add_de_lambda": 79,
+        "all_de_edges": 958,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "92": {
+        "de_edges": 264,
+        "de_lambda": 71,
+        "add_de_edges": 487,
+        "add_de_lambda": 82,
+        "all_de_edges": 1008,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "93": {
+        "de_edges": 266,
+        "de_lambda": 51,
+        "add_de_edges": 488,
+        "add_de_lambda": 56,
+        "all_de_edges": 1044,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "94": {
+        "de_edges": 266,
+        "de_lambda": 43,
+        "add_de_edges": 483,
+        "add_de_lambda": 47,
+        "all_de_edges": 1162,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "95": {
+        "de_edges": 269,
+        "de_lambda": 66,
+        "add_de_edges": 498,
+        "add_de_lambda": 74,
+        "all_de_edges": 1136,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "96": {
+        "de_edges": 275,
+        "de_lambda": 67,
+        "add_de_edges": 514,
+        "add_de_lambda": 68,
+        "all_de_edges": 1034,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "97": {
+        "de_edges": 276,
+        "de_lambda": 89,
+        "add_de_edges": 508,
+        "add_de_lambda": 96,
+        "all_de_edges": 1129,
+        "all_de_lambda": 1000000,
+        "is_subgraph": false
+    },
+    "98": {
+        "de_edges": 280,
+        "de_lambda": 66,
+        "add_de_edges": 517,
+        "add_de_lambda": 66,
+        "all_de_edges": 1083,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "99": {
+        "de_edges": 283,
+        "de_lambda": 60,
+        "add_de_edges": 526,
+        "add_de_lambda": 68,
+        "all_de_edges": 1093,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    },
+    "100": {
+        "de_edges": 286,
+        "de_lambda": 52,
+        "add_de_edges": 527,
+        "add_de_lambda": 63,
+        "all_de_edges": 1119,
+        "all_de_lambda": 1000000,
+        "is_subgraph": true
+    }
+}

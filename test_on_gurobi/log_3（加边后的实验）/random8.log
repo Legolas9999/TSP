@@ -1,0 +1,53 @@
+
+Gurobi 11.0.0 (linux64) logging started Sat Apr 13 18:31:13 2024
+
+Set parameter LogFile to value "log_3/random8.log"
+Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (linux64 - "Ubuntu 22.04.3 LTS")
+
+CPU model: Intel(R) Xeon(R) Platinum 8358 CPU @ 2.60GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 64 physical cores, 64 logical processors, using up to 32 threads
+
+Optimize a model with 0 rows, 64 columns and 0 nonzeros
+Model fingerprint: 0x74d955b7
+Model has 960 quadratic objective terms
+Variable types: 0 continuous, 64 integer (64 binary)
+Coefficient statistics:
+  Matrix range     [0e+00, 0e+00]
+  Objective range  [3e+02, 3e+02]
+  QObjective range [1e+01, 3e+02]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [0e+00, 0e+00]
+Found heuristic solution: objective 1168.0000000
+Found heuristic solution: objective 274.0000000
+Presolve time: 0.01s
+Presolved: 0 rows, 64 columns, 0 nonzeros
+Presolved model has 960 quadratic objective terms
+Variable types: 0 continuous, 64 integer (64 binary)
+
+Root relaxation: objective -2.954984e+02, 63 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 -295.49837    0   62  274.00000 -295.49837   208%     -    0s
+H    0     0                     260.0000000 -295.49837   214%     -    0s
+     0     0 -294.73132    0   62  260.00000 -294.73132   213%     -    0s
+     0     2 -294.73132    0   62  260.00000 -294.73132   213%     -    0s
+H    4     8                     249.0000000 -191.54237   177%   8.8    0s
+H   63    92                     246.0000000 -166.92892   168%   8.0    0s
+
+Cutting planes:
+  Cover: 3
+  MIR: 6
+  Flow cover: 10
+  RLT: 17
+  BQP: 81
+
+Explored 4770 nodes (30864 simplex iterations) in 2.83 seconds (2.22 work units)
+Thread count was 32 (of 64 available processors)
+
+Solution count 5: 246 249 260 ... 1168
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 2.460000000000e+02, best bound 2.460000000000e+02, gap 0.0000%
+city broken:0,time broken:0[0, 0, 0, 0, 1, 0, 0, 0][0, 0, 0, 0, 0, 1, 0, 0][0, 0, 0, 0, 0, 0, 0, 1][1, 0, 0, 0, 0, 0, 0, 0][0, 1, 0, 0, 0, 0, 0, 0][0, 0, 1, 0, 0, 0, 0, 0][0, 0, 0, 1, 0, 0, 0, 0][0, 0, 0, 0, 0, 0, 1, 0]
