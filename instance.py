@@ -117,8 +117,8 @@ def delaunay(dis_mat, cities_coord, add_edges = None, add_neighbor = None) -> tu
 def edges_add_based_voronoi_1(cities_coord):
     # 创建 Voronoi 图
     vor = Voronoi(cities_coord)
-    # voronoi_plot_2d(vor)
-    # plt.show()
+    voronoi_plot_2d(vor)
+    plt.show()
 
     #平面分界线交点的坐标
     coord_inter = vor.vertices
@@ -253,8 +253,6 @@ def edges_add_based_voronoi_2(cities_coord):
     return edge_to_connect
 
 
-
-
 #画出最佳路径图
 def optimal_tour_graph(num_city):
     #从文件读取最佳路径
@@ -275,14 +273,14 @@ def optimal_tour_graph(num_city):
     return G
 
 #判断是否是子图，只考虑边
-def is_subgraph(G_optimal,G_add_de):
+def is_subgraph(G_optimal,G_add_edges):
 
     #边的格式转换
     G_optimal_edge_list = list(map(lambda x: set(x),list(G_optimal.edges)))
-    G_add_de_edge_list = list(map(lambda x: set(x),list(G_add_de.edges)))
+    G_add_edges_list = list(map(lambda x: set(x),list(G_add_edges.edges)))
     
     #判断optimal的边是否在add_edges里，如果不在则保留
-    not_in_list = list(filter(lambda x : x not in G_add_de_edge_list, G_optimal_edge_list))
+    not_in_list = list(filter(lambda x : x not in G_add_edges_list, G_optimal_edge_list))
     #print(not_in_list)
     #列表为空时是子图
     return not not_in_list, not_in_list
@@ -299,8 +297,8 @@ def is_subgraph2(G_optimal, G_add_de):
     # 如果not_in_set为空，说明G_optimal是G_add_de的子图
     return len(not_in_set) == 0, not_in_set
 
-#生成包含各类数据的字典以供查阅
-def creat_data_dic():
+#生成包含各类数据的字典以供查阅,并且dump到json
+def creat_dump_data_dic():
     dic = {}
     for i in range(5,101):
         ins = instance(i)
@@ -310,7 +308,16 @@ def creat_data_dic():
                        'add_de_lambda':ins.add_de_lambda,
                        'all_de_edges':ins.all_de_edges,
                        'all_de_lambda':ins.all_de_lambda,
-                       'is_subgraph':is_subgraph(ins.graph_optimal_tour,ins.graph_all_de)[0]}
+                       'add_is_subgraph':is_subgraph(ins.graph_optimal_tour,ins.graph_add_de)[0],
+                       'all_is_subgraph':is_subgraph(ins.graph_optimal_tour,ins.graph_all_de)[0]}
+    
+    json.dump(dic,open('data.json','w'),indent=4)
+
+
+#读取数据json
+def read_json():
+    with open('data.json','r') as file:
+        dic = json.load(file)
     return dic
 
 #基于原有距离矩阵生成missing edges的距离矩阵，用999999
@@ -346,7 +353,6 @@ def compare_tour(n):
 
     #print(tour_complete,tour_missing)  
     return tour_complete , tour_missing 
-
 
 
 class instance():
@@ -594,7 +600,7 @@ TOUR_FILE = graph_missing_edges/tour/random{self.n}.txt')
 
     #如果不是子图画出没有包含的边
     def draw_not_subgraph(self):
-        result = is_subgraph(self.graph_optimal_tour,self.graph_add_de)
+        result = is_subgraph(self.graph_optimal_tour,self.graph_all_de)
         G = self.graph_optimal_tour
         #如果不是子图
         if result[0] == False:
@@ -611,74 +617,16 @@ TOUR_FILE = graph_missing_edges/tour/random{self.n}.txt')
 
 
 if __name__ == '__main__':
-    with open('neighbor.json','r') as file:
-        dic = json.load(file)
-
-    #print(dic)
-
-    for key , value in dic.items():
-        print(value['all_de_edges'])
-
-
-    # ins = instance(73)
-    # tour_com,tour_miss = compare_tour(73)
-
-    # miss_mat = ins.mat_missing_edges
-
-    #print(tour_miss)
-
-    # for i in range(73):
-    #     print(miss_mat[tour_miss[i]-1, tour_miss[(i+1)%73]-1],i)
-
-    # nx.draw(ins.graph_optimal_tour,ins.graph_pos, with_labels=True, node_size=300, node_color='skyblue')
-    # plt.show()
-
-    # G = nx.Graph()
-    # edges = [(tour_miss[i]-1,tour_miss[(i+1)%73]-1) for i in range(73)]
-    # G.add_edges_from(edges)
-    # nx.draw(G,ins.graph_pos, with_labels=True, node_size=300, node_color='skyblue')
-    # #plt.show()
-
-    # H_com = 0
-    # H_uncom = 0
-    # for i in range(73):
-    #     H_com = H_com + miss_mat[tour_miss[i]-1, tour_miss[(i+1)%73]-1]
-    #     H_uncom = H_uncom + ins.mat[tour_com[i]-1, tour_com[(i+1)%73]-1]
-    # print(H_com,H_uncom)
-
-
-
-    # pass
-
-
-    # dic = creat_data_dic()
-    # json.dump(dic,open('neighbor.json','w'),indent=4)
-
-    # nx.draw(ins.graph_optimal_tour,ins.graph_pos, with_labels=True, node_size=300, node_color='skyblue')
-    # plt.show()
-    # ins.draw_not_subgraph()
-
-
+    #dic = read_json()
+    for i in range(97,98):
+        ins = instance(97)
+        print(is_subgraph(ins.graph_optimal_tour,ins.graph_all_de)[1])
+        ins.draw_not_subgraph()
 
         
 
+        #print(dic[f'{i}']['add_is_subgraph'])
 
-
-    
-    #print(ins.graph_optimal_tour.edges)
-
-    # list_of_sets = [{1, 2}, {2, 3}, {3, 4}]
-    # print({2,6} in list_of_sets)
-    # for i in range(5,31):
-    #     ins = instance(i)
-    #     print(is_subgraph(ins.graph_optimal_tour,ins.graph_add_de))
-    #     nx.draw(ins.graph_optimal_tour,ins.graph_pos, with_labels=True, node_size=300, node_color='skyblue')
-    #     plt.show()
-
-    # for i in range(31,101):
-    #     ins = instance(i)
- 
- 
 
 
 
