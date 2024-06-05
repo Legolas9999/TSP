@@ -10,6 +10,7 @@ import matplotlib.pyplot as plt
 import json
 
 
+
 #根据坐标创建矩阵
 def dis_mat(coord):
     #获取个数
@@ -113,12 +114,12 @@ def delaunay(dis_mat, cities_coord, add_edges = None, add_neighbor = None) -> tu
         
     return max(max_lamuda) , max_lamuda  , G  ,G.number_of_edges()
 
-#基于voronoi图加边
-def edges_add_based_voronoi_1(cities_coord):
+#基于voronoi图加边，一个线段
+def edges_add_seg1(cities_coord):
     # 创建 Voronoi 图
     vor = Voronoi(cities_coord)
-    voronoi_plot_2d(vor)
-    plt.show()
+    # voronoi_plot_2d(vor)
+    # plt.show()
 
     #平面分界线交点的坐标
     coord_inter = vor.vertices
@@ -189,8 +190,8 @@ def edges_add_based_voronoi_1(cities_coord):
     #print(nodes_to_connect)
     return nodes_to_connect
 
-#再次基于voronoi加边
-def edges_add_based_voronoi_2(cities_coord):
+#再次基于voronoi加边，邻居的邻居
+def edges_add_nei2(cities_coord):
     vor = Voronoi(cities_coord)
 
     #voronoi边，包括射线
@@ -252,6 +253,78 @@ def edges_add_based_voronoi_2(cities_coord):
     
     return edge_to_connect
 
+#三个线段加边
+def edges_add_seg3(cities_coord):
+    # 创建 Voronoi 图
+    vor = Voronoi(cities_coord)
+
+    #voronoi顶点的坐标
+    vor_vertices = vor.vertices
+    
+    #每条ridge两个端点索引（voronoi顶点的索引）
+    ridges = vor.ridge_vertices
+    
+    #把无穷远的分界线去除(保留有限ridge)
+    ridges_without_infinite = [vertex for vertex in ridges if -1 not in vertex]
+    #print(ridges_without_infinite)
+
+    regions = vor.regions
+
+
+    regions = vor.point_region
+    #print(regions)
+
+    #遍历每个vor_vertex
+    connect_relation = []
+    for vor_vertex in range(len(vor_vertices)):
+
+        #与各个voronoi顶点相邻的voronoi顶点
+        temp = [vertex for ridge in ridges 
+                          if vor_vertex in ridge
+                          for vertex in ridge
+                          if vertex != vor_vertex]
+        
+        connect_relation.append(temp)
+        
+    print(connect_relation) 
+
+    #遍历每个voronoi顶点
+    for vor_vertex in range(len(vor_vertices)):
+        #第1层（不包含-1，且不会包含自己）
+        level_1 = [vertex for vertex in connect_relation[vor_vertex] 
+                   if vertex != -1]
+
+        #第2层
+        level_2 = []
+        for level_1_vertex in level_1:
+            temp = [vertex for vertex in connect_relation[level_1_vertex]
+                    if vertex not in (-1, vor_vertex)]
+            level_2.append(temp)
+
+        #第3层
+        level_3 = []
+        for level_2_vertices in level_2:   
+            temp_2 = [] 
+            for level_2_vertex in level_2_vertices:
+                #每个第2层的连接    
+                temp_1 = [vertex for vertex in connect_relation[level_2_vertex]
+                        if vertex not in (-1, vor_vertex, level_2_vertex)]
+
+                temp_2.append(temp_1)
+
+            level_3.append(temp_2)
+        #路线
+        route = []
+
+
+
+        print()
+        print(level_1) 
+        print(level_2)
+        print(level_3)
+        print()
+    
+
 
 #画出最佳路径图
 def optimal_tour_graph(num_city):
@@ -272,7 +345,7 @@ def optimal_tour_graph(num_city):
 
     return G
 
-#判断是否是子图，只考虑边
+#判断是否是子图，只考虑边(最优路径图，添加边的图)
 def is_subgraph(G_optimal,G_add_edges):
 
     #边的格式转换
@@ -304,12 +377,12 @@ def creat_dump_data_dic():
         ins = instance(i)
         dic[f'{i}'] = {'de_edges':ins.de_edges,
                        'de_lambda':ins.de_lambda,
-                       'add_de_edges':ins.add_de_edges,
-                       'add_de_lambda':ins.add_de_lambda,
-                       'all_de_edges':ins.all_de_edges,
-                       'all_de_lambda':ins.all_de_lambda,
-                       'add_is_subgraph':is_subgraph(ins.graph_optimal_tour,ins.graph_add_de)[0],
-                       'all_is_subgraph':is_subgraph(ins.graph_optimal_tour,ins.graph_all_de)[0]}
+                       'seg1_edges':ins.seg1_edges,
+                       'seg1_lambda':ins.seg1_lambda,
+                       'seg1_nei2_edges':ins.seg1_nei2_edges,
+                       'seg1_nei2_lambda':ins.seg1_nei2_lambda,
+                       'seg1_is_subgraph':is_subgraph(ins.graph_optimal_tour,ins.graph_seg1)[0],
+                       'seg1_nei2_is_subgraph':is_subgraph(ins.graph_optimal_tour,ins.graph_seg1_nei2)[0]}
     
     json.dump(dic,open('data.json','w'),indent=4)
 
@@ -321,12 +394,12 @@ def read_json():
     return dic
 
 #基于原有距离矩阵生成missing edges的距离矩阵，用999999
-def creat_dis_mat_missing_edges(n,G_add_de,dis_mat):
+def creat_dis_mat_missing_edges(n,G_add_edges,dis_mat):
     #完全图的边
     complete_edges = [{i, j} for i in range(n) for j in range(i+1,n)]
     
     #存在的边
-    exist_edges = list(map(lambda x:set(x), G_add_de.edges()))
+    exist_edges = list(map(lambda x:set(x), G_add_edges.edges()))
     
     #求基于完全图消失的边
     missing_edges = list(filter(lambda x :x not in exist_edges, complete_edges))
@@ -380,24 +453,42 @@ class instance():
         self.de_edges = result[3]
 
         #基于voronoi线段添加边的delauny lambda
-        result = delaunay(self.mat,self.coord,add_edges = edges_add_based_voronoi_1(self.coord))
-        self.add_de_lambda = result[0] 
-        self.add_de_lambda_list = result[1]
-        self.graph_add_de = result[2]   #基于德劳内三角分割加线段对应边的图
-        self.add_de_edges = result[3]
+        result = delaunay(self.mat,self.coord,add_edges = edges_add_seg1(self.coord))
+        self.seg1_lambda = result[0] 
+        self.seg1_lambda_list = result[1]
+        self.graph_seg1 = result[2]   #基于德劳内三角分割加线段对应边的图
+        self.seg1_edges = result[3]
 
-        #基于voronoi添加邻居的邻居
-        result = delaunay(self.mat,self.coord,add_edges = edges_add_based_voronoi_1(self.coord),
-                          add_neighbor = edges_add_based_voronoi_2(self.coord))
-        self.all_de_lambda = result[0] 
-        self.all_de_lambda_list = result[1]
-        self.graph_all_de = result[2]   #加邻居的邻居
-        self.all_de_edges = result[3]
+        #基于voronoi添加一次线段后，再添加邻居的邻居
+        result = delaunay(self.mat,self.coord,add_edges = edges_add_seg1(self.coord),
+                          add_neighbor = edges_add_nei2(self.coord))
+        self.seg1_nei2_lambda = result[0] 
+        self.seg1_nei2_lambda_list = result[1]
+        self.graph_seg1_nei2 = result[2]   #加邻居的邻居
+        self.seg1_nei2_edges = result[3]
+
+
+        #基于voronoi只添加邻居的邻居
+        result = delaunay(self.mat,self.coord,
+                          add_neighbor = edges_add_nei2(self.coord))
+        self.nei2_lambda = result[0] 
+        self.nei2_lambda_list = result[1]
+        self.graph_nei2 = result[2]   
+        self.nei2_edges = result[3]
+
+        #seg3加边
+        result = delaunay(self.mat,self.coord,
+                          add_edges = edges_add_seg3(self.coord))
+        self.seg3_lambda = result[0] 
+        self.seg3_lambda_list = result[1]
+        self.graph_seg3 = result[2]   
+        self.seg3_edges = result[3]
+
 
         #基于非完全图的距离矩阵
         #Python中的可变类型在作为参数传递给函数时，因为传递的是对象的引用而不是其副本。
         #当你在函数内部修改这些可变对象时，外部的原始对象也会被修改。
-        self.mat_missing_edges = creat_dis_mat_missing_edges(self.n,self.graph_add_de,self.mat.copy())
+        self.mat_missing_edges = creat_dis_mat_missing_edges(self.n,self.graph_seg1_nei2,self.mat.copy())
 
     #写入坐标
     def write_coord(self):
@@ -471,7 +562,7 @@ TOUR_FILE = graph_missing_edges/tour/random{self.n}.txt')
         if lambda_list == None:
             # 直接添加约束到obj，城市约束
             for i in range(self.n):
-                obj_expr += self.add_de_lambda * (   (sum(x[i, t] for t in range(self.n)) - 1)**2  )
+                obj_expr += self.seg1_lambda * (   (sum(x[i, t] for t in range(self.n)) - 1)**2  )
 
         #城市惩罚系数为列表
         else:
@@ -482,7 +573,7 @@ TOUR_FILE = graph_missing_edges/tour/random{self.n}.txt')
 
         # 直接添加约束到obj，时间约束
         for t in range(self.n):
-            obj_expr += self.add_de_lambda * ((sum(x[i, t] for i in range(self.n)) - 1)**2 )
+            obj_expr += self.seg1_lambda * ((sum(x[i, t] for i in range(self.n)) - 1)**2 )
 
 
         #目标函数最小化
@@ -600,7 +691,7 @@ TOUR_FILE = graph_missing_edges/tour/random{self.n}.txt')
 
     #如果不是子图画出没有包含的边
     def draw_not_subgraph(self):
-        result = is_subgraph(self.graph_optimal_tour,self.graph_all_de)
+        result = is_subgraph(self.graph_optimal_tour,self.graph_seg1_nei2)
         G = self.graph_optimal_tour
         #如果不是子图
         if result[0] == False:
@@ -618,12 +709,13 @@ TOUR_FILE = graph_missing_edges/tour/random{self.n}.txt')
 
 if __name__ == '__main__':
     #dic = read_json()
-    for i in range(97,98):
-        ins = instance(97)
-        print(is_subgraph(ins.graph_optimal_tour,ins.graph_all_de)[1])
-        ins.draw_not_subgraph()
+    for i in range(5,6):
+        ins = instance(i)
 
-        
+
+ 
+
+    
 
         #print(dic[f'{i}']['add_is_subgraph'])
 
