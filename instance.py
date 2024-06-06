@@ -301,17 +301,15 @@ def edges_add_seg3(cities_coord):
                     if vertex not in (-1, vor_vertex)]
             level_2.append(temp)
 
-        #第3层
+        #第3层,列表为空代表不存在
         level_3 = []
-        for level_2_vertices in level_2:   
+        for index, level_2_vertices in enumerate(level_2):   
             temp_2 = [] 
             for level_2_vertex in level_2_vertices:
                 #每个第2层的连接    
                 temp_1 = [vertex for vertex in connect_relation[level_2_vertex]
-                        if vertex not in (-1, vor_vertex, level_2_vertex)]
-
+                        if vertex not in (-1, vor_vertex, level_1[index])] 
                 temp_2.append(temp_1)
-
             level_3.append(temp_2)
         #路线
         route = []
@@ -322,7 +320,7 @@ def edges_add_seg3(cities_coord):
         print(level_1) 
         print(level_2)
         print(level_3)
-        print()
+        # print()
     
 
 
