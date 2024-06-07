@@ -40,7 +40,7 @@ def dis_mat(coord):
     return mat
 
 #通过delaunay计算lamuda，返回元组 0：最大lamuda  1：每个城市最大lamuda列表  2:lamuda最大时左右城市列表  
-def delaunay(dis_mat, cities_coord, add_edges = None, add_neighbor = None) -> tuple:
+def delaunay(dis_mat, cities_coord, seg1 = None, nei2 = None, seg3 = None) -> tuple:
 
     # 进行德劳内三角剖分
     tri = Delaunay(cities_coord)
@@ -54,14 +54,17 @@ def delaunay(dis_mat, cities_coord, add_edges = None, add_neighbor = None) -> tu
         G.add_edges_from(edges)
 
     #添加线段对应的边
-    if add_edges is not None:
+    if seg1 is not None:
         #变为元组（似乎不变也行）
         #edges = [ (edge[0],edge[1]) for edge in add_edges]
-        G.add_edges_from(add_edges)    
+        G.add_edges_from(seg1)    
 
     #如果添加邻居的邻居
-    if add_neighbor is not None:
-        G.add_edges_from(add_neighbor)
+    if nei2 is not None:
+        G.add_edges_from(nei2)
+
+    if seg3 is not None:
+        G.add_edges_from(seg3)
 
 
     #画出三角分割(如果增加了边就不是三角分割)
@@ -266,12 +269,15 @@ def edges_add_seg3(cities_coord):
     
     #把无穷远的分界线去除(保留有限ridge)
     ridges_without_infinite = [vertex for vertex in ridges if -1 not in vertex]
-    #print(ridges_without_infinite)
-
+   
+    #带有voronoi顶点索引的区域
     regions_with_voronoi_vertex = vor.regions
-    #print(regions)
-    regions_with_mother_point = vor.point_region
+   
+    #带有母点索引的区域
+    regions_with_mother_point = list(vor.point_region)
     
+    #需要被连接的边
+    edges_to_connect = []
 
     #遍历每个vor_vertex
     connect_relation = []
@@ -285,7 +291,6 @@ def edges_add_seg3(cities_coord):
         
         connect_relation.append(temp)
         
-    #print(connect_relation) 
 
     #遍历每个voronoi顶点
     for vor_vertex in range(len(vor_vertices)):
@@ -311,19 +316,13 @@ def edges_add_seg3(cities_coord):
                 temp_2.append(temp_1)
             level_3.append(temp_2)
 
-
-        # print()
-        # print(level_1) 
-        # print(level_2)
-        # print(level_3)
-
         #路线
         routes = [(vor_vertex, level_1_vertex, level_2_vertex, level_3_vertex)
                  for index_level_1, level_1_vertex in enumerate(level_1)
                  for index_level_2, level_2_vertex in enumerate(level_2[index_level_1])
                  for level_3_vertex in level_3[index_level_1][index_level_2]]
-        print()
-        print(routes)
+        # print()
+        # print(routes)
         #复杂写法
         # for index_level_1, level_1_vertex in enumerate(level_1):
         #     for index_level_2, level_2_vertex in enumerate(level_2[index_level_1]):
@@ -332,10 +331,6 @@ def edges_add_seg3(cities_coord):
 
         #遍历每一段路径
         for route in routes:
-            #front
-            # vertex_1_regions = [vertex_1_region 
-            #                     for vertex_1_region in regions_with_voronoi_vertex
-            #                     if route[0] in ]
 
             vertex_1_regions = [vertex_1_region 
                                 for vertex_1_region in regions_with_voronoi_vertex
@@ -350,21 +345,44 @@ def edges_add_seg3(cities_coord):
                                 for vertex_4_region in regions_with_voronoi_vertex
                                 if route[3] in vertex_4_region]
             
+
+            #获取每个voronoi顶点相关联的region的索引
             vertex_1_region_index = []
             vertex_2_region_index = []
-            for vertex_1_region, vertex_2_region in zip(vertex_1_regions,vertex_2_regions):
+            vertex_3_region_index = []
+            vertex_4_region_index = []
+            for vertex_1_region, vertex_2_region, vertex_3_region, vertex_4_region \
+                in zip(vertex_1_regions,vertex_2_regions,vertex_3_regions,vertex_4_regions):
                 vertex_1_region_index.append(regions_with_voronoi_vertex.index(vertex_1_region))
                 vertex_2_region_index.append(regions_with_voronoi_vertex.index(vertex_2_region))
+                vertex_3_region_index.append(regions_with_voronoi_vertex.index(vertex_3_region))
+                vertex_4_region_index.append(regions_with_voronoi_vertex.index(vertex_4_region))
 
-            print(vertex_1_regions)
-            #print()
-            print(vertex_2_regions)
-            print(vertex_3_regions)
-            print(vertex_4_regions)
-            print()
 
-        
-    
+
+            #front 前面两个点 route[0] route[1], back 后面两个点 route[2] route[3],region_list里一定会有两个元素
+            front_region_list = list(set(vertex_1_region_index).symmetric_difference(set(vertex_2_region_index))) 
+            back_region_list = list(set(vertex_3_region_index).symmetric_difference(set(vertex_4_region_index)))
+            
+            #得到需要连接的两个region的索引
+            front_set = set()
+            back_set = set()
+            for front, back in zip(front_region_list, back_region_list):
+                if route[0] in regions_with_voronoi_vertex[front]:
+                    front_set.add(front)
+                if route[3] in regions_with_voronoi_vertex[back]:
+                    back_set.add(back)
+
+            #去重
+            set_of_this_route = front_set.union(back_set)
+
+            #只有长度为2的才需要连接
+            if len(set_of_this_route) == 2:
+                edges_to_connect.append((regions_with_mother_point.index(set_of_this_route.pop()),
+                                            regions_with_mother_point.index(set_of_this_route.pop())))
+               
+
+    return edges_to_connect
 
 
 #画出最佳路径图
@@ -415,15 +433,22 @@ def is_subgraph2(G_optimal, G_add_de):
 def creat_dump_data_dic():
     dic = {}
     for i in range(5,101):
+        print(i)
         ins = instance(i)
         dic[f'{i}'] = {'de_edges':ins.de_edges,
-                       'de_lambda':ins.de_lambda,
                        'seg1_edges':ins.seg1_edges,
-                       'seg1_lambda':ins.seg1_lambda,
                        'seg1_nei2_edges':ins.seg1_nei2_edges,
+                       'seg1_nei2_seg3_edges':ins.seg1_nei2_seg3_edges,
+
+                       'de_lambda':ins.de_lambda,
+                       'seg1_lambda':ins.seg1_lambda,
                        'seg1_nei2_lambda':ins.seg1_nei2_lambda,
+                       'seg1_nei2_seg3_lambda':ins.seg1_nei2_seg3_lambda,
+
+                       'de_is_subgraph':is_subgraph(ins.graph_optimal_tour,ins.graph_de)[0],
                        'seg1_is_subgraph':is_subgraph(ins.graph_optimal_tour,ins.graph_seg1)[0],
-                       'seg1_nei2_is_subgraph':is_subgraph(ins.graph_optimal_tour,ins.graph_seg1_nei2)[0]}
+                       'seg1_nei2_is_subgraph':is_subgraph(ins.graph_optimal_tour,ins.graph_seg1_nei2)[0],
+                       'seg1_nei2_seg3_is_subgraph':is_subgraph(ins.graph_optimal_tour,ins.graph_seg1_nei2_seg3)[0]}
     
     json.dump(dic,open('data.json','w'),indent=4)
 
@@ -494,15 +519,17 @@ class instance():
         self.de_edges = result[3]
 
         #基于voronoi线段添加边的delauny lambda
-        result = delaunay(self.mat,self.coord,add_edges = edges_add_seg1(self.coord))
+        result = delaunay(self.mat, self.coord, 
+                          seg1 = edges_add_seg1(self.coord))
         self.seg1_lambda = result[0] 
         self.seg1_lambda_list = result[1]
         self.graph_seg1 = result[2]   #基于德劳内三角分割加线段对应边的图
         self.seg1_edges = result[3]
 
         #基于voronoi添加一次线段后，再添加邻居的邻居
-        result = delaunay(self.mat,self.coord,add_edges = edges_add_seg1(self.coord),
-                          add_neighbor = edges_add_nei2(self.coord))
+        result = delaunay(self.mat, self.coord, 
+                          seg1 = edges_add_seg1(self.coord),
+                          nei2 = edges_add_nei2(self.coord))
         self.seg1_nei2_lambda = result[0] 
         self.seg1_nei2_lambda_list = result[1]
         self.graph_seg1_nei2 = result[2]   #加邻居的邻居
@@ -511,7 +538,7 @@ class instance():
 
         #基于voronoi只添加邻居的邻居
         result = delaunay(self.mat,self.coord,
-                          add_neighbor = edges_add_nei2(self.coord))
+                          nei2 = edges_add_nei2(self.coord))
         self.nei2_lambda = result[0] 
         self.nei2_lambda_list = result[1]
         self.graph_nei2 = result[2]   
@@ -519,11 +546,13 @@ class instance():
 
         #seg3加边
         result = delaunay(self.mat,self.coord,
-                          add_edges = edges_add_seg3(self.coord))
-        self.seg3_lambda = result[0] 
-        self.seg3_lambda_list = result[1]
-        self.graph_seg3 = result[2]   
-        self.seg3_edges = result[3]
+                          seg1 = edges_add_seg1(self.coord),
+                          nei2 = edges_add_nei2(self.coord),
+                          seg3 = edges_add_seg3(self.coord))
+        self.seg1_nei2_seg3_lambda = result[0] 
+        self.seg1_nei2_seg3_lambda_list = result[1]
+        self.graph_seg1_nei2_seg3 = result[2]   
+        self.seg1_nei2_seg3_edges = result[3]
 
 
         #基于非完全图的距离矩阵
@@ -750,10 +779,10 @@ TOUR_FILE = graph_missing_edges/tour/random{self.n}.txt')
 
 if __name__ == '__main__':
     #dic = read_json()
-    for i in range(5,6):
-        ins = instance(i)
+    # for i in range(5,6):
+    #     ins = instance(i)
 
-
+    creat_dump_data_dic()
     
 
         #print(dic[f'{i}']['add_is_subgraph'])
