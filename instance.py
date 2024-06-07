@@ -270,7 +270,6 @@ def edges_add_seg3(cities_coord):
 
     regions = vor.regions
 
-
     regions = vor.point_region
     #print(regions)
 
@@ -311,15 +310,26 @@ def edges_add_seg3(cities_coord):
                         if vertex not in (-1, vor_vertex, level_1[index])] 
                 temp_2.append(temp_1)
             level_3.append(temp_2)
-        #路线
-        route = []
-
 
 
         print()
         print(level_1) 
         print(level_2)
         print(level_3)
+
+        #路线
+        route = [(vor_vertex, level_1_vertex, level_2_vertex, level_3_vertex)
+                 for index_level_1, level_1_vertex in enumerate(level_1)
+                 for index_level_2, level_2_vertex in enumerate(level_2[index_level_1])
+                 for level_3_vertex in level_3[index_level_1][index_level_2]]
+        
+        print(route)
+        for index_level_1, level_1_vertex in enumerate(level_1):
+            for index_level_2, level_2_vertex in enumerate(level_2[index_level_1]):
+                for level_3_vertex in level_3[index_level_1][index_level_2]:
+                    print(vor_vertex,level_1_vertex, level_2_vertex, level_3_vertex)
+
+
         # print()
     
 
@@ -710,8 +720,6 @@ if __name__ == '__main__':
     for i in range(5,6):
         ins = instance(i)
 
-
- 
 
     
 
