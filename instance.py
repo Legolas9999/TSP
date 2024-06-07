@@ -268,10 +268,10 @@ def edges_add_seg3(cities_coord):
     ridges_without_infinite = [vertex for vertex in ridges if -1 not in vertex]
     #print(ridges_without_infinite)
 
-    regions = vor.regions
-
-    regions = vor.point_region
+    regions_with_voronoi_vertex = vor.regions
     #print(regions)
+    regions_with_mother_point = vor.point_region
+    
 
     #遍历每个vor_vertex
     connect_relation = []
@@ -285,7 +285,7 @@ def edges_add_seg3(cities_coord):
         
         connect_relation.append(temp)
         
-    print(connect_relation) 
+    #print(connect_relation) 
 
     #遍历每个voronoi顶点
     for vor_vertex in range(len(vor_vertices)):
@@ -312,25 +312,58 @@ def edges_add_seg3(cities_coord):
             level_3.append(temp_2)
 
 
-        print()
-        print(level_1) 
-        print(level_2)
-        print(level_3)
+        # print()
+        # print(level_1) 
+        # print(level_2)
+        # print(level_3)
 
         #路线
-        route = [(vor_vertex, level_1_vertex, level_2_vertex, level_3_vertex)
+        routes = [(vor_vertex, level_1_vertex, level_2_vertex, level_3_vertex)
                  for index_level_1, level_1_vertex in enumerate(level_1)
                  for index_level_2, level_2_vertex in enumerate(level_2[index_level_1])
                  for level_3_vertex in level_3[index_level_1][index_level_2]]
+        print()
+        print(routes)
+        #复杂写法
+        # for index_level_1, level_1_vertex in enumerate(level_1):
+        #     for index_level_2, level_2_vertex in enumerate(level_2[index_level_1]):
+        #         for level_3_vertex in level_3[index_level_1][index_level_2]:
+        #             print(vor_vertex,level_1_vertex, level_2_vertex, level_3_vertex)
+
+        #遍历每一段路径
+        for route in routes:
+            #front
+            # vertex_1_regions = [vertex_1_region 
+            #                     for vertex_1_region in regions_with_voronoi_vertex
+            #                     if route[0] in ]
+
+            vertex_1_regions = [vertex_1_region 
+                                for vertex_1_region in regions_with_voronoi_vertex
+                                if route[0] in vertex_1_region]
+            vertex_2_regions = [vertex_2_region 
+                                for vertex_2_region in regions_with_voronoi_vertex
+                                if route[1] in vertex_2_region]
+            vertex_3_regions = [vertex_3_region 
+                                for vertex_3_region in regions_with_voronoi_vertex
+                                if route[2] in vertex_3_region]
+            vertex_4_regions = [vertex_4_region 
+                                for vertex_4_region in regions_with_voronoi_vertex
+                                if route[3] in vertex_4_region]
+            
+            vertex_1_region_index = []
+            vertex_2_region_index = []
+            for vertex_1_region, vertex_2_region in zip(vertex_1_regions,vertex_2_regions):
+                vertex_1_region_index.append(regions_with_voronoi_vertex.index(vertex_1_region))
+                vertex_2_region_index.append(regions_with_voronoi_vertex.index(vertex_2_region))
+
+            print(vertex_1_regions)
+            #print()
+            print(vertex_2_regions)
+            print(vertex_3_regions)
+            print(vertex_4_regions)
+            print()
+
         
-        print(route)
-        for index_level_1, level_1_vertex in enumerate(level_1):
-            for index_level_2, level_2_vertex in enumerate(level_2[index_level_1]):
-                for level_3_vertex in level_3[index_level_1][index_level_2]:
-                    print(vor_vertex,level_1_vertex, level_2_vertex, level_3_vertex)
-
-
-        # print()
     
 
 
