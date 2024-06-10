@@ -8,7 +8,8 @@ import gurobipy as gp
 from scipy.spatial import Voronoi,voronoi_plot_2d
 import matplotlib.pyplot as plt
 import json
-
+import time
+import multiprocessing
 
 
 #根据坐标创建矩阵
@@ -41,7 +42,7 @@ def dis_mat(coord):
 
 #通过delaunay计算lamuda，返回元组 0：最大lamuda  1：每个城市最大lamuda列表  2:lamuda最大时左右城市列表  
 def delaunay(dis_mat, cities_coord, seg1 = None, nei2 = None, seg3 = None) -> tuple:
-
+    
     # 进行德劳内三角剖分
     tri = Delaunay(cities_coord)
 
@@ -776,13 +777,24 @@ TOUR_FILE = graph_missing_edges/tour/random{self.n}.txt')
         else:
             return None
 
+def main(i):
+        ins = instance(i)
+        print(i,ins.seg1_nei2_seg3_edges)
 
 if __name__ == '__main__':
     #dic = read_json()
-    # for i in range(5,6):
-    #     ins = instance(i)
 
-    creat_dump_data_dic()
+
+    start = time.time()
+    
+    for i in range(95,101):
+        sub_process = multiprocessing.Process(target=main,args=(i,))
+        sub_process.start()
+
+        #main(i)
+
+    end = time.time()
+    print(end - start)
     
 
         #print(dic[f'{i}']['add_is_subgraph'])
