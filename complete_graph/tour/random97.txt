@@ -1,6 +1,6 @@
 NAME : random97.766.tour
 COMMENT : Length = 766
-COMMENT : Found by LKH [Keld Helsgaun] Sat May  4 15:10:17 2024
+COMMENT : Found by LKH [Keld Helsgaun] Sun Jun 16 18:02:15 2024
 TYPE : TOUR
 DIMENSION : 97
 TOUR_SECTION

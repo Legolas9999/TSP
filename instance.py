@@ -479,7 +479,7 @@ def is_subgraph2(G_optimal, G_add_de):
 # 生成包含各类数据的字典以供查阅,并且dump到json
 def creat_dump_data_dic():
     dic = {}
-    for i in range(5, 101):
+    for i in range(5, 201):
         print(i)
         ins = instance(i)
         dic[f"{i}"] = {
@@ -562,7 +562,7 @@ class instance:
         self.graph_pos = {i: self.coord[i] for i in range(self.n)}
 
         # 最优路径图
-        self.graph_optimal_tour = optimal_tour_graph(self.n)
+        #self.graph_optimal_tour = optimal_tour_graph(self.n)
 
         # 普通的delauny lambda
         result = delaunay(self.mat, self.coord)
@@ -628,7 +628,7 @@ class instance:
     # 写入矩阵
     def write_mat(self):
         # 写参数
-        with open(f"graph_missing_edges/mat/random{self.n}.tsp", "w") as file:
+        with open(f"complete_graph/mat/random{self.n}.tsp", "w") as file:
             file.write(
                 f"NAME: random{self.n}\r\
 TYPE: TSP\r\
@@ -642,15 +642,15 @@ EDGE_WEIGHT_SECTION\r"
             for i in range(self.n):
                 for j in range(self.n):
                     if i <= j:
-                        file.write(str(self.mat_missing_edges[i, j])[:-2] + "\r")
+                        file.write(str(self.mat[i, j])[:-2] + "\r")
 
             file.write("EOF")
 
     # 写入参数文件
     def write_par(self):
-        with open(f"graph_missing_edges/par/random{self.n}.par", "w") as file:
+        with open(f"complete_graph/par/random{self.n}.par", "w") as file:
             file.write(
-                f"PROBLEM_FILE = graph_missing_edges/mat/random{self.n}.tsp\r\
+                f"PROBLEM_FILE = complete_graph/mat/random{self.n}.tsp\r\
 INITIAL_PERIOD = 1000\r\
 MAX_CANDIDATES = 4\r\
 MAX_TRIALS = 1000\r\
@@ -658,13 +658,13 @@ MOVE_TYPE = 6\r\
 PATCHING_C = 6\r\
 PATCHING_A = 5\r\
 RECOMBINATION = GPX2\r\
-RUNS = 1\r\
-TOUR_FILE = graph_missing_edges/tour/random{self.n}.txt"
+RUNS = 10\r\
+TOUR_FILE = complete_graph/tour/random{self.n}.txt"
             )
 
     # LKH
     def LKH(self):
-        subprocess.run(["LKH-2.exe", f"73/uncom/random{self.n}.par"])
+        subprocess.run(["LKH-2.exe", f"complete_graph/par/random{self.n}.par"])
 
     # 用gurobi最优化
     def gurobi(self, lambda_list=None):
@@ -843,17 +843,11 @@ def main(i):
 
 
 if __name__ == "__main__":
-    # dic = read_json()
-
     start = time.time()
-
-    for i in range(95, 101):
-        sub_process = multiprocessing.Process(target=main, args=(i,))
-        sub_process.start()
-
-        # main(i)
-
-    end = time.time()
-    print(end - start)
-
-    # print(dic[f'{i}']['add_is_subgraph'])
+    ins = instance(10000)
+    ins.write_coord()
+    ins.write_mat()
+    ins.write_par()
+    ins.LKH()
+    #print(is_subgraph(ins.graph_optimal_tour, ins.graph_seg1_nei2_seg3))
+    print(time.time() - start)
