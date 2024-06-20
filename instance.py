@@ -199,66 +199,243 @@ def edges_add_seg1(cities_coord):
     return nodes_to_connect
 
 
-# 再次基于voronoi加边，邻居的邻居
-def edges_add_nei2(cities_coord):
+# seg1
+def edges_add_seg1_new(cities_coord):
+    # 创建Voronoi 图
     vor = Voronoi(cities_coord)
 
-    # voronoi边，包括射线
-    ridge = vor.ridge_vertices
+    # voronoi顶点的坐标
+    vor_vertices = vor.vertices
 
-    regions = vor.regions
-    point_region = vor.point_region
+    # 每条ridge两个端点索引（voronoi顶点的索引）
+    ridges = vor.ridge_vertices
+    # print(ridges)
 
-    # 每个节点的邻接关系，种子节点顺序
-    neighbor_list = []
-    for node in range(cities_coord.shape[0]):
-        # 当前种子节点对应区域索引
-        current_region_index = point_region[node]
+    # 带有母点索引的区域
+    regions_with_mother_point = list(vor.point_region)
 
-        # 当前区域所对应的voronoi顶点
-        current_region_voronoi_vertex = regions[current_region_index]
+    # 带有voronoi顶点索引的区域
+    regions_with_voronoi_vertex = vor.regions
+    # print(regions_with_voronoi_vertex)
 
-        # 与当前区域相邻的区域的索引
-        neighbor_region = set()
-        for vonoroi_vertex in current_region_voronoi_vertex:
-            for region in regions:
-                if vonoroi_vertex in region:
-                    neighbor_region.add(regions.index(region))
+    # 需要被连接的边
+    edges_to_connect = []
 
-        # 去除自己
-        neighbor_region.discard(current_region_index)
-        # 加入列表
-        neighbor_list.append(neighbor_region)
+    # 连接关系
+    connect_relation = []
+    # 遍历每个voronoi顶点
+    for vor_vertex in range(len(vor_vertices)):
+        # 与各个voronoi顶点相邻的voronoi顶点
+        temp = [
+            vertex
+            for ridge in ridges
+            if vor_vertex in ridge
+            for vertex in ridge
+            if vertex != vor_vertex
+        ]
 
-    # print(neighbor_list)
+        # 去除无穷远点
+        temp = list(filter(lambda x: x != -1, temp))
 
-    # 计算需要连接的边
-    edge_to_connect = []
-    for index in range(cities_coord.shape[0]):
-        # 当前区域的邻居
-        region = neighbor_list[index]
+        connect_relation.append(temp)
 
-        # 当前区域的索引
-        region_index = point_region[index]
+    #
+    #print(connect_relation)
 
-        # 遍历每个邻居
-        for neighbor in region:
+    # 存储路径
+    # 遍历每个voronoi顶点
+    for vor_vertex in range(len(vor_vertices)):
+        routes = [
+            (vor_vertex, level_1_vertex)
+            for level_1_vertex in connect_relation[vor_vertex]
+        ]
 
-            # 取得邻居的邻居，居然不能直接改动，得复制
-            neighbors = neighbor_list[np.where(point_region == neighbor)[0][0]].copy()
+        #print(routes)
+        # 遍历每个路径
+        for route in routes:
 
-            # 从中删除当前种子节点的区域
-            neighbors.discard(region_index)
+            vertex_1_regions = [
+                vertex_1_region
+                for vertex_1_region in regions_with_voronoi_vertex
+                if route[0] in vertex_1_region
+            ]
+            vertex_2_regions = [
+                vertex_2_region
+                for vertex_2_region in regions_with_voronoi_vertex
+                if route[1] in vertex_2_region
+            ]
 
-            # 遍历每个邻居的邻居
-            for sub_neighbor in neighbors:
-                temp = {index, np.where(point_region == sub_neighbor)[0][0]}
-                if temp not in edge_to_connect:
-                    edge_to_connect.append(temp)
+            # 获取每个voronoi顶点相关联的region的索引
+            vertex_1_region_index = []
+            vertex_2_region_index = []
 
-    edge_to_connect = list(map(lambda x: tuple(x), edge_to_connect))
+            for vertex_1_region, vertex_2_region in zip(
+                vertex_1_regions, vertex_2_regions
+            ):
+                vertex_1_region_index.append(
+                    regions_with_voronoi_vertex.index(vertex_1_region)
+                )
+                vertex_2_region_index.append(
+                    regions_with_voronoi_vertex.index(vertex_2_region)
+                )
 
-    return edge_to_connect
+            # 需要连接的两个区域的索引
+            region_set = set(vertex_1_region_index).symmetric_difference(
+                set(vertex_2_region_index)
+            )
+
+            #print(region_set)
+
+            edges_to_connect.append(
+                (
+                    regions_with_mother_point.index(region_set.pop()),
+                    regions_with_mother_point.index(region_set.pop()),
+                )
+            )
+    return edges_to_connect
+
+
+# 两个线段加边
+def edges_add_seg2(cities_coord):
+    # 创建Voronoi 图
+    vor = Voronoi(cities_coord)
+
+    # voronoi顶点的坐标
+    vor_vertices = vor.vertices
+
+    # 每条ridge两个端点索引（voronoi顶点的索引）
+    ridges = vor.ridge_vertices
+
+    # 带有母点索引的区域
+    regions_with_mother_point = list(vor.point_region)
+
+    # 带有voronoi顶点索引的区域
+    regions_with_voronoi_vertex = vor.regions
+
+    # 需要被连接的边
+    edges_to_connect = []
+
+    # 连接关系
+    connect_relation = []
+    # 遍历每个voronoi顶点
+    for vor_vertex in range(len(vor_vertices)):
+        # 与各个voronoi顶点相邻的voronoi顶点
+        temp = [
+            vertex
+            for ridge in ridges
+            if vor_vertex in ridge
+            for vertex in ridge
+            if vertex != vor_vertex
+        ]
+
+        connect_relation.append(temp)
+
+    # 遍历每个voronoi顶点
+    for vor_vertex in range(len(vor_vertices)):
+        level_1 = [vertex for vertex in connect_relation[vor_vertex] if vertex != -1]
+
+        level_2 = []
+        for level_1_vertex in level_1:
+            temp = [
+                vertex
+                for vertex in connect_relation[level_1_vertex]
+                if vertex not in (-1, vor_vertex)
+            ]
+
+            level_2.append(temp)
+
+        # print()
+        # print(level_1)
+        # print(level_2)
+
+        # 存储路径
+        routes = [
+            (vor_vertex, level_1_vertex, level_2_vertex)
+            for index_level_1, level_1_vertex in enumerate(level_1)
+            for level_2_vertex in level_2[index_level_1]
+        ]
+        # print(routes)
+
+        # 遍历每一段路径
+        for route in routes:
+
+            vertex_1_regions = [
+                vertex_1_region
+                for vertex_1_region in regions_with_voronoi_vertex
+                if route[0] in vertex_1_region
+            ]
+            vertex_2_regions = [
+                vertex_2_region
+                for vertex_2_region in regions_with_voronoi_vertex
+                if route[1] in vertex_2_region
+            ]
+            vertex_3_regions = [
+                vertex_3_region
+                for vertex_3_region in regions_with_voronoi_vertex
+                if route[2] in vertex_3_region
+            ]
+
+            # 获取每个voronoi顶点相关联的region的索引
+            vertex_1_region_index = []
+            vertex_2_region_index = []
+            vertex_3_region_index = []
+
+            for vertex_1_region, vertex_2_region, vertex_3_region in zip(
+                vertex_1_regions, vertex_2_regions, vertex_3_regions
+            ):
+                vertex_1_region_index.append(
+                    regions_with_voronoi_vertex.index(vertex_1_region)
+                )
+                vertex_2_region_index.append(
+                    regions_with_voronoi_vertex.index(vertex_2_region)
+                )
+                vertex_3_region_index.append(
+                    regions_with_voronoi_vertex.index(vertex_3_region)
+                )
+
+            # print(vertex_1_region_index)
+            # print(vertex_2_region_index)
+            # print(vertex_3_region_index)
+
+            # front --> route[0] route[1], back --> route[1] route[2],region_list里一定会有两个元素
+            front_region_list = list(
+                set(vertex_1_region_index).symmetric_difference(
+                    set(vertex_2_region_index)
+                )
+            )
+            back_region_list = list(
+                set(vertex_2_region_index).symmetric_difference(
+                    set(vertex_3_region_index)
+                )
+            )
+
+            # print(front_region_list)
+            # print(back_region_list)
+
+            # 得到需要连接的两个region的索引
+            front_set = set()
+            back_set = set()
+            for front, back in zip(front_region_list, back_region_list):
+                if route[0] in regions_with_voronoi_vertex[front]:
+                    front_set.add(front)
+                if route[2] in regions_with_voronoi_vertex[back]:
+                    back_set.add(back)
+            # print(front_set)
+            # print(back_set)
+
+            # 去重 去除相连的两个区域重合的
+            set_of_this_route = front_set.union(back_set)
+
+            # 只有长度为2的才需要连接
+            if len(set_of_this_route) == 2:
+                edges_to_connect.append(
+                    (
+                        regions_with_mother_point.index(set_of_this_route.pop()),
+                        regions_with_mother_point.index(set_of_this_route.pop()),
+                    )
+                )
+
+    return edges_to_connect
 
 
 # 三个线段加边
@@ -273,7 +450,7 @@ def edges_add_seg3(cities_coord):
     ridges = vor.ridge_vertices
 
     # 把无穷远的分界线去除(保留有限ridge)
-    ridges_without_infinite = [vertex for vertex in ridges if -1 not in vertex]
+    # ridges_without_infinite = [vertex for vertex in ridges if -1 not in vertex]
 
     # 带有voronoi顶点索引的区域
     regions_with_voronoi_vertex = vor.regions
@@ -429,6 +606,68 @@ def edges_add_seg3(cities_coord):
     return edges_to_connect
 
 
+# 再次基于voronoi加边，邻居的邻居
+def edges_add_nei2(cities_coord):
+    vor = Voronoi(cities_coord)
+
+    # voronoi边，包括射线
+    ridge = vor.ridge_vertices
+
+    regions = vor.regions
+    point_region = vor.point_region
+
+    # 每个节点的邻接关系，种子节点顺序
+    neighbor_list = []
+    for node in range(cities_coord.shape[0]):
+        # 当前种子节点对应区域索引
+        current_region_index = point_region[node]
+
+        # 当前区域所对应的voronoi顶点
+        current_region_voronoi_vertex = regions[current_region_index]
+
+        # 与当前区域相邻的区域的索引
+        neighbor_region = set()
+        for vonoroi_vertex in current_region_voronoi_vertex:
+            for region in regions:
+                if vonoroi_vertex in region:
+                    neighbor_region.add(regions.index(region))
+
+        # 去除自己
+        neighbor_region.discard(current_region_index)
+        # 加入列表
+        neighbor_list.append(neighbor_region)
+
+    # print(neighbor_list)
+
+    # 计算需要连接的边
+    edge_to_connect = []
+    for index in range(cities_coord.shape[0]):
+        # 当前区域的邻居
+        region = neighbor_list[index]
+
+        # 当前区域的索引
+        region_index = point_region[index]
+
+        # 遍历每个邻居
+        for neighbor in region:
+
+            # 取得邻居的邻居，居然不能直接改动，得复制
+            neighbors = neighbor_list[np.where(point_region == neighbor)[0][0]].copy()
+
+            # 从中删除当前种子节点的区域
+            neighbors.discard(region_index)
+
+            # 遍历每个邻居的邻居
+            for sub_neighbor in neighbors:
+                temp = {index, np.where(point_region == sub_neighbor)[0][0]}
+                if temp not in edge_to_connect:
+                    edge_to_connect.append(temp)
+
+    edge_to_connect = list(map(lambda x: tuple(x), edge_to_connect))
+
+    return edge_to_connect
+
+
 # 画出最佳路径图
 def optimal_tour_graph(num_city):
     # 从文件读取最佳路径
@@ -562,7 +801,7 @@ class instance:
         self.graph_pos = {i: self.coord[i] for i in range(self.n)}
 
         # 最优路径图
-        #self.graph_optimal_tour = optimal_tour_graph(self.n)
+        # self.graph_optimal_tour = optimal_tour_graph(self.n)
 
         # 普通的delauny lambda
         result = delaunay(self.mat, self.coord)
@@ -843,11 +1082,5 @@ def main(i):
 
 
 if __name__ == "__main__":
-    start = time.time()
-    ins = instance(10000)
-    ins.write_coord()
-    ins.write_mat()
-    ins.write_par()
-    ins.LKH()
-    #print(is_subgraph(ins.graph_optimal_tour, ins.graph_seg1_nei2_seg3))
-    print(time.time() - start)
+    ins = instance(5)
+    edges_add_seg1_new(ins.coord)
