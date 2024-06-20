@@ -240,7 +240,7 @@ def edges_add_seg1_new(cities_coord):
         connect_relation.append(temp)
 
     #
-    #print(connect_relation)
+    # print(connect_relation)
 
     # 存储路径
     # 遍历每个voronoi顶点
@@ -250,7 +250,7 @@ def edges_add_seg1_new(cities_coord):
             for level_1_vertex in connect_relation[vor_vertex]
         ]
 
-        #print(routes)
+        # print(routes)
         # 遍历每个路径
         for route in routes:
 
@@ -284,7 +284,7 @@ def edges_add_seg1_new(cities_coord):
                 set(vertex_2_region_index)
             )
 
-            #print(region_set)
+            # print(region_set)
 
             edges_to_connect.append(
                 (
@@ -666,6 +666,95 @@ def edges_add_nei2(cities_coord):
     edge_to_connect = list(map(lambda x: tuple(x), edge_to_connect))
 
     return edge_to_connect
+
+
+# nei3
+def edges_add_nei3(cities_coord):
+    vor = Voronoi(cities_coord)
+
+    # voronoi边，[[-1, 0], [-1, 1], [0, 1], [2, 4], [2, 3], [3, 4], [-1, 2], [1, 4], [0, 3]]
+    ridges = vor.ridge_vertices
+
+    regions = (
+        vor.regions
+    )  # [[], [1, -1, 0], [4, 2, 3], [4, 1, -1, 2], [3, 0, -1, 2], [4, 1, 0, 3]]
+
+    regions_with_mother_point = list(vor.point_region)  # [2 4 5 1 3]
+
+    # 建立邻居关系
+    neighbor_relation = (
+        []
+    )  # [[4, 1, 2], [3, 0, 4, 2], [3, 0, 4, 1], [1, 4, 2], [3, 0, 1, 2]]
+    for mother_point in range(len(cities_coord)):  # [0,1,2,3,4]
+        # 当前母节点对应区域索引
+        region_index_of_mother_point = regions_with_mother_point[mother_point]
+        voronoi_vertice_of_region = regions[region_index_of_mother_point]  # [4, 2, 3]
+
+        # 求当前区域的边界
+        edges_of_curr_region = []  # [ [2, 4], [2, 3], [3, 4]]
+        for ridge in ridges:
+            if (
+                ridge[0] in voronoi_vertice_of_region
+                and ridge[1] in voronoi_vertice_of_region
+            ):
+                edges_of_curr_region.append(ridge)
+
+        # 找哪些区域有这些边
+        regions_have_edges = []  # [3,4,5]
+        for ridge in edges_of_curr_region:
+            for index, region in enumerate(regions):
+                if (
+                    ridge[0] in region
+                    and ridge[1] in region
+                    and index != region_index_of_mother_point
+                ):  # 如果该区域有这条边
+                    regions_have_edges.append(index)
+
+        neighbor_relation.append(regions_have_edges)
+
+    # 将邻居关系从区域索引变为母节点的索引
+    for neighbor_i, neighbor in enumerate(neighbor_relation):
+        for region_i, region in enumerate(neighbor):  # [3, 4, 5]
+            neighbor_relation[neighbor_i][region_i] = regions_with_mother_point.index(
+                region
+            )
+
+    # 遍历每个母节点
+    print(neighbor_relation)
+    print()
+    edges_to_connect = []
+    for mother_point in range(len(cities_coord)):
+        # 第一层
+        level_1 = neighbor_relation[mother_point]  # [4, 1, 2]
+
+        # 第二层
+        level_2 = [
+            neighbor_relation[level_1_point] for level_1_point in level_1
+        ]  # [[3, 0, 1, 2], [3, 0, 4, 2], [3, 0, 4, 1]]
+
+        # 第三层
+        level_3 = [
+            [neighbor_relation[level_2_point] for level_2_point in level_2_points]
+            for level_2_points in level_2
+        ]
+
+        # 连接母点和第三层
+        connect_list = [
+            {mother_point, node}
+            for level_3_points in level_3
+            for level_3_point in level_3_points
+            for node in level_3_point
+            if node != mother_point
+        ]
+        
+        # 去重
+        #connect_list = list(set(connect_list))
+
+        print(level_1)
+        print(level_2)
+        print(level_3)
+        print(connect_list)
+        print()
 
 
 # 画出最佳路径图
@@ -1083,4 +1172,4 @@ def main(i):
 
 if __name__ == "__main__":
     ins = instance(5)
-    edges_add_seg1_new(ins.coord)
+    edges_add_nei3(ins.coord)
