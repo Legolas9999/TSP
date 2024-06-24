@@ -44,7 +44,9 @@ def dis_mat(coord):
 
 
 # 通过delaunay计算lamuda，返回元组 0：最大lamuda  1：每个城市最大lamuda列表  2:lamuda最大时左右城市列表
-def delaunay(dis_mat, cities_coord, seg1=None, nei2=None, seg3=None) -> tuple:
+def delaunay(
+    dis_mat, cities_coord, seg1=None, seg2=None, seg3=None, nei2=None, nei3=None
+) -> tuple:
 
     # 进行德劳内三角剖分
     tri = Delaunay(cities_coord)
@@ -57,18 +59,25 @@ def delaunay(dis_mat, cities_coord, seg1=None, nei2=None, seg3=None) -> tuple:
         edges = [(simplex[i], simplex[j]) for i in range(3) for j in range(i + 1, 3)]
         G.add_edges_from(edges)
 
-    # 添加线段对应的边
+    # 添加seg1
     if seg1 is not None:
-        # 变为元组（似乎不变也行）
-        # edges = [ (edge[0],edge[1]) for edge in add_edges]
         G.add_edges_from(seg1)
 
-    # 如果添加邻居的邻居
+    # 添加seg2
+    if seg2 is not None:
+        G.add_edges_from(seg2)
+
+    # 添加seg3
+    if seg3 is not None:
+        G.add_edges_from(seg3)
+
+    # 添加nei2
     if nei2 is not None:
         G.add_edges_from(nei2)
 
-    if seg3 is not None:
-        G.add_edges_from(seg3)
+    # 添加nei3
+    if nei3 is not None:
+        G.add_edges_from(nei3)
 
     # 画出三角分割(如果增加了边就不是三角分割)
     # pos = {i: cities_coord[i] for i in range(cities_coord.shape[0])}
@@ -720,8 +729,8 @@ def edges_add_nei3(cities_coord):
             )
 
     # 遍历每个母节点
-    print(neighbor_relation)
-    print()
+    # print(neighbor_relation)
+    # print()
     edges_to_connect = []
     for mother_point in range(len(cities_coord)):
         # 第一层
@@ -738,23 +747,23 @@ def edges_add_nei3(cities_coord):
             for level_2_points in level_2
         ]
 
-        # 连接母点和第三层
+        # 连接母点和第三层,自己和自己不会连接
         connect_list = [
-            {mother_point, node}
+            (mother_point, node)
             for level_3_points in level_3
             for level_3_point in level_3_points
             for node in level_3_point
             if node != mother_point
         ]
-        
-        # 去重
-        #connect_list = list(set(connect_list))
 
-        print(level_1)
-        print(level_2)
-        print(level_3)
-        print(connect_list)
-        print()
+        # 去重之后再添加到等待连接列表
+        for edge in connect_list:
+            if (edge not in edges_to_connect) and (
+                (edge[1], edge[0]) not in edges_to_connect
+            ):
+                edges_to_connect.append(edge)
+
+    return edges_to_connect
 
 
 # 画出最佳路径图
@@ -812,29 +821,26 @@ def creat_dump_data_dic():
         ins = instance(i)
         dic[f"{i}"] = {
             "de_edges": ins.de_edges,
-            "seg1_edges": ins.seg1_edges,
-            "seg1_nei2_edges": ins.seg1_nei2_edges,
-            "seg1_nei2_seg3_edges": ins.seg1_nei2_seg3_edges,
+            "de_seg1_seg2_seg3_edges": ins.de_seg1_seg2_seg3_edges,
+            "de_nei2_nei3_edges": ins.de_nei2_nei3_edges,
             "de_lambda": ins.de_lambda,
-            "seg1_lambda": ins.seg1_lambda,
-            "seg1_nei2_lambda": ins.seg1_nei2_lambda,
-            "seg1_nei2_seg3_lambda": ins.seg1_nei2_seg3_lambda,
+            "de_seg1_seg2_seg3_lambda": ins.de_seg1_seg2_seg3_lambda,
+            "de_nei2_nei3_lambda": ins.de_nei2_nei3_lambda,
             "de_is_subgraph": is_subgraph(ins.graph_optimal_tour, ins.graph_de)[0],
-            "seg1_is_subgraph": is_subgraph(ins.graph_optimal_tour, ins.graph_seg1)[0],
-            "seg1_nei2_is_subgraph": is_subgraph(
-                ins.graph_optimal_tour, ins.graph_seg1_nei2
+            "de_seg1_seg2_seg3_is_subgraph": is_subgraph(
+                ins.graph_optimal_tour, ins.graph_de_seg1_seg2_seg3
             )[0],
-            "seg1_nei2_seg3_is_subgraph": is_subgraph(
-                ins.graph_optimal_tour, ins.graph_seg1_nei2_seg3
+            "de_nei2_nei3_is_subgraph": is_subgraph(
+                ins.graph_optimal_tour, ins.graph_de_nei2_nei3
             )[0],
         }
 
-    json.dump(dic, open("data.json", "w"), indent=4)
+    json.dump(dic, open("data_seg_nei.json", "w"), indent=4)
 
 
 # 读取数据json
 def read_json():
-    with open("data.json", "r") as file:
+    with open("data_seg_nei.json", "r") as file:
         dic = json.load(file)
     return dic
 
@@ -890,60 +896,46 @@ class instance:
         self.graph_pos = {i: self.coord[i] for i in range(self.n)}
 
         # 最优路径图
-        # self.graph_optimal_tour = optimal_tour_graph(self.n)
+        self.graph_optimal_tour = optimal_tour_graph(self.n)
 
-        # 普通的delauny lambda
+        # 普通的delauny
         result = delaunay(self.mat, self.coord)
         self.de_lambda = result[0]
         self.de_lambda_list = result[1]
         self.graph_de = result[2]  # 德劳内三角分割图
         self.de_edges = result[3]
 
-        # 基于voronoi线段添加边的delauny lambda
-        result = delaunay(self.mat, self.coord, seg1=edges_add_seg1(self.coord))
-        self.seg1_lambda = result[0]
-        self.seg1_lambda_list = result[1]
-        self.graph_seg1 = result[2]  # 基于德劳内三角分割加线段对应边的图
-        self.seg1_edges = result[3]
-
-        # 基于voronoi添加一次线段后，再添加邻居的邻居
+        # 基于de + seg1 + seg2 + seg3
         result = delaunay(
             self.mat,
             self.coord,
             seg1=edges_add_seg1(self.coord),
-            nei2=edges_add_nei2(self.coord),
-        )
-        self.seg1_nei2_lambda = result[0]
-        self.seg1_nei2_lambda_list = result[1]
-        self.graph_seg1_nei2 = result[2]  # 加邻居的邻居
-        self.seg1_nei2_edges = result[3]
-
-        # 基于voronoi只添加邻居的邻居
-        result = delaunay(self.mat, self.coord, nei2=edges_add_nei2(self.coord))
-        self.nei2_lambda = result[0]
-        self.nei2_lambda_list = result[1]
-        self.graph_nei2 = result[2]
-        self.nei2_edges = result[3]
-
-        # seg3加边
-        result = delaunay(
-            self.mat,
-            self.coord,
-            seg1=edges_add_seg1(self.coord),
-            nei2=edges_add_nei2(self.coord),
+            seg2=edges_add_seg2(self.coord),
             seg3=edges_add_seg3(self.coord),
         )
-        self.seg1_nei2_seg3_lambda = result[0]
-        self.seg1_nei2_seg3_lambda_list = result[1]
-        self.graph_seg1_nei2_seg3 = result[2]
-        self.seg1_nei2_seg3_edges = result[3]
+        self.de_seg1_seg2_seg3_lambda = result[0]
+        self.de_seg1_seg2_seg3_lambda_list = result[1]
+        self.graph_de_seg1_seg2_seg3 = result[2]  # 对应的图
+        self.de_seg1_seg2_seg3_edges = result[3]
+
+        # 基于de + nei2 + nei3
+        result = delaunay(
+            self.mat,
+            self.coord,
+            nei2=edges_add_nei2(self.coord),
+            nei3=edges_add_nei3(self.coord),
+        )
+        self.de_nei2_nei3_lambda = result[0]
+        self.de_nei2_nei3_lambda_list = result[1]
+        self.graph_de_nei2_nei3 = result[2]  # 加邻居的邻居
+        self.de_nei2_nei3_edges = result[3]
 
         # 基于非完全图的距离矩阵
         # Python中的可变类型在作为参数传递给函数时，因为传递的是对象的引用而不是其副本。
         # 当你在函数内部修改这些可变对象时，外部的原始对象也会被修改。
-        self.mat_missing_edges = creat_dis_mat_missing_edges(
-            self.n, self.graph_seg1_nei2, self.mat.copy()
-        )
+        # self.mat_missing_edges = creat_dis_mat_missing_edges(
+        #     self.n, self.graph_seg1_nei2, self.mat.copy()
+        # )
 
     # 写入坐标
     def write_coord(self):
@@ -1171,5 +1163,6 @@ def main(i):
 
 
 if __name__ == "__main__":
-    ins = instance(5)
-    edges_add_nei3(ins.coord)
+    dic = read_json()
+    for i in range(5,201):
+        print(dic[f"{i}"]["de_nei2_nei3_edges"])
