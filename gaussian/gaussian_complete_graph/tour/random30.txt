@@ -1,0 +1,38 @@
+NAME : gaussian_random30.3485.tour
+COMMENT : Length = 3485
+COMMENT : Found by LKH [Keld Helsgaun] Sun Jul  7 17:42:59 2024
+TYPE : TOUR
+DIMENSION : 30
+TOUR_SECTION
+1
+18
+15
+16
+6
+30
+20
+28
+8
+4
+26
+7
+14
+9
+2
+10
+13
+21
+5
+25
+12
+3
+27
+11
+19
+22
+29
+23
+17
+24
+-1
+EOF

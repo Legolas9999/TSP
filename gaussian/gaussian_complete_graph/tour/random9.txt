@@ -1,0 +1,17 @@
+NAME : gaussian_random9.3243.tour
+COMMENT : Length = 3243
+COMMENT : Found by LKH [Keld Helsgaun] Sun Jul  7 17:42:49 2024
+TYPE : TOUR
+DIMENSION : 9
+TOUR_SECTION
+1
+3
+5
+2
+7
+4
+8
+9
+6
+-1
+EOF

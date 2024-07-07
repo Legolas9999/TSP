@@ -11,6 +11,36 @@ import json
 import time
 import multiprocessing
 
+def gaussian_coord(n):
+    #设定随机种子
+    np.random.seed(n)
+
+    # 正态分布生成2个随机浮点数,作为城市中心 100-900之间
+    # 均值500， 标准差500
+    while True:
+        center_x, center_y = tuple(np.random.normal(500, 500, 2))
+        if all(100 <= x <= 900 for x in [center_x, center_y]):
+            break
+
+    # 随机生成标准差
+    # 正态分布生成2个随机浮点数,作为标准差， 100-900之间
+    while True:
+        scale_x, scale_y = tuple(np.random.normal(500, 1000, 2)) 
+        if all(100 <= x <= 900 for x in [scale_x, scale_y]):
+            break
+
+    # 使用正态分布生成坐标 0-1000
+    coordinates = np.zeros((n,2))
+    for i in range(n):
+        while True:
+            x_coord = np.random.normal(center_x, scale_x, 1)
+            y_coord = np.random.normal(center_y, scale_y, 1)
+            if all(0 <= c <= 1000 for c in [x_coord, y_coord]):
+                coordinates[i, 0] = x_coord[0]
+                coordinates[i, 1] = y_coord[0]
+                break
+            
+    return  coordinates
 
 # 根据坐标创建矩阵
 def dis_mat(coord):
@@ -132,8 +162,8 @@ def delaunay(
 def edges_add_seg1(cities_coord):
     # 创建 Voronoi 图
     vor = Voronoi(cities_coord)
-    voronoi_plot_2d(vor)
-    plt.show()
+    # voronoi_plot_2d(vor)
+    # plt.show()
 
     # 平面分界线交点的坐标
     coord_inter = vor.vertices
@@ -880,56 +910,71 @@ def compare_tour(n):
     # print(tour_complete,tour_missing)
     return tour_complete, tour_missing
 
+def uniform_coord(n):
+    # 随机数种子选取 确保每次生成的一致
+    np.random.seed(n)
+    coord = np.random.random((n, 2)) * 100
+
+    return coord
 
 class instance:
     def __init__(self, n):
         # 城市个数
         self.n = n
+        # ---------------------------------------------
         # 城市坐标
-        # 随机数种子选取 确保每次生成的一致
-        np.random.seed(self.n)
-        self.coord = np.random.random((self.n, 2)) * 100
+        self.coord = uniform_coord(self.n)
         # 距离矩阵
         self.mat = dis_mat(self.coord)
-
+        # ---------------------------------------------
+        # 城市坐标
+        self.g_coord = gaussian_coord(self.n)
+        # 距离矩阵
+        self.g_mat = dis_mat(self.g_coord)
+        # ---------------------------------------------
         # 为了画图的参数
-        self.graph_pos = {i: self.coord[i] for i in range(self.n)}
-
+        #self.graph_pos = {i: self.coord[i] for i in range(self.n)}
+        # ---------------------------------------------
         # 最优路径图
-        self.graph_optimal_tour = optimal_tour_graph(self.n)
-
+        #self.graph_optimal_tour = optimal_tour_graph(self.n)
+        # ---------------------------------------------
         # 普通的delauny
-        result = delaunay(self.mat, self.coord)
+        result = delaunay(self.g_mat, self.g_coord)
         self.de_lambda = result[0]
         self.de_lambda_list = result[1]
         self.graph_de = result[2]  # 德劳内三角分割图
         self.de_edges = result[3]
-
+        # ---------------------------------------------
         # 基于de + seg1 + seg2 + seg3
         result = delaunay(
-            self.mat,
-            self.coord,
-            seg1=edges_add_seg1(self.coord),
-            seg2=edges_add_seg2(self.coord),
-            seg3=edges_add_seg3(self.coord),
+            self.g_mat,
+            self.g_coord,
+            seg1=edges_add_seg1(self.g_coord),
+            seg2=edges_add_seg2(self.g_coord),
+            seg3=edges_add_seg3(self.g_coord),
         )
         self.de_seg1_seg2_seg3_lambda = result[0]
         self.de_seg1_seg2_seg3_lambda_list = result[1]
         self.graph_de_seg1_seg2_seg3 = result[2]  # 对应的图
         self.de_seg1_seg2_seg3_edges = result[3]
-
+        # ---------------------------------------------
         # 基于de + nei2 + nei3
         result = delaunay(
-            self.mat,
-            self.coord,
-            nei2=edges_add_nei2(self.coord),
-            nei3=edges_add_nei3(self.coord),
+            self.g_mat,
+            self.g_coord,
+            nei2=edges_add_nei2(self.g_coord),
+            nei3=edges_add_nei3(self.g_coord),
         )
         self.de_nei2_nei3_lambda = result[0]
         self.de_nei2_nei3_lambda_list = result[1]
         self.graph_de_nei2_nei3 = result[2]  # 加邻居的邻居
         self.de_nei2_nei3_edges = result[3]
+        # ---------------------------------------------
 
+
+
+
+        # ---------------------------------------------
         # 基于非完全图的距离矩阵
         # Python中的可变类型在作为参数传递给函数时，因为传递的是对象的引用而不是其副本。
         # 当你在函数内部修改这些可变对象时，外部的原始对象也会被修改。
@@ -940,17 +985,17 @@ class instance:
     # 写入坐标
     def write_coord(self):
 
-        with open(f"coord/random{self.n}", "w") as file:
+        with open(f"gaussian/gaussian_coord/random{self.n}.txt", "w") as file:
             # 遍历坐标写入文件
             for i in range(self.n):
-                file.write(f"{self.coord[i,0]} {self.coord[i,1]}\r")
+                file.write(f"{self.g_coord[i,0]} {self.g_coord[i,1]}\r")
 
     # 写入矩阵
     def write_mat(self):
         # 写参数
-        with open(f"complete_graph/mat/random{self.n}.tsp", "w") as file:
+        with open(f"gaussian/gaussian_complete_graph/mat/random{self.n}.tsp", "w") as file:
             file.write(
-                f"NAME: random{self.n}\r\
+                f"NAME: gaussian_random{self.n}\r\
 TYPE: TSP\r\
 DIMENSION: {self.n}\r\
 EDGE_WEIGHT_TYPE: EXPLICIT\r\
@@ -962,15 +1007,15 @@ EDGE_WEIGHT_SECTION\r"
             for i in range(self.n):
                 for j in range(self.n):
                     if i <= j:
-                        file.write(str(self.mat[i, j])[:-2] + "\r")
+                        file.write(str(self.g_mat[i, j])[:-2] + "\r")
 
             file.write("EOF")
 
     # 写入参数文件
     def write_par(self):
-        with open(f"complete_graph/par/random{self.n}.par", "w") as file:
+        with open(f"gaussian/gaussian_complete_graph/par/random{self.n}.par", "w") as file:
             file.write(
-                f"PROBLEM_FILE = complete_graph/mat/random{self.n}.tsp\r\
+                f"PROBLEM_FILE = gaussian/gaussian_complete_graph/mat/random{self.n}.tsp\r\
 INITIAL_PERIOD = 1000\r\
 MAX_CANDIDATES = 4\r\
 MAX_TRIALS = 1000\r\
@@ -979,12 +1024,12 @@ PATCHING_C = 6\r\
 PATCHING_A = 5\r\
 RECOMBINATION = GPX2\r\
 RUNS = 10\r\
-TOUR_FILE = complete_graph/tour/random{self.n}.txt"
+TOUR_FILE = gaussian/gaussian_complete_graph/tour/random{self.n}.txt"
             )
 
     # LKH
     def LKH(self):
-        subprocess.run(["LKH-2.exe", f"complete_graph/par/random{self.n}.par"])
+        subprocess.run(["LKH-2.exe", f"gaussian/gaussian_complete_graph/par/random{self.n}.par"])
 
     # 用gurobi最优化
     def gurobi(self, lambda_list=None):
@@ -1162,7 +1207,9 @@ def main(i):
     print(i, ins.seg1_nei2_seg3_edges)
 
 
+
 if __name__ == "__main__":
-    #dic = read_json()
-    for i in range(99,100):
+    for i in range(5,201):
+        print(i)
         ins = instance(i)
+        ins.LKH()

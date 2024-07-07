@@ -1,6 +1,6 @@
 # 说明
 
-## compete_graph 
+## compete_graph 坐标均匀分布
 基于完全图用LKH解tsp，其中random73的tour更换成找到的更好的解
 
 ## graph_missing_edges 
