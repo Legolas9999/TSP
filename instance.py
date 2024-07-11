@@ -9,7 +9,7 @@ from scipy.spatial import Voronoi, voronoi_plot_2d
 import matplotlib.pyplot as plt
 import json
 import time
-import multiprocessing
+
 
 def gaussian_coord(n):
     #设定随机种子
@@ -799,7 +799,7 @@ def edges_add_nei3(cities_coord):
 # 画出最佳路径图
 def optimal_tour_graph(num_city):
     # 从文件读取最佳路径
-    with open(f"complete_graph/tour/random{num_city}.txt", "r") as file:
+    with open(f"gaussian/gaussian_complete_graph/tour/random{num_city}.txt", "r") as file:
         # 读取tour
         tour = file.readlines()[6:-2]
 
@@ -865,12 +865,12 @@ def creat_dump_data_dic():
             )[0],
         }
 
-    json.dump(dic, open("data_seg_nei.json", "w"), indent=4)
+    json.dump(dic, open("gaussain_graph_data.json", "w"), indent=4)
 
 
 # 读取数据json
 def read_json():
-    with open("data_seg_nei.json", "r") as file:
+    with open("gaussian_graph_data.json", "r") as file:
         dic = json.load(file)
     return dic
 
@@ -936,7 +936,7 @@ class instance:
         #self.graph_pos = {i: self.coord[i] for i in range(self.n)}
         # ---------------------------------------------
         # 最优路径图
-        #self.graph_optimal_tour = optimal_tour_graph(self.n)
+        self.graph_optimal_tour = optimal_tour_graph(self.n)
         # ---------------------------------------------
         # 普通的delauny
         result = delaunay(self.g_mat, self.g_coord)
@@ -1202,14 +1202,16 @@ TOUR_FILE = gaussian/gaussian_complete_graph/tour/random{self.n}.txt"
             return None
 
 
-def main(i):
-    ins = instance(i)
-    print(i, ins.seg1_nei2_seg3_edges)
+def main():
+    dic = read_json()
+    for i in dic:
+        if dic[i]['de_nei2_nei3_is_subgraph'] != True:
+            print(i)
+        print(i)
+    pass
 
 
 
 if __name__ == "__main__":
-    for i in range(5,201):
-        print(i)
-        ins = instance(i)
-        ins.LKH()
+    main()
+        
