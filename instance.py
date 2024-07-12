@@ -898,17 +898,21 @@ def creat_dis_mat_missing_edges(n, G_add_edges, dis_mat):
 # 比较最优路径是否一致，完全图的最优路径 和 非完全图的最优路径
 def compare_tour(n):
 
-    with open(f"complete_graph/tour/random{n}.txt", "r") as file:
-        tour_complete = file.readlines()[6:-2]
+    with open(f"gaussian/gaussian_complete_graph/tour/random{n}.txt", "r") as file:
+        content = file.readlines()
+        tour_complete = content[6:-2]
+        tour_complete_energy = int(content[0].rsplit('.', 2)[1])
 
-    with open(f"graph_missing_edges/tour/random{n}.txt", "r") as file:
-        tour_missing = file.readlines()[6:-2]
+    with open(f"gaussian/gaussian_uncomplete_graph/de_nei2_nei3/tour/random{n}.txt", "r") as file:
+        content = file.readlines()
+        tour_missing = content[6:-2]
+        tour_missing_energy = int(content[0].rsplit('.', 2)[1])
 
     tour_complete = list(map(lambda x: int(x), tour_complete))
     tour_missing = list(map(lambda x: int(x), tour_missing))
 
     # print(tour_complete,tour_missing)
-    return tour_complete, tour_missing
+    return tour_complete == tour_missing , tour_complete_energy, tour_missing_energy
 
 def uniform_coord(n):
     # 随机数种子选取 确保每次生成的一致
@@ -978,9 +982,9 @@ class instance:
         # 基于非完全图的距离矩阵
         # Python中的可变类型在作为参数传递给函数时，因为传递的是对象的引用而不是其副本。
         # 当你在函数内部修改这些可变对象时，外部的原始对象也会被修改。
-        # self.mat_missing_edges = creat_dis_mat_missing_edges(
-        #     self.n, self.graph_seg1_nei2, self.mat.copy()
-        # )
+        self.g_mat_missing_edges = creat_dis_mat_missing_edges(
+            self.n, self.graph_de_nei2_nei3, self.g_mat.copy()
+        )
 
     # 写入坐标
     def write_coord(self):
@@ -993,9 +997,9 @@ class instance:
     # 写入矩阵
     def write_mat(self):
         # 写参数
-        with open(f"gaussian/gaussian_complete_graph/mat/random{self.n}.tsp", "w") as file:
+        with open(f"gaussian/gaussian_uncomplete_graph/de_nei2_nei3/mat/random{self.n}.tsp", "w") as file:
             file.write(
-                f"NAME: gaussian_random{self.n}\r\
+                f"NAME: gaussian_missing_edges_with_de_nei2_nei3_random{self.n}\r\
 TYPE: TSP\r\
 DIMENSION: {self.n}\r\
 EDGE_WEIGHT_TYPE: EXPLICIT\r\
@@ -1007,15 +1011,15 @@ EDGE_WEIGHT_SECTION\r"
             for i in range(self.n):
                 for j in range(self.n):
                     if i <= j:
-                        file.write(str(self.g_mat[i, j])[:-2] + "\r")
+                        file.write(str(self.g_mat_missing_edges[i, j])[:-2] + "\r")
 
             file.write("EOF")
 
     # 写入参数文件
     def write_par(self):
-        with open(f"gaussian/gaussian_complete_graph/par/random{self.n}.par", "w") as file:
+        with open(f"gaussian/gaussian_uncomplete_graph/de_nei2_nei3/par/random{self.n}.par", "w") as file:
             file.write(
-                f"PROBLEM_FILE = gaussian/gaussian_complete_graph/mat/random{self.n}.tsp\r\
+                f"PROBLEM_FILE = gaussian/gaussian_uncomplete_graph/de_nei2_nei3/mat/random{self.n}.tsp\r\
 INITIAL_PERIOD = 1000\r\
 MAX_CANDIDATES = 4\r\
 MAX_TRIALS = 1000\r\
@@ -1024,12 +1028,12 @@ PATCHING_C = 6\r\
 PATCHING_A = 5\r\
 RECOMBINATION = GPX2\r\
 RUNS = 10\r\
-TOUR_FILE = gaussian/gaussian_complete_graph/tour/random{self.n}.txt"
+TOUR_FILE = gaussian/gaussian_uncomplete_graph/de_nei2_nei3/tour/random{self.n}.txt"
             )
 
     # LKH
     def LKH(self):
-        subprocess.run(["LKH-2.exe", f"gaussian/gaussian_complete_graph/par/random{self.n}.par"])
+        subprocess.run(["LKH-2.exe", f"gaussian/gaussian_uncomplete_graph/de_nei2_nei3/par/random{self.n}.par"])
 
     # 用gurobi最优化
     def gurobi(self, lambda_list=None):
@@ -1203,11 +1207,20 @@ TOUR_FILE = gaussian/gaussian_complete_graph/tour/random{self.n}.txt"
 
 
 def main():
-    dic = read_json()
-    for i in dic:
-        if dic[i]['de_nei2_nei3_is_subgraph'] != True:
-            print(i)
-        print(i)
+    n = 0
+    c = 0
+    for i in range(5,201):
+      
+        result = compare_tour(i)
+        # 路径不一致的
+        if not result[0]:
+            n += 1
+            if result[1] > result[2]:
+                c += 1
+                print(i)
+
+    print(n , c)
+
     pass
 
 

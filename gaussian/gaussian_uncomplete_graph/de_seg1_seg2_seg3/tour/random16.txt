@@ -1,0 +1,24 @@
+NAME : gaussian_missing_edges_with_de_seg1_seg2_seg3_random16.2868.tour
+COMMENT : Length = 2868
+COMMENT : Found by LKH [Keld Helsgaun] Fri Jul 12 16:32:19 2024
+TYPE : TOUR
+DIMENSION : 16
+TOUR_SECTION
+1
+5
+16
+9
+3
+12
+7
+13
+6
+2
+15
+8
+10
+14
+4
+11
+-1
+EOF

@@ -1,0 +1,51 @@
+NAME : gaussian_missing_edges_with_de_nei2_nei3_random43.4613.tour
+COMMENT : Length = 4613
+COMMENT : Found by LKH [Keld Helsgaun] Fri Jul 12 17:07:38 2024
+TYPE : TOUR
+DIMENSION : 43
+TOUR_SECTION
+1
+9
+2
+41
+29
+5
+20
+26
+22
+11
+16
+23
+7
+30
+31
+38
+12
+19
+42
+4
+28
+24
+40
+17
+14
+10
+43
+21
+25
+36
+34
+33
+15
+27
+6
+39
+8
+13
+3
+18
+35
+32
+37
+-1
+EOF
