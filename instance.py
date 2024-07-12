@@ -926,12 +926,12 @@ class instance:
         # 城市个数
         self.n = n
         # ---------------------------------------------
-        # 城市坐标
+        # 城市坐标 平均分布
         self.coord = uniform_coord(self.n)
         # 距离矩阵
         self.mat = dis_mat(self.coord)
         # ---------------------------------------------
-        # 城市坐标
+        # 城市坐标 正态分布
         self.g_coord = gaussian_coord(self.n)
         # 距离矩阵
         self.g_mat = dis_mat(self.g_coord)
@@ -1207,20 +1207,28 @@ TOUR_FILE = gaussian/gaussian_uncomplete_graph/de_nei2_nei3/tour/random{self.n}.
 
 
 def main():
-    n = 0
-    c = 0
-    for i in range(5,201):
+    # n = 0
+    # c = 0
+    # for i in range(5,201):
       
-        result = compare_tour(i)
-        # 路径不一致的
-        if not result[0]:
-            n += 1
-            if result[1] > result[2]:
-                c += 1
-                print(i)
+    #     result = compare_tour(i)
+    #     # 路径不一致的
+    #     if not result[0]:
+    #         n += 1
+    #         if result[1] > result[2]:
+    #             c += 1
+    #             print(i)
 
-    print(n , c)
+    # print(n , c)
+    ins = instance(149)
+    mat = ins.g_coord
+    with open("random149.tsp", 'w') as file:
 
+        for i in range(149):
+            file.writelines(str(i+1) + ' ' + str(mat[i, 0]) + ' ' + str(mat[i, 1]) + '\r')
+
+
+ 
     pass
 
 
