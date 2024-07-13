@@ -1,24 +1,23 @@
 import numpy as np
 import matplotlib.pyplot as plt
-from sklearn.mixture import GaussianMixture
 
-# 定义多个城市中心及其方差
-centers = [(20, 30), (50, 50), (80, 80)]
-std_devs = [5, 10, 7]
-weights = [0.3, 0.5, 0.2]  # 每个中心的权重
+# 设置随机种子以确保结果可重复
+np.random.seed(0)
 
-# 生成数据点
-n_samples = 1000
-X = np.zeros((n_samples, 2))
+# 生成符合正态分布的城市坐标
+center_x, center_y = 100, 100  # 中心点
+std_dev_x, std_dev_y = 10, 20  # 标准差
 
-for i, (center, std, weight) in enumerate(zip(centers, std_devs, weights)):
-    count = int(weight * n_samples)
-    X[i * count: (i + 1) * count, 0] = np.random.normal(center[0], std, count)
-    X[i * count: (i + 1) * count, 1] = np.random.normal(center[1], std, count)
+# 生成1000个城市坐标
+num_points = 200
+x_coords = np.random.normal(center_x, std_dev_x, num_points)
+y_coords = np.random.normal(center_y, std_dev_y, num_points)
 
-# 绘制城市坐标分布图
-plt.scatter(X[:, 0], X[:, 1], alpha=0.5)
-plt.title('City Coordinates - Mixture of Gaussians')
+# 绘制城市坐标
+plt.figure(figsize=(10, 6))
+plt.scatter(x_coords, y_coords)
+plt.title('City Coordinates Generated from Normal Distribution')
 plt.xlabel('X Coordinate')
 plt.ylabel('Y Coordinate')
+#plt.grid(True)
 plt.show()

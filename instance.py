@@ -870,7 +870,7 @@ def creat_dump_data_dic():
 
 # 读取数据json
 def read_json():
-    with open("gaussian_graph_data.json", "r") as file:
+    with open("gaussian/gaussian_graph_data.json", "r") as file:
         dic = json.load(file)
     return dic
 
@@ -1207,29 +1207,10 @@ TOUR_FILE = gaussian/gaussian_uncomplete_graph/de_nei2_nei3/tour/random{self.n}.
 
 
 def main():
-    # n = 0
-    # c = 0
-    # for i in range(5,201):
-      
-    #     result = compare_tour(i)
-    #     # 路径不一致的
-    #     if not result[0]:
-    #         n += 1
-    #         if result[1] > result[2]:
-    #             c += 1
-    #             print(i)
-
-    # print(n , c)
-    ins = instance(149)
-    mat = ins.g_coord
-    with open("random149.tsp", 'w') as file:
-
-        for i in range(149):
-            file.writelines(str(i+1) + ' ' + str(mat[i, 0]) + ' ' + str(mat[i, 1]) + '\r')
-
-
- 
     pass
+    dic = read_json()
+    for i in range(5, 201):
+        print(dic[str(i)]['de_nei2_nei3_edges'])
 
 
 
