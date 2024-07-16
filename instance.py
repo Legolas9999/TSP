@@ -1035,6 +1035,11 @@ TOUR_FILE = gaussian/gaussian_uncomplete_graph/de_nei2_nei3/tour/random{self.n}.
     def LKH(self):
         subprocess.run(["LKH-2.exe", f"gaussian/gaussian_uncomplete_graph/de_nei2_nei3/par/random{self.n}.par"])
 
+    # LKH
+    @staticmethod
+    def static_LKH():
+        subprocess.run(["LKH-2.exe", f"Tnm/Tnm10000.par"])
+
     # 用gurobi最优化
     def gurobi(self, lambda_list=None):
 
@@ -1207,10 +1212,12 @@ TOUR_FILE = gaussian/gaussian_uncomplete_graph/de_nei2_nei3/tour/random{self.n}.
 
 
 def main():
-    pass
-    dic = read_json()
-    for i in range(5, 201):
-        print(dic[str(i)]['de_nei2_nei3_edges'])
+    # pass
+    # dic = read_json()
+    # for i in range(5, 201):
+    #     print(dic[str(i)]['de_nei2_nei3_edges'])
+
+    instance.static_LKH()
 
 
 
