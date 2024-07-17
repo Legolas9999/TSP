@@ -799,12 +799,16 @@ def edges_add_nei3(cities_coord):
 # 画出最佳路径图
 def optimal_tour_graph(num_city):
     # 从文件读取最佳路径
-    with open(f"gaussian/gaussian_complete_graph/tour/random{num_city}.txt", "r") as file:
+    with open(f"even/even_complete_graph/tour/random{num_city}.txt", "r") as file:
+        result = file.readlines()
         # 读取tour
-        tour = file.readlines()[6:-2]
+        tour = result[6:-2]
 
-        # 格式转换，去除换行符
-        tour = list(map(lambda x: int(x) - 1, tour))
+        # 获取最优路径长度
+        length = int(result[0].rsplit('.', 2)[1])
+
+    # 格式转换，去除换行符
+    tour = list(map(lambda x: int(x) - 1, tour))
 
     # 创建图
     G = nx.Graph()
@@ -813,7 +817,7 @@ def optimal_tour_graph(num_city):
     edges = [(tour[i], tour[(i + 1) % num_city]) for i in range(num_city)]
     G.add_edges_from(edges)
 
-    return G
+    return G, tour, length
 
 
 # 判断是否是子图，只考虑边(最优路径图，添加边的图)
@@ -895,6 +899,20 @@ def creat_dis_mat_missing_edges(n, G_add_edges, dis_mat):
     return dis_mat
 
 
+# 基于原有距离矩阵生成missing edges的距离矩阵，用999999
+def missing_edges(n, G_add_edges):
+    # 完全图的边
+    complete_edges = [{i, j} for i in range(n) for j in range(i + 1, n)]
+
+    # 存在的边
+    exist_edges = list(map(lambda x: set(x), G_add_edges.edges()))
+
+    # 求基于完全图消失的边
+    missing_edges = list(filter(lambda x: x not in exist_edges, complete_edges))
+
+    return missing_edges
+
+
 # 比较最优路径是否一致，完全图的最优路径 和 非完全图的最优路径
 def compare_tour(n):
 
@@ -931,19 +949,22 @@ class instance:
         # 距离矩阵
         self.mat = dis_mat(self.coord)
         # ---------------------------------------------
-        # 城市坐标 正态分布
-        self.g_coord = gaussian_coord(self.n)
-        # 距离矩阵
-        self.g_mat = dis_mat(self.g_coord)
+        # # 城市坐标 正态分布
+        # self.g_coord = gaussian_coord(self.n)
+        # # 距离矩阵
+        # self.g_mat = dis_mat(self.g_coord)
         # ---------------------------------------------
         # 为了画图的参数
         #self.graph_pos = {i: self.coord[i] for i in range(self.n)}
         # ---------------------------------------------
         # 最优路径图
-        self.graph_optimal_tour = optimal_tour_graph(self.n)
+        result = optimal_tour_graph(self.n)
+        self.graph_optimal_tour = result[0]
+        self.optimal_tour = result[1]
+        self.optimal_length = result[2]
         # ---------------------------------------------
         # 普通的delauny
-        result = delaunay(self.g_mat, self.g_coord)
+        result = delaunay(self.mat, self.coord)
         self.de_lambda = result[0]
         self.de_lambda_list = result[1]
         self.graph_de = result[2]  # 德劳内三角分割图
@@ -951,11 +972,11 @@ class instance:
         # ---------------------------------------------
         # 基于de + seg1 + seg2 + seg3
         result = delaunay(
-            self.g_mat,
-            self.g_coord,
-            seg1=edges_add_seg1(self.g_coord),
-            seg2=edges_add_seg2(self.g_coord),
-            seg3=edges_add_seg3(self.g_coord),
+            self.mat,
+            self.coord,
+            seg1=edges_add_seg1(self.coord),
+            seg2=edges_add_seg2(self.coord),
+            seg3=edges_add_seg3(self.coord),
         )
         self.de_seg1_seg2_seg3_lambda = result[0]
         self.de_seg1_seg2_seg3_lambda_list = result[1]
@@ -964,10 +985,10 @@ class instance:
         # ---------------------------------------------
         # 基于de + nei2 + nei3
         result = delaunay(
-            self.g_mat,
-            self.g_coord,
-            nei2=edges_add_nei2(self.g_coord),
-            nei3=edges_add_nei3(self.g_coord),
+            self.mat,
+            self.coord,
+            nei2=edges_add_nei2(self.coord),
+            nei3=edges_add_nei3(self.coord),
         )
         self.de_nei2_nei3_lambda = result[0]
         self.de_nei2_nei3_lambda_list = result[1]
@@ -982,8 +1003,8 @@ class instance:
         # 基于非完全图的距离矩阵
         # Python中的可变类型在作为参数传递给函数时，因为传递的是对象的引用而不是其副本。
         # 当你在函数内部修改这些可变对象时，外部的原始对象也会被修改。
-        self.g_mat_missing_edges = creat_dis_mat_missing_edges(
-            self.n, self.graph_de_nei2_nei3, self.g_mat.copy()
+        self.mat_missing_edges = creat_dis_mat_missing_edges(
+            self.n, self.graph_de_nei2_nei3, self.mat.copy()
         )
 
     # 写入坐标
@@ -992,7 +1013,7 @@ class instance:
         with open(f"gaussian/gaussian_coord/random{self.n}.txt", "w") as file:
             # 遍历坐标写入文件
             for i in range(self.n):
-                file.write(f"{self.g_coord[i,0]} {self.g_coord[i,1]}\r")
+                file.write(f"{self.coord[i,0]} {self.coord[i,1]}\r")
 
     # 写入矩阵
     def write_mat(self):
@@ -1011,7 +1032,7 @@ EDGE_WEIGHT_SECTION\r"
             for i in range(self.n):
                 for j in range(self.n):
                     if i <= j:
-                        file.write(str(self.g_mat_missing_edges[i, j])[:-2] + "\r")
+                        file.write(str(self.mat_missing_edges[i, j])[:-2] + "\r")
 
             file.write("EOF")
 
@@ -1212,12 +1233,12 @@ TOUR_FILE = gaussian/gaussian_uncomplete_graph/de_nei2_nei3/tour/random{self.n}.
 
 
 def main():
-    # pass
+    pass
     # dic = read_json()
     # for i in range(5, 201):
     #     print(dic[str(i)]['de_nei2_nei3_edges'])
 
-    instance.static_LKH()
+    #instance.static_LKH()
 
 
 
