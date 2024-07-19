@@ -2,6 +2,7 @@ from instance import instance, missing_edges
 import networkx as nx
 from pprint import pprint
 
+# 不存在的边的两个端点，如果在最优路径里绕行，相关数据
 def prove_seg(ins, total_info):
     # 不存在的边
     edges = missing_edges(ins.n, ins.graph_de_seg1_seg2_seg3)
