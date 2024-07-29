@@ -799,7 +799,7 @@ def edges_add_nei3(cities_coord):
 # 画出最佳路径图
 def optimal_tour_graph(num_city):
     # 从文件读取最佳路径
-    with open(f"even/even_complete_graph/tour/random{num_city}.txt", "r") as file:
+    with open(f"so_big_ins/random{num_city}.txt", "r") as file:
         result = file.readlines()
         # 读取tour
         tour = result[6:-2]
@@ -935,7 +935,7 @@ def compare_tour(n):
 def uniform_coord(n):
     # 随机数种子选取 确保每次生成的一致
     np.random.seed(n)
-    coord = np.random.random((n, 2)) * 100
+    coord = np.random.random((n, 2)) * 10000
 
     return coord
 
@@ -976,7 +976,7 @@ class instance:
             self.coord,
             seg1=edges_add_seg1(self.coord),
             seg2=edges_add_seg2(self.coord),
-            seg3=edges_add_seg3(self.coord),
+            seg3=edges_add_seg3(self.coord)
         )
         self.de_seg1_seg2_seg3_lambda = result[0]
         self.de_seg1_seg2_seg3_lambda_list = result[1]
@@ -988,7 +988,7 @@ class instance:
             self.mat,
             self.coord,
             nei2=edges_add_nei2(self.coord),
-            nei3=edges_add_nei3(self.coord),
+            nei3=edges_add_nei3(self.coord)
         )
         self.de_nei2_nei3_lambda = result[0]
         self.de_nei2_nei3_lambda_list = result[1]
@@ -1000,17 +1000,17 @@ class instance:
 
 
         # ---------------------------------------------
-        # 基于非完全图的距离矩阵
-        # Python中的可变类型在作为参数传递给函数时，因为传递的是对象的引用而不是其副本。
-        # 当你在函数内部修改这些可变对象时，外部的原始对象也会被修改。
-        self.mat_missing_edges = creat_dis_mat_missing_edges(
-            self.n, self.graph_de_nei2_nei3, self.mat.copy()
-        )
+        # # 基于非完全图的距离矩阵
+        # # Python中的可变类型在作为参数传递给函数时，因为传递的是对象的引用而不是其副本。
+        # # 当你在函数内部修改这些可变对象时，外部的原始对象也会被修改。
+        # self.mat_missing_edges = creat_dis_mat_missing_edges(
+        #     self.n, self.graph_de_nei2_nei3, self.mat.copy()
+        # )
 
     # 写入坐标
     def write_coord(self):
 
-        with open(f"gaussian/gaussian_coord/random{self.n}.txt", "w") as file:
+        with open(f"so_big_ins/random{self.n}.txt", "w") as file:
             # 遍历坐标写入文件
             for i in range(self.n):
                 file.write(f"{self.coord[i,0]} {self.coord[i,1]}\r")
@@ -1018,9 +1018,9 @@ class instance:
     # 写入矩阵
     def write_mat(self):
         # 写参数
-        with open(f"gaussian/gaussian_uncomplete_graph/de_nei2_nei3/mat/random{self.n}.tsp", "w") as file:
+        with open(f"so_big_ins/random{self.n}.tsp", "w") as file:
             file.write(
-                f"NAME: gaussian_missing_edges_with_de_nei2_nei3_random{self.n}\r\
+                f"NAME: so_big_ins_random{self.n}\r\
 TYPE: TSP\r\
 DIMENSION: {self.n}\r\
 EDGE_WEIGHT_TYPE: EXPLICIT\r\
@@ -1032,15 +1032,15 @@ EDGE_WEIGHT_SECTION\r"
             for i in range(self.n):
                 for j in range(self.n):
                     if i <= j:
-                        file.write(str(self.mat_missing_edges[i, j])[:-2] + "\r")
+                        file.write(str(self.mat[i, j])[:-2] + "\r")
 
             file.write("EOF")
 
     # 写入参数文件
     def write_par(self):
-        with open(f"gaussian/gaussian_uncomplete_graph/de_nei2_nei3/par/random{self.n}.par", "w") as file:
+        with open(f"so_big_ins/random{self.n}.par", "w") as file:
             file.write(
-                f"PROBLEM_FILE = gaussian/gaussian_uncomplete_graph/de_nei2_nei3/mat/random{self.n}.tsp\r\
+                f"PROBLEM_FILE = so_big_ins/random{self.n}.tsp\r\
 INITIAL_PERIOD = 1000\r\
 MAX_CANDIDATES = 4\r\
 MAX_TRIALS = 1000\r\
@@ -1049,17 +1049,17 @@ PATCHING_C = 6\r\
 PATCHING_A = 5\r\
 RECOMBINATION = GPX2\r\
 RUNS = 10\r\
-TOUR_FILE = gaussian/gaussian_uncomplete_graph/de_nei2_nei3/tour/random{self.n}.txt"
+TOUR_FILE = so_big_ins/random{self.n}.txt"
             )
 
     # LKH
     def LKH(self):
-        subprocess.run(["LKH-2.exe", f"gaussian/gaussian_uncomplete_graph/de_nei2_nei3/par/random{self.n}.par"])
+        subprocess.run(["LKH-2.exe", f"so_big_ins/random{self.n}.par"])
 
     # LKH
     @staticmethod
     def static_LKH():
-        subprocess.run(["LKH-2.exe", f"Tnm/Tnm10000.par"])
+        subprocess.run(["LKH-2.exe", f"so_big_ins/random10000.par"])
 
     # 用gurobi最优化
     def gurobi(self, lambda_list=None):
@@ -1234,12 +1234,17 @@ TOUR_FILE = gaussian/gaussian_uncomplete_graph/de_nei2_nei3/tour/random{self.n}.
 
 def main():
     pass
-    # dic = read_json()
-    # for i in range(5, 201):
-    #     print(dic[str(i)]['de_nei2_nei3_edges'])
+    ins = instance(10000)
+    dic = {
+        'de_lambda':ins.de_lambda,
+        'de_seg_lambda':ins.de_seg1_seg2_seg3_lambda,
+        'de_nei_lambda':ins.de_nei2_nei3_lambda
+    }
+    print(dic)
 
-    #instance.static_LKH()
-
+    print('de:' ,is_subgraph(ins.graph_optimal_tour,ins.graph_de)[0])
+    print('de_seg:' ,is_subgraph(ins.graph_optimal_tour,ins.graph_de_seg1_seg2_seg3)[0])
+    print('de_nei:' ,is_subgraph(ins.graph_optimal_tour,ins.graph_de_nei2_nei3)[0])
 
 
 if __name__ == "__main__":
