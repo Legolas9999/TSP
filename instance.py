@@ -799,7 +799,7 @@ def edges_add_nei3(cities_coord):
 # 画出最佳路径图
 def optimal_tour_graph(num_city):
     # 从文件读取最佳路径
-    with open(f"so_big_ins/random{num_city}.txt", "r") as file:
+    with open(f"even/even_complete_graph/tour/random{num_city}.txt", "r") as file:
         result = file.readlines()
         # 读取tour
         tour = result[6:-2]
@@ -935,9 +935,33 @@ def compare_tour(n):
 def uniform_coord(n):
     # 随机数种子选取 确保每次生成的一致
     np.random.seed(n)
-    coord = np.random.random((n, 2)) * 10000
+    coord = np.random.random((n, 2)) * 100
 
     return coord
+
+
+
+# 输入最佳路径图
+def lambda_based_on_optimal(tour, mat):
+    n = len(tour)
+    lambda_list = []
+    for i, city in enumerate(tour):
+        node_right = tour[(i + 1) % n]
+        node_left = tour[i - 1]
+
+        # 求当前节点的lambda
+        current_lambda = (mat[node_left, city] + mat[city, node_right]) / 2
+        current_lambda = math.floor(current_lambda)
+
+        # 添加到list
+        lambda_list.append(current_lambda)
+
+    # 取最大值 并 +1
+    max_lambda = max(lambda_list) + 1
+
+    return max_lambda
+
+
 
 class instance:
     def __init__(self, n):
@@ -962,6 +986,7 @@ class instance:
         self.graph_optimal_tour = result[0]
         self.optimal_tour = result[1]
         self.optimal_length = result[2]
+        self.optimal_lambda = lambda_based_on_optimal(self.optimal_tour, self.mat)
         # ---------------------------------------------
         # 普通的delauny
         result = delaunay(self.mat, self.coord)
@@ -1085,7 +1110,7 @@ TOUR_FILE = so_big_ins/random{self.n}.txt"
         if lambda_list == None:
             # 直接添加约束到obj，城市约束
             for i in range(self.n):
-                obj_expr += self.seg1_lambda * (
+                obj_expr += self.optimal_lambda * (
                     (sum(x[i, t] for t in range(self.n)) - 1) ** 2
                 )
 
@@ -1099,7 +1124,7 @@ TOUR_FILE = so_big_ins/random{self.n}.txt"
 
         # 直接添加约束到obj，时间约束
         for t in range(self.n):
-            obj_expr += self.seg1_lambda * (
+            obj_expr += self.optimal_lambda * (
                 (sum(x[i, t] for i in range(self.n)) - 1) ** 2
             )
 
@@ -1113,7 +1138,7 @@ TOUR_FILE = so_big_ins/random{self.n}.txt"
         # model.setParam('Cutoff', 202)
 
         # 设置日志文件名
-        log_file = f"log_3/random{self.n}.log"
+        log_file = f"gurobi_optimal_tour_log/gurobi_log/random{self.n}.log"
 
         # 设置求解器参数，将日志输出到文件
         model.Params.LogFile = log_file
@@ -1140,13 +1165,35 @@ TOUR_FILE = so_big_ins/random{self.n}.txt"
                 un_time += 1
 
         # 记录
-        with open(f"log_3/random{self.n}.log", "a") as file:
+        with open(f"gurobi_optimal_tour_log/gurobi_log/random{self.n}.log", "a") as file:
             file.write(f"\rcity broken:{un_city},time broken:{un_time}\r")
 
-            # 记录当前的变量矩阵
-            for i in range(self.n):
-                x_value = [int(x[i, t].x) for t in range(self.n)]
-                file.write("\r" + str(x_value))
+        # 记录当前的变量矩阵
+        solution_mat = np.full((self.n, self.n), 2)
+        for i in range(self.n):
+            for j in range(self.n):
+                solution_mat[i, j] = int(x[i, j].x)
+
+
+        dic = {}
+        solution_mat_list = solution_mat.tolist()
+        # ndarray不能直接写入json
+        dic['solution_mat'] = solution_mat_list
+        dic['best_solution'] = model.ObjVal
+
+        json.dump(dic, open(f"gurobi_optimal_tour_log/solution_log/random{self.n}.json", "w"), indent=4)
+
+
+
+
+    def get_solution_mat(self):
+        # 从json中读取当前解的矩阵
+        with open(f"gurobi_optimal_tour_log/solution_log/random{self.n}.json", "r") as file:
+            dic = json.load(file)
+            array = np.array(dic['solution_mat'])
+        return array
+
+
 
     # 用gurobi解TSP
     def gurobi_LKH(self):
@@ -1234,17 +1281,26 @@ TOUR_FILE = so_big_ins/random{self.n}.txt"
 
 def main():
     pass
-    ins = instance(10000)
-    dic = {
-        'de_lambda':ins.de_lambda,
-        'de_seg_lambda':ins.de_seg1_seg2_seg3_lambda,
-        'de_nei_lambda':ins.de_nei2_nei3_lambda
-    }
-    print(dic)
+    # ins = instance(10000)
+    # dic = {
+    #     'de_lambda':ins.de_lambda,
+    #     'de_seg_lambda':ins.de_seg1_seg2_seg3_lambda,
+    #     'de_nei_lambda':ins.de_nei2_nei3_lambda
+    # }
+    # print(dic)
 
-    print('de:' ,is_subgraph(ins.graph_optimal_tour,ins.graph_de)[0])
-    print('de_seg:' ,is_subgraph(ins.graph_optimal_tour,ins.graph_de_seg1_seg2_seg3)[0])
-    print('de_nei:' ,is_subgraph(ins.graph_optimal_tour,ins.graph_de_nei2_nei3)[0])
+    # print('de:' ,is_subgraph(ins.graph_optimal_tour,ins.graph_de)[0])
+    # print('de_seg:' ,is_subgraph(ins.graph_optimal_tour,ins.graph_de_seg1_seg2_seg3)[0])
+    # print('de_nei:' ,is_subgraph(ins.graph_optimal_tour,ins.graph_de_nei2_nei3)[0])
+
+    for i in range(5, 6):
+        ins = instance(i)
+        ins.gurobi()
+
+
+
+
+
 
 
 if __name__ == "__main__":

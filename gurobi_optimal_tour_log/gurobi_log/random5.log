@@ -1,0 +1,491 @@
+city broken:0,time broken:0city broken:0,time broken:0city broken:0,time broken:0city broken:0,time broken:0city broken:0,time broken:0
+Gurobi 11.0.2 (win64) logging started Mon Aug  5 14:52:13 2024
+
+Set parameter LogFile to value "gurobi_optimal_tour_log/gurobi_log/random5.log"
+Gurobi Optimizer version 11.0.2 build v11.0.2rc0 (win64 - Windows 11.0 (22631.2))
+
+CPU model: Intel(R) Core(TM) i3-9100 CPU @ 3.60GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 4 physical cores, 4 logical processors, using up to 4 threads
+
+Optimize a model with 0 rows, 25 columns and 0 nonzeros
+Model fingerprint: 0x20274d91
+Model has 225 quadratic objective terms
+Variable types: 0 continuous, 25 integer (25 binary)
+Coefficient statistics:
+  Matrix range     [0e+00, 0e+00]
+  Objective range  [3e+02, 3e+02]
+  QObjective range [1e+01, 3e+02]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [0e+00, 0e+00]
+Found heuristic solution: objective 660.0000000
+Found heuristic solution: objective 202.0000000
+Presolve time: 0.01s
+Presolved: 200 rows, 225 columns, 600 nonzeros
+Variable types: 0 continuous, 225 integer (225 binary)
+
+Root relaxation: objective -9.900000e+02, 29 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 -990.00000    0   25  202.00000 -990.00000   590%     -    0s
+     0     0 -206.00000    0   32  202.00000 -206.00000   202%     -    0s
+     0     0 -138.00000    0   30  202.00000 -138.00000   168%     -    0s
+     0     0   -8.00000    0   28  202.00000   -8.00000   104%     -    0s
+     0     0   -4.83333    0   28  202.00000   -4.83333   102%     -    0s
+     0     2   25.00000    0   28  202.00000   25.00000  87.6%     -    0s
+
+Cutting planes:
+  Cover: 6
+  MIR: 1
+  BQP: 21
+
+Explored 26 nodes (558 simplex iterations) in 0.14 seconds (0.05 work units)
+Thread count was 4 (of 4 available processors)
+
+Solution count 2: 202 660 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 2.020000000000e+02, best bound 2.020000000000e+02, gap 0.0000%
+city broken:0,time broken:0
+Gurobi 11.0.2 (win64) logging started Mon Aug  5 14:54:12 2024
+
+Set parameter LogFile to value "gurobi_optimal_tour_log/gurobi_log/random5.log"
+Gurobi Optimizer version 11.0.2 build v11.0.2rc0 (win64 - Windows 11.0 (22631.2))
+
+CPU model: Intel(R) Core(TM) i3-9100 CPU @ 3.60GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 4 physical cores, 4 logical processors, using up to 4 threads
+
+Optimize a model with 0 rows, 25 columns and 0 nonzeros
+Model fingerprint: 0x20274d91
+Model has 225 quadratic objective terms
+Variable types: 0 continuous, 25 integer (25 binary)
+Coefficient statistics:
+  Matrix range     [0e+00, 0e+00]
+  Objective range  [3e+02, 3e+02]
+  QObjective range [1e+01, 3e+02]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [0e+00, 0e+00]
+Found heuristic solution: objective 660.0000000
+Found heuristic solution: objective 202.0000000
+Presolve time: 0.01s
+Presolved: 200 rows, 225 columns, 600 nonzeros
+Variable types: 0 continuous, 225 integer (225 binary)
+
+Root relaxation: objective -9.900000e+02, 29 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 -990.00000    0   25  202.00000 -990.00000   590%     -    0s
+     0     0 -206.00000    0   32  202.00000 -206.00000   202%     -    0s
+     0     0 -138.00000    0   30  202.00000 -138.00000   168%     -    0s
+     0     0   -8.00000    0   28  202.00000   -8.00000   104%     -    0s
+     0     0   -4.83333    0   28  202.00000   -4.83333   102%     -    0s
+     0     2   25.00000    0   28  202.00000   25.00000  87.6%     -    0s
+
+Cutting planes:
+  Cover: 6
+  MIR: 1
+  BQP: 21
+
+Explored 26 nodes (558 simplex iterations) in 0.14 seconds (0.05 work units)
+Thread count was 4 (of 4 available processors)
+
+Solution count 2: 202 660 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 2.020000000000e+02, best bound 2.020000000000e+02, gap 0.0000%
+city broken:0,time broken:0
+Gurobi 11.0.2 (win64) logging started Mon Aug  5 14:55:56 2024
+
+Set parameter LogFile to value "gurobi_optimal_tour_log/gurobi_log/random5.log"
+Gurobi Optimizer version 11.0.2 build v11.0.2rc0 (win64 - Windows 11.0 (22631.2))
+
+CPU model: Intel(R) Core(TM) i3-9100 CPU @ 3.60GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 4 physical cores, 4 logical processors, using up to 4 threads
+
+Optimize a model with 0 rows, 25 columns and 0 nonzeros
+Model fingerprint: 0x20274d91
+Model has 225 quadratic objective terms
+Variable types: 0 continuous, 25 integer (25 binary)
+Coefficient statistics:
+  Matrix range     [0e+00, 0e+00]
+  Objective range  [3e+02, 3e+02]
+  QObjective range [1e+01, 3e+02]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [0e+00, 0e+00]
+Found heuristic solution: objective 660.0000000
+Found heuristic solution: objective 202.0000000
+Presolve time: 0.01s
+Presolved: 200 rows, 225 columns, 600 nonzeros
+Variable types: 0 continuous, 225 integer (225 binary)
+
+Root relaxation: objective -9.900000e+02, 29 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 -990.00000    0   25  202.00000 -990.00000   590%     -    0s
+     0     0 -206.00000    0   32  202.00000 -206.00000   202%     -    0s
+     0     0 -138.00000    0   30  202.00000 -138.00000   168%     -    0s
+     0     0   -8.00000    0   28  202.00000   -8.00000   104%     -    0s
+     0     0   -4.83333    0   28  202.00000   -4.83333   102%     -    0s
+     0     2   25.00000    0   28  202.00000   25.00000  87.6%     -    0s
+
+Cutting planes:
+  Cover: 6
+  MIR: 1
+  BQP: 21
+
+Explored 26 nodes (558 simplex iterations) in 0.15 seconds (0.05 work units)
+Thread count was 4 (of 4 available processors)
+
+Solution count 2: 202 660 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 2.020000000000e+02, best bound 2.020000000000e+02, gap 0.0000%
+city broken:0,time broken:0
+Gurobi 11.0.2 (win64) logging started Mon Aug  5 14:56:35 2024
+
+Set parameter LogFile to value "gurobi_optimal_tour_log/gurobi_log/random5.log"
+Gurobi Optimizer version 11.0.2 build v11.0.2rc0 (win64 - Windows 11.0 (22631.2))
+
+CPU model: Intel(R) Core(TM) i3-9100 CPU @ 3.60GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 4 physical cores, 4 logical processors, using up to 4 threads
+
+Optimize a model with 0 rows, 25 columns and 0 nonzeros
+Model fingerprint: 0x20274d91
+Model has 225 quadratic objective terms
+Variable types: 0 continuous, 25 integer (25 binary)
+Coefficient statistics:
+  Matrix range     [0e+00, 0e+00]
+  Objective range  [3e+02, 3e+02]
+  QObjective range [1e+01, 3e+02]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [0e+00, 0e+00]
+Found heuristic solution: objective 660.0000000
+Found heuristic solution: objective 202.0000000
+Presolve time: 0.01s
+Presolved: 200 rows, 225 columns, 600 nonzeros
+Variable types: 0 continuous, 225 integer (225 binary)
+
+Root relaxation: objective -9.900000e+02, 29 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 -990.00000    0   25  202.00000 -990.00000   590%     -    0s
+     0     0 -206.00000    0   32  202.00000 -206.00000   202%     -    0s
+     0     0 -138.00000    0   30  202.00000 -138.00000   168%     -    0s
+     0     0   -8.00000    0   28  202.00000   -8.00000   104%     -    0s
+     0     0   -4.83333    0   28  202.00000   -4.83333   102%     -    0s
+     0     2   25.00000    0   28  202.00000   25.00000  87.6%     -    0s
+
+Cutting planes:
+  Cover: 6
+  MIR: 1
+  BQP: 21
+
+Explored 26 nodes (558 simplex iterations) in 0.14 seconds (0.05 work units)
+Thread count was 4 (of 4 available processors)
+
+Solution count 2: 202 660 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 2.020000000000e+02, best bound 2.020000000000e+02, gap 0.0000%
+city broken:0,time broken:0
+Gurobi 11.0.2 (win64) logging started Mon Aug  5 14:57:20 2024
+
+Set parameter LogFile to value "gurobi_optimal_tour_log/gurobi_log/random5.log"
+Gurobi Optimizer version 11.0.2 build v11.0.2rc0 (win64 - Windows 11.0 (22631.2))
+
+CPU model: Intel(R) Core(TM) i3-9100 CPU @ 3.60GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 4 physical cores, 4 logical processors, using up to 4 threads
+
+Optimize a model with 0 rows, 25 columns and 0 nonzeros
+Model fingerprint: 0x20274d91
+Model has 225 quadratic objective terms
+Variable types: 0 continuous, 25 integer (25 binary)
+Coefficient statistics:
+  Matrix range     [0e+00, 0e+00]
+  Objective range  [3e+02, 3e+02]
+  QObjective range [1e+01, 3e+02]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [0e+00, 0e+00]
+Found heuristic solution: objective 660.0000000
+Found heuristic solution: objective 202.0000000
+Presolve time: 0.01s
+Presolved: 200 rows, 225 columns, 600 nonzeros
+Variable types: 0 continuous, 225 integer (225 binary)
+
+Root relaxation: objective -9.900000e+02, 29 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 -990.00000    0   25  202.00000 -990.00000   590%     -    0s
+     0     0 -206.00000    0   32  202.00000 -206.00000   202%     -    0s
+     0     0 -138.00000    0   30  202.00000 -138.00000   168%     -    0s
+     0     0   -8.00000    0   28  202.00000   -8.00000   104%     -    0s
+     0     0   -4.83333    0   28  202.00000   -4.83333   102%     -    0s
+     0     2   25.00000    0   28  202.00000   25.00000  87.6%     -    0s
+
+Cutting planes:
+  Cover: 6
+  MIR: 1
+  BQP: 21
+
+Explored 26 nodes (558 simplex iterations) in 0.14 seconds (0.05 work units)
+Thread count was 4 (of 4 available processors)
+
+Solution count 2: 202 660 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 2.020000000000e+02, best bound 2.020000000000e+02, gap 0.0000%
+city broken:0,time broken:0
+Gurobi 11.0.2 (win64) logging started Mon Aug  5 14:57:46 2024
+
+Set parameter LogFile to value "gurobi_optimal_tour_log/gurobi_log/random5.log"
+Gurobi Optimizer version 11.0.2 build v11.0.2rc0 (win64 - Windows 11.0 (22631.2))
+
+CPU model: Intel(R) Core(TM) i3-9100 CPU @ 3.60GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 4 physical cores, 4 logical processors, using up to 4 threads
+
+Optimize a model with 0 rows, 25 columns and 0 nonzeros
+Model fingerprint: 0x20274d91
+Model has 225 quadratic objective terms
+Variable types: 0 continuous, 25 integer (25 binary)
+Coefficient statistics:
+  Matrix range     [0e+00, 0e+00]
+  Objective range  [3e+02, 3e+02]
+  QObjective range [1e+01, 3e+02]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [0e+00, 0e+00]
+Found heuristic solution: objective 660.0000000
+Found heuristic solution: objective 202.0000000
+Presolve time: 0.01s
+Presolved: 200 rows, 225 columns, 600 nonzeros
+Variable types: 0 continuous, 225 integer (225 binary)
+
+Root relaxation: objective -9.900000e+02, 29 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 -990.00000    0   25  202.00000 -990.00000   590%     -    0s
+     0     0 -206.00000    0   32  202.00000 -206.00000   202%     -    0s
+     0     0 -138.00000    0   30  202.00000 -138.00000   168%     -    0s
+     0     0   -8.00000    0   28  202.00000   -8.00000   104%     -    0s
+     0     0   -4.83333    0   28  202.00000   -4.83333   102%     -    0s
+     0     2   25.00000    0   28  202.00000   25.00000  87.6%     -    0s
+
+Cutting planes:
+  Cover: 6
+  MIR: 1
+  BQP: 21
+
+Explored 26 nodes (558 simplex iterations) in 0.15 seconds (0.05 work units)
+Thread count was 4 (of 4 available processors)
+
+Solution count 2: 202 660 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 2.020000000000e+02, best bound 2.020000000000e+02, gap 0.0000%
+city broken:0,time broken:0
+Gurobi 11.0.2 (win64) logging started Mon Aug  5 14:58:26 2024
+
+Set parameter LogFile to value "gurobi_optimal_tour_log/gurobi_log/random5.log"
+Gurobi Optimizer version 11.0.2 build v11.0.2rc0 (win64 - Windows 11.0 (22631.2))
+
+CPU model: Intel(R) Core(TM) i3-9100 CPU @ 3.60GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 4 physical cores, 4 logical processors, using up to 4 threads
+
+Optimize a model with 0 rows, 25 columns and 0 nonzeros
+Model fingerprint: 0x20274d91
+Model has 225 quadratic objective terms
+Variable types: 0 continuous, 25 integer (25 binary)
+Coefficient statistics:
+  Matrix range     [0e+00, 0e+00]
+  Objective range  [3e+02, 3e+02]
+  QObjective range [1e+01, 3e+02]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [0e+00, 0e+00]
+Found heuristic solution: objective 660.0000000
+Found heuristic solution: objective 202.0000000
+Presolve time: 0.01s
+Presolved: 200 rows, 225 columns, 600 nonzeros
+Variable types: 0 continuous, 225 integer (225 binary)
+
+Root relaxation: objective -9.900000e+02, 29 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 -990.00000    0   25  202.00000 -990.00000   590%     -    0s
+     0     0 -206.00000    0   32  202.00000 -206.00000   202%     -    0s
+     0     0 -138.00000    0   30  202.00000 -138.00000   168%     -    0s
+     0     0   -8.00000    0   28  202.00000   -8.00000   104%     -    0s
+     0     0   -4.83333    0   28  202.00000   -4.83333   102%     -    0s
+     0     2   25.00000    0   28  202.00000   25.00000  87.6%     -    0s
+
+Cutting planes:
+  Cover: 6
+  MIR: 1
+  BQP: 21
+
+Explored 26 nodes (558 simplex iterations) in 0.14 seconds (0.05 work units)
+Thread count was 4 (of 4 available processors)
+
+Solution count 2: 202 660 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 2.020000000000e+02, best bound 2.020000000000e+02, gap 0.0000%
+city broken:0,time broken:0
+Gurobi 11.0.2 (win64) logging started Mon Aug  5 14:59:22 2024
+
+Set parameter LogFile to value "gurobi_optimal_tour_log/gurobi_log/random5.log"
+Gurobi Optimizer version 11.0.2 build v11.0.2rc0 (win64 - Windows 11.0 (22631.2))
+
+CPU model: Intel(R) Core(TM) i3-9100 CPU @ 3.60GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 4 physical cores, 4 logical processors, using up to 4 threads
+
+Optimize a model with 0 rows, 25 columns and 0 nonzeros
+Model fingerprint: 0x20274d91
+Model has 225 quadratic objective terms
+Variable types: 0 continuous, 25 integer (25 binary)
+Coefficient statistics:
+  Matrix range     [0e+00, 0e+00]
+  Objective range  [3e+02, 3e+02]
+  QObjective range [1e+01, 3e+02]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [0e+00, 0e+00]
+Found heuristic solution: objective 660.0000000
+Found heuristic solution: objective 202.0000000
+Presolve time: 0.01s
+Presolved: 200 rows, 225 columns, 600 nonzeros
+Variable types: 0 continuous, 225 integer (225 binary)
+
+Root relaxation: objective -9.900000e+02, 29 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 -990.00000    0   25  202.00000 -990.00000   590%     -    0s
+     0     0 -206.00000    0   32  202.00000 -206.00000   202%     -    0s
+     0     0 -138.00000    0   30  202.00000 -138.00000   168%     -    0s
+     0     0   -8.00000    0   28  202.00000   -8.00000   104%     -    0s
+     0     0   -4.83333    0   28  202.00000   -4.83333   102%     -    0s
+     0     2   25.00000    0   28  202.00000   25.00000  87.6%     -    0s
+
+Cutting planes:
+  Cover: 6
+  MIR: 1
+  BQP: 21
+
+Explored 26 nodes (558 simplex iterations) in 0.14 seconds (0.05 work units)
+Thread count was 4 (of 4 available processors)
+
+Solution count 2: 202 660 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 2.020000000000e+02, best bound 2.020000000000e+02, gap 0.0000%
+city broken:0,time broken:0
+Gurobi 11.0.2 (win64) logging started Mon Aug  5 14:59:47 2024
+
+Set parameter LogFile to value "gurobi_optimal_tour_log/gurobi_log/random5.log"
+Gurobi Optimizer version 11.0.2 build v11.0.2rc0 (win64 - Windows 11.0 (22631.2))
+
+CPU model: Intel(R) Core(TM) i3-9100 CPU @ 3.60GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 4 physical cores, 4 logical processors, using up to 4 threads
+
+Optimize a model with 0 rows, 25 columns and 0 nonzeros
+Model fingerprint: 0x20274d91
+Model has 225 quadratic objective terms
+Variable types: 0 continuous, 25 integer (25 binary)
+Coefficient statistics:
+  Matrix range     [0e+00, 0e+00]
+  Objective range  [3e+02, 3e+02]
+  QObjective range [1e+01, 3e+02]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [0e+00, 0e+00]
+Found heuristic solution: objective 660.0000000
+Found heuristic solution: objective 202.0000000
+Presolve time: 0.01s
+Presolved: 200 rows, 225 columns, 600 nonzeros
+Variable types: 0 continuous, 225 integer (225 binary)
+
+Root relaxation: objective -9.900000e+02, 29 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 -990.00000    0   25  202.00000 -990.00000   590%     -    0s
+     0     0 -206.00000    0   32  202.00000 -206.00000   202%     -    0s
+     0     0 -138.00000    0   30  202.00000 -138.00000   168%     -    0s
+     0     0   -8.00000    0   28  202.00000   -8.00000   104%     -    0s
+     0     0   -4.83333    0   28  202.00000   -4.83333   102%     -    0s
+     0     2   25.00000    0   28  202.00000   25.00000  87.6%     -    0s
+
+Cutting planes:
+  Cover: 6
+  MIR: 1
+  BQP: 21
+
+Explored 26 nodes (558 simplex iterations) in 0.14 seconds (0.05 work units)
+Thread count was 4 (of 4 available processors)
+
+Solution count 2: 202 660 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 2.020000000000e+02, best bound 2.020000000000e+02, gap 0.0000%
+city broken:0,time broken:0
+Gurobi 11.0.2 (win64) logging started Mon Aug  5 15:02:13 2024
+
+Set parameter LogFile to value "gurobi_optimal_tour_log/gurobi_log/random5.log"
+Gurobi Optimizer version 11.0.2 build v11.0.2rc0 (win64 - Windows 11.0 (22631.2))
+
+CPU model: Intel(R) Core(TM) i3-9100 CPU @ 3.60GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 4 physical cores, 4 logical processors, using up to 4 threads
+
+Optimize a model with 0 rows, 25 columns and 0 nonzeros
+Model fingerprint: 0x20274d91
+Model has 225 quadratic objective terms
+Variable types: 0 continuous, 25 integer (25 binary)
+Coefficient statistics:
+  Matrix range     [0e+00, 0e+00]
+  Objective range  [3e+02, 3e+02]
+  QObjective range [1e+01, 3e+02]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [0e+00, 0e+00]
+Found heuristic solution: objective 660.0000000
+Found heuristic solution: objective 202.0000000
+Presolve time: 0.01s
+Presolved: 200 rows, 225 columns, 600 nonzeros
+Variable types: 0 continuous, 225 integer (225 binary)
+
+Root relaxation: objective -9.900000e+02, 29 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 -990.00000    0   25  202.00000 -990.00000   590%     -    0s
+     0     0 -206.00000    0   32  202.00000 -206.00000   202%     -    0s
+     0     0 -138.00000    0   30  202.00000 -138.00000   168%     -    0s
+     0     0   -8.00000    0   28  202.00000   -8.00000   104%     -    0s
+     0     0   -4.83333    0   28  202.00000   -4.83333   102%     -    0s
+     0     2   25.00000    0   28  202.00000   25.00000  87.6%     -    0s
+
+Cutting planes:
+  Cover: 6
+  MIR: 1
+  BQP: 21
+
+Explored 26 nodes (558 simplex iterations) in 0.13 seconds (0.05 work units)
+Thread count was 4 (of 4 available processors)
+
+Solution count 2: 202 660 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 2.020000000000e+02, best bound 2.020000000000e+02, gap 0.0000%
+city broken:0,time broken:0
