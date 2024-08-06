@@ -1,0 +1,52 @@
+
+Gurobi 11.0.0 (linux64) logging started Mon Aug  5 15:11:50 2024
+
+Set parameter LogFile to value "gurobi_optimal_tour_log/gurobi_log/random9.log"
+Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (linux64 - "Ubuntu 22.04.3 LTS")
+
+CPU model: Intel(R) Xeon(R) Platinum 8358 CPU @ 2.60GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 64 physical cores, 64 logical processors, using up to 32 threads
+
+Optimize a model with 0 rows, 81 columns and 0 nonzeros
+Model fingerprint: 0x6d80b1df
+Model has 1377 quadratic objective terms
+Variable types: 0 continuous, 81 integer (81 binary)
+Coefficient statistics:
+  Matrix range     [0e+00, 0e+00]
+  Objective range  [2e+02, 2e+02]
+  QObjective range [3e+01, 2e+02]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [0e+00, 0e+00]
+Found heuristic solution: objective 1008.0000000
+Found heuristic solution: objective 392.0000000
+Found heuristic solution: objective 348.0000000
+Found heuristic solution: objective 336.0000000
+Found heuristic solution: objective 299.0000000
+Presolve time: 0.01s
+Presolved: 0 rows, 81 columns, 0 nonzeros
+Presolved model has 1377 quadratic objective terms
+Variable types: 0 continuous, 81 integer (81 binary)
+
+Root relaxation: objective -6.614157e+02, 79 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 -661.41566    0   79  299.00000 -661.41566   321%     -    0s
+     0     0 -659.47754    0   79  299.00000 -659.47754   321%     -    0s
+     0     2 -659.47754    0   79  299.00000 -659.47754   321%     -    0s
+H   34    64                     296.0000000 -530.75665   279%  11.5    0s
+
+Cutting planes:
+  MIR: 84
+  Flow cover: 20
+  BQP: 36
+
+Explored 4002 nodes (23658 simplex iterations) in 2.50 seconds (2.39 work units)
+Thread count was 32 (of 64 available processors)
+
+Solution count 6: 296 299 336 ... 1008
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 2.960000000000e+02, best bound 2.960000000000e+02, gap 0.0000%
+city broken:1,time broken:1

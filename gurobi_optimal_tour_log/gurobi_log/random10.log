@@ -1,0 +1,53 @@
+
+Gurobi 11.0.0 (linux64) logging started Mon Aug  5 15:11:53 2024
+
+Set parameter LogFile to value "gurobi_optimal_tour_log/gurobi_log/random10.log"
+Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (linux64 - "Ubuntu 22.04.3 LTS")
+
+CPU model: Intel(R) Xeon(R) Platinum 8358 CPU @ 2.60GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 64 physical cores, 64 logical processors, using up to 32 threads
+
+Optimize a model with 0 rows, 100 columns and 0 nonzeros
+Model fingerprint: 0x426b372a
+Model has 1900 quadratic objective terms
+Variable types: 0 continuous, 100 integer (100 binary)
+Coefficient statistics:
+  Matrix range     [0e+00, 0e+00]
+  Objective range  [2e+02, 2e+02]
+  QObjective range [3e+01, 2e+02]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [0e+00, 0e+00]
+Found heuristic solution: objective 820.0000000
+Found heuristic solution: objective 334.0000000
+Found heuristic solution: objective 323.0000000
+Presolve time: 0.01s
+Presolved: 0 rows, 100 columns, 0 nonzeros
+Presolved model has 1900 quadratic objective terms
+Variable types: 0 continuous, 100 integer (100 binary)
+
+Root relaxation: objective -8.934599e+02, 99 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 -893.45987    0   98  323.00000 -893.45987   377%     -    0s
+H    0     0                     320.0000000 -893.45987   379%     -    0s
+     0     0 -893.25574    0   98  320.00000 -893.25574   379%     -    0s
+H    0     2                     316.0000000 -892.02704   382%     -    0s
+     0     2 -892.02704    0   98  316.00000 -892.02704   382%     -    0s
+H  231   256                     309.0000000 -702.99145   328%   7.8    0s
+
+Cutting planes:
+  Gomory: 1
+  Zero half: 1
+  RLT: 80
+  BQP: 4
+
+Explored 9845 nodes (89114 simplex iterations) in 1.90 seconds (2.30 work units)
+Thread count was 32 (of 64 available processors)
+
+Solution count 6: 309 316 320 ... 820
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 3.090000000000e+02, best bound 3.090000000000e+02, gap 0.0000%
+city broken:2,time broken:2

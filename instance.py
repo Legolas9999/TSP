@@ -873,10 +873,10 @@ def creat_dump_data_dic():
 
 
 # 读取数据json
-def read_json():
-    with open("gaussian/gaussian_graph_data.json", "r") as file:
+def read_json(n):
+    with open(f"gurobi_optimal_tour_log/solution_log/random{n}.json", "r") as file:
         dic = json.load(file)
-    return dic
+    return np.array(dic['solution_mat'])
 
 
 # 基于原有距离矩阵生成missing edges的距离矩阵，用999999
@@ -979,7 +979,7 @@ class instance:
         # self.g_mat = dis_mat(self.g_coord)
         # ---------------------------------------------
         # 为了画图的参数
-        #self.graph_pos = {i: self.coord[i] for i in range(self.n)}
+        self.graph_pos = {i: self.coord[i] for i in range(self.n)}
         # ---------------------------------------------
         # 最优路径图
         result = optimal_tour_graph(self.n)
@@ -1293,9 +1293,17 @@ def main():
     # print('de_seg:' ,is_subgraph(ins.graph_optimal_tour,ins.graph_de_seg1_seg2_seg3)[0])
     # print('de_nei:' ,is_subgraph(ins.graph_optimal_tour,ins.graph_de_nei2_nei3)[0])
 
-    for i in range(5, 6):
-        ins = instance(i)
-        ins.gurobi()
+    
+    ins = instance(6)
+
+    nx.draw(ins.graph_optimal_tour, ins.graph_pos, with_labels=True, node_size=300, node_color='skyblue')
+    #plt.show()
+    dic = read_json(6)
+    print(dic)
+    print(ins.mat)
+    print(ins.optimal_lambda)
+    print('seses\
+sdsdsd')
 
 
 
