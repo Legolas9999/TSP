@@ -1296,14 +1296,8 @@ def main():
     
     ins = instance(6)
 
-    nx.draw(ins.graph_optimal_tour, ins.graph_pos, with_labels=True, node_size=300, node_color='skyblue')
-    #plt.show()
-    dic = read_json(6)
-    print(dic)
-    print(ins.mat)
-    print(ins.optimal_lambda)
-    print('seses\
-sdsdsd')
+    print( ins.de_seg1_seg2_seg3_lambda)
+
 
 
 
