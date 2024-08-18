@@ -73,6 +73,40 @@ def dis_mat(coord):
     return mat
 
 
+# 根据完全图计算lambda
+def iterate_for_complete_lamuda(n:int, dis_mat) -> int:
+    # 先创建城市列表
+    city_list = [i for i in range(n)]
+
+    #lambda_list
+    lambda_list = []
+
+    #以索引的方式遍历每个城市
+    for node in range(n):
+        #等待组合的列表
+        combination_list = list(filter(lambda x: x != node, city_list))
+       
+        # 生成所有长度为2的组合
+        combs = list(combinations(combination_list, 2))
+
+        #该点的最大lambda
+        max_lambda = 0
+
+        # 遍历该点的所有组合
+        for comb in combs:
+            temp = 0.5*(dis_mat[comb[0], node] + dis_mat[node, comb[1]])
+            if temp > max_lambda:
+                max_lambda = temp
+        
+        # 存入当前点的最大lambda
+        lambda_list.append(max_lambda)
+
+    #向下取整处理
+    lambda_list = list(map(lambda x : math.floor(x) + 1, lambda_list))
+    return max(lambda_list)
+
+
+
 # 通过delaunay计算lamuda，返回元组 0：最大lamuda  1：每个城市最大lamuda列表  2:lamuda最大时左右城市列表
 def delaunay(
     dis_mat, cities_coord, seg1=None, seg2=None, seg3=None, nei2=None, nei3=None
@@ -155,7 +189,11 @@ def delaunay(
     # 不能刚好等于，要稍微大一点
     max_lamuda = [temp + 1 for temp in max_lamuda]
 
-    return max(max_lamuda), max_lamuda, G, G.number_of_edges()
+    return max(max_lamuda), max_lamuda, G, G.number_of_edges(), left_and_right_index_for_every_city
+
+
+
+
 
 
 # 基于voronoi图加边，一个线段
@@ -972,6 +1010,10 @@ class instance:
         self.coord = uniform_coord(self.n)
         # 距离矩阵
         self.mat = dis_mat(self.coord)
+        #最大城市间距离
+        self.max_distance = int(np.max(self.mat))
+        #完全图下的lambda
+        self.complete_lambda = iterate_for_complete_lamuda(self.n, self.mat)
         # ---------------------------------------------
         # # 城市坐标 正态分布
         # self.g_coord = gaussian_coord(self.n)
@@ -981,12 +1023,15 @@ class instance:
         # 为了画图的参数
         self.graph_pos = {i: self.coord[i] for i in range(self.n)}
         # ---------------------------------------------
+        #完全图
+        self.graph_complete = nx.complete_graph(self.n)
+        # ---------------------------------------------
         # 最优路径图
-        result = optimal_tour_graph(self.n)
-        self.graph_optimal_tour = result[0]
-        self.optimal_tour = result[1]
-        self.optimal_length = result[2]
-        self.optimal_lambda = lambda_based_on_optimal(self.optimal_tour, self.mat)
+        # result = optimal_tour_graph(self.n)
+        # self.graph_optimal_tour = result[0]
+        # self.optimal_tour = result[1]
+        # self.optimal_length = result[2]
+        # self.optimal_lambda = lambda_based_on_optimal(self.optimal_tour, self.mat)
         # ---------------------------------------------
         # 普通的delauny
         result = delaunay(self.mat, self.coord)
@@ -1019,6 +1064,7 @@ class instance:
         self.de_nei2_nei3_lambda_list = result[1]
         self.graph_de_nei2_nei3 = result[2]  # 加邻居的邻居
         self.de_nei2_nei3_edges = result[3]
+        self.check = result[4]
         # ---------------------------------------------
 
 
@@ -1293,12 +1339,14 @@ def main():
     # print('de_seg:' ,is_subgraph(ins.graph_optimal_tour,ins.graph_de_seg1_seg2_seg3)[0])
     # print('de_nei:' ,is_subgraph(ins.graph_optimal_tour,ins.graph_de_nei2_nei3)[0])
 
+    for i in range(200, 201):
+        ins = instance(i)
+        #print(ins.complete_lambda, ins.de_nei2_nei3_lambda)
+        print(ins.de_seg1_seg2_seg3_edges, ins.de_nei2_nei3_edges)
+        # nx.draw(ins.graph_complete, ins.graph_pos,with_labels=True, node_size=300, node_color="skyblue")
+        # plt.show()
+
     
-    ins = instance(6)
-
-    print( ins.de_seg1_seg2_seg3_lambda)
-
-
 
 
 
