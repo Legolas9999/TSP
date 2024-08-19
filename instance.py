@@ -1339,10 +1339,10 @@ def main():
     # print('de_seg:' ,is_subgraph(ins.graph_optimal_tour,ins.graph_de_seg1_seg2_seg3)[0])
     # print('de_nei:' ,is_subgraph(ins.graph_optimal_tour,ins.graph_de_nei2_nei3)[0])
 
-    for i in range(200, 201):
+    for i in range(20, 21):
         ins = instance(i)
         #print(ins.complete_lambda, ins.de_nei2_nei3_lambda)
-        print(ins.de_seg1_seg2_seg3_edges, ins.de_nei2_nei3_edges)
+        print(ins.de_nei2_nei3_lambda, ins.complete_lambda, len(ins.check))
         # nx.draw(ins.graph_complete, ins.graph_pos,with_labels=True, node_size=300, node_color="skyblue")
         # plt.show()
 
