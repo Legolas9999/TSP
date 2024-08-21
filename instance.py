@@ -296,7 +296,7 @@ def edges_add_seg1(cities_coord):
         nodes_to_connect.append(temp)
 
     nodes_to_connect = list(map(lambda x: tuple(x), nodes_to_connect))
-    # print(nodes_to_connect)
+    #print(nodes_to_connect)
     return nodes_to_connect
 
 
@@ -713,23 +713,24 @@ def edges_add_nei2(cities_coord):
 
     # voronoi边，包括射线
     ridge = vor.ridge_vertices
+    
+    regions = vor.regions   # [[], [1, -1, 0], [4, 2, 3], [4, 1, -1, 2], [3, 0, -1, 2], [4, 1, 0, 3]]
+    point_region = vor.point_region # [2 4 5 1 3]
 
-    regions = vor.regions
-    point_region = vor.point_region
 
     # 每个节点的邻接关系，种子节点顺序
     neighbor_list = []
-    for node in range(cities_coord.shape[0]):
+    for node in range(cities_coord.shape[0]): # 0-4
         # 当前种子节点对应区域索引
-        current_region_index = point_region[node]
+        current_region_index = point_region[node]  # 2
 
         # 当前区域所对应的voronoi顶点
-        current_region_voronoi_vertex = regions[current_region_index]
+        current_region_voronoi_vertex = regions[current_region_index]  # [4, 2, 3]
 
         # 与当前区域相邻的区域的索引
         neighbor_region = set()
-        for vonoroi_vertex in current_region_voronoi_vertex:
-            for region in regions:
+        for vonoroi_vertex in current_region_voronoi_vertex: # 4,2,3
+            for region in regions:   # [[], [1, -1, 0], [4, 2, 3], [4, 1, -1, 2], [3, 0, -1, 2], [4, 1, 0, 3]]
                 if vonoroi_vertex in region:
                     neighbor_region.add(regions.index(region))
 
@@ -738,7 +739,7 @@ def edges_add_nei2(cities_coord):
         # 加入列表
         neighbor_list.append(neighbor_region)
 
-    # print(neighbor_list)
+    print('nei2:',neighbor_list)
 
     # 计算需要连接的边
     edge_to_connect = []
@@ -765,7 +766,6 @@ def edges_add_nei2(cities_coord):
                     edge_to_connect.append(temp)
 
     edge_to_connect = list(map(lambda x: tuple(x), edge_to_connect))
-
     return edge_to_connect
 
 
@@ -819,6 +819,7 @@ def edges_add_nei3(cities_coord):
             neighbor_relation[neighbor_i][region_i] = regions_with_mother_point.index(
                 region
             )
+    print('nei3:',neighbor_relation)
 
     # 遍历每个母节点
     # print(neighbor_relation)
@@ -1355,6 +1356,47 @@ TOUR_FILE = so_big_ins/random{self.n}.txt"
             return None
 
 
+
+
+def check():
+    diff = []
+    for i in range(5, 6):
+        ins = instance(i)
+        print(i)
+        print('edges of nei:',ins.de_nei2_nei3_edges)
+        
+        if set(ins.left_city_right_nei) != set(ins.left_city_right_complete):
+            print('not equal')
+            diff.append(i)
+
+
+            print(ins.left_city_right_nei ,ins.left_city_right_complete)
+
+
+            print(ins.mat[ins.left_city_right_nei[0], ins.left_city_right_nei[1]] +
+                ins.mat[ins.left_city_right_nei[1], ins.left_city_right_nei[2]])
+            
+            print(ins.mat[ins.left_city_right_complete[0], ins.left_city_right_complete[1]] +
+                ins.mat[ins.left_city_right_complete[1], ins.left_city_right_complete[2]])
+            
+        
+            nei_list = [(ins.left_city_right_nei[0], ins.left_city_right_nei[1]), 
+                     (ins.left_city_right_nei[1], ins.left_city_right_nei[2])]
+    
+        
+            complete_list = [(ins.left_city_right_complete[0], ins.left_city_right_complete[1]), 
+                            (ins.left_city_right_complete[1], ins.left_city_right_complete[2])]
+            
+            
+
+            nx.draw(ins.graph_de_nei2_nei3, ins.graph_pos, with_labels=True, node_size=300, node_color="skyblue", edge_color='white')
+            
+            nx.draw_networkx_edges(ins.graph_de_nei2_nei3, ins.graph_pos, nei_list, edge_color="r", width=3) # nei红色
+            nx.draw_networkx_edges(ins.graph_de_nei2_nei3, ins.graph_pos, complete_list, edge_color="g", width=3)
+            plt.show()
+
+            
+
 def main():
     pass
     # ins = instance(10000)
@@ -1369,33 +1411,13 @@ def main():
     # print('de_seg:' ,is_subgraph(ins.graph_optimal_tour,ins.graph_de_seg1_seg2_seg3)[0])
     # print('de_nei:' ,is_subgraph(ins.graph_optimal_tour,ins.graph_de_nei2_nei3)[0])
 
-    for i in range(50,51):
-        print(i)
-        ins = instance(i)
-
-        print(ins.left_city_right_nei ,ins.left_city_right_complete)
-
-        print(ins.mat[ins.left_city_right_nei[0], ins.left_city_right_nei[1]] +
-              ins.mat[ins.left_city_right_nei[1], ins.left_city_right_nei[2]])
-        
-        print(ins.mat[ins.left_city_right_complete[0], ins.left_city_right_complete[1]] +
-              ins.mat[ins.left_city_right_complete[1], ins.left_city_right_complete[2]])
     
+    check()
 
-        nei_list = [(ins.left_city_right_nei[0], ins.left_city_right_nei[1]), 
-                         (ins.left_city_right_nei[1], ins.left_city_right_nei[2])]
-        
-        
-        complete_list = [(ins.left_city_right_complete[0], ins.left_city_right_complete[1]), 
-                         (ins.left_city_right_complete[1], ins.left_city_right_complete[2])]
-        
-        
 
-        nx.draw(ins.graph_de_nei2_nei3, ins.graph_pos, with_labels=True, node_size=300, node_color="skyblue")
-        
-        nx.draw_networkx_edges(ins.graph_de_nei2_nei3, ins.graph_pos, nei_list, edge_color="r", width=3)
-        nx.draw_networkx_edges(ins.graph_de_nei2_nei3, ins.graph_pos, complete_list, edge_color="g", width=3)
-        plt.show()
+
+
+
 
 
 
