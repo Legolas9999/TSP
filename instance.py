@@ -1051,7 +1051,7 @@ class instance:
         self.complete_lambda_list = result[1]
         self.graph_complete = nx.complete_graph(self.n)  # 对应的图
         self.complete_edges = result[2]
-        self.left_lambda_right_complete = result[3] # 所选取到的最大lambda时的组合
+        self.left_city_right_complete = result[3] # 所选取到的最大lambda时的组合
 
         # ---------------------------------------------
         # 最优路径图
@@ -1067,7 +1067,7 @@ class instance:
         self.de_lambda_list = result[1]
         self.graph_de = result[2]  # 德劳内三角分割图
         self.de_edges = result[3]
-        self.left_lambda_right_de = result[4]
+        self.left_city_right_de = result[4]
         # ---------------------------------------------
         # 基于de + seg1 + seg2 + seg3
         result = delaunay(
@@ -1081,7 +1081,7 @@ class instance:
         self.de_seg1_seg2_seg3_lambda_list = result[1]
         self.graph_de_seg1_seg2_seg3 = result[2]  # 对应的图
         self.de_seg1_seg2_seg3_edges = result[3]
-        self.left_lambda_right_seg = result[4]
+        self.left_city_right_seg = result[4]
         # ---------------------------------------------
         # 基于de + nei2 + nei3
         result = delaunay(
@@ -1094,7 +1094,7 @@ class instance:
         self.de_nei2_nei3_lambda_list = result[1]
         self.graph_de_nei2_nei3 = result[2]  # 加邻居的邻居
         self.de_nei2_nei3_edges = result[3]
-        self.left_lambda_right_nei = result[4]
+        self.left_city_right_nei = result[4]
         # ---------------------------------------------
 
 
@@ -1369,16 +1369,33 @@ def main():
     # print('de_seg:' ,is_subgraph(ins.graph_optimal_tour,ins.graph_de_seg1_seg2_seg3)[0])
     # print('de_nei:' ,is_subgraph(ins.graph_optimal_tour,ins.graph_de_nei2_nei3)[0])
 
-    for i in range(500, 501):
+    for i in range(50,51):
         print(i)
         ins = instance(i)
-        print(ins.left_lambda_right_nei ,ins.left_lambda_right_complete)
-        print(ins.mat[ins.left_lambda_right_nei[0], ins.left_lambda_right_nei[1]] +
-              ins.mat[ins.left_lambda_right_nei[1], ins.left_lambda_right_nei[2]])
-        print(ins.mat[ins.left_lambda_right_complete[0], ins.left_lambda_right_complete[1]] +
-              ins.mat[ins.left_lambda_right_complete[1], ins.left_lambda_right_complete[2]])
+
+        print(ins.left_city_right_nei ,ins.left_city_right_complete)
+
+        print(ins.mat[ins.left_city_right_nei[0], ins.left_city_right_nei[1]] +
+              ins.mat[ins.left_city_right_nei[1], ins.left_city_right_nei[2]])
+        
+        print(ins.mat[ins.left_city_right_complete[0], ins.left_city_right_complete[1]] +
+              ins.mat[ins.left_city_right_complete[1], ins.left_city_right_complete[2]])
     
 
+        nei_list = [(ins.left_city_right_nei[0], ins.left_city_right_nei[1]), 
+                         (ins.left_city_right_nei[1], ins.left_city_right_nei[2])]
+        
+        
+        complete_list = [(ins.left_city_right_complete[0], ins.left_city_right_complete[1]), 
+                         (ins.left_city_right_complete[1], ins.left_city_right_complete[2])]
+        
+        
+
+        nx.draw(ins.graph_de_nei2_nei3, ins.graph_pos, with_labels=True, node_size=300, node_color="skyblue")
+        
+        nx.draw_networkx_edges(ins.graph_de_nei2_nei3, ins.graph_pos, nei_list, edge_color="r", width=3)
+        nx.draw_networkx_edges(ins.graph_de_nei2_nei3, ins.graph_pos, complete_list, edge_color="g", width=3)
+        plt.show()
 
 
 
