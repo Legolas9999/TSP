@@ -708,7 +708,7 @@ def edges_add_seg3(cities_coord):
 
 
 # 再次基于voronoi加边，邻居的邻居
-def edges_add_nei2(cities_coord):
+def edges_add_nei2_error(cities_coord):
     vor = Voronoi(cities_coord)
 
     # voronoi边，包括射线
@@ -739,7 +739,7 @@ def edges_add_nei2(cities_coord):
         # 加入列表
         neighbor_list.append(neighbor_region)
 
-    print('nei2:',neighbor_list)
+    print('nei2:',neighbor_list)  # 
 
     # 计算需要连接的边
     edge_to_connect = []
@@ -767,6 +767,91 @@ def edges_add_nei2(cities_coord):
 
     edge_to_connect = list(map(lambda x: tuple(x), edge_to_connect))
     return edge_to_connect
+
+
+def edges_add_nei2(cities_coord):
+    vor = Voronoi(cities_coord)
+
+    # voronoi边，[[-1, 0], [-1, 1], [0, 1], [2, 4], [2, 3], [3, 4], [-1, 2], [1, 4], [0, 3]]
+    ridges = vor.ridge_vertices
+
+    regions = (
+        vor.regions
+    )  # [[], [1, -1, 0], [4, 2, 3], [4, 1, -1, 2], [3, 0, -1, 2], [4, 1, 0, 3]]
+
+    regions_with_mother_point = list(vor.point_region)  # [2 4 5 1 3]
+
+    # 建立邻居关系
+    neighbor_relation = (
+        []
+    )  # [[4, 1, 2], [3, 0, 4, 2], [3, 0, 4, 1], [1, 4, 2], [3, 0, 1, 2]]
+    for mother_point in range(len(cities_coord)):  # [0,1,2,3,4]
+        # 当前母节点对应区域索引
+        region_index_of_mother_point = regions_with_mother_point[mother_point]
+        voronoi_vertice_of_region = regions[region_index_of_mother_point]  # [4, 2, 3]
+
+        # 求当前区域的边界
+        edges_of_curr_region = []  # [ [2, 4], [2, 3], [3, 4]]
+        for ridge in ridges:
+            if (
+                ridge[0] in voronoi_vertice_of_region
+                and ridge[1] in voronoi_vertice_of_region
+            ):
+                edges_of_curr_region.append(ridge)
+
+        # 找哪些区域有这些边
+        regions_have_edges = []  # [3,4,5]
+        for ridge in edges_of_curr_region:
+            for index, region in enumerate(regions):
+                if (
+                    ridge[0] in region
+                    and ridge[1] in region
+                    and index != region_index_of_mother_point
+                ):  # 如果该区域有这条边
+                    regions_have_edges.append(index)
+
+        neighbor_relation.append(regions_have_edges)
+
+    # 将邻居关系从区域索引变为母节点的索引
+    for neighbor_i, neighbor in enumerate(neighbor_relation):
+        for region_i, region in enumerate(neighbor):  # [3, 4, 5]
+            neighbor_relation[neighbor_i][region_i] = regions_with_mother_point.index(
+                region
+            )
+    #print(neighbor_relation)
+    # for index, relation in enumerate(neighbor_relation):
+    #     print(index, relation)
+    # -----
+
+    edges_to_connect = []
+    for mother_point in range(len(cities_coord)):
+        # 第一层
+        level_1 = neighbor_relation[mother_point]
+
+        # 第二层
+        level_2 = [
+            neighbor_relation[level_1_point] for level_1_point in level_1
+        ]
+
+        # print(mother_point, level_2)
+
+        # 连接母点和第二层,自己和自己不会连接
+        connect_list = [
+            (mother_point, node)
+            for level_2_points in level_2
+            for node in level_2_points
+            if node != mother_point
+        ]
+
+        # 去重
+        for edge in connect_list:
+            if (edge not in edges_to_connect) and (edge[1], edge[0]) not in edges_to_connect:
+                edges_to_connect.append(edge)
+        
+    return edges_to_connect
+
+
+
 
 
 # nei3
@@ -819,7 +904,7 @@ def edges_add_nei3(cities_coord):
             neighbor_relation[neighbor_i][region_i] = regions_with_mother_point.index(
                 region
             )
-    print('nei3:',neighbor_relation)
+    # print('nei3:',neighbor_relation)
 
     # 遍历每个母节点
     # print(neighbor_relation)
@@ -1056,11 +1141,11 @@ class instance:
 
         # ---------------------------------------------
         # 最优路径图
-        # result = optimal_tour_graph(self.n)
-        # self.graph_optimal_tour = result[0]
-        # self.optimal_tour = result[1]
-        # self.optimal_length = result[2]
-        # self.optimal_lambda = lambda_based_on_optimal(self.optimal_tour, self.mat)
+        result = optimal_tour_graph(self.n)
+        self.graph_optimal_tour = result[0]
+        self.optimal_tour = result[1]
+        self.optimal_length = result[2]
+        self.optimal_lambda = lambda_based_on_optimal(self.optimal_tour, self.mat)
         # ---------------------------------------------
         # 普通的delauny
         result = delaunay(self.mat, self.coord)
@@ -1164,7 +1249,7 @@ TOUR_FILE = so_big_ins/random{self.n}.txt"
         subprocess.run(["LKH-2.exe", f"so_big_ins/random10000.par"])
 
     # 用gurobi最优化
-    def gurobi(self, lambda_list=None):
+    def gurobi(self, lambda_value, lambda_list=None):
 
         # 创建模型
         model = gp.Model(f"TSP_QUBO_test_{self.n}")
@@ -1187,7 +1272,7 @@ TOUR_FILE = so_big_ins/random{self.n}.txt"
         if lambda_list == None:
             # 直接添加约束到obj，城市约束
             for i in range(self.n):
-                obj_expr += self.optimal_lambda * (
+                obj_expr += self.lambda_value * (
                     (sum(x[i, t] for t in range(self.n)) - 1) ** 2
                 )
 
@@ -1201,7 +1286,7 @@ TOUR_FILE = so_big_ins/random{self.n}.txt"
 
         # 直接添加约束到obj，时间约束
         for t in range(self.n):
-            obj_expr += self.optimal_lambda * (
+            obj_expr += self.lambda_value * (
                 (sum(x[i, t] for i in range(self.n)) - 1) ** 2
             )
 
@@ -1211,8 +1296,8 @@ TOUR_FILE = so_big_ins/random{self.n}.txt"
         # 设置求解器时间参数
         model.Params.TimeLimit = 7200
 
-        # 设置cutoff
-        # model.setParam('Cutoff', 202)
+        # 设置cutoff，达到最优解就停止
+        model.setParam('Cutoff', self.optimal_length)
 
         # 设置日志文件名
         log_file = f"gurobi_optimal_tour_log/gurobi_log/random{self.n}.log"
@@ -1360,40 +1445,47 @@ TOUR_FILE = so_big_ins/random{self.n}.txt"
 
 def check():
     diff = []
-    for i in range(5, 6):
+    for i in range(173,174):
+
         ins = instance(i)
-        print(i)
-        print('edges of nei:',ins.de_nei2_nei3_edges)
+        print('edges:', ins.de_nei2_nei3_edges, ins.de_nei2_new_nei3_edges)
+        print('lambda:', ins.de_nei2_nei3_lambda, ins.de_nei2_new_nei3_lambda)
+        print('#'*20)
         
-        if set(ins.left_city_right_nei) != set(ins.left_city_right_complete):
-            print('not equal')
-            diff.append(i)
+        # print('edges of nei:',ins.de_nei2_nei3_edges)
+        
+        # if set(ins.left_city_right_nei) != set(ins.left_city_right_complete):
+        #     print('not equal')
+        #     diff.append(i)
 
 
-            print(ins.left_city_right_nei ,ins.left_city_right_complete)
+        #     print(ins.left_city_right_nei ,ins.left_city_right_complete)
 
 
-            print(ins.mat[ins.left_city_right_nei[0], ins.left_city_right_nei[1]] +
-                ins.mat[ins.left_city_right_nei[1], ins.left_city_right_nei[2]])
+        #     print(ins.mat[ins.left_city_right_nei[0], ins.left_city_right_nei[1]] +
+        #         ins.mat[ins.left_city_right_nei[1], ins.left_city_right_nei[2]])
             
-            print(ins.mat[ins.left_city_right_complete[0], ins.left_city_right_complete[1]] +
-                ins.mat[ins.left_city_right_complete[1], ins.left_city_right_complete[2]])
+        #     print(ins.mat[ins.left_city_right_complete[0], ins.left_city_right_complete[1]] +
+        #         ins.mat[ins.left_city_right_complete[1], ins.left_city_right_complete[2]])
             
         
-            nei_list = [(ins.left_city_right_nei[0], ins.left_city_right_nei[1]), 
-                     (ins.left_city_right_nei[1], ins.left_city_right_nei[2])]
+        # nei_list = [(ins.left_city_right_nei[0], ins.left_city_right_nei[1]), 
+        #             (ins.left_city_right_nei[1], ins.left_city_right_nei[2])]
+
     
-        
-            complete_list = [(ins.left_city_right_complete[0], ins.left_city_right_complete[1]), 
-                            (ins.left_city_right_complete[1], ins.left_city_right_complete[2])]
+        # complete_list = [(ins.left_city_right_complete[0], ins.left_city_right_complete[1]), 
+        #                 (ins.left_city_right_complete[1], ins.left_city_right_complete[2])]
             
-            
+        # print('old',list(ins.graph_de_nei2_nei3.neighbors(133)))
+        # print('new', list(ins.graph_de_nei2_new_nei3.neighbors(133)))
 
-            nx.draw(ins.graph_de_nei2_nei3, ins.graph_pos, with_labels=True, node_size=300, node_color="skyblue", edge_color='white')
-            
-            nx.draw_networkx_edges(ins.graph_de_nei2_nei3, ins.graph_pos, nei_list, edge_color="r", width=3) # nei红色
-            nx.draw_networkx_edges(ins.graph_de_nei2_nei3, ins.graph_pos, complete_list, edge_color="g", width=3)
-            plt.show()
+        # nx.draw(ins.graph_de_nei2_nei3, ins.graph_pos, with_labels=True, node_size=300, node_color="skyblue", edge_color='white')
+        
+        # nx.draw_networkx_edges(ins.graph_de_nei2_nei3, ins.graph_pos, nei_list, edge_color="r", width=3) # nei红色
+        # nx.draw_networkx_edges(ins.graph_de_nei2_nei3, ins.graph_pos, complete_list, edge_color="g", width=3)
+        # plt.show()
+
+        
 
             
 
@@ -1412,7 +1504,11 @@ def main():
     # print('de_nei:' ,is_subgraph(ins.graph_optimal_tour,ins.graph_de_nei2_nei3)[0])
 
     
-    check()
+    for i in range(5, 201):
+        ins = instance(i)
+
+        print(ins.max_distance)
+
 
 
 
