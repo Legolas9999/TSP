@@ -1,7 +1,7 @@
 
-Gurobi 11.0.0 (linux64) logging started Mon Aug  5 15:11:47 2024
+Gurobi 11.0.0 (linux64) logging started Thu Aug 22 17:27:37 2024
 
-Set parameter LogFile to value "gurobi_optimal_tour_log/gurobi_log/random8.log"
+Set parameter LogFile to value "gurobi_log/optimal_penalty/gurobi_log/random8.log"
 Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (linux64 - "Ubuntu 22.04.3 LTS")
 
 CPU model: Intel(R) Xeon(R) Platinum 8358 CPU @ 2.60GHz, instruction set [SSE2|AVX|AVX2|AVX512]

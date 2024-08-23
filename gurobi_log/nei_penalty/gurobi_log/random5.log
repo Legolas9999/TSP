@@ -1,5 +1,5 @@
 
-Gurobi 11.0.0 (linux64) logging started Sun Aug 18 00:26:44 2024
+Gurobi 11.0.0 (linux64) logging started Thu Aug 22 17:30:59 2024
 
 Set parameter LogFile to value "gurobi_log/nei_penalty/gurobi_log/random5.log"
 Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (linux64 - "Ubuntu 22.04.3 LTS")
@@ -40,7 +40,7 @@ Cutting planes:
   MIR: 1
   BQP: 28
 
-Explored 21 nodes (562 simplex iterations) in 0.11 seconds (0.05 work units)
+Explored 21 nodes (562 simplex iterations) in 0.47 seconds (0.05 work units)
 Thread count was 32 (of 64 available processors)
 
 Solution count 2: 202 720 

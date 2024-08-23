@@ -1,5 +1,5 @@
 
-Gurobi 11.0.0 (linux64) logging started Sun Aug 18 00:26:45 2024
+Gurobi 11.0.0 (linux64) logging started Thu Aug 22 17:31:01 2024
 
 Set parameter LogFile to value "gurobi_log/nei_penalty/gurobi_log/random8.log"
 Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (linux64 - "Ubuntu 22.04.3 LTS")
@@ -20,7 +20,7 @@ Coefficient statistics:
 Found heuristic solution: objective 1632.0000000
 Found heuristic solution: objective 329.0000000
 Found heuristic solution: objective 285.0000000
-Presolve time: 0.00s
+Presolve time: 0.01s
 Presolved: 0 rows, 64 columns, 0 nonzeros
 Presolved model has 960 quadratic objective terms
 Variable types: 0 continuous, 64 integer (64 binary)
@@ -47,7 +47,7 @@ Cutting planes:
   RLT: 19
   BQP: 75
 
-Explored 6863 nodes (46010 simplex iterations) in 1.94 seconds (1.67 work units)
+Explored 6863 nodes (46010 simplex iterations) in 3.34 seconds (1.67 work units)
 Thread count was 32 (of 64 available processors)
 
 Solution count 8: 246 249 261 ... 1632

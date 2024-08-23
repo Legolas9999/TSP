@@ -1,7 +1,7 @@
 
-Gurobi 11.0.0 (linux64) logging started Mon Aug  5 15:11:55 2024
+Gurobi 11.0.0 (linux64) logging started Thu Aug 22 17:27:44 2024
 
-Set parameter LogFile to value "gurobi_optimal_tour_log/gurobi_log/random11.log"
+Set parameter LogFile to value "gurobi_log/optimal_penalty/gurobi_log/random11.log"
 Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (linux64 - "Ubuntu 22.04.3 LTS")
 
 CPU model: Intel(R) Xeon(R) Platinum 8358 CPU @ 2.60GHz, instruction set [SSE2|AVX|AVX2|AVX512]
@@ -40,7 +40,7 @@ Cutting planes:
   Gomory: 3
   RLT: 116
 
-Explored 10476 nodes (141790 simplex iterations) in 1.32 seconds (1.29 work units)
+Explored 10476 nodes (141790 simplex iterations) in 1.60 seconds (1.29 work units)
 Thread count was 32 (of 64 available processors)
 
 Solution count 5: 318 324 348 ... 1320

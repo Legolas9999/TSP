@@ -1,7 +1,7 @@
 
-Gurobi 11.0.0 (linux64) logging started Mon Aug  5 15:11:45 2024
+Gurobi 11.0.0 (linux64) logging started Thu Aug 22 17:27:35 2024
 
-Set parameter LogFile to value "gurobi_optimal_tour_log/gurobi_log/random7.log"
+Set parameter LogFile to value "gurobi_log/optimal_penalty/gurobi_log/random7.log"
 Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (linux64 - "Ubuntu 22.04.3 LTS")
 
 CPU model: Intel(R) Xeon(R) Platinum 8358 CPU @ 2.60GHz, instruction set [SSE2|AVX|AVX2|AVX512]
@@ -20,7 +20,7 @@ Coefficient statistics:
 Found heuristic solution: objective 756.0000000
 Found heuristic solution: objective 265.0000000
 Found heuristic solution: objective 258.0000000
-Presolve time: 0.01s
+Presolve time: 0.00s
 Presolved: 0 rows, 49 columns, 0 nonzeros
 Presolved model has 637 quadratic objective terms
 Variable types: 0 continuous, 49 integer (49 binary)
@@ -41,7 +41,7 @@ Cutting planes:
   Flow cover: 13
   BQP: 73
 
-Explored 6857 nodes (30762 simplex iterations) in 1.81 seconds (1.47 work units)
+Explored 6857 nodes (30762 simplex iterations) in 1.58 seconds (1.47 work units)
 Thread count was 32 (of 64 available processors)
 
 Solution count 3: 258 265 756 
