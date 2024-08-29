@@ -224,8 +224,8 @@ def delaunay(
 def edges_add_seg1(cities_coord):
     # 创建 Voronoi 图
     vor = Voronoi(cities_coord)
-    # voronoi_plot_2d(vor)
-    # plt.show()
+    voronoi_plot_2d(vor)
+    plt.show()
 
     # 平面分界线交点的坐标
     coord_inter = vor.vertices
@@ -1504,10 +1504,11 @@ def main():
     # print('de_nei:' ,is_subgraph(ins.graph_optimal_tour,ins.graph_de_nei2_nei3)[0])
 
     
-    for i in range(5, 201):
-        ins = instance(i)
+    for i in range(8,9):
 
-        print(ins.max_distance)
+        ins = instance(40)
+
+        print(ins.optimal_tour)
 
 
 
