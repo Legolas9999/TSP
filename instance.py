@@ -1445,12 +1445,12 @@ TOUR_FILE = so_big_ins/random{self.n}.txt"
 
 def check():
     diff = []
-    for i in range(173,174):
+    # for i in range(173,174):
 
-        ins = instance(i)
-        print('edges:', ins.de_nei2_nei3_edges, ins.de_nei2_new_nei3_edges)
-        print('lambda:', ins.de_nei2_nei3_lambda, ins.de_nei2_new_nei3_lambda)
-        print('#'*20)
+    ins = instance(20)
+        #print('edges:', ins.de_nei2_nei3_edges, ins.de_nei2_new_nei3_edges)
+        #print('lambda:', ins.de_nei2_nei3_lambda, ins.de_nei2_new_nei3_lambda)
+        #print('#'*20)
         
         # print('edges of nei:',ins.de_nei2_nei3_edges)
         
@@ -1479,11 +1479,11 @@ def check():
         # print('old',list(ins.graph_de_nei2_nei3.neighbors(133)))
         # print('new', list(ins.graph_de_nei2_new_nei3.neighbors(133)))
 
-        # nx.draw(ins.graph_de_nei2_nei3, ins.graph_pos, with_labels=True, node_size=300, node_color="skyblue", edge_color='white')
-        
-        # nx.draw_networkx_edges(ins.graph_de_nei2_nei3, ins.graph_pos, nei_list, edge_color="r", width=3) # nei红色
-        # nx.draw_networkx_edges(ins.graph_de_nei2_nei3, ins.graph_pos, complete_list, edge_color="g", width=3)
-        # plt.show()
+    nx.draw(ins.graph_de_nei2_nei3, ins.graph_pos, with_labels=True, node_size=300, node_color="skyblue", edge_color='black')
+    
+    # nx.draw_networkx_edges(ins.graph_de_nei2_nei3, ins.graph_pos, nei_list, edge_color="r", width=3) # nei红色
+    # nx.draw_networkx_edges(ins.graph_de_nei2_nei3, ins.graph_pos, complete_list, edge_color="g", width=3)
+    plt.show()
 
         
 
@@ -1503,12 +1503,12 @@ def main():
     # print('de_seg:' ,is_subgraph(ins.graph_optimal_tour,ins.graph_de_seg1_seg2_seg3)[0])
     # print('de_nei:' ,is_subgraph(ins.graph_optimal_tour,ins.graph_de_nei2_nei3)[0])
 
-    
-    for i in range(8,9):
+    check()
+    # for i in range(8,9):
 
-        ins = instance(40)
+    #     ins = instance(20)
 
-        print(ins.optimal_tour)
+    #     print(ins.optimal_tour)
 
 
 
