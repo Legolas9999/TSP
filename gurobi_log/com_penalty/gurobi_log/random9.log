@@ -1,0 +1,50 @@
+
+Gurobi 11.0.0 (linux64) logging started Sat Aug 31 01:20:24 2024
+
+Set parameter LogFile to value "gurobi_log/com_penalty/gurobi_log/random9.log"
+Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (linux64 - "Ubuntu 22.04.3 LTS")
+
+CPU model: Intel(R) Xeon(R) Platinum 8358 CPU @ 2.60GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 64 physical cores, 64 logical processors, using up to 32 threads
+
+Optimize a model with 0 rows, 81 columns and 0 nonzeros
+Model fingerprint: 0x846d2756
+Model has 1377 quadratic objective terms
+Variable types: 0 continuous, 81 integer (81 binary)
+Coefficient statistics:
+  Matrix range     [0e+00, 0e+00]
+  Objective range  [4e+02, 4e+02]
+  QObjective range [3e+01, 4e+02]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [0e+00, 0e+00]
+Found heuristic solution: objective 1998.0000000
+Found heuristic solution: objective 489.0000000
+Found heuristic solution: objective 445.0000000
+Found heuristic solution: objective 359.0000000
+Presolve time: 0.01s
+Presolved: 0 rows, 81 columns, 0 nonzeros
+Presolved model has 1377 quadratic objective terms
+Variable types: 0 continuous, 81 integer (81 binary)
+Found heuristic solution: objective 325.0000000
+
+Root relaxation: objective -6.541345e+02, 79 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 -654.13454    0   79  325.00000 -654.13454   301%     -    0s
+     0     0 -654.12992    0   79  325.00000 -654.12992   301%     -    0s
+     0     2 -652.27231    0   79  325.00000 -652.27231   301%     -    0s
+H   97   124                     307.0000000 -505.12443   265%   9.6    0s
+
+Cutting planes:
+  RLT: 57
+
+Explored 4603 nodes (30873 simplex iterations) in 0.59 seconds (0.52 work units)
+Thread count was 32 (of 64 available processors)
+
+Solution count 6: 307 325 359 ... 1998
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 3.070000000000e+02, best bound 3.070000000000e+02, gap 0.0000%
+city broken:0,time broken:0
