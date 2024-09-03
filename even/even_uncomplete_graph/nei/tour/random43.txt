@@ -1,0 +1,51 @@
+NAME : random43.555.tour
+COMMENT : Length = 555
+COMMENT : Found by LKH [Keld Helsgaun] Tue Sep  3 16:56:18 2024
+TYPE : TOUR
+DIMENSION : 43
+TOUR_SECTION
+1
+5
+10
+14
+3
+6
+12
+25
+41
+11
+18
+22
+37
+29
+13
+17
+30
+4
+28
+26
+19
+39
+21
+32
+8
+24
+40
+42
+38
+36
+23
+33
+27
+43
+9
+15
+35
+7
+31
+20
+2
+34
+16
+-1
+EOF

@@ -9,6 +9,7 @@ from scipy.spatial import Voronoi, voronoi_plot_2d
 import matplotlib.pyplot as plt
 import json
 import time
+import os
 
 
 def gaussian_coord(n):
@@ -224,8 +225,8 @@ def delaunay(
 def edges_add_seg1(cities_coord):
     # 创建 Voronoi 图
     vor = Voronoi(cities_coord)
-    voronoi_plot_2d(vor)
-    plt.show()
+    # voronoi_plot_2d(vor)
+    # plt.show()
 
     # 平面分界线交点的坐标
     coord_inter = vor.vertices
@@ -943,6 +944,20 @@ def edges_add_nei3(cities_coord):
 
     return edges_to_connect
 
+# 从seg文件读取length
+def read_seg(num):
+    with open(f"even/even_uncomplete_graph/seg/tour/random{num}.txt", "r") as file:
+        first_line = file.readline().strip()  # 读取第一行并去除两边的空白字符
+        length = int(first_line.rsplit('.', 2)[1])
+        return length
+    
+# 从nei文件读取length
+def read_nei(num):
+    with open(f"even/even_uncomplete_graph/nei/tour/random{num}.txt", "r") as file:
+        first_line = file.readline().strip()  # 读取第一行并去除两边的空白字符
+        length = int(first_line.rsplit('.', 2)[1])
+        return length
+
 
 # 画出最佳路径图
 def optimal_tour_graph(num_city):
@@ -1028,7 +1043,7 @@ def read_json(n):
 
 
 # 基于原有距离矩阵生成missing edges的距离矩阵，用999999
-def creat_dis_mat_missing_edges(n, G_add_edges, dis_mat):
+def creat_dis_mat_missing_edges(n, G_add_edges, dis_mat, max_distance):
     # 完全图的边
     complete_edges = [{i, j} for i in range(n) for j in range(i + 1, n)]
 
@@ -1041,8 +1056,8 @@ def creat_dis_mat_missing_edges(n, G_add_edges, dis_mat):
     # 创建基于消失边的距离矩阵
     for edge in missing_edges:
         temp = list(edge)
-        dis_mat[temp[0], temp[1]] = 999999
-        dis_mat[temp[1], temp[0]] = 999999
+        dis_mat[temp[0], temp[1]] = max_distance
+        dis_mat[temp[1], temp[0]] = max_distance
 
     return dis_mat
 
@@ -1115,7 +1130,7 @@ class instance:
     def __init__(self, n):
         # 城市个数
         self.n = n
-        # ---------------------------------------------
+        # # ---------------------------------------------
         # 城市坐标 平均分布
         self.coord = uniform_coord(self.n)
         # 距离矩阵
@@ -1187,12 +1202,30 @@ class instance:
 
 
         # ---------------------------------------------
-        # # 基于非完全图的距离矩阵
-        # # Python中的可变类型在作为参数传递给函数时，因为传递的是对象的引用而不是其副本。
-        # # 当你在函数内部修改这些可变对象时，外部的原始对象也会被修改。
-        # self.mat_missing_edges = creat_dis_mat_missing_edges(
-        #     self.n, self.graph_de_nei2_nei3, self.mat.copy()
-        # )
+        # 基于非完全图的距离矩阵
+        # Python中的可变类型在作为参数传递给函数时，因为传递的是对象的引用而不是其副本。
+        # 当你在函数内部修改这些可变对象时，外部的原始对象也会被修改。
+
+        self.mat_missing_edges_seg = creat_dis_mat_missing_edges(
+            self.n, self.graph_de_seg1_seg2_seg3, self.mat.copy(), self.max_distance
+        )
+        
+        self.mat_missing_edges_nei = creat_dis_mat_missing_edges(
+            self.n, self.graph_de_nei2_nei3, self.mat.copy(), self.max_distance
+        )
+
+        # ---------------------------------------------
+        # 分别读取非完全图的length
+        self.mat_missing_edges_seg_length = read_seg(self.n)
+
+        self.mat_missing_edges_nei_length = read_nei(self.n)
+
+        # ---------------------------------------------
+        # 统计非完全图矩阵中最大距离出现的次数 对称矩阵除以2
+        self.num_quadratic_eliminated_seg = int(np.count_nonzero(self.mat_missing_edges_seg == self.max_distance) / 2)
+        
+        self.num_quadratic_eliminated_nei = int(np.count_nonzero(self.mat_missing_edges_nei == self.max_distance) / 2)
+
 
     # 写入坐标
     def write_coord(self):
@@ -1205,9 +1238,9 @@ class instance:
     # 写入矩阵
     def write_mat(self):
         # 写参数
-        with open(f"so_big_ins/random{self.n}.tsp", "w") as file:
+        with open(f"even/even_uncomplete_graph/nei/mat/random{self.n}.tsp", "w") as file:
             file.write(
-                f"NAME: so_big_ins_random{self.n}\r\
+                f"NAME: random{self.n}\r\
 TYPE: TSP\r\
 DIMENSION: {self.n}\r\
 EDGE_WEIGHT_TYPE: EXPLICIT\r\
@@ -1219,15 +1252,15 @@ EDGE_WEIGHT_SECTION\r"
             for i in range(self.n):
                 for j in range(self.n):
                     if i <= j:
-                        file.write(str(self.mat[i, j])[:-2] + "\r")
+                        file.write(str(self.mat_missing_edges_nei[i, j])[:-2] + "\r")
 
             file.write("EOF")
 
     # 写入参数文件
     def write_par(self):
-        with open(f"so_big_ins/random{self.n}.par", "w") as file:
+        with open(f"even/even_uncomplete_graph/nei/par/random{self.n}.par", "w") as file:
             file.write(
-                f"PROBLEM_FILE = so_big_ins/random{self.n}.tsp\r\
+                f"PROBLEM_FILE = even/even_uncomplete_graph/nei/mat/random{self.n}.tsp\r\
 INITIAL_PERIOD = 1000\r\
 MAX_CANDIDATES = 4\r\
 MAX_TRIALS = 1000\r\
@@ -1236,12 +1269,24 @@ PATCHING_C = 6\r\
 PATCHING_A = 5\r\
 RECOMBINATION = GPX2\r\
 RUNS = 10\r\
-TOUR_FILE = so_big_ins/random{self.n}.txt"
+TOUR_FILE = even/even_uncomplete_graph/nei/tour/random{self.n}.txt"
             )
 
     # LKH
     def LKH(self):
-        subprocess.run(["LKH-2.exe", f"so_big_ins/random{self.n}.par"])
+        subprocess.run(["LKH-2.exe", f"even/even_uncomplete_graph/seg/par/random{self.n}.par"])
+        os.system(f'echo.|LKH-2.exe even/even_uncomplete_graph/seg/par/random{self.n}.par')
+
+
+    def LKH_test(self):
+        process = subprocess.Popen(
+        ["LKH-2.exe", f"even/even_uncomplete_graph/nei/par/random{self.n}.par"],
+        stdin=subprocess.PIPE
+    )
+    
+        # 发送回车键以继续下一次循环
+        process.communicate(input=b'\n')
+
 
     # LKH
     @staticmethod
@@ -1490,25 +1535,15 @@ def check():
             
 
 def main():
-    pass
-    # ins = instance(10000)
-    # dic = {
-    #     'de_lambda':ins.de_lambda,
-    #     'de_seg_lambda':ins.de_seg1_seg2_seg3_lambda,
-    #     'de_nei_lambda':ins.de_nei2_nei3_lambda
-    # }
-    # print(dic)
+    print('seg')
+    for i in range(5, 201):
+        # print(i)
+        ins = instance(i)
+        print(ins.num_quadratic_eliminated_seg)
+        
+        
+        
 
-    # print('de:' ,is_subgraph(ins.graph_optimal_tour,ins.graph_de)[0])
-    # print('de_seg:' ,is_subgraph(ins.graph_optimal_tour,ins.graph_de_seg1_seg2_seg3)[0])
-    # print('de_nei:' ,is_subgraph(ins.graph_optimal_tour,ins.graph_de_nei2_nei3)[0])
-
-    check()
-    # for i in range(8,9):
-
-    #     ins = instance(20)
-
-    #     print(ins.optimal_tour)
 
 
 
