@@ -947,16 +947,40 @@ def edges_add_nei3(cities_coord):
 # 从seg文件读取length
 def read_seg(num):
     with open(f"even/even_uncomplete_graph/seg/tour/random{num}.txt", "r") as file:
-        first_line = file.readline().strip()  # 读取第一行并去除两边的空白字符
-        length = int(first_line.rsplit('.', 2)[1])
-        return length
+
+        result = file.readlines()
+        # 读取tour
+        tour = result[6:-2]
+
+        # 获取最优路径长度
+        length = int(result[0].rsplit('.', 2)[1])
+
+        #first_line = file.readline().strip()  # 读取第一行并去除两边的空白字符
+        #length = int(first_line.rsplit('.', 2)[1])
+
+    # 格式转换，去除换行符
+    tour = list(map(lambda x: int(x) - 1, tour))
+    return length, tour
     
 # 从nei文件读取length
 def read_nei(num):
     with open(f"even/even_uncomplete_graph/nei/tour/random{num}.txt", "r") as file:
-        first_line = file.readline().strip()  # 读取第一行并去除两边的空白字符
-        length = int(first_line.rsplit('.', 2)[1])
-        return length
+        #first_line = file.readline().strip()  # 读取第一行并去除两边的空白字符
+        #length = int(first_line.rsplit('.', 2)[1])
+
+        result = file.readlines()
+        # 读取tour
+        tour = result[6:-2]
+
+        # 获取最优路径长度
+        length = int(result[0].rsplit('.', 2)[1])
+
+        #first_line = file.readline().strip()  # 读取第一行并去除两边的空白字符
+        #length = int(first_line.rsplit('.', 2)[1])
+
+    # 格式转换，去除换行符
+    tour = list(map(lambda x: int(x) - 1, tour))
+    return length, tour
 
 
 # 画出最佳路径图
@@ -1042,7 +1066,7 @@ def read_json(n):
     return np.array(dic['solution_mat'])
 
 
-# 基于原有距离矩阵生成missing edges的距离矩阵，用999999
+# 基于原有距离矩阵生成missing edges的距离矩阵，用最大距离
 def creat_dis_mat_missing_edges(n, G_add_edges, dis_mat, max_distance):
     # 完全图的边
     complete_edges = [{i, j} for i in range(n) for j in range(i + 1, n)]
@@ -1215,16 +1239,21 @@ class instance:
         )
 
         # ---------------------------------------------
-        # 分别读取非完全图的length
-        self.mat_missing_edges_seg_length = read_seg(self.n)
+        # 分别读取非完全图的length和tour
+        result = read_seg(self.n)
+        self.mat_missing_edges_seg_length = result[0]
+        self.seg_tour = result[1]
 
-        self.mat_missing_edges_nei_length = read_nei(self.n)
+        result = read_nei(self.n)
+        self.mat_missing_edges_nei_length = result[0]
+        self.nei_tour = result[1]
 
         # ---------------------------------------------
         # 统计非完全图矩阵中最大距离出现的次数 对称矩阵除以2
-        self.num_quadratic_eliminated_seg = int(np.count_nonzero(self.mat_missing_edges_seg == self.max_distance) / 2)
+        # 并计算可以削减的二次项个数
+        self.num_quadratic_eliminated_seg = 2 * self.n * int(np.count_nonzero(self.mat_missing_edges_seg == self.max_distance) / 2)
         
-        self.num_quadratic_eliminated_nei = int(np.count_nonzero(self.mat_missing_edges_nei == self.max_distance) / 2)
+        self.num_quadratic_eliminated_nei = 2 * self.n * int(np.count_nonzero(self.mat_missing_edges_nei == self.max_distance) / 2)
 
 
     # 写入坐标
@@ -1535,11 +1564,11 @@ def check():
             
 
 def main():
-    print('seg')
+    print('nei')
     for i in range(5, 201):
         # print(i)
         ins = instance(i)
-        print(ins.num_quadratic_eliminated_seg)
+        print(ins.seg_tour == ins.optimal_tour)
         
         
         
