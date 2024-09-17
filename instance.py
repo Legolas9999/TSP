@@ -544,6 +544,8 @@ def edges_add_seg2(cities_coord):
 def edges_add_seg3(cities_coord):
     # 创建 Voronoi 图
     vor = Voronoi(cities_coord)
+    # voronoi_plot_2d(vor)
+    # plt.show()
 
     # voronoi顶点的坐标
     vor_vertices = vor.vertices
@@ -1194,6 +1196,29 @@ class instance:
         self.de_edges = result[3]
         self.left_city_right_de = result[4]
         # ---------------------------------------------
+        # 基于de + seg1 
+        result = delaunay(
+            self.mat,
+            self.coord,
+            seg1=edges_add_seg1(self.coord)
+        )
+        self.de_seg1_lambda = result[0]
+        self.de_seg1_lambda_list = result[1]
+        self.graph_de_seg1 = result[2]  # 对应的图
+        self.de_seg1_edges = result[3]
+        # ---------------------------------------------  
+        # 基于de + seg1 + seg2
+        result = delaunay(
+            self.mat,
+            self.coord,
+            seg1=edges_add_seg1(self.coord),
+            seg2=edges_add_seg2(self.coord)
+        )
+        self.de_seg1_seg2_lambda = result[0]
+        self.de_seg1_seg2_lambda_list = result[1]
+        self.graph_de_seg1_seg2 = result[2]  # 对应的图
+        self.de_seg1_seg2_edges = result[3]
+        # ---------------------------------------------
         # 基于de + seg1 + seg2 + seg3
         result = delaunay(
             self.mat,
@@ -1207,6 +1232,18 @@ class instance:
         self.graph_de_seg1_seg2_seg3 = result[2]  # 对应的图
         self.de_seg1_seg2_seg3_edges = result[3]
         self.left_city_right_seg = result[4]
+        # ---------------------------------------------
+        # 基于de + nei2 
+        result = delaunay(
+            self.mat,
+            self.coord,
+            nei2=edges_add_nei2(self.coord)
+        )
+        self.de_nei2_lambda = result[0]
+        self.de_nei2_lambda_list = result[1]
+        self.graph_de_nei2 = result[2]  # 加邻居的邻居
+        self.de_nei2_edges = result[3]
+        #self.left_city_right_nei2 = result[4]
         # ---------------------------------------------
         # 基于de + nei2 + nei3
         result = delaunay(
@@ -1495,8 +1532,8 @@ TOUR_FILE = even/even_uncomplete_graph/nei/tour/random{self.n}.txt"
 
     # 如果不是子图画出没有包含的边
     def draw_not_subgraph(self):
-        result = is_subgraph(self.graph_optimal_tour, self.graph_seg1_nei2)
-        G = self.graph_optimal_tour
+        result = is_subgraph(self.graph_optimal_tour, self.graph_de_seg1_seg2)
+        G = self.graph_de_seg1_seg2
         # 如果不是子图
         if result[0] == False:
 
@@ -1504,11 +1541,11 @@ TOUR_FILE = even/even_uncomplete_graph/nei/tour/random{self.n}.txt"
             edge_list = list(map(lambda x: tuple(x), result[1]))
 
             nx.draw(
-                G, self.graph_pos, with_labels=True, node_size=300, node_color="skyblue"
+                G, self.graph_pos, with_labels=True, node_size=300, node_color="skyblue", width=0.5
             )
-            nx.draw_networkx_edges(
-                G, self.graph_pos, edge_list, edge_color="r", width=3
-            )
+            # nx.draw_networkx_edges(
+            #     G, self.graph_pos, edge_list, edge_color="r", width=3
+            # )
             plt.show()
 
         else:
@@ -1521,7 +1558,7 @@ def check():
     diff = []
     # for i in range(173,174):
 
-    ins = instance(20)
+    ins = instance(98)
         #print('edges:', ins.de_nei2_nei3_edges, ins.de_nei2_new_nei3_edges)
         #print('lambda:', ins.de_nei2_nei3_lambda, ins.de_nei2_new_nei3_lambda)
         #print('#'*20)
@@ -1553,7 +1590,7 @@ def check():
         # print('old',list(ins.graph_de_nei2_nei3.neighbors(133)))
         # print('new', list(ins.graph_de_nei2_new_nei3.neighbors(133)))
 
-    nx.draw(ins.graph_de_nei2_nei3, ins.graph_pos, with_labels=True, node_size=300, node_color="skyblue", edge_color='black')
+    nx.draw(ins.graph_de_nei2_nei3, ins.graph_pos, with_labels=True, node_size=300, node_color="skyblue", edge_color='black', width = 0.5)
     
     # nx.draw_networkx_edges(ins.graph_de_nei2_nei3, ins.graph_pos, nei_list, edge_color="r", width=3) # nei红色
     # nx.draw_networkx_edges(ins.graph_de_nei2_nei3, ins.graph_pos, complete_list, edge_color="g", width=3)
@@ -1565,11 +1602,13 @@ def check():
 
 def main():
     print('nei')
-    for i in range(5, 201):
+    for i in range(98, 99):
         # print(i)
         ins = instance(i)
-        print(ins.seg_tour == ins.optimal_tour)
-        
+        print(i)
+        ins.draw_not_subgraph()
+        #res = is_subgraph(ins.graph_optimal_tour, ins.graph_de_nei2)[0]
+        #print(i, res)
         
         
 
@@ -1585,5 +1624,5 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    check()
         
