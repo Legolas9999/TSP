@@ -544,8 +544,8 @@ def edges_add_seg2(cities_coord):
 def edges_add_seg3(cities_coord):
     # 创建 Voronoi 图
     vor = Voronoi(cities_coord)
-    # voronoi_plot_2d(vor)
-    # plt.show()
+    voronoi_plot_2d(vor)
+    plt.show()
 
     # voronoi顶点的坐标
     vor_vertices = vor.vertices
@@ -1557,44 +1557,45 @@ TOUR_FILE = even/even_uncomplete_graph/nei/tour/random{self.n}.txt"
 def check():
     diff = []
     # for i in range(173,174):
-
-    ins = instance(98)
-        #print('edges:', ins.de_nei2_nei3_edges, ins.de_nei2_new_nei3_edges)
-        #print('lambda:', ins.de_nei2_nei3_lambda, ins.de_nei2_new_nei3_lambda)
-        #print('#'*20)
-        
-        # print('edges of nei:',ins.de_nei2_nei3_edges)
-        
-        # if set(ins.left_city_right_nei) != set(ins.left_city_right_complete):
-        #     print('not equal')
-        #     diff.append(i)
-
-
-        #     print(ins.left_city_right_nei ,ins.left_city_right_complete)
-
-
-        #     print(ins.mat[ins.left_city_right_nei[0], ins.left_city_right_nei[1]] +
-        #         ins.mat[ins.left_city_right_nei[1], ins.left_city_right_nei[2]])
+    for i in range(98, 99):
+        print(i)
+        ins = instance(i)
+            #print('edges:', ins.de_nei2_nei3_edges, ins.de_nei2_new_nei3_edges)
+            #print('lambda:', ins.de_nei2_nei3_lambda, ins.de_nei2_new_nei3_lambda)
+            #print('#'*20)
             
-        #     print(ins.mat[ins.left_city_right_complete[0], ins.left_city_right_complete[1]] +
-        #         ins.mat[ins.left_city_right_complete[1], ins.left_city_right_complete[2]])
+            # print('edges of nei:',ins.de_nei2_nei3_edges)
             
+            # if set(ins.left_city_right_nei) != set(ins.left_city_right_complete):
+            #     print('not equal')
+            #     diff.append(i)
+
+
+            #     print(ins.left_city_right_nei ,ins.left_city_right_complete)
+
+
+            #     print(ins.mat[ins.left_city_right_nei[0], ins.left_city_right_nei[1]] +
+            #         ins.mat[ins.left_city_right_nei[1], ins.left_city_right_nei[2]])
+                
+            #     print(ins.mat[ins.left_city_right_complete[0], ins.left_city_right_complete[1]] +
+            #         ins.mat[ins.left_city_right_complete[1], ins.left_city_right_complete[2]])
+                
+            
+            # nei_list = [(ins.left_city_right_nei[0], ins.left_city_right_nei[1]), 
+            #             (ins.left_city_right_nei[1], ins.left_city_right_nei[2])]
+
         
-        # nei_list = [(ins.left_city_right_nei[0], ins.left_city_right_nei[1]), 
-        #             (ins.left_city_right_nei[1], ins.left_city_right_nei[2])]
+            # complete_list = [(ins.left_city_right_complete[0], ins.left_city_right_complete[1]), 
+            #                 (ins.left_city_right_complete[1], ins.left_city_right_complete[2])]
+                
+            # print('old',list(ins.graph_de_nei2_nei3.neighbors(133)))
+            # print('new', list(ins.graph_de_nei2_new_nei3.neighbors(133)))
 
-    
-        # complete_list = [(ins.left_city_right_complete[0], ins.left_city_right_complete[1]), 
-        #                 (ins.left_city_right_complete[1], ins.left_city_right_complete[2])]
-            
-        # print('old',list(ins.graph_de_nei2_nei3.neighbors(133)))
-        # print('new', list(ins.graph_de_nei2_new_nei3.neighbors(133)))
-
-    nx.draw(ins.graph_de_nei2_nei3, ins.graph_pos, with_labels=True, node_size=300, node_color="skyblue", edge_color='black', width = 0.5)
-    
-    # nx.draw_networkx_edges(ins.graph_de_nei2_nei3, ins.graph_pos, nei_list, edge_color="r", width=3) # nei红色
-    # nx.draw_networkx_edges(ins.graph_de_nei2_nei3, ins.graph_pos, complete_list, edge_color="g", width=3)
-    plt.show()
+        #nx.draw(ins.graph_de_seg1_seg2_seg3, ins.graph_pos, with_labels=True, node_size=300, node_color="skyblue", edge_color='black', width = 0.5)
+        
+        # nx.draw_networkx_edges(ins.graph_de_nei2_nei3, ins.graph_pos, nei_list, edge_color="r", width=3) # nei红色
+        # nx.draw_networkx_edges(ins.graph_de_nei2_nei3, ins.graph_pos, complete_list, edge_color="g", width=3)
+        #plt.show()
 
         
 
