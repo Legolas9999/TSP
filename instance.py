@@ -11,6 +11,8 @@ import json
 import time
 import os
 
+from pyqubo import Binary, Array, SubH
+
 
 def gaussian_coord(n):
     #设定随机种子
@@ -544,8 +546,8 @@ def edges_add_seg2(cities_coord):
 def edges_add_seg3(cities_coord):
     # 创建 Voronoi 图
     vor = Voronoi(cities_coord)
-    voronoi_plot_2d(vor)
-    plt.show()
+    #voronoi_plot_2d(vor)
+    #plt.show()
 
     # voronoi顶点的坐标
     vor_vertices = vor.vertices
@@ -1551,6 +1553,18 @@ TOUR_FILE = even/even_uncomplete_graph/nei/tour/random{self.n}.txt"
         else:
             return None
 
+    # 创建tsp的qubo模型(索引从0开始)
+    def tsp_qubo_model(self):
+
+        tsp_x = Array.create('x', shape=(self.n, self.n), vartype='BINARY')
+        print(tsp_x)
+        
+        
+
+
+
+
+
 
 
 
@@ -1625,5 +1639,6 @@ def main():
 
 
 if __name__ == "__main__":
-    check()
+    ins = instance(5)
+    ins.tsp_qubo_model()
         
