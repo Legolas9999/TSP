@@ -1,6 +1,6 @@
 NAME : random180.1067.tour
 COMMENT : Length = 1067
-COMMENT : Found by LKH [Keld Helsgaun] Thu Sep 26 17:53:01 2024
+COMMENT : Found by LKH [Keld Helsgaun] Thu Sep 26 21:42:56 2024
 TYPE : TOUR
 DIMENSION : 180
 TOUR_SECTION

@@ -1,6 +1,6 @@
 NAME : random156.963.tour
 COMMENT : Length = 963
-COMMENT : Found by LKH [Keld Helsgaun] Thu Sep 26 17:43:32 2024
+COMMENT : Found by LKH [Keld Helsgaun] Thu Sep 26 21:34:07 2024
 TYPE : TOUR
 DIMENSION : 156
 TOUR_SECTION

@@ -1,40 +1,25 @@
-NAME : random124.850.tour
-COMMENT : Length = 850
-COMMENT : Found by LKH [Keld Helsgaun] Tue Sep  3 16:42:45 2024
+NAME : random124.851.tour
+COMMENT : Length = 851
+COMMENT : Found by LKH [Keld Helsgaun] Thu Sep 26 18:46:40 2024
 TYPE : TOUR
 DIMENSION : 124
 TOUR_SECTION
 1
-30
-48
+35
 21
 9
 119
 103
 54
+48
+30
 108
 45
 23
 66
 47
-37
-72
-18
 26
 34
-5
-17
-74
-76
-106
-124
-27
-65
-60
-31
-120
-57
-53
 68
 7
 92
@@ -95,8 +80,8 @@ TOUR_SECTION
 11
 110
 62
-4
 75
+4
 117
 2
 78
@@ -113,20 +98,35 @@ TOUR_SECTION
 116
 84
 70
-16
 52
 61
-58
+16
 123
-89
+58
 101
 81
+89
 28
 95
 98
 13
 46
 99
-35
+17
+74
+76
+106
+124
+27
+65
+60
+31
+120
+57
+53
+5
+18
+72
+37
 -1
 EOF

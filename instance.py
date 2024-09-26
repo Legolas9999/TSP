@@ -1354,7 +1354,7 @@ TOUR_FILE = even/even_complete_graph/tour/random{self.n}.txt"
 
     def LKH_test(self):
         process = subprocess.Popen(
-        ["LKH-2.exe", f"even/even_uncomplete_graph/nei/par/random{self.n}.par"],
+        ["LKH-2.exe", f"even/even_complete_graph/par/random{self.n}.par"],
         stdin=subprocess.PIPE
     )
     

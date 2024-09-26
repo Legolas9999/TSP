@@ -1,6 +1,6 @@
-NAME : random88.732.tour
-COMMENT : Length = 732
-COMMENT : Found by LKH [Keld Helsgaun] Tue Sep  3 16:31:53 2024
+NAME : random88.734.tour
+COMMENT : Length = 734
+COMMENT : Found by LKH [Keld Helsgaun] Thu Sep 26 18:41:53 2024
 TYPE : TOUR
 DIMENSION : 88
 TOUR_SECTION
