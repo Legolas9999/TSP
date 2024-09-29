@@ -14,6 +14,8 @@ import os
 
 from pyqubo import Array
 
+import embedding 
+
 
 def gaussian_coord(n):
     #设定随机种子
@@ -1093,7 +1095,17 @@ def creat_dis_mat_missing_edges(n, G_add_edges, dis_mat, max_distance):
         dis_mat[temp[0], temp[1]] = max_distance
         dis_mat[temp[1], temp[0]] = max_distance
 
-    return dis_mat
+    # -----------除对角线外同时减去最大距离
+    # 复制数组以保持原数组不变
+    dis_mat_for_qubo = dis_mat.copy()
+
+    # 获取对角线掩码矩阵
+    diag_mask = np.eye(dis_mat.shape[0], dtype=bool)
+
+    # 对所有非对角线的元素减去相同的值，例如减去2
+    dis_mat_for_qubo[~diag_mask] -= max_distance
+
+    return dis_mat, dis_mat_for_qubo
 
 
 # 基于原有距离矩阵生成missing edges的距离矩阵，用999999
@@ -1164,13 +1176,13 @@ class instance:
     def __init__(self, n):
         # 城市个数
         self.n = n
-        # # ---------------------------------------------
-        # # 城市坐标 平均分布
-        # self.coord = uniform_coord(self.n)
-        # # 距离矩阵
-        # self.mat = dis_mat(self.coord)
-        # #最大城市间距离
-        # self.max_distance = int(np.max(self.mat))
+        # ---------------------------------------------
+        # 城市坐标 平均分布
+        self.coord = uniform_coord(self.n)
+        # 距离矩阵
+        self.mat = dis_mat(self.coord)
+        #最大城市间距离
+        self.max_distance = int(np.max(self.mat))
         # # ---------------------------------------------
         # # # 城市坐标 正态分布
         # # self.g_coord = gaussian_coord(self.n)
@@ -1227,19 +1239,19 @@ class instance:
         # self.graph_de_seg1_seg2 = result[2]  # 对应的图
         # self.de_seg1_seg2_edges = result[3]
         # # ---------------------------------------------
-        # # 基于de + seg1 + seg2 + seg3
-        # result = delaunay(
-        #     self.mat,
-        #     self.coord,
-        #     seg1=edges_add_seg1(self.coord),
-        #     seg2=edges_add_seg2(self.coord),
-        #     seg3=edges_add_seg3(self.coord)
-        # )
-        # self.de_seg1_seg2_seg3_lambda = result[0]
-        # self.de_seg1_seg2_seg3_lambda_list = result[1]
-        # self.graph_de_seg1_seg2_seg3 = result[2]  # 对应的图
-        # self.de_seg1_seg2_seg3_edges = result[3]
-        # self.left_city_right_seg = result[4]
+        # 基于de + seg1 + seg2 + seg3
+        result = delaunay(
+            self.mat,
+            self.coord,
+            seg1=edges_add_seg1(self.coord),
+            seg2=edges_add_seg2(self.coord),
+            seg3=edges_add_seg3(self.coord)
+        )
+        self.de_seg1_seg2_seg3_lambda = result[0]
+        self.de_seg1_seg2_seg3_lambda_list = result[1]
+        self.graph_de_seg1_seg2_seg3 = result[2]  # 对应的图
+        self.de_seg1_seg2_seg3_edges = result[3]
+        self.left_city_right_seg = result[4]
         # # ---------------------------------------------
         # # 基于de + nei2 
         # result = delaunay(
@@ -1253,35 +1265,39 @@ class instance:
         # self.de_nei2_edges = result[3]
         # #self.left_city_right_nei2 = result[4]
         # # ---------------------------------------------
-        # # 基于de + nei2 + nei3
-        # result = delaunay(
-        #     self.mat,
-        #     self.coord,
-        #     nei2=edges_add_nei2(self.coord),
-        #     nei3=edges_add_nei3(self.coord)
-        # )
-        # self.de_nei2_nei3_lambda = result[0]
-        # self.de_nei2_nei3_lambda_list = result[1]
-        # self.graph_de_nei2_nei3 = result[2]  # 加邻居的邻居
-        # self.de_nei2_nei3_edges = result[3]
-        # self.left_city_right_nei = result[4]
+        # 基于de + nei2 + nei3
+        result = delaunay(
+            self.mat,
+            self.coord,
+            nei2=edges_add_nei2(self.coord),
+            nei3=edges_add_nei3(self.coord)
+        )
+        self.de_nei2_nei3_lambda = result[0]
+        self.de_nei2_nei3_lambda_list = result[1]
+        self.graph_de_nei2_nei3 = result[2]  # 加邻居的邻居
+        self.de_nei2_nei3_edges = result[3]
+        self.left_city_right_nei = result[4]
         # # ---------------------------------------------
 
 
 
 
         # # ---------------------------------------------
-        # # 基于非完全图的距离矩阵
-        # # Python中的可变类型在作为参数传递给函数时，因为传递的是对象的引用而不是其副本。
-        # # 当你在函数内部修改这些可变对象时，外部的原始对象也会被修改。
+        # 基于非完全图的距离矩阵
+        # Python中的可变类型在作为参数传递给函数时，因为传递的是对象的引用而不是其副本。
+        # 当你在函数内部修改这些可变对象时，外部的原始对象也会被修改。
 
-        # self.mat_missing_edges_seg = creat_dis_mat_missing_edges(
-        #     self.n, self.graph_de_seg1_seg2_seg3, self.mat.copy(), self.max_distance
-        # )
+        self.mat_missing_edges_seg, self.mat_missing_edges_seg_for_qubo = creat_dis_mat_missing_edges(
+            self.n, self.graph_de_seg1_seg2_seg3, self.mat.copy(), self.max_distance
+        )
         
-        # self.mat_missing_edges_nei = creat_dis_mat_missing_edges(
-        #     self.n, self.graph_de_nei2_nei3, self.mat.copy(), self.max_distance
-        # )
+        self.mat_missing_edges_nei, self.mat_missing_edges_nei_for_qubo = creat_dis_mat_missing_edges(
+            self.n, self.graph_de_nei2_nei3, self.mat.copy(), self.max_distance
+        )
+
+        # ---------------------------------------------
+        # 所有元素（除对角线）减去最大距离
+
 
         # # ---------------------------------------------
         # # 分别读取非完全图的length和tour
@@ -1563,8 +1579,8 @@ TOUR_FILE = even/even_complete_graph/tour/random{self.n}.txt"
     def tsp_qubo_model(self):
 
         # n
-        # liner: n**2
-        # quadratic（上三角）: 2*n**2*(n-1) 项
+        # liner: n^2
+        # quadratic（上三角）: 2n^2(n-1) 项
 
 
         # 距离矩阵（假设对称距离）
@@ -1590,7 +1606,7 @@ TOUR_FILE = even/even_complete_graph/tour/random{self.n}.txt"
         H_time = sum((sum(tsp_x[i, t] for i in range(self.n)) - 1) ** 2 for t in range(self.n))
 
         # 目标函数：最小化路径的总距离
-        H_obj = sum(self.mat[i, j] * tsp_x[i, t] * tsp_x[j, (t+1) % self.n] for i in range(self.n) for j in range(self.n) for t in range(self.n))
+        H_obj = sum(self.mat_missing_edges_nei_for_qubo[i, j] * tsp_x[i, t] * tsp_x[j, (t+1) % self.n] for i in range(self.n) for j in range(self.n) for t in range(self.n))
 
         # 总哈密顿量：目标函数 + 约束条件
         H = H_obj + self.max_distance * (H_city + H_time)
@@ -1601,32 +1617,24 @@ TOUR_FILE = even/even_complete_graph/tour/random{self.n}.txt"
         # 转换为 QUBO
         qubo, offset = model.to_qubo()
 
-        # 输出 QUBO 和偏移量
-        #print("QUBO:", sorted(qubo))
-        #print("Offset:", offset)
+        # # 检查
 
+        # cnt_liner = 0
+        # cnt_quadratic = 0
+        # for key, val in sorted(qubo.items()):
+        #     # 一次项
+        #     if key[0] == key[1]:
+        #         cnt_liner += 1
 
-        cnt_liner = 0
-        cnt_quadratic = 0
+        #     # 二次项
+        #     else:
+        #         cnt_quadratic += 1
+        # print(cnt_quadratic)
 
+        return qubo
 
+        
 
-        for key, val in sorted(qubo.items()):
-            # 一次项
-            if key[0] == key[1]:
-                cnt_liner += 1
-
-            else:
-                cnt_quadratic += 1
-
-        print(f"ins:{self.n}")
-        print(cnt_quadratic - 2*self.n**2*(self.n-1))
-        print(2*self.n**2*(self.n-1))
-
-        #print(self.mat)
-        zero_count = np.count_nonzero(self.mat == 0)
-
-        print(f"矩阵中 0 的个数为: {zero_count}")
 
 
 
@@ -1683,9 +1691,12 @@ def main():
 
 
 if __name__ == "__main__":
-    for i in range(5, 201):
+    for i in range(15, 201):
         print(i)
         ins = instance(i)
-        ins.LKH_test()
+        qubo = ins.tsp_qubo_model()
+        embedding.embed_complete_tsp_zephyr(qubo)
+        
+
     
             
