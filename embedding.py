@@ -1,4 +1,3 @@
-from turtle import circle
 from minorminer import busclique
 from minorminer import find_embedding
 import dwave_networkx as dnx
@@ -12,35 +11,44 @@ import random
 
 
 #########################################################################
-#嵌入tsp完全图到2000Q的chimera,n:tsp城市个数
-def embed_complete_tsp_chimera(qubo):
+# 嵌入tsp完全图到2000Q的chimera,n:tsp城市个数
+# 默认:chimera = dnx.chimera_graph(16) 
+# qubo:qubo模型 n:城市大小   add:拓扑增加   method:方法
+def embed_tsp_chimera(qubo, n, add, method):
 
     # 选择 2000Q 量子退火机的 Chimera 拓扑
-    chimera = dnx.chimera_graph(16) 
+    chimera = dnx.chimera_graph(16 + add) 
 
-    
 
     # 查找嵌入，返回嵌入映射
     embedding = find_embedding(qubo, chimera)
     
-    # 检查嵌入是否成功
-    if embedding:
-        print("嵌入成功!")
-        # print(embedding)
-        # dnx.draw_chimera_embedding(chimera, emb = embedding,with_labels = False, node_size = 10)
-        # plt.show()
-    else:
-        print("嵌入失败!")
+
+    with open(f'embed_result/chimera/chimera_{method}.txt', "a+", encoding="utf-8") as file:
+        
+
+        # 检查嵌入是否成功
+        if embedding:
+            print(f"{n},嵌入成功!", file=file)
+            return True
+            # print(embedding)
+            # dnx.draw_chimera_embedding(chimera, emb = embedding,with_labels = False, node_size = 10)
+            # plt.show()
+        else:
+            print(f"{n},嵌入失败!", file=file)
+            print("", file=file)
+            return False
 
 #########################################################################
 
 
 #########################################################################
 #嵌入tsp完全图到2000Q的chimera,n:tsp城市个数
-def embed_complete_tsp_pegasus(qubo):
+# 默认:pegasus = dnx.pegasus_graph(16)
+def embed_tsp_pegasus(qubo, n, add, method):
 
     # 选择 Advantage 量子退火机的 pegasus 拓扑
-    pegasus = dnx.pegasus_graph(16)
+    pegasus = dnx.pegasus_graph(16 + add)
 
     # 
     # dnx.draw_pegasus(pegasus, with_labels = False, node_size = 10)
@@ -49,24 +57,27 @@ def embed_complete_tsp_pegasus(qubo):
     # 查找嵌入，返回嵌入映射
     embedding = find_embedding(qubo, pegasus)
     
-    # 检查嵌入是否成功
-    if embedding:
-        print("嵌入成功!")
-        # print(embedding)
-        # dnx.draw_pegasus_embedding(pegasus, emb = embedding,with_labels = False, node_size = 5)
-        # plt.show()
-    else:
-        print("嵌入失败!")
+    with open(f'embed_result/pegasus/pegasus_{method}.txt', "a+", encoding="utf-8") as file:
+        # 检查嵌入是否成功
+        if embedding:
+            print(f"{n},嵌入成功!", file=file)
+            return True
+
+        else:
+            print(f"{n},嵌入失败!", file=file)
+            print("", file=file)
+            return False
 
 #########################################################################
 
 
 #########################################################################
 #嵌入tsp完全图到2000Q的chimera,n:tsp城市个数
-def embed_complete_tsp_zephyr(qubo):
+# 默认:zephyr = dnx.zephyr_graph(15)
+def embed_tsp_zephyr(qubo, n, add, method):
 
     # 选择 新一代 量子退火机的 zephyr 拓扑
-    zephyr = dnx.zephyr_graph(15)
+    zephyr = dnx.zephyr_graph(15 + add)
 
     # dnx.draw_zephyr(zephyr, with_labels = False, node_size = 10)
     # plt.show()
@@ -75,14 +86,16 @@ def embed_complete_tsp_zephyr(qubo):
     # 查找嵌入，返回嵌入映射
     embedding = find_embedding(qubo, zephyr)
     
-    # 检查嵌入是否成功
-    if embedding:
-        print("嵌入成功!")
-        # print(embedding)
-        # dnx.draw_zephyr_embedding(zephyr, emb = embedding,with_labels = False, node_size = 5)
-        # plt.show()
-    else:
-        print("嵌入失败!")
+    with open(f'embed_result/zephyr/zephyr_{method}.txt', "a+", encoding="utf-8") as file:
+        # 检查嵌入是否成功
+        if embedding:
+            print(f"{n},嵌入成功!", file=file)
+            return True
+
+        else:
+            print(f"{n},嵌入失败!", file=file)
+            print("", file=file)
+            return False
 
 #########################################################################
 
@@ -115,4 +128,4 @@ def embed_complete_tsp_zephyr(qubo):
 
 
 if __name__ == '__main__':
-    embed_complete_tsp_chimera()
+    pass

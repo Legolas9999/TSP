@@ -15,6 +15,8 @@ import os
 from pyqubo import Array
 
 import embedding 
+import dwave_networkx as dnx
+from minorminer import find_embedding
 
 
 def gaussian_coord(n):
@@ -1287,6 +1289,7 @@ class instance:
         # Python中的可变类型在作为参数传递给函数时，因为传递的是对象的引用而不是其副本。
         # 当你在函数内部修改这些可变对象时，外部的原始对象也会被修改。
 
+        # 返回：0:把不存在的边替换为最大距离     1:除对角线外减去最大距离
         self.mat_missing_edges_seg, self.mat_missing_edges_seg_for_qubo = creat_dis_mat_missing_edges(
             self.n, self.graph_de_seg1_seg2_seg3, self.mat.copy(), self.max_distance
         )
@@ -1294,10 +1297,6 @@ class instance:
         self.mat_missing_edges_nei, self.mat_missing_edges_nei_for_qubo = creat_dis_mat_missing_edges(
             self.n, self.graph_de_nei2_nei3, self.mat.copy(), self.max_distance
         )
-
-        # ---------------------------------------------
-        # 所有元素（除对角线）减去最大距离
-
 
         # # ---------------------------------------------
         # # 分别读取非完全图的length和tour
@@ -1575,8 +1574,8 @@ TOUR_FILE = even/even_complete_graph/tour/random{self.n}.txt"
         else:
             return None
 
-    # 创建tsp的qubo模型(索引从0开始)
-    def tsp_qubo_model(self):
+    # 根据nei，创建tsp的qubo模型(索引从0开始)
+    def tsp_nei_qubo_model(self):
 
         # n
         # liner: n^2
@@ -1632,6 +1631,58 @@ TOUR_FILE = even/even_complete_graph/tour/random{self.n}.txt"
         # print(cnt_quadratic)
 
         return qubo
+    
+    # 根据seg，创建tsp的qubo模型
+    def tsp_seg_qubo_model(self):
+    
+        # 创建二进制变量 x[i, t]，表示城市 i 是否在路径的第 t 位置上
+        tsp_x = Array.create('x', shape=(self.n, self.n), vartype='BINARY')
+
+        # 约束1：每个城市必须且只能被访问一次
+        H_city = sum((sum(tsp_x[i, t] for t in range(self.n)) - 1) ** 2 for i in range(self.n))
+
+        # 约束2：每次只能访问一个城市
+        H_time = sum((sum(tsp_x[i, t] for i in range(self.n)) - 1) ** 2 for t in range(self.n))
+
+        # 目标函数：最小化路径的总距离
+        H_obj = sum(self.mat_missing_edges_seg_for_qubo[i, j] * tsp_x[i, t] * tsp_x[j, (t+1) % self.n] for i in range(self.n) for j in range(self.n) for t in range(self.n))
+
+        # 总哈密顿量：目标函数 + 约束条件
+        H = H_obj + self.max_distance * (H_city + H_time)
+
+        # 编译模型
+        model = H.compile()
+
+        # 转换为 QUBO
+        qubo, offset = model.to_qubo()
+
+        return qubo
+    
+    # 根据完全图，创建tsp模型
+    def tsp_complete_qubo_model(self):
+    
+        # 创建二进制变量 x[i, t]，表示城市 i 是否在路径的第 t 位置上
+        tsp_x = Array.create('x', shape=(self.n, self.n), vartype='BINARY')
+
+        # 约束1：每个城市必须且只能被访问一次
+        H_city = sum((sum(tsp_x[i, t] for t in range(self.n)) - 1) ** 2 for i in range(self.n))
+
+        # 约束2：每次只能访问一个城市
+        H_time = sum((sum(tsp_x[i, t] for i in range(self.n)) - 1) ** 2 for t in range(self.n))
+
+        # 目标函数：最小化路径的总距离
+        H_obj = sum(self.mat[i, j] * tsp_x[i, t] * tsp_x[j, (t+1) % self.n] for i in range(self.n) for j in range(self.n) for t in range(self.n))
+
+        # 总哈密顿量：目标函数 + 约束条件
+        H = H_obj + self.max_distance * (H_city + H_time)
+
+        # 编译模型
+        model = H.compile()
+
+        # 转换为 QUBO
+        qubo, offset = model.to_qubo()
+
+        return qubo
 
         
 
@@ -1668,14 +1719,40 @@ def check():
             
 
 def main():
-    print('nei')
-    for i in range(98, 99):
-        # print(i)
-        ins = instance(i)
-        print(i)
-        ins.draw_not_subgraph()
-        #res = is_subgraph(ins.graph_optimal_tour, ins.graph_de_nei2)[0]
-        #print(i, res)
+    for size in range(13,14):
+            
+            
+            ins = instance(size)
+            print(ins.n)
+            
+            chimera = dnx.chimera_graph(36) 
+
+            qubo_complete = ins.tsp_complete_qubo_model()
+            qubo_nei = ins.tsp_nei_qubo_model()
+            qubo_seg = ins.tsp_seg_qubo_model()
+
+
+            embed_complete = find_embedding(qubo_complete, chimera)
+            embed_nei = find_embedding(qubo_nei, chimera)
+            embed_seg = find_embedding(qubo_seg, chimera)
+
+
+
+
+            if embed_complete:
+                print(f"size = {ins.n}, 嵌入chimera = 36, complete,成功!")
+            else:
+                print(f"size = {ins.n}, 嵌入chimera = 36, complete,失败!")
+
+            if embed_nei:
+                print(f"size = {ins.n}, 嵌入chimera = 36, nei,成功!")
+            else:
+                print(f"size = {ins.n}, 嵌入chimera = 36, nei,失败!")
+
+            if embed_seg:
+                print(f"size = {ins.n}, 嵌入chimera = 36, seg,成功!")
+            else:
+                print(f"size = {ins.n}, 嵌入chimera = 36, seg,失败!")
         
         
 
@@ -1688,15 +1765,71 @@ def main():
 
 
 
+
+
+# if __name__ == "__main__":
+#     ############################
+#     # 方法
+#     method = "seg"
+#     # 拓扑结构
+#     topology = "chimera"
+#     # add的起步（最大城市大小的起步）
+#     max_size = 50
+#     ###########################
+
+
+#     # zephyr
+#     if topology == "zephyr":
+#         initial = 15
+    
+#     # chimera pegasus
+#     else:
+#         initial = 16
+
+
+#     ################################
+#     # topology  size 的增加大小
+#     # 指定 add 0到20    21~
+#     for add in range(200,201):
+#     ################################
+
+#         with open(f'embed_result/{topology}/{topology}_{method}.txt', "a+", encoding="utf-8") as file:
+#             print(f"{topology} = {initial + add}", file = file)
+
+#         for i in range(max_size, 201):
+#             print(i)
+#             ins = instance(i)
+
+#             # 
+#             if method == "complete":
+#                 qubo = ins.tsp_complete_qubo_model()
+#             elif method == "seg":
+#                 qubo = ins.tsp_seg_qubo_model()
+#             elif method == "nei":
+#                 qubo = ins.tsp_nei_qubo_model() 
+
+
+#             if topology == "chimera":
+#                 result = embedding.embed_tsp_chimera(qubo, ins.n, add, method)
+#             elif topology == "pegasus":
+#                 result = embedding.embed_tsp_pegasus(qubo, ins.n, add, method)
+#             elif topology == "zephyr":
+#                 result = embedding.embed_tsp_zephyr(qubo, ins.n, add, method)
+
+
+#             # 嵌入失败
+#             if result is False :
+#                 max_size = i
+#                 break
 
 
 if __name__ == "__main__":
-    for i in range(15, 201):
-        print(i)
-        ins = instance(i)
-        qubo = ins.tsp_qubo_model()
-        embedding.embed_complete_tsp_zephyr(qubo)
-        
+    main()
+
+    
+    
+
+
 
     
             
