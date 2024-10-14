@@ -18,6 +18,7 @@ def embed_tsp_chimera(qubo, n, add, method):
 
     # 选择 2000Q 量子退火机的 Chimera 拓扑
     chimera = dnx.chimera_graph(16 + add) 
+    chimera = dnx.chimera_graph(n) 
 
 
     # 查找嵌入，返回嵌入映射

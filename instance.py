@@ -15,8 +15,6 @@ import os
 from pyqubo import Array
 
 import embedding 
-import dwave_networkx as dnx
-from minorminer import find_embedding
 
 
 def gaussian_coord(n):
@@ -1719,115 +1717,80 @@ def check():
             
 
 def main():
-    for size in range(13,14):
-            
-            
-            ins = instance(size)
-            print(ins.n)
-            
-            chimera = dnx.chimera_graph(36) 
-
-            qubo_complete = ins.tsp_complete_qubo_model()
-            qubo_nei = ins.tsp_nei_qubo_model()
-            qubo_seg = ins.tsp_seg_qubo_model()
-
-
-            embed_complete = find_embedding(qubo_complete, chimera)
-            embed_nei = find_embedding(qubo_nei, chimera)
-            embed_seg = find_embedding(qubo_seg, chimera)
-
-
-
-
-            if embed_complete:
-                print(f"size = {ins.n}, 嵌入chimera = 36, complete,成功!")
-            else:
-                print(f"size = {ins.n}, 嵌入chimera = 36, complete,失败!")
-
-            if embed_nei:
-                print(f"size = {ins.n}, 嵌入chimera = 36, nei,成功!")
-            else:
-                print(f"size = {ins.n}, 嵌入chimera = 36, nei,失败!")
-
-            if embed_seg:
-                print(f"size = {ins.n}, 嵌入chimera = 36, seg,成功!")
-            else:
-                print(f"size = {ins.n}, 嵌入chimera = 36, seg,失败!")
-        
+    import dwave_networkx as dnx
+    g = dnx.zephyr_graph(16)
+    print(g.number_of_nodes())
         
 
 
+def embed_test():
+    ############################
+    # 方法
+    method = "seg"
+    # 拓扑结构
+    topology = "chimera"
+    # add的起步（最大城市大小的起步）
+    max_size = 24
+    ###########################
 
 
-
-
-
-
-
-
-
-
-# if __name__ == "__main__":
-#     ############################
-#     # 方法
-#     method = "seg"
-#     # 拓扑结构
-#     topology = "chimera"
-#     # add的起步（最大城市大小的起步）
-#     max_size = 50
-#     ###########################
-
-
-#     # zephyr
-#     if topology == "zephyr":
-#         initial = 15
+    # zephyr
+    if topology == "zephyr":
+        initial = 15
     
-#     # chimera pegasus
-#     else:
-#         initial = 16
+    # chimera pegasus
+    else:
+        initial = 16
 
 
-#     ################################
-#     # topology  size 的增加大小
-#     # 指定 add 0到20    21~
-#     for add in range(200,201):
-#     ################################
+    ################################
+    # topology  size 的增加大小
+    # 指定 add 0到20    21~99     100~200  201~300
+    for add in range(201, 301):
+    ################################
 
-#         with open(f'embed_result/{topology}/{topology}_{method}.txt', "a+", encoding="utf-8") as file:
-#             print(f"{topology} = {initial + add}", file = file)
+        with open(f'embed_result/{topology}/{topology}_{method}.txt', "a+", encoding="utf-8") as file:
+            print(f"{topology} = {initial + add}", file = file)
 
-#         for i in range(max_size, 201):
-#             print(i)
-#             ins = instance(i)
+        for i in range(max_size, 201):
+            print(i)
+            ins = instance(i)
 
-#             # 
-#             if method == "complete":
-#                 qubo = ins.tsp_complete_qubo_model()
-#             elif method == "seg":
-#                 qubo = ins.tsp_seg_qubo_model()
-#             elif method == "nei":
-#                 qubo = ins.tsp_nei_qubo_model() 
-
-
-#             if topology == "chimera":
-#                 result = embedding.embed_tsp_chimera(qubo, ins.n, add, method)
-#             elif topology == "pegasus":
-#                 result = embedding.embed_tsp_pegasus(qubo, ins.n, add, method)
-#             elif topology == "zephyr":
-#                 result = embedding.embed_tsp_zephyr(qubo, ins.n, add, method)
+            # 
+            if method == "complete":
+                qubo = ins.tsp_complete_qubo_model()
+            elif method == "seg":
+                qubo = ins.tsp_seg_qubo_model()
+            elif method == "nei":
+                qubo = ins.tsp_nei_qubo_model() 
 
 
-#             # 嵌入失败
-#             if result is False :
-#                 max_size = i
-#                 break
+            if topology == "chimera":
+                result = embedding.embed_tsp_chimera(qubo, ins.n, add, method)
+            elif topology == "pegasus":
+                result = embedding.embed_tsp_pegasus(qubo, ins.n, add, method)
+            elif topology == "zephyr":
+                result = embedding.embed_tsp_zephyr(qubo, ins.n, add, method)
+
+
+            # 嵌入失败
+            if result is False :
+                max_size = i
+                break
+
+
+
+
+
+
+
+
 
 
 if __name__ == "__main__":
     main()
 
-    
-    
+
 
 
 
