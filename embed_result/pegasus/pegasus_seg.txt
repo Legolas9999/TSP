@@ -76,3 +76,475 @@ pegasus = 35
 
 pegasus = 36
 21,嵌入失败!
+pegasus = 37
+21,嵌入失败!
+
+pegasus = 38
+21,嵌入失败!
+
+pegasus = 39
+21,嵌入失败!
+
+pegasus = 40
+21,嵌入成功!
+22,嵌入失败!
+
+pegasus = 41
+22,嵌入失败!
+
+pegasus = 42
+22,嵌入失败!
+
+pegasus = 43
+22,嵌入失败!
+
+pegasus = 44
+22,嵌入失败!
+
+pegasus = 45
+22,嵌入失败!
+
+pegasus = 46
+22,嵌入成功!
+23,嵌入失败!
+
+pegasus = 47
+23,嵌入失败!
+
+pegasus = 48
+23,嵌入失败!
+
+pegasus = 49
+23,嵌入失败!
+
+pegasus = 50
+23,嵌入失败!
+
+pegasus = 51
+23,嵌入成功!
+24,嵌入失败!
+
+pegasus = 52
+24,嵌入失败!
+
+pegasus = 53
+24,嵌入失败!
+
+pegasus = 54
+24,嵌入失败!
+
+pegasus = 55
+24,嵌入失败!
+
+pegasus = 56
+24,嵌入失败!
+
+pegasus = 57
+24,嵌入失败!
+
+pegasus = 58
+24,嵌入失败!
+
+pegasus = 59
+24,嵌入失败!
+
+pegasus = 60
+24,嵌入成功!
+25,嵌入失败!
+
+pegasus = 61
+25,嵌入失败!
+
+pegasus = 62
+25,嵌入失败!
+
+pegasus = 63
+25,嵌入成功!
+26,嵌入失败!
+
+pegasus = 64
+26,嵌入失败!
+
+pegasus = 65
+26,嵌入失败!
+
+pegasus = 66
+26,嵌入失败!
+
+pegasus = 67
+26,嵌入失败!
+
+pegasus = 68
+26,嵌入失败!
+
+pegasus = 69
+26,嵌入失败!
+
+pegasus = 70
+26,嵌入失败!
+
+pegasus = 71
+26,嵌入失败!
+
+pegasus = 72
+26,嵌入失败!
+
+pegasus = 73
+26,嵌入失败!
+
+pegasus = 74
+26,嵌入失败!
+
+pegasus = 75
+26,嵌入失败!
+
+pegasus = 76
+26,嵌入失败!
+
+pegasus = 77
+26,嵌入失败!
+
+pegasus = 78
+26,嵌入失败!
+
+pegasus = 79
+26,嵌入失败!
+
+pegasus = 80
+26,嵌入成功!
+27,嵌入失败!
+
+pegasus = 81
+27,嵌入失败!
+
+pegasus = 82
+27,嵌入失败!
+
+pegasus = 83
+27,嵌入失败!
+
+pegasus = 84
+27,嵌入失败!
+
+pegasus = 85
+27,嵌入失败!
+
+pegasus = 86
+27,嵌入失败!
+
+pegasus = 87
+27,嵌入失败!
+
+pegasus = 88
+27,嵌入失败!
+
+pegasus = 89
+27,嵌入失败!
+
+pegasus = 90
+27,嵌入失败!
+
+pegasus = 91
+27,嵌入失败!
+
+pegasus = 92
+27,嵌入失败!
+
+pegasus = 93
+27,嵌入失败!
+
+pegasus = 94
+27,嵌入失败!
+
+pegasus = 95
+27,嵌入失败!
+
+pegasus = 96
+27,嵌入失败!
+
+pegasus = 97
+27,嵌入失败!
+
+pegasus = 98
+27,嵌入失败!
+
+pegasus = 99
+27,嵌入失败!
+
+pegasus = 100
+27,嵌入失败!
+
+pegasus = 101
+27,嵌入失败!
+
+pegasus = 102
+27,嵌入失败!
+
+pegasus = 103
+27,嵌入失败!
+
+pegasus = 104
+27,嵌入失败!
+
+pegasus = 105
+27,嵌入失败!
+
+pegasus = 106
+27,嵌入失败!
+
+pegasus = 107
+27,嵌入失败!
+
+pegasus = 108
+27,嵌入失败!
+
+pegasus = 109
+27,嵌入失败!
+
+pegasus = 110
+27,嵌入失败!
+
+pegasus = 111
+27,嵌入失败!
+
+pegasus = 112
+27,嵌入失败!
+
+pegasus = 113
+27,嵌入失败!
+
+pegasus = 114
+27,嵌入失败!
+
+pegasus = 115
+27,嵌入失败!
+
+pegasus = 116
+27,嵌入失败!
+
+pegasus = 117
+27,嵌入失败!
+
+pegasus = 118
+27,嵌入失败!
+
+pegasus = 119
+27,嵌入失败!
+
+pegasus = 120
+27,嵌入失败!
+
+pegasus = 121
+27,嵌入失败!
+
+pegasus = 122
+27,嵌入失败!
+
+pegasus = 123
+27,嵌入失败!
+
+pegasus = 124
+27,嵌入失败!
+
+pegasus = 125
+27,嵌入失败!
+
+pegasus = 126
+27,嵌入失败!
+
+pegasus = 127
+27,嵌入失败!
+
+pegasus = 128
+27,嵌入失败!
+
+pegasus = 129
+27,嵌入失败!
+
+pegasus = 130
+27,嵌入失败!
+
+pegasus = 131
+27,嵌入失败!
+
+pegasus = 132
+27,嵌入失败!
+
+pegasus = 133
+27,嵌入失败!
+
+pegasus = 134
+27,嵌入失败!
+
+pegasus = 135
+27,嵌入失败!
+
+pegasus = 136
+27,嵌入失败!
+
+pegasus = 137
+27,嵌入失败!
+
+pegasus = 138
+27,嵌入失败!
+
+pegasus = 139
+27,嵌入失败!
+
+pegasus = 140
+27,嵌入失败!
+
+pegasus = 141
+27,嵌入失败!
+
+pegasus = 142
+27,嵌入失败!
+
+pegasus = 143
+27,嵌入失败!
+
+pegasus = 144
+27,嵌入失败!
+
+pegasus = 145
+27,嵌入失败!
+
+pegasus = 146
+27,嵌入失败!
+
+pegasus = 147
+27,嵌入失败!
+
+pegasus = 148
+27,嵌入失败!
+
+pegasus = 149
+27,嵌入失败!
+
+pegasus = 150
+27,嵌入失败!
+
+pegasus = 151
+27,嵌入失败!
+
+pegasus = 152
+27,嵌入失败!
+
+pegasus = 153
+27,嵌入失败!
+
+pegasus = 154
+27,嵌入失败!
+
+pegasus = 155
+27,嵌入失败!
+
+pegasus = 156
+27,嵌入失败!
+
+pegasus = 157
+27,嵌入失败!
+
+pegasus = 158
+27,嵌入失败!
+
+pegasus = 159
+27,嵌入失败!
+
+pegasus = 160
+27,嵌入失败!
+
+pegasus = 161
+27,嵌入失败!
+
+pegasus = 162
+27,嵌入失败!
+
+pegasus = 163
+27,嵌入失败!
+
+pegasus = 164
+27,嵌入失败!
+
+pegasus = 165
+27,嵌入失败!
+
+pegasus = 166
+27,嵌入失败!
+
+pegasus = 167
+27,嵌入失败!
+
+pegasus = 168
+27,嵌入失败!
+
+pegasus = 169
+27,嵌入失败!
+
+pegasus = 170
+27,嵌入失败!
+
+pegasus = 171
+27,嵌入失败!
+
+pegasus = 172
+27,嵌入失败!
+
+pegasus = 173
+27,嵌入失败!
+
+pegasus = 174
+27,嵌入失败!
+
+pegasus = 175
+27,嵌入失败!
+
+pegasus = 176
+27,嵌入失败!
+
+pegasus = 177
+27,嵌入失败!
+
+pegasus = 178
+27,嵌入失败!
+
+pegasus = 179
+27,嵌入失败!
+
+pegasus = 180
+27,嵌入失败!
+
+pegasus = 181
+27,嵌入失败!
+
+pegasus = 182
+27,嵌入失败!
+
+pegasus = 183
+27,嵌入失败!
+
+pegasus = 184
+27,嵌入失败!
+
+pegasus = 185
+27,嵌入失败!
+
+pegasus = 186
+27,嵌入失败!
+
+pegasus = 187
+27,嵌入失败!
+
+pegasus = 188
+27,嵌入失败!
+
+pegasus = 189
+27,嵌入失败!
+
+pegasus = 190
+27,嵌入失败!
+
+pegasus = 191
+27,嵌入失败!
+
+pegasus = 192

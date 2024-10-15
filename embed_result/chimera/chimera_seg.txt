@@ -69,4 +69,834 @@ chimera = 35
 chimera = 36
 13,嵌入失败!
 
+chimera = 37
+13,嵌入成功!
+14,嵌入失败!
+
+chimera = 38
+14,嵌入失败!
+
+chimera = 39
+14,嵌入失败!
+
+chimera = 40
+14,嵌入失败!
+
+chimera = 41
+14,嵌入失败!
+
+chimera = 42
+14,嵌入失败!
+
+chimera = 43
+14,嵌入失败!
+
+chimera = 44
+14,嵌入失败!
+
+chimera = 45
+14,嵌入成功!
+15,嵌入失败!
+
+chimera = 46
+15,嵌入失败!
+
+chimera = 47
+15,嵌入失败!
+
+chimera = 48
+15,嵌入失败!
+
+chimera = 49
+15,嵌入失败!
+
+chimera = 50
+15,嵌入失败!
+
+chimera = 51
+15,嵌入成功!
+16,嵌入失败!
+
+chimera = 52
+16,嵌入失败!
+
+chimera = 53
+16,嵌入失败!
+
+chimera = 54
+16,嵌入失败!
+
+chimera = 55
+16,嵌入失败!
+
+chimera = 56
+16,嵌入失败!
+
+chimera = 57
+16,嵌入失败!
+
+chimera = 58
+16,嵌入失败!
+
+chimera = 59
+16,嵌入失败!
+
+chimera = 60
+16,嵌入成功!
+17,嵌入失败!
+
+chimera = 61
+17,嵌入失败!
+
+chimera = 62
+17,嵌入失败!
+
+chimera = 63
+17,嵌入失败!
+
+chimera = 64
+17,嵌入失败!
+
+chimera = 65
+17,嵌入失败!
+
+chimera = 66
+17,嵌入失败!
+
+chimera = 67
+17,嵌入失败!
+
+chimera = 68
+17,嵌入成功!
+18,嵌入失败!
+
+chimera = 69
+18,嵌入失败!
+
+chimera = 70
+18,嵌入失败!
+
+chimera = 71
+18,嵌入失败!
+
+chimera = 72
+18,嵌入失败!
+
+chimera = 73
+18,嵌入失败!
+
+chimera = 74
+18,嵌入失败!
+
+chimera = 75
+18,嵌入失败!
+
+chimera = 76
+18,嵌入失败!
+
+chimera = 77
+18,嵌入失败!
+
+chimera = 78
+18,嵌入失败!
+
+chimera = 79
+18,嵌入成功!
+19,嵌入失败!
+
+chimera = 80
+19,嵌入失败!
+
+chimera = 81
+19,嵌入失败!
+
+chimera = 82
+19,嵌入失败!
+
+chimera = 83
+19,嵌入失败!
+
+chimera = 84
+19,嵌入失败!
+
+chimera = 85
+19,嵌入失败!
+
+chimera = 86
+19,嵌入失败!
+
+chimera = 87
+19,嵌入失败!
+
+chimera = 88
+19,嵌入失败!
+
+chimera = 89
+19,嵌入失败!
+
+chimera = 90
+19,嵌入失败!
+
+chimera = 91
+19,嵌入失败!
+
+chimera = 92
+19,嵌入成功!
+20,嵌入失败!
+
+chimera = 93
+20,嵌入失败!
+
+chimera = 94
+20,嵌入失败!
+
+chimera = 95
+20,嵌入失败!
+
+chimera = 96
+20,嵌入失败!
+
+chimera = 97
+20,嵌入失败!
+
+chimera = 98
+20,嵌入失败!
+
+chimera = 99
+20,嵌入失败!
+
+chimera = 100
+20,嵌入失败!
+
+chimera = 101
+20,嵌入失败!
+
+chimera = 102
+20,嵌入失败!
+
+chimera = 103
+20,嵌入失败!
+
+chimera = 104
+20,嵌入失败!
+
+chimera = 105
+20,嵌入失败!
+
+chimera = 106
+20,嵌入失败!
+
+chimera = 107
+20,嵌入失败!
+
+chimera = 108
+20,嵌入成功!
+21,嵌入失败!
+
+chimera = 109
+21,嵌入失败!
+
+chimera = 110
+21,嵌入失败!
+
+chimera = 111
+21,嵌入失败!
+
+chimera = 112
+21,嵌入失败!
+
+chimera = 113
+21,嵌入失败!
+
+chimera = 114
+21,嵌入失败!
+
+chimera = 115
+21,嵌入失败!
+
+chimera = 116
+21,嵌入失败!
+
+chimera = 117
+21,嵌入失败!
+
+chimera = 118
+21,嵌入失败!
+
+chimera = 119
+21,嵌入失败!
+
+chimera = 120
+21,嵌入失败!
+
+chimera = 121
+21,嵌入失败!
+
+chimera = 122
+21,嵌入成功!
+22,嵌入失败!
+
+chimera = 123
+22,嵌入失败!
+
+chimera = 124
+22,嵌入失败!
+
+chimera = 125
+22,嵌入失败!
+
+chimera = 126
+22,嵌入失败!
+
+chimera = 127
+22,嵌入失败!
+
+chimera = 128
+22,嵌入失败!
+
+chimera = 129
+22,嵌入失败!
+
+chimera = 130
+22,嵌入失败!
+
+chimera = 131
+22,嵌入失败!
+
+chimera = 132
+22,嵌入失败!
+
+chimera = 133
+22,嵌入失败!
+
+chimera = 134
+22,嵌入失败!
+
+chimera = 135
+22,嵌入失败!
+
+chimera = 136
+22,嵌入失败!
+
+chimera = 137
+22,嵌入失败!
+
+chimera = 138
+22,嵌入失败!
+
+chimera = 139
+22,嵌入失败!
+
+chimera = 140
+22,嵌入失败!
+
+chimera = 141
+22,嵌入成功!
+23,嵌入失败!
+
+chimera = 142
+23,嵌入失败!
+
+chimera = 143
+23,嵌入失败!
+
+chimera = 144
+23,嵌入失败!
+
+chimera = 145
+23,嵌入失败!
+
+chimera = 146
+23,嵌入失败!
+
+chimera = 147
+23,嵌入失败!
+
+chimera = 148
+23,嵌入失败!
+
+chimera = 149
+23,嵌入失败!
+
+chimera = 150
+23,嵌入失败!
+
+chimera = 151
+23,嵌入失败!
+
+chimera = 152
+23,嵌入失败!
+
+chimera = 153
+23,嵌入失败!
+
+chimera = 154
+23,嵌入失败!
+
+chimera = 155
+23,嵌入失败!
+
+chimera = 156
+23,嵌入失败!
+
+chimera = 157
+23,嵌入失败!
+
+chimera = 158
+23,嵌入失败!
+
+chimera = 159
+23,嵌入失败!
+
+chimera = 160
+23,嵌入失败!
+
+chimera = 161
+23,嵌入失败!
+
+chimera = 162
+23,嵌入成功!
+24,嵌入失败!
+
+chimera = 163
+24,嵌入失败!
+
+chimera = 164
+24,嵌入失败!
+
+chimera = 165
+24,嵌入失败!
+
+chimera = 166
+24,嵌入失败!
+
+chimera = 167
+24,嵌入失败!
+
+chimera = 168
+24,嵌入失败!
+
+chimera = 169
+24,嵌入失败!
+
+chimera = 170
+24,嵌入失败!
+
+chimera = 171
+24,嵌入失败!
+
+chimera = 172
+24,嵌入失败!
+
+chimera = 173
+24,嵌入失败!
+
+chimera = 174
+24,嵌入失败!
+
+chimera = 175
+24,嵌入失败!
+
+chimera = 176
+24,嵌入失败!
+
+chimera = 177
+24,嵌入失败!
+
+chimera = 178
+24,嵌入失败!
+
+chimera = 179
+24,嵌入失败!
+
+chimera = 180
+24,嵌入失败!
+
+chimera = 181
+24,嵌入失败!
+
+chimera = 182
+24,嵌入失败!
+
+chimera = 183
+24,嵌入失败!
+
+chimera = 184
+24,嵌入失败!
+
+chimera = 185
+24,嵌入失败!
+
+chimera = 186
+24,嵌入失败!
+
+chimera = 187
+24,嵌入失败!
+
+chimera = 188
+24,嵌入失败!
+
+chimera = 189
+24,嵌入失败!
+
+chimera = 190
+24,嵌入失败!
+
+chimera = 191
+24,嵌入失败!
+
+chimera = 192
+24,嵌入失败!
+
+chimera = 193
+24,嵌入失败!
+
+chimera = 194
+24,嵌入失败!
+
+chimera = 195
+24,嵌入失败!
+
+chimera = 196
+24,嵌入失败!
+
+chimera = 197
+24,嵌入失败!
+
+chimera = 198
+24,嵌入失败!
+
+chimera = 199
+24,嵌入失败!
+
+chimera = 200
+24,嵌入失败!
+
+chimera = 201
+24,嵌入失败!
+
+chimera = 202
+24,嵌入失败!
+
+chimera = 203
+24,嵌入失败!
+
+chimera = 204
+24,嵌入失败!
+
+chimera = 205
+24,嵌入失败!
+
+chimera = 206
+24,嵌入失败!
+
+chimera = 207
+24,嵌入失败!
+
+chimera = 208
+24,嵌入失败!
+
+chimera = 209
+24,嵌入失败!
+
+chimera = 210
+24,嵌入失败!
+
+chimera = 211
+24,嵌入失败!
+
+chimera = 212
+24,嵌入失败!
+
+chimera = 213
+24,嵌入失败!
+
+chimera = 214
+24,嵌入失败!
+
+chimera = 215
+24,嵌入失败!
+
 chimera = 216
+24,嵌入失败!
+
+chimera = 217
+24,嵌入失败!
+
+chimera = 218
+24,嵌入失败!
+
+chimera = 219
+24,嵌入失败!
+
+chimera = 220
+24,嵌入失败!
+
+chimera = 221
+24,嵌入失败!
+
+chimera = 222
+24,嵌入失败!
+
+chimera = 223
+24,嵌入失败!
+
+chimera = 224
+24,嵌入失败!
+
+chimera = 225
+24,嵌入失败!
+
+chimera = 226
+24,嵌入失败!
+
+chimera = 227
+24,嵌入失败!
+
+chimera = 228
+24,嵌入失败!
+
+chimera = 229
+24,嵌入失败!
+
+chimera = 230
+24,嵌入失败!
+
+chimera = 231
+24,嵌入失败!
+
+chimera = 232
+24,嵌入失败!
+
+chimera = 233
+24,嵌入失败!
+
+chimera = 234
+24,嵌入失败!
+
+chimera = 235
+24,嵌入失败!
+
+chimera = 236
+24,嵌入失败!
+
+chimera = 237
+24,嵌入失败!
+
+chimera = 238
+24,嵌入失败!
+
+chimera = 239
+24,嵌入失败!
+
+chimera = 240
+24,嵌入失败!
+
+chimera = 241
+24,嵌入失败!
+
+chimera = 242
+24,嵌入失败!
+
+chimera = 243
+24,嵌入失败!
+
+chimera = 244
+24,嵌入失败!
+
+chimera = 245
+24,嵌入失败!
+
+chimera = 246
+24,嵌入失败!
+
+chimera = 247
+24,嵌入失败!
+
+chimera = 248
+24,嵌入失败!
+
+chimera = 249
+24,嵌入失败!
+
+chimera = 250
+24,嵌入失败!
+
+chimera = 251
+24,嵌入失败!
+
+chimera = 252
+24,嵌入失败!
+
+chimera = 253
+24,嵌入失败!
+
+chimera = 254
+24,嵌入失败!
+
+chimera = 255
+24,嵌入失败!
+
+chimera = 256
+24,嵌入失败!
+
+chimera = 257
+24,嵌入失败!
+
+chimera = 258
+24,嵌入失败!
+
+chimera = 259
+24,嵌入失败!
+
+chimera = 260
+24,嵌入失败!
+
+chimera = 261
+24,嵌入失败!
+
+chimera = 262
+24,嵌入失败!
+
+chimera = 263
+24,嵌入失败!
+
+chimera = 264
+24,嵌入失败!
+
+chimera = 265
+24,嵌入失败!
+
+chimera = 266
+24,嵌入失败!
+
+chimera = 267
+24,嵌入失败!
+
+chimera = 268
+24,嵌入失败!
+
+chimera = 269
+24,嵌入失败!
+
+chimera = 270
+24,嵌入失败!
+
+chimera = 271
+24,嵌入失败!
+
+chimera = 272
+24,嵌入失败!
+
+chimera = 273
+24,嵌入失败!
+
+chimera = 274
+24,嵌入失败!
+
+chimera = 275
+24,嵌入失败!
+
+chimera = 276
+24,嵌入失败!
+
+chimera = 277
+24,嵌入失败!
+
+chimera = 278
+24,嵌入失败!
+
+chimera = 279
+24,嵌入失败!
+
+chimera = 280
+24,嵌入失败!
+
+chimera = 281
+24,嵌入失败!
+
+chimera = 282
+24,嵌入失败!
+
+chimera = 283
+24,嵌入失败!
+
+chimera = 284
+24,嵌入失败!
+
+chimera = 285
+24,嵌入失败!
+
+chimera = 286
+24,嵌入失败!
+
+chimera = 287
+24,嵌入失败!
+
+chimera = 288
+24,嵌入失败!
+
+chimera = 289
+24,嵌入失败!
+
+chimera = 290
+24,嵌入失败!
+
+chimera = 291
+24,嵌入失败!
+
+chimera = 292
+24,嵌入失败!
+
+chimera = 293
+24,嵌入失败!
+
+chimera = 294
+24,嵌入失败!
+
+chimera = 295
+24,嵌入失败!
+
+chimera = 296
+24,嵌入失败!
+
+chimera = 297
+24,嵌入失败!
+
+chimera = 298
+24,嵌入失败!
+
+chimera = 299
+24,嵌入失败!
+
+chimera = 300
+24,嵌入失败!
+
+chimera = 301
+24,嵌入失败!
+
+chimera = 302
+24,嵌入失败!
+
+chimera = 303
+24,嵌入失败!
+
+chimera = 304
+24,嵌入失败!
+
+chimera = 305
+24,嵌入失败!
+
+chimera = 306
+24,嵌入失败!
+
+chimera = 307
+24,嵌入失败!
+
+chimera = 308
+24,嵌入失败!
+
+chimera = 309
+24,嵌入失败!
+
+chimera = 310
