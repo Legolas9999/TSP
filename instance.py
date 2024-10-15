@@ -1208,36 +1208,36 @@ class instance:
         # self.optimal_length = result[2]
         # self.optimal_lambda = lambda_based_on_optimal(self.optimal_tour, self.mat)
         # # ---------------------------------------------
-        # # 普通的delauny
-        # result = delaunay(self.mat, self.coord)
-        # self.de_lambda = result[0]
-        # self.de_lambda_list = result[1]
-        # self.graph_de = result[2]  # 德劳内三角分割图
-        # self.de_edges = result[3]
-        # self.left_city_right_de = result[4]
+        # 普通的delauny
+        result = delaunay(self.mat, self.coord)
+        self.de_lambda = result[0]
+        self.de_lambda_list = result[1]
+        self.graph_de = result[2]  # 德劳内三角分割图
+        self.de_edges = result[3]
+        self.left_city_right_de = result[4]
         # # ---------------------------------------------
-        # # 基于de + seg1 
-        # result = delaunay(
-        #     self.mat,
-        #     self.coord,
-        #     seg1=edges_add_seg1(self.coord)
-        # )
-        # self.de_seg1_lambda = result[0]
-        # self.de_seg1_lambda_list = result[1]
-        # self.graph_de_seg1 = result[2]  # 对应的图
-        # self.de_seg1_edges = result[3]
+        # 基于de + seg1 
+        result = delaunay(
+            self.mat,
+            self.coord,
+            seg1=edges_add_seg1(self.coord)
+        )
+        self.de_seg1_lambda = result[0]
+        self.de_seg1_lambda_list = result[1]
+        self.graph_de_seg1 = result[2]  # 对应的图
+        self.de_seg1_edges = result[3]
         # # ---------------------------------------------  
-        # # 基于de + seg1 + seg2
-        # result = delaunay(
-        #     self.mat,
-        #     self.coord,
-        #     seg1=edges_add_seg1(self.coord),
-        #     seg2=edges_add_seg2(self.coord)
-        # )
-        # self.de_seg1_seg2_lambda = result[0]
-        # self.de_seg1_seg2_lambda_list = result[1]
-        # self.graph_de_seg1_seg2 = result[2]  # 对应的图
-        # self.de_seg1_seg2_edges = result[3]
+        # 基于de + seg1 + seg2
+        result = delaunay(
+            self.mat,
+            self.coord,
+            seg1=edges_add_seg1(self.coord),
+            seg2=edges_add_seg2(self.coord)
+        )
+        self.de_seg1_seg2_lambda = result[0]
+        self.de_seg1_seg2_lambda_list = result[1]
+        self.graph_de_seg1_seg2 = result[2]  # 对应的图
+        self.de_seg1_seg2_edges = result[3]
         # # ---------------------------------------------
         # 基于de + seg1 + seg2 + seg3
         result = delaunay(
@@ -1253,17 +1253,17 @@ class instance:
         self.de_seg1_seg2_seg3_edges = result[3]
         self.left_city_right_seg = result[4]
         # # ---------------------------------------------
-        # # 基于de + nei2 
-        # result = delaunay(
-        #     self.mat,
-        #     self.coord,
-        #     nei2=edges_add_nei2(self.coord)
-        # )
-        # self.de_nei2_lambda = result[0]
-        # self.de_nei2_lambda_list = result[1]
-        # self.graph_de_nei2 = result[2]  # 加邻居的邻居
-        # self.de_nei2_edges = result[3]
-        # #self.left_city_right_nei2 = result[4]
+        # 基于de + nei2 
+        result = delaunay(
+            self.mat,
+            self.coord,
+            nei2=edges_add_nei2(self.coord)
+        )
+        self.de_nei2_lambda = result[0]
+        self.de_nei2_lambda_list = result[1]
+        self.graph_de_nei2 = result[2]  # 加邻居的邻居
+        self.de_nei2_edges = result[3]
+        #self.left_city_right_nei2 = result[4]
         # # ---------------------------------------------
         # 基于de + nei2 + nei3
         result = delaunay(
@@ -1288,13 +1288,42 @@ class instance:
         # 当你在函数内部修改这些可变对象时，外部的原始对象也会被修改。
 
         # 返回：0:把不存在的边替换为最大距离     1:除对角线外减去最大距离
-        self.mat_missing_edges_seg, self.mat_missing_edges_seg_for_qubo = creat_dis_mat_missing_edges(
+
+        ##########################
+        # de
+        self.mat_missing_edges_de, self.mat_missing_edges_de_for_qubo = creat_dis_mat_missing_edges(
+            self.n, self.graph_de, self.mat.copy(), self.max_distance
+        )
+        ##########################
+
+        # de + seg1
+        self.mat_missing_edges_de_seg1, self.mat_missing_edges_de_seg1_for_qubo = creat_dis_mat_missing_edges(
+            self.n, self.graph_de_seg1, self.mat.copy(), self.max_distance
+        )
+
+        # de + seg1 + seg2
+        self.mat_missing_edges_de_seg1_seg2, self.mat_missing_edges_de_seg1_seg2_for_qubo = creat_dis_mat_missing_edges(
+            self.n, self.graph_de_seg1_seg2, self.mat.copy(), self.max_distance
+        )
+
+        # de + seg1 + seg2 + seg3
+        self.mat_missing_edges_de_seg1_seg2_seg3, self.mat_missing_edges_de_seg1_seg2_seg3_for_qubo = creat_dis_mat_missing_edges(
             self.n, self.graph_de_seg1_seg2_seg3, self.mat.copy(), self.max_distance
         )
-        
-        self.mat_missing_edges_nei, self.mat_missing_edges_nei_for_qubo = creat_dis_mat_missing_edges(
+
+
+        #######################
+        # de + nei2
+        self.mat_missing_edges_de_nei2, self.mat_missing_edges_de_nei2_for_qubo = creat_dis_mat_missing_edges(
+            self.n, self.graph_de_nei2, self.mat.copy(), self.max_distance
+        )
+
+        # de + nei2 + nei3
+        self.mat_missing_edges_de_nei2_nei3, self.mat_missing_edges_de_nei2_nei3_for_qubo = creat_dis_mat_missing_edges(
             self.n, self.graph_de_nei2_nei3, self.mat.copy(), self.max_distance
         )
+
+        #######################
 
         # # ---------------------------------------------
         # # 分别读取非完全图的length和tour
@@ -1682,6 +1711,43 @@ TOUR_FILE = even/even_complete_graph/tour/random{self.n}.txt"
 
         return qubo
 
+    def tsp_qubo_model(self, mat_index):
+        # 创建二进制变量 x[i, t]，表示城市 i 是否在路径的第 t 位置上
+        tsp_x = Array.create('x', shape=(self.n, self.n), vartype='BINARY')
+
+        # 约束1：每个城市必须且只能被访问一次
+        H_city = sum((sum(tsp_x[i, t] for t in range(self.n)) - 1) ** 2 for i in range(self.n))
+
+        # 约束2：每次只能访问一个城市
+        H_time = sum((sum(tsp_x[i, t] for i in range(self.n)) - 1) ** 2 for t in range(self.n))
+
+        # 目标函数：最小化路径的总距离
+        # 方法  
+        # 1.de    
+        # 2.de+seg1  3.de+seg1+seg2   4.de+seg1+seg2+seg3   
+        # 5.de+nei2  6.de+nei2+nei3 
+        mat_group = [
+            self.mat_missing_edges_de_for_qubo,
+            self.mat_missing_edges_de_seg1_for_qubo,
+            self.mat_missing_edges_de_seg1_seg2_for_qubo,
+            self.mat_missing_edges_de_seg1_seg2_seg3_for_qubo,
+            self.mat_missing_edges_de_nei2_for_qubo,
+            self.mat_missing_edges_de_nei2_nei3_for_qubo          
+            ]
+
+        # 直接取值mat_group
+        H_obj = sum(mat_group[mat_index][i, j] * tsp_x[i, t] * tsp_x[j, (t+1) % self.n] for i in range(self.n) for j in range(self.n) for t in range(self.n))
+
+        # 总哈密顿量：目标函数 + 约束条件
+        H = H_obj + self.max_distance * (H_city + H_time)
+
+        # 编译模型
+        model = H.compile()
+
+        # 转换为 QUBO
+        qubo, offset = model.to_qubo()
+
+        return qubo
         
 
 
@@ -1725,12 +1791,16 @@ def main():
 
 def embed_test():
     ############################
-    # 方法
-    method = "seg"
+    # 方法  
+    # 0.de    
+    # 1.de+seg1  2.de+seg1+seg2   3.de+seg1+seg2+seg3   
+    # 4.de+nei2  5.de+nei2+nei3 
+
+    method = "de"
     # 拓扑结构
     topology = "chimera"
     # add的起步（最大城市大小的起步）
-    max_size = 24
+    max_size = 5
     ###########################
 
 
@@ -1746,7 +1816,7 @@ def embed_test():
     ################################
     # topology  size 的增加大小
     # 指定 add 0到20    21~99     100~200  201~300
-    for add in range(201, 301):
+    for add in range(0, 301):
     ################################
 
         with open(f'embed_result/{topology}/{topology}_{method}.txt', "a+", encoding="utf-8") as file:
