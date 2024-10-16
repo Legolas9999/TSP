@@ -5,20 +5,25 @@ import networkx as nx
 import matplotlib.pyplot as plt
 import dimod
 import random
+import time
 
 
 def embed_tsp(qubo, n, add, topology:str, method:str):
-
+    
     #创建topology及嵌入
     if topology == 'chimera':
-        chimera = dnx.chimera_graph(16 + add) 
+        chimera = dnx.chimera_graph(16 + add)
+        start = time.time() 
         embedding = find_embedding(qubo, chimera) 
     if topology == 'pegasus':
         pegasus = dnx.pegasus_graph(16 + add)
+        start = time.time()
         embedding = find_embedding(qubo, pegasus)
     if topology == 'zephyr':
         zephyr = dnx.zephyr_graph(15 + add)
+        start = time.time()
         embedding = find_embedding(qubo, zephyr)
+
 
     # 写入文件
     with open(f'embed_result2/{topology}/{topology}_{method}.txt', "a+", encoding="utf-8") as file:
@@ -26,11 +31,11 @@ def embed_tsp(qubo, n, add, topology:str, method:str):
 
         # 检查嵌入是否成功
         if embedding:
-            print(f"{n},嵌入成功!", file=file)
+            print(f"{n},嵌入成功!  " + f'{time.time() - start}s', file=file)
             return True
 
         else:
-            print(f"{n},嵌入失败!", file=file)
+            print(f"{n},嵌入失败!  " + f'{time.time() - start}s', file=file)
             print("", file=file)
             return False
 
