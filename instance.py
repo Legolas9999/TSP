@@ -1392,6 +1392,15 @@ class instance:
         
         # self.num_quadratic_eliminated_nei = 2 * self.n * int(np.count_nonzero(self.mat_missing_edges_nei == self.max_distance) / 2)
 
+        self.num_quadratic_com = (self.n ** 2 *(self.n - 1)) + (int(np.count_nonzero(self.mat)) * self.n)
+        
+        self.num_quadratic_de = (self.n ** 2 *(self.n - 1)) + (int(np.count_nonzero(self.mat_missing_edges_de_for_qubo)) * self.n)
+        
+        self.num_quadratic_de_seg1_seg2_seg3 = (self.n ** 2 *(self.n - 1)) + (int(np.count_nonzero(self.mat_missing_edges_de_seg1_seg2_seg3_for_qubo)) * self.n)
+        
+        self.num_quadratic_de_nei2_nei3 = (self.n ** 2 *(self.n - 1)) + (int(np.count_nonzero(self.mat_missing_edges_de_nei2_nei3_for_qubo)) * self.n)
+        
+        self.num_quadratic_total = (self.n ** 2 *(self.n - 1)) * 2
 
     # 写入坐标
     def write_coord(self):
@@ -1908,11 +1917,13 @@ def embed_test():
 
 
 if __name__ == "__main__":
-    embed_test()
+    # embed_test()
     # ins = instance(5)
     # print(ins.mat)
     # print(ins.mat_missing_edges_de_for_qubo)
-    
+    for i in range(101,201):
+        ins = instance(i)
+        print(ins.num_quadratic_de_nei2_nei3)
     
 
    
