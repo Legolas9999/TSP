@@ -14,7 +14,7 @@ def embed_tsp(qubo, n, add, topology:str, method:str):
     if topology == 'chimera':
         chimera = dnx.chimera_graph(16 + add)
         start = time.time() 
-        embedding = find_embedding(qubo, chimera) 
+        embedding = find_embedding(qubo, chimera, random_seed=1) 
     if topology == 'pegasus':
         pegasus = dnx.pegasus_graph(16 + add)
         start = time.time()
@@ -25,8 +25,10 @@ def embed_tsp(qubo, n, add, topology:str, method:str):
         embedding = find_embedding(qubo, zephyr)
 
 
+    print(embedding)
+
     # 写入文件
-    with open(f'embed_result2/{topology}/{topology}_{method}.txt', "a+", encoding="utf-8") as file:
+    with open(f'embed_result3/{topology}/{topology}_{method}.txt', "a+", encoding="utf-8") as file:
         
 
         # 检查嵌入是否成功

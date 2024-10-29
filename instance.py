@@ -1893,7 +1893,7 @@ def embed_test():
     for add in range(0, 301):
     ################################
 
-        with open(f'embed_result2/{topology}/{topology}_{method}.txt', "a+", encoding="utf-8") as file:
+        with open(f'embed_result3/{topology}/{topology}_{method}.txt', "a+", encoding="utf-8") as file:
             print(f"{topology} = {initial + add}", file = file)
 
         for i in range(max_size, 201):
@@ -1921,10 +1921,10 @@ if __name__ == "__main__":
     # ins = instance(5)
     # print(ins.mat)
     # print(ins.mat_missing_edges_de_for_qubo)
-    for i in range(101,201):
-        ins = instance(i)
-        print(ins.num_quadratic_de_nei2_nei3)
+
+    embed_test()
     
+    #print(os.urandom(4))
 
    
 
