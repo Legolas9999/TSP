@@ -9,42 +9,45 @@ import time
 
 
 def embed_tsp(qubo, n, add, topology:str, method:str):
-    
-    #创建topology及嵌入
-    if topology == 'chimera':
-        chimera = dnx.chimera_graph(16 + add)
-        start = time.time() 
-        embedding = find_embedding(qubo, chimera, random_seed=1) 
-    if topology == 'pegasus':
-        pegasus = dnx.pegasus_graph(16 + add)
-        start = time.time()
-        embedding = find_embedding(qubo, pegasus)
-    if topology == 'zephyr':
-        zephyr = dnx.zephyr_graph(15 + add)
-        start = time.time()
-        embedding = find_embedding(qubo, zephyr)
 
-
-    print(embedding)
-
-    # 写入文件
+    # 先打开文件
     with open(f'embed_result3/{topology}/{topology}_{method}.txt', "a+", encoding="utf-8") as file:
         
+        # 确定random_seed 1~10
+        for seed in range(1,11):
+            #创建topology及嵌入
+            if topology == 'chimera':
+                chimera = dnx.chimera_graph(16 + add)
+                start = time.time() 
+                embedding = find_embedding(qubo, chimera, random_seed=seed) 
+                used_time = time.time() - start
+            if topology == 'pegasus':
+                pegasus = dnx.pegasus_graph(16 + add)
+                start = time.time()
+                embedding = find_embedding(qubo, pegasus, random_seed=seed)
+                used_time = time.time() - start
+            if topology == 'zephyr':
+                zephyr = dnx.zephyr_graph(15 + add)
+                start = time.time()
+                embedding = find_embedding(qubo, zephyr, random_seed=seed)
+                used_time = time.time() - start
 
-        # 检查嵌入是否成功
-        if embedding:
-            print(f"{n},嵌入成功!  " + f'{time.time() - start}s', file=file)
-            return True
+            #####
+            # 找到嵌入
+            if embedding:
+                print(f"{n},成功!  " + f'seed = {seed} '  + f'time = {round(used_time, 2)}s', file=file)
+                print('#############################################',file=file)
+                return True
+        
+            # 没找到嵌入 且 seed <= 10
+            elif seed <= 10:
+                print(f"{n},失败!  " + f'seed = {seed} ' + f'time = {round(used_time, 2)}s', file=file)
 
-        else:
-            print(f"{n},嵌入失败!  " + f'{time.time() - start}s', file=file)
-            print("", file=file)
-            return False
-
-
-
-
-
+            # 结束十轮seed
+            else:
+                print(f"{n},失败!  " + f'seed = {seed} ' + f'time = {round(used_time, 2)}s', file=file)
+                print('#############################################',file=file)
+                return False
 
 
 
