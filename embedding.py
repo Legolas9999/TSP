@@ -42,7 +42,7 @@ def embed_tsp(qubo, n, add, topology:str, method:str):
             # 没找到嵌入 且 seed <= 10
             elif seed <= 10:
                 print(f"{n},失败!  " + f'seed = {seed} ' + f'time = {round(used_time, 2)}s', file=file)
-
+                continue
             # 结束十轮seed
             else:
                 print(f"{n},失败!  " + f'seed = {seed} ' + f'time = {round(used_time, 2)}s', file=file)
