@@ -10,7 +10,7 @@ import time
 
 def embed_tsp(qubo, n, add, topology:str, method:str):
 
-    # 先打开文件
+    # 先打开文件，行缓冲
     with open(f'embed_result3/{topology}/{topology}_{method}.txt', "a+", encoding="utf-8") as file:
         
         # 确定random_seed 1~10
@@ -35,18 +35,18 @@ def embed_tsp(qubo, n, add, topology:str, method:str):
             #####
             # 找到嵌入
             if embedding:
-                print(f"{n},成功!  " + f'seed = {seed} '  + f'time = {round(used_time, 2)}s', file=file)
-                print('#############################################',file=file)
+                print(f"{n},成功!  " + f'seed = {seed} '  + f'time = {round(used_time, 2)}s', file=file, flush=True)
+                print('#############################################',file=file, flush=True)
                 return True
         
             # 没找到嵌入 且 seed <= 10
-            elif seed <= 10:
-                print(f"{n},失败!  " + f'seed = {seed} ' + f'time = {round(used_time, 2)}s', file=file)
+            elif seed < 10:
+                print(f"{n},失败!  " + f'seed = {seed} ' + f'time = {round(used_time, 2)}s', file=file, flush=True)
                 continue
-            # 结束十轮seed
+            # 结束第十轮seed
             else:
-                print(f"{n},失败!  " + f'seed = {seed} ' + f'time = {round(used_time, 2)}s', file=file)
-                print('#############################################',file=file)
+                print(f"{n},失败!  " + f'seed = {seed} ' + f'time = {round(used_time, 2)}s', file=file, flush=True)
+                print('#############################################',file=file, flush=True)
                 return False
 
 
