@@ -1873,7 +1873,7 @@ def embed_test():
     topology_index = 0
     topology = topology_lst[topology_index]
     # add的起步（最大城市大小的起步）
-    max_size = 10
+    max_size = 5
     ###########################
 
 

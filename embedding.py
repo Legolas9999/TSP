@@ -10,27 +10,29 @@ import time
 
 def embed_tsp(qubo, n, add, topology:str, method:str):
 
-    # 先打开文件，行缓冲
-    with open(f'embed_result3/{topology}/{topology}_{method}.txt', "a+", encoding="utf-8") as file:
         
-        # 确定random_seed 1~10
-        for seed in range(1,11):
-            #创建topology及嵌入
-            if topology == 'chimera':
-                chimera = dnx.chimera_graph(16 + add)
-                start = time.time() 
-                embedding = find_embedding(qubo, chimera, random_seed=seed) 
-                used_time = time.time() - start
-            if topology == 'pegasus':
-                pegasus = dnx.pegasus_graph(16 + add)
-                start = time.time()
-                embedding = find_embedding(qubo, pegasus, random_seed=seed)
-                used_time = time.time() - start
-            if topology == 'zephyr':
-                zephyr = dnx.zephyr_graph(15 + add)
-                start = time.time()
-                embedding = find_embedding(qubo, zephyr, random_seed=seed)
-                used_time = time.time() - start
+    # 确定random_seed 1~10
+    for seed in range(1,11):
+        #创建topology及嵌入
+        if topology == 'chimera':
+            chimera = dnx.chimera_graph(16 + add)
+            start = time.time() 
+            embedding = find_embedding(qubo, chimera, random_seed=seed) 
+            used_time = time.time() - start
+        if topology == 'pegasus':
+            pegasus = dnx.pegasus_graph(16 + add)
+            start = time.time()
+            embedding = find_embedding(qubo, pegasus, random_seed=seed)
+            used_time = time.time() - start
+        if topology == 'zephyr':
+            zephyr = dnx.zephyr_graph(15 + add)
+            start = time.time()
+            embedding = find_embedding(qubo, zephyr, random_seed=seed)
+            used_time = time.time() - start
+
+
+         # 先打开文件，行缓冲
+        with open(f'embed_result3/{topology}/{topology}_{method}.txt', "a+", encoding="utf-8") as file:
 
             #####
             # 找到嵌入
