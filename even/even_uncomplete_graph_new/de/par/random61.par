@@ -1,0 +1,1 @@
+PROBLEM_FILE = even/even_uncomplete_graph_new/de/mat/random61.tspINITIAL_PERIOD = 1000MAX_CANDIDATES = 4MAX_TRIALS = 1000MOVE_TYPE = 6PATCHING_C = 6PATCHING_A = 5RECOMBINATION = GPX2RUNS = 10TRACE_LEVEL = 0TOUR_FILE = even/even_uncomplete_graph_new/de/tour/random61.txt

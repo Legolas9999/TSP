@@ -1,0 +1,9 @@
+PARAMETER_FILE = even/even_complete_graph_new/par/random27.par
+PROBLEM_FILE = even/even_complete_graph_new/mat/random27.tsp
+Successes/Runs = 1/0
+Cost.min = 430, Cost.avg = 430.00, Cost.max = 430
+Gap.min = 0.0000%, Gap.avg = 0.0000%, Gap.max = 0.0000%
+Trials.min = 0, Trials.avg = 0.0, Trials.max = 0
+Time.min = 0.01 sec., Time.avg = 0.01 sec., Time.max = 0.01 sec.
+Time.total = 0.01 sec.
+请按任意键继续. . . 

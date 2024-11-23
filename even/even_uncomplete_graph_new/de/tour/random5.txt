@@ -1,0 +1,13 @@
+NAME : random5.202.tour
+COMMENT : Length = 202
+COMMENT : Found by LKH [Keld Helsgaun] Sat Nov 23 21:46:26 2024
+TYPE : TOUR
+DIMENSION : 5
+TOUR_SECTION
+1
+2
+3
+4
+5
+-1
+EOF

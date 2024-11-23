@@ -1,0 +1,9 @@
+PARAMETER_FILE = even/even_uncomplete_graph_new/nei/par/random95.par
+PROBLEM_FILE = even/even_uncomplete_graph_new/nei/mat/random95.tsp
+Successes/Runs = 0/10
+Cost.min = 780, Cost.avg = 780.00, Cost.max = 780
+Gap.min = 0.0000%, Gap.avg = 0.0000%, Gap.max = 0.0000%
+Trials.min = 1000, Trials.avg = 1000.0, Trials.max = 1000
+Time.min = 0.16 sec., Time.avg = 0.19 sec., Time.max = 0.27 sec.
+Time.total = 1.96 sec.
+请按任意键继续. . . 

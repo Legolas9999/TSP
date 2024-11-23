@@ -1,0 +1,28 @@
+NAME : random20.360.tour
+COMMENT : Length = 360
+COMMENT : Found by LKH [Keld Helsgaun] Sat Nov 23 21:46:26 2024
+TYPE : TOUR
+DIMENSION : 20
+TOUR_SECTION
+1
+6
+9
+3
+19
+4
+15
+20
+10
+17
+12
+5
+8
+18
+13
+16
+2
+11
+7
+14
+-1
+EOF

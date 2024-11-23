@@ -1,0 +1,9 @@
+PARAMETER_FILE = even/even_uncomplete_graph_new/seg/par/random67.par
+PROBLEM_FILE = even/even_uncomplete_graph_new/seg/mat/random67.tsp
+Successes/Runs = 0/10
+Cost.min = 663, Cost.avg = 663.00, Cost.max = 663
+Gap.min = 0.0000%, Gap.avg = 0.0000%, Gap.max = 0.0000%
+Trials.min = 1000, Trials.avg = 1000.0, Trials.max = 1000
+Time.min = 0.06 sec., Time.avg = 0.07 sec., Time.max = 0.09 sec.
+Time.total = 0.72 sec.
+请按任意键继续. . . 
