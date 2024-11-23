@@ -11,6 +11,7 @@ import matplotlib.pyplot as plt
 import json
 import time
 import os
+import re
 
 from pyqubo import Array
 
@@ -1180,227 +1181,227 @@ class instance:
     def __init__(self, n):
         # 城市个数
         self.n = n
+        # ---------------------------------------------
+        # 城市坐标 平均分布
+        self.coord = uniform_coord(self.n)
+        # 距离矩阵
+        self.mat = dis_mat(self.coord)
+        #最大城市间距离
+        self.max_distance = int(np.max(self.mat))
         # # ---------------------------------------------
-        # # 城市坐标 平均分布
-        # self.coord = uniform_coord(self.n)
-        # # 距离矩阵
-        # self.mat = dis_mat(self.coord)
-        # #最大城市间距离
-        # self.max_distance = int(np.max(self.mat))
-        # # # ---------------------------------------------
-        # # # # 城市坐标 正态分布
-        # # # self.g_coord = gaussian_coord(self.n)
-        # # # # 距离矩阵
-        # # # self.g_mat = dis_mat(self.g_coord)
-        # # # ---------------------------------------------
-        # # # 为了画图的参数
-        # # self.graph_pos = {i: self.coord[i] for i in range(self.n)}
-        # # # ---------------------------------------------
-        # # # 基于完全图
-        # # result = iterate_for_complete_lamuda(self.n, self.mat)
-        # # self.complete_lambda = result[0]  #完全图下的lambda
-        # # self.complete_lambda_list = result[1]
-        # self.graph_complete = nx.complete_graph(self.n)  # 对应的图
-        # # self.complete_edges = result[2]
-        # # self.left_city_right_complete = result[3] # 所选取到的最大lambda时的组合
+        # # # 城市坐标 正态分布
+        # # self.g_coord = gaussian_coord(self.n)
+        # # # 距离矩阵
+        # # self.g_mat = dis_mat(self.g_coord)
+        # # ---------------------------------------------
+        # # 为了画图的参数
+        # self.graph_pos = {i: self.coord[i] for i in range(self.n)}
+        # # ---------------------------------------------
+        # # 基于完全图
+        # result = iterate_for_complete_lamuda(self.n, self.mat)
+        # self.complete_lambda = result[0]  #完全图下的lambda
+        # self.complete_lambda_list = result[1]
+        self.graph_complete = nx.complete_graph(self.n)  # 对应的图
+        # self.complete_edges = result[2]
+        # self.left_city_right_complete = result[3] # 所选取到的最大lambda时的组合
 
-        # # # ---------------------------------------------
-        # # 最优路径图
-        # result = optimal_tour_graph(self.n)
-        # self.graph_optimal = result[0]
-        # # self.optimal_tour = result[1]
-        # # self.optimal_length = result[2]
-        # # self.optimal_lambda = lambda_based_on_optimal(self.optimal_tour, self.mat)
-        # # # ---------------------------------------------
-        # # 普通的delauny
-        # # result = delaunay(self.mat, self.coord)
-        # # self.de_lambda = result[0]
-        # # self.de_lambda_list = result[1]
-        # # self.graph_de = result[2]  # 德劳内三角分割图
-        # # self.de_edges = result[3]
-        # # self.left_city_right_de = result[4]
-        # self.graph_de = delaunay(self.coord)
-        # # # ---------------------------------------------
-        # # 基于de + seg1 
-        # # result = delaunay(
-        # #     self.mat,
-        # #     self.coord,
-        # #     seg1=edges_add_seg1(self.coord)
-        # # )
-        # # self.de_seg1_lambda = result[0]
-        # # self.de_seg1_lambda_list = result[1]
-        # # self.graph_de_seg1 = result[2]  # 对应的图
-        # # self.de_seg1_edges = result[3]
+        # # ---------------------------------------------
+        # 最优路径图
+        result = optimal_tour_graph(self.n)
+        self.graph_optimal = result[0]
+        # self.optimal_tour = result[1]
+        # self.optimal_length = result[2]
+        # self.optimal_lambda = lambda_based_on_optimal(self.optimal_tour, self.mat)
+        # # ---------------------------------------------
+        # 普通的delauny
+        # result = delaunay(self.mat, self.coord)
+        # self.de_lambda = result[0]
+        # self.de_lambda_list = result[1]
+        # self.graph_de = result[2]  # 德劳内三角分割图
+        # self.de_edges = result[3]
+        # self.left_city_right_de = result[4]
+        self.graph_de = delaunay(self.coord)
+        # # ---------------------------------------------
+        # 基于de + seg1 
+        # result = delaunay(
+        #     self.mat,
+        #     self.coord,
+        #     seg1=edges_add_seg1(self.coord)
+        # )
+        # self.de_seg1_lambda = result[0]
+        # self.de_seg1_lambda_list = result[1]
+        # self.graph_de_seg1 = result[2]  # 对应的图
+        # self.de_seg1_edges = result[3]
         # self.graph_de_seg1 = delaunay(
         #     self.coord,
         #     seg1=edges_add_seg1(self.coord)
         # )
-        # # # ---------------------------------------------  
-        # # 基于de + seg1 + seg2
-        # # result = delaunay(
-        # #     self.mat,
-        # #     self.coord,
-        # #     seg1=edges_add_seg1(self.coord),
-        # #     seg2=edges_add_seg2(self.coord)
-        # # )
-        # # self.de_seg1_seg2_lambda = result[0]
-        # # self.de_seg1_seg2_lambda_list = result[1]
-        # # self.graph_de_seg1_seg2 = result[2]  # 对应的图
-        # # self.de_seg1_seg2_edges = result[3]
+        # # ---------------------------------------------  
+        # 基于de + seg1 + seg2
+        # result = delaunay(
+        #     self.mat,
+        #     self.coord,
+        #     seg1=edges_add_seg1(self.coord),
+        #     seg2=edges_add_seg2(self.coord)
+        # )
+        # self.de_seg1_seg2_lambda = result[0]
+        # self.de_seg1_seg2_lambda_list = result[1]
+        # self.graph_de_seg1_seg2 = result[2]  # 对应的图
+        # self.de_seg1_seg2_edges = result[3]
 
         # self.graph_de_seg1_seg2 = delaunay(
         #     self.coord,
         #     seg1=edges_add_seg1(self.coord),
         #     seg2=edges_add_seg2(self.coord)
         # )
-        # # # ---------------------------------------------
-        # # 基于de + seg1 + seg2 + seg3
-        # # result = delaunay(
-        # #     self.mat,
-        # #     self.coord,
-        # #     seg1=edges_add_seg1(self.coord),
-        # #     seg2=edges_add_seg2(self.coord),
-        # #     seg3=edges_add_seg3(self.coord)
-        # # )
-        # # self.de_seg1_seg2_seg3_lambda = result[0]
-        # # self.de_seg1_seg2_seg3_lambda_list = result[1]
-        # # self.graph_de_seg1_seg2_seg3 = result[2]  # 对应的图
-        # # self.de_seg1_seg2_seg3_edges = result[3]
-        # # self.left_city_right_seg = result[4]
-
-        # self.graph_de_seg1_seg2_seg3 = delaunay(
+        # # ---------------------------------------------
+        # 基于de + seg1 + seg2 + seg3
+        # result = delaunay(
+        #     self.mat,
         #     self.coord,
         #     seg1=edges_add_seg1(self.coord),
         #     seg2=edges_add_seg2(self.coord),
         #     seg3=edges_add_seg3(self.coord)
         # )
-        # # # ---------------------------------------------
-        # # 基于de + nei2 
-        # # result = delaunay(
-        # #     self.mat,
-        # #     self.coord,
-        # #     nei2=edges_add_nei2(self.coord)
-        # # )
-        # # self.de_nei2_lambda = result[0]
-        # # self.de_nei2_lambda_list = result[1]
-        # # self.graph_de_nei2 = result[2]  # 加邻居的邻居
-        # # self.de_nei2_edges = result[3]
-        # # self.left_city_right_nei2 = result[4]
+        # self.de_seg1_seg2_seg3_lambda = result[0]
+        # self.de_seg1_seg2_seg3_lambda_list = result[1]
+        # self.graph_de_seg1_seg2_seg3 = result[2]  # 对应的图
+        # self.de_seg1_seg2_seg3_edges = result[3]
+        # self.left_city_right_seg = result[4]
+
+        self.graph_de_seg1_seg2_seg3 = delaunay(
+            self.coord,
+            seg1=edges_add_seg1(self.coord),
+            seg2=edges_add_seg2(self.coord),
+            seg3=edges_add_seg3(self.coord)
+        )
+        # # ---------------------------------------------
+        # 基于de + nei2 
+        # result = delaunay(
+        #     self.mat,
+        #     self.coord,
+        #     nei2=edges_add_nei2(self.coord)
+        # )
+        # self.de_nei2_lambda = result[0]
+        # self.de_nei2_lambda_list = result[1]
+        # self.graph_de_nei2 = result[2]  # 加邻居的邻居
+        # self.de_nei2_edges = result[3]
+        # self.left_city_right_nei2 = result[4]
 
         # self.graph_de_nei2 = delaunay(
         #     self.coord,
         #     nei2=edges_add_nei2(self.coord)
         # )
-        # # # ---------------------------------------------
-        # # 基于de + nei2 + nei3
-        # # result = delaunay(
-        # #     self.mat,
-        # #     self.coord,
-        # #     nei2=edges_add_nei2(self.coord),
-        # #     nei3=edges_add_nei3(self.coord)
-        # # )
-        # # self.de_nei2_nei3_lambda = result[0]
-        # # self.de_nei2_nei3_lambda_list = result[1]
-        # # self.graph_de_nei2_nei3 = result[2]  # 加邻居的邻居
-        # # self.de_nei2_nei3_edges = result[3]
-        # # self.left_city_right_nei = result[4]
-
-        # self.graph_de_nei2_nei3 = delaunay(
+        # # ---------------------------------------------
+        # 基于de + nei2 + nei3
+        # result = delaunay(
+        #     self.mat,
         #     self.coord,
         #     nei2=edges_add_nei2(self.coord),
         #     nei3=edges_add_nei3(self.coord)
         # )
-        # # # ---------------------------------------------
+        # self.de_nei2_nei3_lambda = result[0]
+        # self.de_nei2_nei3_lambda_list = result[1]
+        # self.graph_de_nei2_nei3 = result[2]  # 加邻居的邻居
+        # self.de_nei2_nei3_edges = result[3]
+        # self.left_city_right_nei = result[4]
+
+        self.graph_de_nei2_nei3 = delaunay(
+            self.coord,
+            nei2=edges_add_nei2(self.coord),
+            nei3=edges_add_nei3(self.coord)
+        )
+        # # ---------------------------------------------
 
 
 
 
-        # # # ---------------------------------------------
-        # # 基于非完全图的距离矩阵
-        # # Python中的可变类型在作为参数传递给函数时，因为传递的是对象的引用而不是其副本。
-        # # 当你在函数内部修改这些可变对象时，外部的原始对象也会被修改。
+        # # ---------------------------------------------
+        # 基于非完全图的距离矩阵
+        # Python中的可变类型在作为参数传递给函数时，因为传递的是对象的引用而不是其副本。
+        # 当你在函数内部修改这些可变对象时，外部的原始对象也会被修改。
 
-        # # 返回：0:把不存在的边替换为最大距离     1:除对角线外减去最大距离
+        # 返回：0:把不存在的边替换为最大距离     1:除对角线外减去最大距离
 
-        # ##########################
-        # # de
-        # # self.mat_missing_edges_de, self.mat_missing_edges_de_for_qubo = creat_dis_mat_missing_edges(
-        # #     self.n, self.graph_de, self.mat.copy(), self.max_distance
-        # # )
-        # self.mat_missing_edges_de_for_qubo = creat_dis_mat_missing_edges(
+        ##########################
+        # de
+        # self.mat_missing_edges_de, self.mat_missing_edges_de_for_qubo = creat_dis_mat_missing_edges(
         #     self.n, self.graph_de, self.mat.copy(), self.max_distance
         # )
-        # ##########################
+        self.mat_missing_edges_de_for_qubo = creat_dis_mat_missing_edges(
+            self.n, self.graph_de, self.mat.copy(), self.max_distance
+        )
+        ##########################
 
-        # # de + seg1
-        # # self.mat_missing_edges_de_seg1, self.mat_missing_edges_de_seg1_for_qubo = creat_dis_mat_missing_edges(
-        # #     self.n, self.graph_de_seg1, self.mat.copy(), self.max_distance
-        # # )
+        # de + seg1
+        # self.mat_missing_edges_de_seg1, self.mat_missing_edges_de_seg1_for_qubo = creat_dis_mat_missing_edges(
+        #     self.n, self.graph_de_seg1, self.mat.copy(), self.max_distance
+        # )
         # self.mat_missing_edges_de_seg1_for_qubo = creat_dis_mat_missing_edges(
         #     self.n, self.graph_de_seg1, self.mat.copy(), self.max_distance
         # )
 
-        # # de + seg1 + seg2
-        # # self.mat_missing_edges_de_seg1_seg2, self.mat_missing_edges_de_seg1_seg2_for_qubo = creat_dis_mat_missing_edges(
-        # #     self.n, self.graph_de_seg1_seg2, self.mat.copy(), self.max_distance
-        # # )
+        # de + seg1 + seg2
+        # self.mat_missing_edges_de_seg1_seg2, self.mat_missing_edges_de_seg1_seg2_for_qubo = creat_dis_mat_missing_edges(
+        #     self.n, self.graph_de_seg1_seg2, self.mat.copy(), self.max_distance
+        # )
         # self.mat_missing_edges_de_seg1_seg2_for_qubo = creat_dis_mat_missing_edges(
         #     self.n, self.graph_de_seg1_seg2, self.mat.copy(), self.max_distance
         # )
 
-        # # de + seg1 + seg2 + seg3
-        # # self.mat_missing_edges_de_seg1_seg2_seg3, self.mat_missing_edges_de_seg1_seg2_seg3_for_qubo = creat_dis_mat_missing_edges(
-        # #     self.n, self.graph_de_seg1_seg2_seg3, self.mat.copy(), self.max_distance
-        # # )
-        # self.mat_missing_edges_de_seg1_seg2_seg3_for_qubo = creat_dis_mat_missing_edges(
+        # de + seg1 + seg2 + seg3
+        # self.mat_missing_edges_de_seg1_seg2_seg3, self.mat_missing_edges_de_seg1_seg2_seg3_for_qubo = creat_dis_mat_missing_edges(
         #     self.n, self.graph_de_seg1_seg2_seg3, self.mat.copy(), self.max_distance
         # )
+        self.mat_missing_edges_de_seg1_seg2_seg3_for_qubo = creat_dis_mat_missing_edges(
+            self.n, self.graph_de_seg1_seg2_seg3, self.mat.copy(), self.max_distance
+        )
 
-        # #######################
-        # # de + nei2
-        # # self.mat_missing_edges_de_nei2, self.mat_missing_edges_de_nei2_for_qubo = creat_dis_mat_missing_edges(
-        # #     self.n, self.graph_de_nei2, self.mat.copy(), self.max_distance
-        # # )
+        #######################
+        # de + nei2
+        # self.mat_missing_edges_de_nei2, self.mat_missing_edges_de_nei2_for_qubo = creat_dis_mat_missing_edges(
+        #     self.n, self.graph_de_nei2, self.mat.copy(), self.max_distance
+        # )
         # self.mat_missing_edges_de_nei2_for_qubo = creat_dis_mat_missing_edges(
         #     self.n, self.graph_de_nei2, self.mat.copy(), self.max_distance
         # )
 
-        # # de + nei2 + nei3
-        # # self.mat_missing_edges_de_nei2_nei3, self.mat_missing_edges_de_nei2_nei3_for_qubo = creat_dis_mat_missing_edges(
-        # #     self.n, self.graph_de_nei2_nei3, self.mat.copy(), self.max_distance
-        # # )
-        # self.mat_missing_edges_de_nei2_nei3_for_qubo = creat_dis_mat_missing_edges(
+        # de + nei2 + nei3
+        # self.mat_missing_edges_de_nei2_nei3, self.mat_missing_edges_de_nei2_nei3_for_qubo = creat_dis_mat_missing_edges(
         #     self.n, self.graph_de_nei2_nei3, self.mat.copy(), self.max_distance
         # )
+        self.mat_missing_edges_de_nei2_nei3_for_qubo = creat_dis_mat_missing_edges(
+            self.n, self.graph_de_nei2_nei3, self.mat.copy(), self.max_distance
+        )
 
-        # #######################
+        #######################
 
-        # # # ---------------------------------------------
-        # # # 分别读取非完全图的length和tour
-        # # result = read_seg(self.n)
-        # # self.mat_missing_edges_seg_length = result[0]
-        # # self.seg_tour = result[1]
+        # # ---------------------------------------------
+        # # 分别读取非完全图的length和tour
+        # result = read_seg(self.n)
+        # self.mat_missing_edges_seg_length = result[0]
+        # self.seg_tour = result[1]
 
-        # # result = read_nei(self.n)
-        # # self.mat_missing_edges_nei_length = result[0]
-        # # self.nei_tour = result[1]
+        # result = read_nei(self.n)
+        # self.mat_missing_edges_nei_length = result[0]
+        # self.nei_tour = result[1]
 
-        # # # ---------------------------------------------
-        # # # 统计非完全图矩阵中最大距离出现的次数 对称矩阵除以2
-        # # # 并计算可以削减的二次项个数
-        # # self.num_quadratic_eliminated_seg = 2 * self.n * int(np.count_nonzero(self.mat_missing_edges_seg == self.max_distance) / 2)
+        # # ---------------------------------------------
+        # # 统计非完全图矩阵中最大距离出现的次数 对称矩阵除以2
+        # # 并计算可以削减的二次项个数
+        # self.num_quadratic_eliminated_seg = 2 * self.n * int(np.count_nonzero(self.mat_missing_edges_seg == self.max_distance) / 2)
         
-        # # self.num_quadratic_eliminated_nei = 2 * self.n * int(np.count_nonzero(self.mat_missing_edges_nei == self.max_distance) / 2)
+        # self.num_quadratic_eliminated_nei = 2 * self.n * int(np.count_nonzero(self.mat_missing_edges_nei == self.max_distance) / 2)
 
-        # # self.num_quadratic_com = (self.n ** 2 *(self.n - 1)) + (int(np.count_nonzero(self.mat)) * self.n)
+        # self.num_quadratic_com = (self.n ** 2 *(self.n - 1)) + (int(np.count_nonzero(self.mat)) * self.n)
         
-        # # self.num_quadratic_de = (self.n ** 2 *(self.n - 1)) + (int(np.count_nonzero(self.mat_missing_edges_de_for_qubo)) * self.n)
+        # self.num_quadratic_de = (self.n ** 2 *(self.n - 1)) + (int(np.count_nonzero(self.mat_missing_edges_de_for_qubo)) * self.n)
         
-        # # self.num_quadratic_de_seg1_seg2_seg3 = (self.n ** 2 *(self.n - 1)) + (int(np.count_nonzero(self.mat_missing_edges_de_seg1_seg2_seg3_for_qubo)) * self.n)
+        # self.num_quadratic_de_seg1_seg2_seg3 = (self.n ** 2 *(self.n - 1)) + (int(np.count_nonzero(self.mat_missing_edges_de_seg1_seg2_seg3_for_qubo)) * self.n)
         
-        # # self.num_quadratic_de_nei2_nei3 = (self.n ** 2 *(self.n - 1)) + (int(np.count_nonzero(self.mat_missing_edges_de_nei2_nei3_for_qubo)) * self.n)
+        # self.num_quadratic_de_nei2_nei3 = (self.n ** 2 *(self.n - 1)) + (int(np.count_nonzero(self.mat_missing_edges_de_nei2_nei3_for_qubo)) * self.n)
         
-        # # self.num_quadratic_total = (self.n ** 2 *(self.n - 1)) * 2
+        # self.num_quadratic_total = (self.n ** 2 *(self.n - 1)) * 2
 
     # 写入坐标
     def write_coord(self):
@@ -1819,14 +1820,45 @@ TOUR_FILE = even/even_uncomplete_graph_new/de/tour/random{self.n}.txt"
 
 def check():
     for i in range(5, 201):
-        print(i)
         ins = instance(i)
-        # print(ins.mat_missing_edges_de_for_qubo)
-        ins.LKH_test()
+        if is_subgraph(ins.graph_optimal, ins.graph_de_nei2_nei3)[0]:
+            print(1)
+        else:
+            print(0)
 
 
 
-        
+# 只是为了提取time_log文件中的时间信息
+def get_time_value():
+    for i in range(5, 201):
+        # 文件路径
+        file_path = f"even/even_uncomplete_graph_new/nei/time_log/random{i}.txt"
+
+        # 正则表达式匹配时间项
+        time_pattern = r"(Time\.(min|avg|max|total) = [\d\.]+ sec\.)"
+
+        # 提取时间信息
+        time_values = {}
+
+        # 读取文件内容并提取时间数值
+        with open(file_path, "r", encoding="utf-8") as file:
+            for line in file:
+                matches = re.findall(time_pattern, line)
+                for match in matches:
+                    key_value = match[0].split("=")
+                    key = key_value[0].strip()  # 提取 "Time.min", "Time.avg" 等
+                    value = float(key_value[1].strip().split()[0])  # 提取数值部分
+                    time_values[key] = value
+
+        # 输出提取的时间信息
+        # for key, value in time_values.items():
+        #     print(f"{key}: {value} seconds")
+        print(time_values['Time.total'])
+
+
+
+
+
 
             
 
@@ -1923,6 +1955,7 @@ if __name__ == "__main__":
     # print(ins.mat_missing_edges_de_for_qubo)
 
     check()
+
     
     #print(os.urandom(4))
 

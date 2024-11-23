@@ -6,4 +6,3 @@ Gap.min = 0.0000%, Gap.avg = 0.0000%, Gap.max = 0.0000%
 Trials.min = 1000, Trials.avg = 1000.0, Trials.max = 1000
 Time.min = 1.08 sec., Time.avg = 1.79 sec., Time.max = 3.16 sec.
 Time.total = 18.06 sec.
-请按任意键继续. . . 
