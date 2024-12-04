@@ -950,3 +950,1418 @@ chimera = 90
 20,失败!  seed = 2 time = 1193.51s
 20,失败!  seed = 3 time = 1210.13s
 20,失败!  seed = 4 time = 1335.96s
+20,失败!  seed = 5 time = 1158.66s
+20,失败!  seed = 6 time = 1302.73s
+20,成功!  seed = 7 time = 1014.14s
+#############################################
+21,失败!  seed = 1 time = 1161.88s
+21,失败!  seed = 2 time = 1408.22s
+21,失败!  seed = 3 time = 1246.83s
+21,失败!  seed = 4 time = 1416.47s
+21,失败!  seed = 5 time = 1288.21s
+21,失败!  seed = 6 time = 1189.12s
+21,失败!  seed = 7 time = 1361.23s
+21,失败!  seed = 8 time = 1176.15s
+21,失败!  seed = 9 time = 1410.96s
+21,失败!  seed = 10 time = 1280.76s
+#############################################
+chimera = 91
+21,失败!  seed = 1 time = 1431.11s
+21,失败!  seed = 2 time = 1451.34s
+21,失败!  seed = 3 time = 1246.99s
+21,失败!  seed = 4 time = 1356.42s
+21,失败!  seed = 5 time = 1178.2s
+21,失败!  seed = 6 time = 1438.58s
+21,失败!  seed = 7 time = 1395.16s
+21,失败!  seed = 8 time = 1366.11s
+21,失败!  seed = 9 time = 1431.15s
+21,失败!  seed = 10 time = 1241.53s
+#############################################
+chimera = 92
+21,失败!  seed = 1 time = 1429.52s
+21,失败!  seed = 2 time = 1282.12s
+21,失败!  seed = 3 time = 1220.85s
+21,失败!  seed = 4 time = 1472.38s
+21,失败!  seed = 5 time = 1375.59s
+21,失败!  seed = 6 time = 1250.8s
+21,失败!  seed = 7 time = 1351.67s
+21,失败!  seed = 8 time = 1426.9s
+21,失败!  seed = 9 time = 1212.4s
+21,失败!  seed = 10 time = 1280.07s
+#############################################
+chimera = 93
+21,失败!  seed = 1 time = 1287.91s
+21,失败!  seed = 2 time = 1279.61s
+21,失败!  seed = 3 time = 1367.01s
+21,失败!  seed = 4 time = 1344.11s
+21,失败!  seed = 5 time = 1355.62s
+21,失败!  seed = 6 time = 1483.37s
+21,失败!  seed = 7 time = 1400.24s
+21,失败!  seed = 8 time = 1218.0s
+21,失败!  seed = 9 time = 1468.77s
+21,失败!  seed = 10 time = 1383.47s
+#############################################
+chimera = 94
+21,失败!  seed = 1 time = 1208.64s
+21,失败!  seed = 2 time = 1280.06s
+21,失败!  seed = 3 time = 1140.22s
+21,失败!  seed = 4 time = 1185.12s
+21,失败!  seed = 5 time = 1234.08s
+21,失败!  seed = 6 time = 1212.72s
+21,失败!  seed = 7 time = 1293.64s
+21,失败!  seed = 8 time = 1310.62s
+21,失败!  seed = 9 time = 1316.36s
+21,失败!  seed = 10 time = 1283.18s
+#############################################
+chimera = 95
+21,失败!  seed = 1 time = 1281.77s
+21,失败!  seed = 2 time = 1318.97s
+21,失败!  seed = 3 time = 1321.13s
+21,失败!  seed = 4 time = 1269.73s
+21,失败!  seed = 5 time = 1234.75s
+21,失败!  seed = 6 time = 1412.06s
+21,失败!  seed = 7 time = 1304.54s
+21,失败!  seed = 8 time = 1709.0s
+21,失败!  seed = 9 time = 1287.18s
+21,失败!  seed = 10 time = 1361.31s
+#############################################
+chimera = 96
+21,失败!  seed = 1 time = 1265.0s
+21,失败!  seed = 2 time = 1282.38s
+21,失败!  seed = 3 time = 1324.86s
+21,失败!  seed = 4 time = 1272.46s
+21,失败!  seed = 5 time = 1332.21s
+21,失败!  seed = 6 time = 1147.59s
+21,失败!  seed = 7 time = 1151.72s
+21,失败!  seed = 8 time = 1336.04s
+21,失败!  seed = 9 time = 1142.07s
+21,失败!  seed = 10 time = 1314.58s
+#############################################
+chimera = 97
+21,失败!  seed = 1 time = 1150.07s
+21,失败!  seed = 2 time = 1268.52s
+21,失败!  seed = 3 time = 1596.02s
+21,失败!  seed = 4 time = 1528.29s
+21,失败!  seed = 5 time = 1524.65s
+21,失败!  seed = 6 time = 1510.33s
+21,失败!  seed = 7 time = 1389.21s
+21,失败!  seed = 8 time = 1566.0s
+21,失败!  seed = 9 time = 1543.69s
+21,失败!  seed = 10 time = 1175.73s
+#############################################
+chimera = 98
+21,失败!  seed = 1 time = 1361.32s
+21,失败!  seed = 2 time = 1505.57s
+21,失败!  seed = 3 time = 1369.06s
+21,失败!  seed = 4 time = 1445.56s
+21,失败!  seed = 5 time = 1330.89s
+21,失败!  seed = 6 time = 1433.22s
+21,失败!  seed = 7 time = 1458.13s
+21,失败!  seed = 8 time = 1365.03s
+21,失败!  seed = 9 time = 1475.65s
+21,失败!  seed = 10 time = 1418.28s
+#############################################
+chimera = 99
+21,失败!  seed = 1 time = 1433.62s
+21,失败!  seed = 2 time = 1359.4s
+21,失败!  seed = 3 time = 1495.14s
+21,失败!  seed = 4 time = 1233.32s
+21,失败!  seed = 5 time = 1319.32s
+21,失败!  seed = 6 time = 1196.51s
+21,失败!  seed = 7 time = 1213.8s
+21,失败!  seed = 8 time = 1284.57s
+21,失败!  seed = 9 time = 1262.28s
+21,失败!  seed = 10 time = 1196.54s
+#############################################
+chimera = 100
+21,失败!  seed = 1 time = 1417.86s
+21,失败!  seed = 2 time = 1528.56s
+21,失败!  seed = 3 time = 1430.11s
+21,失败!  seed = 4 time = 1571.64s
+21,失败!  seed = 5 time = 1276.07s
+21,失败!  seed = 6 time = 1543.26s
+21,失败!  seed = 7 time = 1264.9s
+21,失败!  seed = 8 time = 1436.04s
+21,失败!  seed = 9 time = 1247.55s
+21,失败!  seed = 10 time = 1689.44s
+#############################################
+chimera = 101
+21,失败!  seed = 1 time = 1232.11s
+21,失败!  seed = 2 time = 1502.71s
+21,失败!  seed = 3 time = 1233.85s
+21,失败!  seed = 4 time = 1274.44s
+21,失败!  seed = 5 time = 1519.59s
+21,失败!  seed = 6 time = 1230.86s
+21,失败!  seed = 7 time = 1523.5s
+21,失败!  seed = 8 time = 1470.82s
+21,失败!  seed = 9 time = 1483.61s
+21,失败!  seed = 10 time = 1232.91s
+#############################################
+chimera = 102
+21,失败!  seed = 1 time = 1445.59s
+21,失败!  seed = 2 time = 1292.24s
+21,失败!  seed = 3 time = 1429.49s
+21,失败!  seed = 4 time = 1453.04s
+21,失败!  seed = 5 time = 1424.95s
+21,失败!  seed = 6 time = 1564.89s
+21,失败!  seed = 7 time = 1583.51s
+21,失败!  seed = 8 time = 1492.4s
+21,失败!  seed = 9 time = 1453.42s
+21,失败!  seed = 10 time = 1490.76s
+#############################################
+chimera = 103
+21,失败!  seed = 1 time = 1219.7s
+21,失败!  seed = 2 time = 1197.3s
+21,失败!  seed = 3 time = 1223.29s
+21,失败!  seed = 4 time = 1263.31s
+21,失败!  seed = 5 time = 1209.52s
+21,失败!  seed = 6 time = 1190.51s
+21,失败!  seed = 7 time = 1216.08s
+21,失败!  seed = 8 time = 1188.13s
+21,失败!  seed = 9 time = 1201.04s
+21,失败!  seed = 10 time = 1199.06s
+#############################################
+chimera = 104
+21,失败!  seed = 1 time = 1222.55s
+21,失败!  seed = 2 time = 1240.59s
+21,失败!  seed = 3 time = 1245.93s
+21,失败!  seed = 4 time = 1240.28s
+21,失败!  seed = 5 time = 1244.68s
+21,失败!  seed = 6 time = 1228.29s
+21,失败!  seed = 7 time = 1251.47s
+21,失败!  seed = 8 time = 1238.74s
+21,失败!  seed = 9 time = 1212.05s
+21,失败!  seed = 10 time = 1218.13s
+#############################################
+chimera = 105
+21,失败!  seed = 1 time = 1260.33s
+21,失败!  seed = 2 time = 1231.92s
+21,失败!  seed = 3 time = 1279.97s
+21,失败!  seed = 4 time = 1278.1s
+21,失败!  seed = 5 time = 1230.06s
+21,失败!  seed = 6 time = 1263.35s
+21,失败!  seed = 7 time = 1274.32s
+21,失败!  seed = 8 time = 1286.49s
+21,失败!  seed = 9 time = 1264.66s
+21,失败!  seed = 10 time = 1374.75s
+#############################################
+chimera = 106
+21,失败!  seed = 1 time = 1212.71s
+21,失败!  seed = 2 time = 1406.58s
+21,失败!  seed = 3 time = 1218.43s
+21,失败!  seed = 4 time = 1158.32s
+21,失败!  seed = 5 time = 1398.2s
+21,失败!  seed = 6 time = 1161.44s
+21,失败!  seed = 7 time = 1207.68s
+21,失败!  seed = 8 time = 1173.98s
+21,失败!  seed = 9 time = 1417.96s
+21,失败!  seed = 10 time = 1160.73s
+#############################################
+chimera = 107
+21,成功!  seed = 1 time = 1042.97s
+#############################################
+22,失败!  seed = 1 time = 1435.37s
+22,失败!  seed = 2 time = 1297.03s
+22,失败!  seed = 3 time = 1307.53s
+22,失败!  seed = 4 time = 1318.57s
+22,失败!  seed = 5 time = 1315.4s
+22,失败!  seed = 6 time = 1316.05s
+22,失败!  seed = 7 time = 1303.11s
+22,失败!  seed = 8 time = 1353.55s
+22,失败!  seed = 9 time = 1283.73s
+22,失败!  seed = 10 time = 1274.92s
+#############################################
+chimera = 108
+22,失败!  seed = 1 time = 1376.14s
+22,失败!  seed = 2 time = 1361.36s
+22,失败!  seed = 3 time = 1339.94s
+22,失败!  seed = 4 time = 1339.31s
+22,失败!  seed = 5 time = 1380.58s
+22,失败!  seed = 6 time = 1371.82s
+22,失败!  seed = 7 time = 1278.09s
+22,失败!  seed = 8 time = 1227.95s
+22,失败!  seed = 9 time = 1238.83s
+22,失败!  seed = 10 time = 1260.75s
+#############################################
+chimera = 109
+22,失败!  seed = 1 time = 1294.96s
+22,失败!  seed = 2 time = 1285.68s
+22,失败!  seed = 3 time = 1302.46s
+22,失败!  seed = 4 time = 1360.91s
+22,失败!  seed = 5 time = 1274.45s
+22,失败!  seed = 6 time = 1341.14s
+22,失败!  seed = 7 time = 1354.32s
+22,失败!  seed = 8 time = 1347.11s
+22,失败!  seed = 9 time = 1355.11s
+22,失败!  seed = 10 time = 1350.13s
+#############################################
+chimera = 110
+22,失败!  seed = 1 time = 1365.92s
+22,失败!  seed = 2 time = 1370.55s
+22,失败!  seed = 3 time = 1379.11s
+22,失败!  seed = 4 time = 1358.65s
+22,失败!  seed = 5 time = 1365.03s
+22,失败!  seed = 6 time = 1364.08s
+22,失败!  seed = 7 time = 1363.34s
+22,失败!  seed = 8 time = 1376.26s
+22,失败!  seed = 9 time = 1369.74s
+22,失败!  seed = 10 time = 1390.86s
+#############################################
+chimera = 111
+22,失败!  seed = 1 time = 1423.02s
+22,失败!  seed = 2 time = 1370.76s
+22,失败!  seed = 3 time = 1415.19s
+22,失败!  seed = 4 time = 1400.01s
+22,失败!  seed = 5 time = 1429.11s
+22,失败!  seed = 6 time = 1405.71s
+22,失败!  seed = 7 time = 1412.26s
+22,失败!  seed = 8 time = 1428.77s
+22,失败!  seed = 9 time = 1433.66s
+22,失败!  seed = 10 time = 1430.02s
+#############################################
+chimera = 112
+22,失败!  seed = 1 time = 1456.43s
+22,失败!  seed = 2 time = 1407.96s
+22,失败!  seed = 3 time = 1367.57s
+22,失败!  seed = 4 time = 1441.96s
+22,失败!  seed = 5 time = 1455.69s
+22,失败!  seed = 6 time = 1454.58s
+22,失败!  seed = 7 time = 1447.16s
+22,失败!  seed = 8 time = 1452.79s
+22,失败!  seed = 9 time = 1401.66s
+22,失败!  seed = 10 time = 1421.23s
+#############################################
+chimera = 113
+22,失败!  seed = 1 time = 1436.72s
+22,失败!  seed = 2 time = 1423.36s
+22,失败!  seed = 3 time = 1433.11s
+22,失败!  seed = 4 time = 1439.98s
+22,失败!  seed = 5 time = 1441.82s
+22,失败!  seed = 6 time = 1433.99s
+22,失败!  seed = 7 time = 1438.85s
+22,失败!  seed = 8 time = 1426.75s
+22,失败!  seed = 9 time = 1435.71s
+22,失败!  seed = 10 time = 1434.86s
+#############################################
+chimera = 114
+22,失败!  seed = 1 time = 1637.44s
+22,失败!  seed = 2 time = 1347.02s
+22,失败!  seed = 3 time = 1326.15s
+22,失败!  seed = 4 time = 1345.19s
+22,失败!  seed = 5 time = 1363.21s
+22,失败!  seed = 6 time = 1368.95s
+22,失败!  seed = 7 time = 1325.38s
+22,失败!  seed = 8 time = 1422.05s
+22,失败!  seed = 9 time = 1481.32s
+22,失败!  seed = 10 time = 1377.09s
+#############################################
+chimera = 115
+22,失败!  seed = 1 time = 1368.51s
+22,失败!  seed = 2 time = 1516.11s
+22,失败!  seed = 3 time = 1470.04s
+22,失败!  seed = 4 time = 1501.17s
+22,失败!  seed = 5 time = 1343.18s
+22,失败!  seed = 6 time = 1218.65s
+22,失败!  seed = 7 time = 1240.65s
+22,失败!  seed = 8 time = 1572.75s
+22,失败!  seed = 9 time = 1597.82s
+22,失败!  seed = 10 time = 1237.25s
+#############################################
+chimera = 116
+22,失败!  seed = 1 time = 1397.7s
+22,失败!  seed = 2 time = 1412.43s
+22,失败!  seed = 3 time = 1353.34s
+22,失败!  seed = 4 time = 1429.46s
+22,失败!  seed = 5 time = 1252.08s
+22,失败!  seed = 6 time = 1294.16s
+22,失败!  seed = 7 time = 1277.81s
+22,失败!  seed = 8 time = 1249.04s
+22,失败!  seed = 9 time = 1237.21s
+22,失败!  seed = 10 time = 1218.1s
+#############################################
+chimera = 117
+22,失败!  seed = 1 time = 1356.3s
+22,失败!  seed = 2 time = 1314.29s
+22,失败!  seed = 3 time = 1262.24s
+22,失败!  seed = 4 time = 1287.07s
+22,失败!  seed = 5 time = 1260.78s
+22,失败!  seed = 6 time = 1277.53s
+22,失败!  seed = 7 time = 1274.11s
+22,失败!  seed = 8 time = 1267.62s
+22,失败!  seed = 9 time = 1276.54s
+22,失败!  seed = 10 time = 1277.65s
+#############################################
+chimera = 118
+22,失败!  seed = 1 time = 1314.32s
+22,失败!  seed = 2 time = 1245.85s
+22,失败!  seed = 3 time = 1338.91s
+22,失败!  seed = 4 time = 1284.35s
+22,失败!  seed = 5 time = 1314.75s
+22,失败!  seed = 6 time = 1328.45s
+22,成功!  seed = 7 time = 1016.66s
+#############################################
+23,失败!  seed = 1 time = 1497.28s
+23,失败!  seed = 2 time = 1467.6s
+23,失败!  seed = 3 time = 1514.06s
+23,失败!  seed = 4 time = 1448.61s
+23,失败!  seed = 5 time = 1494.99s
+23,失败!  seed = 6 time = 1458.24s
+23,失败!  seed = 7 time = 1425.64s
+23,失败!  seed = 8 time = 1443.31s
+23,失败!  seed = 9 time = 1473.84s
+23,失败!  seed = 10 time = 1530.92s
+#############################################
+chimera = 119
+23,失败!  seed = 1 time = 1507.83s
+23,失败!  seed = 2 time = 1473.81s
+23,失败!  seed = 3 time = 1474.12s
+23,失败!  seed = 4 time = 1511.7s
+23,失败!  seed = 5 time = 1466.07s
+23,失败!  seed = 6 time = 1410.83s
+23,失败!  seed = 7 time = 1503.45s
+23,失败!  seed = 8 time = 1447.17s
+23,失败!  seed = 9 time = 1476.49s
+23,失败!  seed = 10 time = 1509.44s
+#############################################
+chimera = 120
+23,失败!  seed = 1 time = 1507.49s
+23,失败!  seed = 2 time = 1563.84s
+23,失败!  seed = 3 time = 1550.85s
+23,失败!  seed = 4 time = 1543.3s
+23,失败!  seed = 5 time = 1622.02s
+23,失败!  seed = 6 time = 1610.39s
+23,失败!  seed = 7 time = 1609.27s
+23,失败!  seed = 8 time = 1551.0s
+23,失败!  seed = 9 time = 1584.13s
+23,失败!  seed = 10 time = 1605.49s
+#############################################
+chimera = 121
+23,失败!  seed = 1 time = 1569.55s
+23,失败!  seed = 2 time = 1682.39s
+23,失败!  seed = 3 time = 1649.8s
+23,失败!  seed = 4 time = 1623.9s
+23,失败!  seed = 5 time = 1605.47s
+23,失败!  seed = 6 time = 1616.28s
+23,失败!  seed = 7 time = 1634.08s
+23,失败!  seed = 8 time = 1636.17s
+23,失败!  seed = 9 time = 1622.08s
+23,失败!  seed = 10 time = 1556.94s
+#############################################
+chimera = 122
+23,失败!  seed = 1 time = 1625.66s
+23,失败!  seed = 2 time = 1719.44s
+23,失败!  seed = 3 time = 1523.02s
+23,失败!  seed = 4 time = 1487.66s
+23,失败!  seed = 5 time = 1496.8s
+23,失败!  seed = 6 time = 1513.34s
+23,失败!  seed = 7 time = 1491.15s
+23,失败!  seed = 8 time = 1486.86s
+23,失败!  seed = 9 time = 1520.02s
+23,失败!  seed = 10 time = 1511.62s
+#############################################
+chimera = 123
+23,失败!  seed = 1 time = 1469.93s
+23,失败!  seed = 2 time = 1557.44s
+23,失败!  seed = 3 time = 1514.54s
+23,失败!  seed = 4 time = 1525.47s
+23,失败!  seed = 5 time = 1515.57s
+23,失败!  seed = 6 time = 1551.07s
+23,失败!  seed = 7 time = 1539.67s
+23,失败!  seed = 8 time = 1526.91s
+23,失败!  seed = 9 time = 1534.5s
+23,失败!  seed = 10 time = 1539.25s
+#############################################
+chimera = 124
+23,失败!  seed = 1 time = 1590.77s
+23,失败!  seed = 2 time = 1581.8s
+23,失败!  seed = 3 time = 1534.53s
+23,失败!  seed = 4 time = 1534.41s
+23,失败!  seed = 5 time = 1511.02s
+23,失败!  seed = 6 time = 1553.23s
+23,失败!  seed = 7 time = 1504.42s
+23,失败!  seed = 8 time = 1537.91s
+23,失败!  seed = 9 time = 1534.71s
+23,失败!  seed = 10 time = 1530.56s
+#############################################
+chimera = 125
+23,失败!  seed = 1 time = 1533.38s
+23,失败!  seed = 2 time = 1598.41s
+23,失败!  seed = 3 time = 1587.5s
+23,失败!  seed = 4 time = 1588.61s
+23,失败!  seed = 5 time = 1586.86s
+23,失败!  seed = 6 time = 1580.1s
+23,失败!  seed = 7 time = 1749.91s
+23,失败!  seed = 8 time = 1561.25s
+23,失败!  seed = 9 time = 1411.26s
+23,失败!  seed = 10 time = 1544.39s
+#############################################
+chimera = 126
+23,失败!  seed = 1 time = 1646.28s
+23,失败!  seed = 2 time = 1620.59s
+23,失败!  seed = 3 time = 1611.61s
+23,失败!  seed = 4 time = 1634.11s
+23,失败!  seed = 5 time = 1597.42s
+23,失败!  seed = 6 time = 1636.88s
+23,失败!  seed = 7 time = 1628.51s
+23,失败!  seed = 8 time = 1627.45s
+23,失败!  seed = 9 time = 1619.81s
+23,失败!  seed = 10 time = 1600.36s
+#############################################
+chimera = 127
+23,失败!  seed = 1 time = 1656.76s
+23,失败!  seed = 2 time = 1655.67s
+23,失败!  seed = 3 time = 1649.31s
+23,失败!  seed = 4 time = 1358.85s
+23,失败!  seed = 5 time = 1639.76s
+23,失败!  seed = 6 time = 1632.99s
+23,失败!  seed = 7 time = 1667.71s
+23,失败!  seed = 8 time = 1632.01s
+23,失败!  seed = 9 time = 1624.11s
+23,失败!  seed = 10 time = 1637.56s
+#############################################
+chimera = 128
+23,失败!  seed = 1 time = 1690.3s
+23,失败!  seed = 2 time = 1711.9s
+23,失败!  seed = 3 time = 1707.36s
+23,失败!  seed = 4 time = 1680.22s
+23,失败!  seed = 5 time = 1687.34s
+23,失败!  seed = 6 time = 1708.96s
+23,失败!  seed = 7 time = 1623.48s
+23,失败!  seed = 8 time = 1687.64s
+23,失败!  seed = 9 time = 1642.83s
+23,失败!  seed = 10 time = 1661.09s
+#############################################
+chimera = 129
+23,失败!  seed = 1 time = 1729.58s
+23,失败!  seed = 2 time = 1725.57s
+23,失败!  seed = 3 time = 1726.48s
+23,失败!  seed = 4 time = 1735.88s
+23,失败!  seed = 5 time = 1512.38s
+23,失败!  seed = 6 time = 1705.92s
+23,失败!  seed = 7 time = 1700.29s
+23,失败!  seed = 8 time = 1700.87s
+23,失败!  seed = 9 time = 1568.9s
+23,失败!  seed = 10 time = 1741.12s
+#############################################
+chimera = 130
+23,失败!  seed = 1 time = 1749.22s
+23,失败!  seed = 2 time = 1766.36s
+23,失败!  seed = 3 time = 1756.14s
+23,失败!  seed = 4 time = 1834.19s
+23,失败!  seed = 5 time = 1829.76s
+23,失败!  seed = 6 time = 1840.81s
+23,失败!  seed = 7 time = 1774.67s
+23,失败!  seed = 8 time = 1747.78s
+23,失败!  seed = 9 time = 1750.21s
+23,失败!  seed = 10 time = 1594.02s
+#############################################
+chimera = 131
+23,失败!  seed = 1 time = 1825.19s
+23,失败!  seed = 2 time = 1804.6s
+23,失败!  seed = 3 time = 1810.35s
+23,失败!  seed = 4 time = 1764.62s
+23,失败!  seed = 5 time = 1798.51s
+23,失败!  seed = 6 time = 1828.37s
+23,失败!  seed = 7 time = 1841.08s
+23,失败!  seed = 8 time = 1835.15s
+23,失败!  seed = 9 time = 1776.31s
+23,失败!  seed = 10 time = 1816.54s
+#############################################
+chimera = 132
+23,失败!  seed = 1 time = 1834.06s
+23,失败!  seed = 2 time = 1809.02s
+23,失败!  seed = 3 time = 1738.62s
+23,失败!  seed = 4 time = 1760.65s
+23,失败!  seed = 5 time = 1838.98s
+23,失败!  seed = 6 time = 1876.69s
+23,失败!  seed = 7 time = 1721.89s
+23,失败!  seed = 8 time = 1424.25s
+23,失败!  seed = 9 time = 1840.56s
+23,失败!  seed = 10 time = 1865.38s
+#############################################
+chimera = 133
+23,失败!  seed = 1 time = 1640.44s
+23,失败!  seed = 2 time = 1496.21s
+23,失败!  seed = 3 time = 1856.32s
+23,失败!  seed = 4 time = 1881.7s
+23,失败!  seed = 5 time = 1872.0s
+23,失败!  seed = 6 time = 1913.94s
+23,失败!  seed = 7 time = 1877.46s
+23,失败!  seed = 8 time = 1830.45s
+23,失败!  seed = 9 time = 1516.98s
+23,失败!  seed = 10 time = 1839.6s
+#############################################
+chimera = 134
+23,失败!  seed = 1 time = 1927.82s
+23,失败!  seed = 2 time = 1337.35s
+23,失败!  seed = 3 time = 1726.57s
+23,失败!  seed = 4 time = 1932.66s
+23,失败!  seed = 5 time = 1953.71s
+23,失败!  seed = 6 time = 1926.17s
+23,失败!  seed = 7 time = 1951.6s
+23,失败!  seed = 8 time = 1884.4s
+23,失败!  seed = 9 time = 1903.11s
+23,失败!  seed = 10 time = 1728.86s
+#############################################
+chimera = 135
+23,失败!  seed = 1 time = 1964.26s
+23,失败!  seed = 2 time = 1983.3s
+23,失败!  seed = 3 time = 1350.31s
+23,失败!  seed = 4 time = 1936.44s
+23,失败!  seed = 5 time = 1367.94s
+23,失败!  seed = 6 time = 1963.92s
+23,失败!  seed = 7 time = 1355.92s
+23,失败!  seed = 8 time = 1978.93s
+23,失败!  seed = 9 time = 1361.91s
+23,失败!  seed = 10 time = 1383.63s
+#############################################
+chimera = 136
+23,失败!  seed = 1 time = 1391.86s
+23,失败!  seed = 2 time = 1401.94s
+23,失败!  seed = 3 time = 1404.52s
+23,失败!  seed = 4 time = 1399.03s
+23,失败!  seed = 5 time = 1385.67s
+23,失败!  seed = 6 time = 1371.62s
+23,失败!  seed = 7 time = 1942.47s
+23,失败!  seed = 8 time = 1521.2s
+23,失败!  seed = 9 time = 1367.69s
+23,失败!  seed = 10 time = 1426.47s
+#############################################
+chimera = 137
+23,成功!  seed = 1 time = 1022.85s
+#############################################
+24,失败!  seed = 1 time = 1537.25s
+24,失败!  seed = 2 time = 1537.28s
+24,失败!  seed = 3 time = 1524.49s
+24,失败!  seed = 4 time = 1499.67s
+24,失败!  seed = 5 time = 1511.05s
+24,失败!  seed = 6 time = 1483.55s
+24,失败!  seed = 7 time = 1480.17s
+24,失败!  seed = 8 time = 1519.49s
+24,失败!  seed = 9 time = 1509.46s
+24,失败!  seed = 10 time = 1492.02s
+#############################################
+chimera = 138
+24,失败!  seed = 1 time = 1547.59s
+24,失败!  seed = 2 time = 1520.29s
+24,失败!  seed = 3 time = 1499.23s
+24,失败!  seed = 4 time = 1529.81s
+24,失败!  seed = 5 time = 1501.78s
+24,失败!  seed = 6 time = 1515.74s
+24,失败!  seed = 7 time = 1524.33s
+24,失败!  seed = 8 time = 1563.61s
+24,失败!  seed = 9 time = 1560.82s
+24,失败!  seed = 10 time = 1569.39s
+#############################################
+chimera = 139
+24,失败!  seed = 1 time = 1609.43s
+24,失败!  seed = 2 time = 1602.2s
+24,失败!  seed = 3 time = 1609.73s
+24,失败!  seed = 4 time = 1611.36s
+24,失败!  seed = 5 time = 1617.66s
+24,失败!  seed = 6 time = 1619.31s
+24,失败!  seed = 7 time = 1609.15s
+24,失败!  seed = 8 time = 1608.82s
+24,失败!  seed = 9 time = 1589.98s
+24,失败!  seed = 10 time = 1617.63s
+#############################################
+chimera = 140
+24,失败!  seed = 1 time = 1599.14s
+24,失败!  seed = 2 time = 1677.05s
+24,失败!  seed = 3 time = 1662.3s
+24,失败!  seed = 4 time = 1648.35s
+24,失败!  seed = 5 time = 1585.05s
+24,失败!  seed = 6 time = 1647.12s
+24,失败!  seed = 7 time = 1670.29s
+24,失败!  seed = 8 time = 1648.62s
+24,失败!  seed = 9 time = 1658.35s
+24,失败!  seed = 10 time = 1686.99s
+#############################################
+chimera = 141
+24,失败!  seed = 1 time = 1649.36s
+24,失败!  seed = 2 time = 1703.7s
+24,失败!  seed = 3 time = 1683.66s
+24,失败!  seed = 4 time = 1658.29s
+24,失败!  seed = 5 time = 1635.37s
+24,失败!  seed = 6 time = 1667.35s
+24,失败!  seed = 7 time = 1681.86s
+24,失败!  seed = 8 time = 1650.75s
+24,失败!  seed = 9 time = 1690.15s
+24,失败!  seed = 10 time = 1633.66s
+#############################################
+chimera = 142
+24,失败!  seed = 1 time = 1732.24s
+24,失败!  seed = 2 time = 1726.6s
+24,失败!  seed = 3 time = 1750.71s
+24,失败!  seed = 4 time = 1722.95s
+24,失败!  seed = 5 time = 1720.71s
+24,失败!  seed = 6 time = 1734.18s
+24,失败!  seed = 7 time = 1700.28s
+24,失败!  seed = 8 time = 1715.36s
+24,失败!  seed = 9 time = 1713.64s
+24,失败!  seed = 10 time = 1705.53s
+#############################################
+chimera = 143
+24,失败!  seed = 1 time = 1724.7s
+24,失败!  seed = 2 time = 1764.67s
+24,失败!  seed = 3 time = 1725.02s
+24,失败!  seed = 4 time = 1731.3s
+24,失败!  seed = 5 time = 1745.97s
+24,失败!  seed = 6 time = 1738.19s
+24,失败!  seed = 7 time = 1749.01s
+24,失败!  seed = 8 time = 1734.47s
+24,失败!  seed = 9 time = 1738.82s
+24,失败!  seed = 10 time = 1709.25s
+#############################################
+chimera = 144
+24,失败!  seed = 1 time = 1753.55s
+24,失败!  seed = 2 time = 1759.52s
+24,失败!  seed = 3 time = 1742.18s
+24,失败!  seed = 4 time = 1718.61s
+24,失败!  seed = 5 time = 1756.55s
+24,失败!  seed = 6 time = 1743.69s
+24,失败!  seed = 7 time = 1778.62s
+24,失败!  seed = 8 time = 1743.81s
+24,失败!  seed = 9 time = 1719.68s
+24,失败!  seed = 10 time = 1760.18s
+#############################################
+chimera = 145
+24,失败!  seed = 1 time = 1801.62s
+24,失败!  seed = 2 time = 1815.26s
+24,失败!  seed = 3 time = 1777.45s
+24,失败!  seed = 4 time = 1793.63s
+24,失败!  seed = 5 time = 1822.58s
+24,失败!  seed = 6 time = 1800.63s
+24,失败!  seed = 7 time = 1783.46s
+24,失败!  seed = 8 time = 1737.79s
+24,失败!  seed = 9 time = 1805.68s
+24,失败!  seed = 10 time = 1772.0s
+#############################################
+chimera = 146
+24,失败!  seed = 1 time = 1822.0s
+24,失败!  seed = 2 time = 1677.93s
+24,失败!  seed = 3 time = 1803.75s
+24,失败!  seed = 4 time = 1553.75s
+24,失败!  seed = 5 time = 1836.64s
+24,失败!  seed = 6 time = 1813.73s
+24,失败!  seed = 7 time = 1804.94s
+24,失败!  seed = 8 time = 1825.67s
+24,失败!  seed = 9 time = 1823.97s
+24,失败!  seed = 10 time = 1787.12s
+#############################################
+chimera = 147
+24,失败!  seed = 1 time = 1867.3s
+24,失败!  seed = 2 time = 1850.41s
+24,失败!  seed = 3 time = 1852.14s
+24,失败!  seed = 4 time = 1843.67s
+24,失败!  seed = 5 time = 1887.15s
+24,失败!  seed = 6 time = 1868.55s
+24,失败!  seed = 7 time = 1877.46s
+24,失败!  seed = 8 time = 1863.05s
+24,失败!  seed = 9 time = 1885.58s
+24,失败!  seed = 10 time = 1897.52s
+#############################################
+chimera = 148
+24,失败!  seed = 1 time = 1825.57s
+24,失败!  seed = 2 time = 1861.74s
+24,失败!  seed = 3 time = 1674.45s
+24,失败!  seed = 4 time = 1902.69s
+24,失败!  seed = 5 time = 1931.34s
+24,失败!  seed = 6 time = 1884.07s
+24,失败!  seed = 7 time = 1912.59s
+24,失败!  seed = 8 time = 1900.14s
+24,失败!  seed = 9 time = 1914.31s
+24,失败!  seed = 10 time = 1611.16s
+#############################################
+chimera = 149
+24,失败!  seed = 1 time = 1638.4s
+24,失败!  seed = 2 time = 1954.31s
+24,失败!  seed = 3 time = 1942.2s
+24,失败!  seed = 4 time = 1883.8s
+24,失败!  seed = 5 time = 1923.86s
+24,失败!  seed = 6 time = 1927.08s
+24,失败!  seed = 7 time = 1948.31s
+24,失败!  seed = 8 time = 1888.91s
+24,失败!  seed = 9 time = 1934.52s
+24,失败!  seed = 10 time = 1948.33s
+#############################################
+chimera = 150
+24,失败!  seed = 1 time = 1993.51s
+24,失败!  seed = 2 time = 1898.08s
+24,失败!  seed = 3 time = 1967.83s
+24,失败!  seed = 4 time = 1972.11s
+24,失败!  seed = 5 time = 1988.28s
+24,失败!  seed = 6 time = 1952.79s
+24,失败!  seed = 7 time = 1974.49s
+24,失败!  seed = 8 time = 2015.8s
+24,失败!  seed = 9 time = 1967.99s
+24,失败!  seed = 10 time = 1980.94s
+#############################################
+chimera = 151
+24,失败!  seed = 1 time = 2003.86s
+24,失败!  seed = 2 time = 1682.06s
+24,失败!  seed = 3 time = 2003.39s
+24,失败!  seed = 4 time = 1998.2s
+24,失败!  seed = 5 time = 2018.1s
+24,失败!  seed = 6 time = 2018.59s
+24,失败!  seed = 7 time = 1893.58s
+24,失败!  seed = 8 time = 1937.98s
+24,失败!  seed = 9 time = 2027.39s
+24,失败!  seed = 10 time = 1866.23s
+#############################################
+chimera = 152
+24,失败!  seed = 1 time = 2002.43s
+24,失败!  seed = 2 time = 2039.89s
+24,失败!  seed = 3 time = 2016.37s
+24,失败!  seed = 4 time = 2021.67s
+24,失败!  seed = 5 time = 2048.64s
+24,失败!  seed = 6 time = 1845.15s
+24,失败!  seed = 7 time = 2034.5s
+24,失败!  seed = 8 time = 2020.87s
+24,失败!  seed = 9 time = 2046.36s
+24,失败!  seed = 10 time = 1798.61s
+#############################################
+chimera = 153
+24,失败!  seed = 1 time = 2073.25s
+24,失败!  seed = 2 time = 2051.68s
+24,失败!  seed = 3 time = 2065.77s
+24,失败!  seed = 4 time = 2044.07s
+24,失败!  seed = 5 time = 2011.21s
+24,失败!  seed = 6 time = 2056.42s
+24,失败!  seed = 7 time = 2111.36s
+24,失败!  seed = 8 time = 2046.37s
+24,失败!  seed = 9 time = 2071.71s
+24,失败!  seed = 10 time = 2074.84s
+#############################################
+chimera = 154
+24,失败!  seed = 1 time = 2080.56s
+24,失败!  seed = 2 time = 2138.2s
+24,失败!  seed = 3 time = 2068.29s
+24,失败!  seed = 4 time = 1850.94s
+24,失败!  seed = 5 time = 1997.2s
+24,失败!  seed = 6 time = 2208.17s
+24,失败!  seed = 7 time = 1935.54s
+24,失败!  seed = 8 time = 2048.8s
+24,失败!  seed = 9 time = 1677.83s
+24,失败!  seed = 10 time = 2108.65s
+#############################################
+chimera = 155
+24,失败!  seed = 1 time = 2052.08s
+24,失败!  seed = 2 time = 2136.42s
+24,失败!  seed = 3 time = 2176.55s
+24,失败!  seed = 4 time = 2132.08s
+24,失败!  seed = 5 time = 2170.08s
+24,失败!  seed = 6 time = 2151.57s
+24,失败!  seed = 7 time = 2091.51s
+24,失败!  seed = 8 time = 2080.14s
+24,失败!  seed = 9 time = 2101.59s
+24,失败!  seed = 10 time = 1936.47s
+#############################################
+chimera = 156
+24,失败!  seed = 1 time = 2131.53s
+24,失败!  seed = 2 time = 1988.81s
+24,失败!  seed = 3 time = 1882.92s
+24,失败!  seed = 4 time = 2182.15s
+24,失败!  seed = 5 time = 1857.27s
+24,失败!  seed = 6 time = 1785.45s
+24,失败!  seed = 7 time = 2152.27s
+24,失败!  seed = 8 time = 2158.81s
+24,失败!  seed = 9 time = 2190.6s
+24,失败!  seed = 10 time = 2159.17s
+#############################################
+chimera = 157
+24,失败!  seed = 1 time = 2213.68s
+24,失败!  seed = 2 time = 2164.54s
+24,成功!  seed = 3 time = 1290.27s
+#############################################
+25,失败!  seed = 1 time = 2366.53s
+25,失败!  seed = 2 time = 2447.23s
+25,失败!  seed = 3 time = 2399.4s
+25,失败!  seed = 4 time = 2471.41s
+25,失败!  seed = 5 time = 2425.83s
+25,失败!  seed = 6 time = 2456.54s
+25,失败!  seed = 7 time = 2409.05s
+25,失败!  seed = 8 time = 2362.81s
+25,失败!  seed = 9 time = 2440.78s
+25,失败!  seed = 10 time = 2459.75s
+#############################################
+chimera = 158
+25,失败!  seed = 1 time = 2511.62s
+25,失败!  seed = 2 time = 2476.49s
+25,失败!  seed = 3 time = 2492.58s
+25,失败!  seed = 4 time = 2525.1s
+25,失败!  seed = 5 time = 2484.33s
+25,失败!  seed = 6 time = 2553.58s
+25,失败!  seed = 7 time = 2518.2s
+25,失败!  seed = 8 time = 2479.97s
+25,失败!  seed = 9 time = 2483.33s
+25,失败!  seed = 10 time = 2510.46s
+#############################################
+chimera = 159
+25,失败!  seed = 1 time = 2543.34s
+25,失败!  seed = 2 time = 2541.42s
+25,失败!  seed = 3 time = 2560.78s
+25,失败!  seed = 4 time = 2559.68s
+25,失败!  seed = 5 time = 2565.76s
+25,失败!  seed = 6 time = 2529.81s
+25,失败!  seed = 7 time = 2599.36s
+25,失败!  seed = 8 time = 2640.16s
+25,失败!  seed = 9 time = 2992.47s
+25,失败!  seed = 10 time = 3916.04s
+#############################################
+chimera = 160
+25,失败!  seed = 1 time = 1443.09s
+25,失败!  seed = 2 time = 1403.64s
+25,失败!  seed = 3 time = 1200.16s
+25,失败!  seed = 4 time = 1332.28s
+25,失败!  seed = 5 time = 1109.39s
+25,失败!  seed = 6 time = 1313.77s
+25,失败!  seed = 7 time = 1157.28s
+25,失败!  seed = 8 time = 1130.04s
+25,失败!  seed = 9 time = 1214.36s
+25,失败!  seed = 10 time = 1212.1s
+#############################################
+chimera = 161
+25,失败!  seed = 1 time = 1119.97s
+25,失败!  seed = 2 time = 1023.75s
+25,失败!  seed = 3 time = 1041.18s
+25,失败!  seed = 4 time = 1099.69s
+25,失败!  seed = 5 time = 1288.36s
+25,失败!  seed = 6 time = 1148.76s
+25,失败!  seed = 7 time = 1156.12s
+25,失败!  seed = 8 time = 1157.64s
+25,失败!  seed = 9 time = 1203.8s
+25,失败!  seed = 10 time = 1095.82s
+#############################################
+chimera = 162
+25,失败!  seed = 1 time = 1278.63s
+25,失败!  seed = 2 time = 1227.62s
+25,失败!  seed = 3 time = 1224.16s
+25,失败!  seed = 4 time = 1356.52s
+25,失败!  seed = 5 time = 1180.55s
+25,失败!  seed = 6 time = 4002.73s
+25,失败!  seed = 7 time = 1187.47s
+25,失败!  seed = 8 time = 1161.43s
+25,失败!  seed = 9 time = 1184.81s
+25,失败!  seed = 10 time = 1337.91s
+#############################################
+chimera = 163
+25,失败!  seed = 1 time = 1232.86s
+25,失败!  seed = 2 time = 1289.84s
+25,失败!  seed = 3 time = 1124.44s
+25,失败!  seed = 4 time = 1121.61s
+25,失败!  seed = 5 time = 1174.53s
+25,失败!  seed = 6 time = 1087.16s
+25,失败!  seed = 7 time = 1075.15s
+25,失败!  seed = 8 time = 1101.67s
+25,失败!  seed = 9 time = 1147.69s
+25,失败!  seed = 10 time = 1259.34s
+#############################################
+chimera = 164
+25,失败!  seed = 1 time = 1054.74s
+25,失败!  seed = 2 time = 3916.79s
+25,失败!  seed = 3 time = 1018.26s
+25,失败!  seed = 4 time = 1231.49s
+25,失败!  seed = 5 time = 1128.72s
+25,失败!  seed = 6 time = 1112.16s
+25,失败!  seed = 7 time = 1183.91s
+25,失败!  seed = 8 time = 1008.69s
+25,失败!  seed = 9 time = 1193.54s
+25,失败!  seed = 10 time = 1137.36s
+#############################################
+chimera = 165
+25,失败!  seed = 1 time = 1264.28s
+25,失败!  seed = 2 time = 1131.93s
+25,失败!  seed = 3 time = 1564.28s
+25,失败!  seed = 4 time = 1521.48s
+25,失败!  seed = 5 time = 1121.6s
+25,失败!  seed = 6 time = 1219.41s
+25,失败!  seed = 7 time = 3561.19s
+25,失败!  seed = 8 time = 2438.83s
+25,失败!  seed = 9 time = 2967.52s
+25,失败!  seed = 10 time = 2958.59s
+#############################################
+chimera = 166
+25,失败!  seed = 1 time = 3029.25s
+25,失败!  seed = 2 time = 3022.26s
+25,失败!  seed = 3 time = 3026.95s
+25,失败!  seed = 4 time = 4509.2s
+25,失败!  seed = 5 time = 1376.79s
+25,失败!  seed = 6 time = 1400.74s
+25,失败!  seed = 7 time = 1388.62s
+25,失败!  seed = 8 time = 1347.6s
+25,失败!  seed = 9 time = 1360.07s
+25,失败!  seed = 10 time = 1456.7s
+#############################################
+chimera = 167
+25,失败!  seed = 1 time = 1563.19s
+25,失败!  seed = 2 time = 1382.03s
+25,失败!  seed = 3 time = 1476.06s
+25,失败!  seed = 4 time = 1331.02s
+25,失败!  seed = 5 time = 1693.78s
+25,失败!  seed = 6 time = 1504.62s
+25,失败!  seed = 7 time = 1306.0s
+25,失败!  seed = 8 time = 1543.71s
+25,失败!  seed = 9 time = 1578.41s
+25,失败!  seed = 10 time = 1679.47s
+#############################################
+chimera = 168
+25,失败!  seed = 1 time = 1713.47s
+25,失败!  seed = 2 time = 1461.92s
+25,失败!  seed = 3 time = 1570.32s
+25,失败!  seed = 4 time = 1557.88s
+25,失败!  seed = 5 time = 1590.86s
+25,失败!  seed = 6 time = 1558.61s
+25,失败!  seed = 7 time = 1567.7s
+25,失败!  seed = 8 time = 1634.11s
+25,失败!  seed = 9 time = 1590.39s
+25,失败!  seed = 10 time = 1540.37s
+#############################################
+chimera = 169
+25,失败!  seed = 1 time = 1562.01s
+25,失败!  seed = 2 time = 1574.11s
+25,失败!  seed = 3 time = 1509.67s
+25,失败!  seed = 4 time = 1487.12s
+25,失败!  seed = 5 time = 1618.75s
+25,失败!  seed = 6 time = 1685.51s
+25,失败!  seed = 7 time = 1515.22s
+25,失败!  seed = 8 time = 1515.34s
+25,失败!  seed = 9 time = 1506.71s
+25,失败!  seed = 10 time = 1545.66s
+#############################################
+chimera = 170
+25,失败!  seed = 1 time = 1782.75s
+25,失败!  seed = 2 time = 1755.87s
+25,失败!  seed = 3 time = 1620.6s
+25,失败!  seed = 4 time = 1650.27s
+25,失败!  seed = 5 time = 1607.07s
+25,失败!  seed = 6 time = 1633.26s
+25,失败!  seed = 7 time = 1493.37s
+25,失败!  seed = 8 time = 1534.97s
+25,失败!  seed = 9 time = 1493.29s
+25,失败!  seed = 10 time = 1513.23s
+#############################################
+chimera = 171
+25,失败!  seed = 1 time = 1497.04s
+25,失败!  seed = 2 time = 1540.28s
+25,失败!  seed = 3 time = 1552.35s
+25,失败!  seed = 4 time = 1507.19s
+25,失败!  seed = 5 time = 1374.58s
+25,失败!  seed = 6 time = 1564.37s
+25,失败!  seed = 7 time = 1539.27s
+25,失败!  seed = 8 time = 1620.43s
+25,失败!  seed = 9 time = 1621.36s
+25,失败!  seed = 10 time = 1492.53s
+#############################################
+chimera = 172
+25,失败!  seed = 1 time = 1571.82s
+25,失败!  seed = 2 time = 1595.55s
+25,失败!  seed = 3 time = 1669.17s
+25,失败!  seed = 4 time = 1689.14s
+25,失败!  seed = 5 time = 1547.1s
+25,失败!  seed = 6 time = 1665.48s
+25,失败!  seed = 7 time = 1662.86s
+25,失败!  seed = 8 time = 1655.78s
+25,失败!  seed = 9 time = 1554.75s
+25,失败!  seed = 10 time = 1684.04s
+#############################################
+chimera = 173
+25,失败!  seed = 1 time = 1594.21s
+25,失败!  seed = 2 time = 1794.1s
+25,失败!  seed = 3 time = 1592.14s
+25,失败!  seed = 4 time = 1554.67s
+25,失败!  seed = 5 time = 1574.66s
+25,失败!  seed = 6 time = 1549.62s
+25,失败!  seed = 7 time = 1623.88s
+25,失败!  seed = 8 time = 1559.66s
+25,失败!  seed = 9 time = 1661.75s
+25,失败!  seed = 10 time = 1742.04s
+#############################################
+chimera = 174
+25,失败!  seed = 1 time = 1601.18s
+25,失败!  seed = 2 time = 1732.62s
+25,失败!  seed = 3 time = 1530.61s
+25,失败!  seed = 4 time = 1501.26s
+25,失败!  seed = 5 time = 1479.09s
+25,失败!  seed = 6 time = 1597.86s
+25,失败!  seed = 7 time = 1535.9s
+25,失败!  seed = 8 time = 1534.81s
+25,失败!  seed = 9 time = 1584.09s
+25,失败!  seed = 10 time = 1568.62s
+#############################################
+chimera = 175
+25,失败!  seed = 1 time = 1691.22s
+25,失败!  seed = 2 time = 1563.72s
+25,失败!  seed = 3 time = 1541.96s
+25,失败!  seed = 4 time = 1679.0s
+25,失败!  seed = 5 time = 1816.64s
+25,失败!  seed = 6 time = 1646.02s
+25,失败!  seed = 7 time = 1616.04s
+25,失败!  seed = 8 time = 1624.66s
+25,失败!  seed = 9 time = 1638.91s
+25,失败!  seed = 10 time = 1628.62s
+#############################################
+chimera = 176
+25,失败!  seed = 1 time = 1675.24s
+25,失败!  seed = 2 time = 1651.83s
+25,失败!  seed = 3 time = 1696.82s
+25,失败!  seed = 4 time = 1923.91s
+25,失败!  seed = 5 time = 2007.72s
+25,失败!  seed = 6 time = 1972.94s
+25,失败!  seed = 7 time = 1928.86s
+25,失败!  seed = 8 time = 1939.49s
+25,失败!  seed = 9 time = 1971.73s
+25,失败!  seed = 10 time = 1850.83s
+#############################################
+chimera = 177
+25,失败!  seed = 1 time = 1516.75s
+25,失败!  seed = 2 time = 1356.71s
+25,失败!  seed = 3 time = 1370.22s
+25,失败!  seed = 4 time = 1321.67s
+25,失败!  seed = 5 time = 1386.8s
+25,失败!  seed = 6 time = 1348.53s
+25,失败!  seed = 7 time = 1361.74s
+25,失败!  seed = 8 time = 1212.51s
+25,失败!  seed = 9 time = 1180.09s
+25,失败!  seed = 10 time = 1230.34s
+#############################################
+chimera = 178
+25,失败!  seed = 1 time = 1261.33s
+25,失败!  seed = 2 time = 1339.0s
+25,失败!  seed = 3 time = 1356.15s
+25,失败!  seed = 4 time = 1469.8s
+25,失败!  seed = 5 time = 1371.5s
+25,失败!  seed = 6 time = 1365.16s
+25,失败!  seed = 7 time = 1163.02s
+25,失败!  seed = 8 time = 1197.87s
+25,失败!  seed = 9 time = 1272.55s
+25,失败!  seed = 10 time = 1344.77s
+#############################################
+chimera = 179
+25,失败!  seed = 1 time = 1390.58s
+25,失败!  seed = 2 time = 1408.52s
+25,失败!  seed = 3 time = 1420.89s
+25,失败!  seed = 4 time = 1371.89s
+25,失败!  seed = 5 time = 1400.17s
+25,失败!  seed = 6 time = 1385.32s
+25,失败!  seed = 7 time = 1301.22s
+25,失败!  seed = 8 time = 1339.46s
+25,失败!  seed = 9 time = 1390.37s
+25,失败!  seed = 10 time = 1268.63s
+#############################################
+chimera = 180
+25,失败!  seed = 1 time = 1305.54s
+25,失败!  seed = 2 time = 1296.61s
+25,失败!  seed = 3 time = 1285.84s
+25,失败!  seed = 4 time = 1241.78s
+25,失败!  seed = 5 time = 1333.14s
+25,失败!  seed = 6 time = 1250.13s
+25,失败!  seed = 7 time = 1291.44s
+25,失败!  seed = 8 time = 1315.04s
+25,失败!  seed = 9 time = 1314.15s
+25,失败!  seed = 10 time = 1234.63s
+#############################################
+chimera = 181
+25,失败!  seed = 1 time = 1300.45s
+25,失败!  seed = 2 time = 1277.54s
+25,失败!  seed = 3 time = 1309.27s
+25,失败!  seed = 4 time = 1586.0s
+25,失败!  seed = 5 time = 1412.08s
+25,失败!  seed = 6 time = 1519.27s
+25,失败!  seed = 7 time = 1563.77s
+25,失败!  seed = 8 time = 1797.25s
+25,失败!  seed = 9 time = 1591.96s
+25,失败!  seed = 10 time = 1641.01s
+#############################################
+chimera = 182
+25,失败!  seed = 1 time = 1746.68s
+25,失败!  seed = 2 time = 1766.58s
+25,失败!  seed = 3 time = 1750.35s
+25,失败!  seed = 4 time = 1767.07s
+25,失败!  seed = 5 time = 2047.3s
+25,失败!  seed = 6 time = 1734.64s
+25,失败!  seed = 7 time = 1663.06s
+25,失败!  seed = 8 time = 1452.03s
+25,失败!  seed = 9 time = 1382.42s
+25,失败!  seed = 10 time = 1468.59s
+#############################################
+chimera = 183
+25,失败!  seed = 1 time = 1379.01s
+25,失败!  seed = 2 time = 1672.54s
+25,失败!  seed = 3 time = 1697.87s
+25,失败!  seed = 4 time = 1669.8s
+25,失败!  seed = 5 time = 1701.44s
+25,失败!  seed = 6 time = 1414.4s
+25,失败!  seed = 7 time = 1446.71s
+25,失败!  seed = 8 time = 1520.97s
+25,失败!  seed = 9 time = 1466.75s
+25,失败!  seed = 10 time = 1424.51s
+#############################################
+chimera = 184
+25,失败!  seed = 1 time = 1510.5s
+25,失败!  seed = 2 time = 1489.86s
+25,失败!  seed = 3 time = 1523.06s
+25,失败!  seed = 4 time = 1500.2s
+25,失败!  seed = 5 time = 1415.29s
+25,失败!  seed = 6 time = 1399.73s
+25,失败!  seed = 7 time = 1402.08s
+25,失败!  seed = 8 time = 1462.75s
+25,失败!  seed = 9 time = 1414.1s
+25,失败!  seed = 10 time = 1500.17s
+#############################################
+chimera = 185
+25,失败!  seed = 1 time = 1445.89s
+25,失败!  seed = 2 time = 1460.85s
+25,失败!  seed = 3 time = 1598.79s
+25,失败!  seed = 4 time = 1726.1s
+25,失败!  seed = 5 time = 1575.32s
+25,失败!  seed = 6 time = 1524.03s
+25,失败!  seed = 7 time = 1671.4s
+25,失败!  seed = 8 time = 1708.57s
+25,失败!  seed = 9 time = 1536.28s
+25,失败!  seed = 10 time = 1509.95s
+#############################################
+chimera = 186
+25,失败!  seed = 1 time = 1483.38s
+25,失败!  seed = 2 time = 1472.75s
+25,失败!  seed = 3 time = 1543.99s
+25,失败!  seed = 4 time = 1523.84s
+25,失败!  seed = 5 time = 1555.33s
+25,失败!  seed = 6 time = 1416.09s
+25,失败!  seed = 7 time = 1456.6s
+25,失败!  seed = 8 time = 1518.31s
+25,失败!  seed = 9 time = 1486.01s
+25,失败!  seed = 10 time = 1516.38s
+#############################################
+chimera = 187
+25,失败!  seed = 1 time = 1497.52s
+25,失败!  seed = 2 time = 1554.13s
+25,失败!  seed = 3 time = 1637.82s
+25,失败!  seed = 4 time = 1594.2s
+25,失败!  seed = 5 time = 1652.34s
+25,失败!  seed = 6 time = 1521.12s
+25,失败!  seed = 7 time = 1563.82s
+25,失败!  seed = 8 time = 1491.0s
+25,失败!  seed = 9 time = 1636.56s
+25,失败!  seed = 10 time = 1689.46s
+#############################################
+chimera = 188
+25,失败!  seed = 1 time = 1674.86s
+25,失败!  seed = 2 time = 1556.84s
+25,失败!  seed = 3 time = 1533.24s
+25,失败!  seed = 4 time = 1596.37s
+25,失败!  seed = 5 time = 1564.12s
+25,失败!  seed = 6 time = 1648.62s
+25,失败!  seed = 7 time = 1652.58s
+25,失败!  seed = 8 time = 1451.19s
+25,失败!  seed = 9 time = 1546.0s
+25,失败!  seed = 10 time = 1765.26s
+#############################################
+chimera = 189
+25,失败!  seed = 1 time = 1731.12s
+25,失败!  seed = 2 time = 1786.26s
+25,失败!  seed = 3 time = 1861.55s
+25,失败!  seed = 4 time = 1751.13s
+25,失败!  seed = 5 time = 1761.43s
+25,失败!  seed = 6 time = 1819.21s
+25,失败!  seed = 7 time = 1816.61s
+25,失败!  seed = 8 time = 1755.03s
+25,失败!  seed = 9 time = 1805.36s
+25,失败!  seed = 10 time = 1734.1s
+#############################################
+chimera = 190
+25,失败!  seed = 1 time = 1893.85s
+25,失败!  seed = 2 time = 1858.51s
+25,失败!  seed = 3 time = 1878.29s
+25,失败!  seed = 4 time = 1682.55s
+25,失败!  seed = 5 time = 2012.98s
+25,失败!  seed = 6 time = 1816.2s
+25,失败!  seed = 7 time = 1713.74s
+25,失败!  seed = 8 time = 2004.97s
+25,失败!  seed = 9 time = 2580.34s
+25,失败!  seed = 10 time = 2775.91s
+#############################################
+chimera = 191
+25,失败!  seed = 1 time = 2392.03s
+25,失败!  seed = 2 time = 2829.78s
+25,失败!  seed = 3 time = 2613.06s
+25,失败!  seed = 4 time = 2392.32s
+25,失败!  seed = 5 time = 2583.75s
+25,失败!  seed = 6 time = 2498.63s
+25,失败!  seed = 7 time = 2564.67s
+25,失败!  seed = 8 time = 2431.18s
+25,失败!  seed = 9 time = 2424.7s
+25,失败!  seed = 10 time = 2508.31s
+#############################################
+chimera = 192
+25,失败!  seed = 1 time = 2459.07s
+25,失败!  seed = 2 time = 2249.03s
+25,失败!  seed = 3 time = 2304.21s
+25,失败!  seed = 4 time = 2290.53s
+25,失败!  seed = 5 time = 2334.0s
+25,失败!  seed = 6 time = 2221.02s
+25,失败!  seed = 7 time = 2363.02s
+25,失败!  seed = 8 time = 2448.76s
+25,失败!  seed = 9 time = 2192.76s
+25,失败!  seed = 10 time = 2092.85s
+#############################################
+chimera = 193
+25,失败!  seed = 1 time = 2255.52s
+25,失败!  seed = 2 time = 2152.88s
+25,失败!  seed = 3 time = 2352.55s
+25,失败!  seed = 4 time = 2201.42s
+25,失败!  seed = 5 time = 2067.06s
+25,失败!  seed = 6 time = 1880.82s
+25,失败!  seed = 7 time = 1904.53s
+25,失败!  seed = 8 time = 2177.63s
+25,失败!  seed = 9 time = 2033.17s
+25,失败!  seed = 10 time = 2309.81s
+#############################################
+chimera = 194
+25,失败!  seed = 1 time = 2223.36s
+25,失败!  seed = 2 time = 2177.98s
+25,失败!  seed = 3 time = 1644.36s
+25,失败!  seed = 4 time = 1614.86s
+25,失败!  seed = 5 time = 1529.87s
+25,失败!  seed = 6 time = 1764.54s
+25,失败!  seed = 7 time = 1909.77s
+25,失败!  seed = 8 time = 1935.91s
+25,失败!  seed = 9 time = 1908.77s
+25,失败!  seed = 10 time = 1909.94s
+#############################################
+chimera = 195
+25,失败!  seed = 1 time = 1844.65s
+25,失败!  seed = 2 time = 1998.35s
+25,失败!  seed = 3 time = 1944.29s
+25,失败!  seed = 4 time = 2024.47s
+25,失败!  seed = 5 time = 1758.84s
+25,失败!  seed = 6 time = 1861.12s
+25,失败!  seed = 7 time = 2004.44s
+25,失败!  seed = 8 time = 1989.18s
+25,失败!  seed = 9 time = 2034.63s
+25,失败!  seed = 10 time = 2481.67s
+#############################################
+chimera = 196
+25,失败!  seed = 1 time = 2072.46s
+25,失败!  seed = 2 time = 1948.22s
+25,失败!  seed = 3 time = 1903.53s
+25,失败!  seed = 4 time = 1876.57s
+25,失败!  seed = 5 time = 2175.4s
+25,失败!  seed = 6 time = 1739.98s
+25,失败!  seed = 7 time = 1879.64s
+25,失败!  seed = 8 time = 2666.09s
+25,失败!  seed = 9 time = 2545.43s
+25,失败!  seed = 10 time = 2516.46s
+#############################################
+chimera = 197
+25,失败!  seed = 1 time = 2556.13s
+25,失败!  seed = 2 time = 2542.03s
+25,失败!  seed = 3 time = 2497.98s
+25,失败!  seed = 4 time = 2077.8s
+25,失败!  seed = 5 time = 1963.91s
+25,失败!  seed = 6 time = 1989.45s
+25,失败!  seed = 7 time = 2020.25s
+25,失败!  seed = 8 time = 1965.15s
+25,失败!  seed = 9 time = 2288.37s
+25,失败!  seed = 10 time = 2569.9s
+#############################################
+chimera = 198
+25,失败!  seed = 1 time = 2389.67s
+25,失败!  seed = 2 time = 2523.5s
+25,失败!  seed = 3 time = 2540.88s
+25,失败!  seed = 4 time = 2689.6s
+25,失败!  seed = 5 time = 2721.01s
+25,失败!  seed = 6 time = 2202.77s
+25,失败!  seed = 7 time = 2572.75s
+25,失败!  seed = 8 time = 2570.0s
+25,失败!  seed = 9 time = 2375.49s
+25,失败!  seed = 10 time = 2405.24s
+#############################################
+chimera = 199
+25,失败!  seed = 1 time = 2500.24s
+25,失败!  seed = 2 time = 2548.09s
+25,失败!  seed = 3 time = 2392.38s
+25,失败!  seed = 4 time = 2114.18s
+25,失败!  seed = 5 time = 2102.45s
+25,失败!  seed = 6 time = 2731.07s
+25,失败!  seed = 7 time = 2750.83s
+25,失败!  seed = 8 time = 2155.93s
+25,失败!  seed = 9 time = 2140.2s
+25,失败!  seed = 10 time = 2328.36s
+#############################################
+chimera = 200
+25,失败!  seed = 1 time = 2031.83s
+25,失败!  seed = 2 time = 2441.59s
+25,失败!  seed = 3 time = 2542.3s
+25,失败!  seed = 4 time = 2261.87s
+25,失败!  seed = 5 time = 2688.22s
+25,失败!  seed = 6 time = 2461.74s
+25,失败!  seed = 7 time = 2543.83s
+25,失败!  seed = 8 time = 2650.43s
+25,失败!  seed = 9 time = 2599.33s
+25,失败!  seed = 10 time = 2302.28s
+#############################################
+chimera = 201
+25,失败!  seed = 1 time = 2435.9s
+25,失败!  seed = 2 time = 2814.45s
+25,失败!  seed = 3 time = 2698.87s
+25,失败!  seed = 4 time = 2730.23s
+25,失败!  seed = 5 time = 2760.99s
+25,失败!  seed = 6 time = 2238.19s
+25,失败!  seed = 7 time = 2212.76s
+25,失败!  seed = 8 time = 2401.66s
+25,失败!  seed = 9 time = 2162.27s
+25,失败!  seed = 10 time = 2660.9s
+#############################################
+chimera = 202
+25,失败!  seed = 1 time = 2873.69s
+25,失败!  seed = 2 time = 2766.21s
+25,失败!  seed = 3 time = 2531.11s
+25,失败!  seed = 4 time = 2395.33s
+25,失败!  seed = 5 time = 2600.99s
+25,失败!  seed = 6 time = 2344.5s
+25,失败!  seed = 7 time = 2284.73s
+25,失败!  seed = 8 time = 2631.54s
+25,失败!  seed = 9 time = 2834.03s
+25,失败!  seed = 10 time = 2323.24s
+#############################################
+chimera = 203
+25,失败!  seed = 1 time = 2348.79s
+25,失败!  seed = 2 time = 2363.46s
+25,失败!  seed = 3 time = 2610.49s
+25,失败!  seed = 4 time = 2255.37s
+25,失败!  seed = 5 time = 2910.77s
+25,失败!  seed = 6 time = 2421.43s
+25,失败!  seed = 7 time = 2545.6s
+25,失败!  seed = 8 time = 2412.93s
+25,失败!  seed = 9 time = 2227.93s
+25,失败!  seed = 10 time = 2372.96s
+#############################################
+chimera = 204
+25,失败!  seed = 1 time = 2479.23s
+25,失败!  seed = 2 time = 2253.97s
+25,失败!  seed = 3 time = 2178.41s
+25,失败!  seed = 4 time = 2236.45s
+25,失败!  seed = 5 time = 1797.65s
+25,失败!  seed = 6 time = 2411.03s
+25,失败!  seed = 7 time = 2412.8s
+25,失败!  seed = 8 time = 1800.85s
+25,失败!  seed = 9 time = 1601.28s
+25,失败!  seed = 10 time = 1454.84s
+#############################################
+chimera = 205
+25,失败!  seed = 1 time = 1565.85s
+25,失败!  seed = 2 time = 1472.35s
+25,失败!  seed = 3 time = 1538.66s
+25,失败!  seed = 4 time = 1422.77s
+25,失败!  seed = 5 time = 1237.42s
+25,失败!  seed = 6 time = 1274.84s
+25,失败!  seed = 7 time = 1278.0s
+25,失败!  seed = 8 time = 1247.22s
+25,失败!  seed = 9 time = 1174.59s
+25,失败!  seed = 10 time = 1250.15s
+#############################################
+chimera = 206
+25,失败!  seed = 1 time = 1272.8s
+25,失败!  seed = 2 time = 1242.33s
+25,失败!  seed = 3 time = 1234.66s

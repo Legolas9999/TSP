@@ -717,3 +717,871 @@ pegasus = 68
 #############################################
 pegasus = 69
 27,失败!  seed = 1 time = 2765.4s
+27,失败!  seed = 2 time = 2917.42s
+27,失败!  seed = 3 time = 3123.78s
+27,失败!  seed = 4 time = 3106.24s
+27,失败!  seed = 5 time = 2613.48s
+27,失败!  seed = 6 time = 3024.78s
+27,失败!  seed = 7 time = 2912.27s
+27,失败!  seed = 8 time = 3587.87s
+27,失败!  seed = 9 time = 3007.46s
+27,失败!  seed = 10 time = 2941.52s
+#############################################
+pegasus = 70
+27,失败!  seed = 1 time = 3172.42s
+27,失败!  seed = 2 time = 3085.06s
+27,失败!  seed = 3 time = 3044.2s
+27,成功!  seed = 4 time = 2023.8s
+#############################################
+28,失败!  seed = 1 time = 3087.07s
+28,失败!  seed = 2 time = 3183.16s
+28,失败!  seed = 3 time = 3195.71s
+28,失败!  seed = 4 time = 3109.24s
+28,失败!  seed = 5 time = 3441.83s
+28,失败!  seed = 6 time = 1071.64s
+28,失败!  seed = 7 time = 1015.59s
+28,失败!  seed = 8 time = 1197.22s
+28,失败!  seed = 9 time = 1202.61s
+28,失败!  seed = 10 time = 1312.33s
+#############################################
+pegasus = 71
+28,失败!  seed = 1 time = 1245.61s
+28,失败!  seed = 2 time = 1069.43s
+28,失败!  seed = 3 time = 1232.08s
+28,失败!  seed = 4 time = 1233.68s
+28,失败!  seed = 5 time = 1058.97s
+28,失败!  seed = 6 time = 1296.82s
+28,失败!  seed = 7 time = 1389.93s
+28,失败!  seed = 8 time = 1199.54s
+28,失败!  seed = 9 time = 1281.6s
+28,失败!  seed = 10 time = 1220.15s
+#############################################
+pegasus = 72
+28,失败!  seed = 1 time = 1296.47s
+28,失败!  seed = 2 time = 1315.86s
+28,失败!  seed = 3 time = 1012.21s
+28,失败!  seed = 4 time = 3727.47s
+28,失败!  seed = 5 time = 3426.04s
+28,失败!  seed = 6 time = 1125.92s
+28,失败!  seed = 7 time = 1131.88s
+28,失败!  seed = 8 time = 1203.57s
+28,失败!  seed = 9 time = 1947.54s
+28,失败!  seed = 10 time = 1848.68s
+#############################################
+pegasus = 73
+28,失败!  seed = 1 time = 1880.46s
+28,失败!  seed = 2 time = 1968.03s
+28,失败!  seed = 3 time = 1960.41s
+28,失败!  seed = 4 time = 2035.66s
+28,失败!  seed = 5 time = 1246.83s
+28,失败!  seed = 6 time = 1011.46s
+28,失败!  seed = 7 time = 1051.49s
+28,失败!  seed = 8 time = 1065.23s
+28,失败!  seed = 9 time = 1042.71s
+28,失败!  seed = 10 time = 1023.3s
+#############################################
+pegasus = 74
+28,失败!  seed = 1 time = 1166.57s
+28,失败!  seed = 2 time = 1100.02s
+28,失败!  seed = 3 time = 1203.06s
+28,失败!  seed = 4 time = 1193.37s
+28,失败!  seed = 5 time = 1141.91s
+28,失败!  seed = 6 time = 1302.79s
+28,失败!  seed = 7 time = 1276.55s
+28,失败!  seed = 8 time = 1099.04s
+28,失败!  seed = 9 time = 1240.83s
+28,失败!  seed = 10 time = 1133.05s
+#############################################
+pegasus = 75
+28,失败!  seed = 1 time = 1234.87s
+28,失败!  seed = 2 time = 1235.44s
+28,失败!  seed = 3 time = 1048.73s
+28,失败!  seed = 4 time = 1161.37s
+28,失败!  seed = 5 time = 1359.31s
+28,失败!  seed = 6 time = 1287.05s
+28,失败!  seed = 7 time = 1260.39s
+28,失败!  seed = 8 time = 1317.39s
+28,失败!  seed = 9 time = 1174.77s
+28,失败!  seed = 10 time = 1314.47s
+#############################################
+pegasus = 76
+28,失败!  seed = 1 time = 1241.9s
+28,失败!  seed = 2 time = 1116.33s
+28,失败!  seed = 3 time = 1078.63s
+28,失败!  seed = 4 time = 1156.32s
+28,失败!  seed = 5 time = 1117.46s
+28,失败!  seed = 6 time = 1042.97s
+28,失败!  seed = 7 time = 1121.22s
+28,失败!  seed = 8 time = 1211.03s
+28,失败!  seed = 9 time = 1367.45s
+28,失败!  seed = 10 time = 1247.39s
+#############################################
+pegasus = 77
+28,失败!  seed = 1 time = 1357.36s
+28,失败!  seed = 2 time = 1316.6s
+28,失败!  seed = 3 time = 1223.54s
+28,失败!  seed = 4 time = 1401.45s
+28,失败!  seed = 5 time = 1225.42s
+28,失败!  seed = 6 time = 1290.81s
+28,失败!  seed = 7 time = 1412.37s
+28,失败!  seed = 8 time = 1377.66s
+28,失败!  seed = 9 time = 1170.37s
+28,失败!  seed = 10 time = 1289.81s
+#############################################
+pegasus = 78
+28,失败!  seed = 1 time = 1337.75s
+28,失败!  seed = 2 time = 1268.75s
+28,失败!  seed = 3 time = 1235.2s
+28,失败!  seed = 4 time = 1380.57s
+28,失败!  seed = 5 time = 1205.4s
+28,失败!  seed = 6 time = 1389.29s
+28,失败!  seed = 7 time = 1454.26s
+28,失败!  seed = 8 time = 1456.88s
+28,失败!  seed = 9 time = 1269.87s
+28,失败!  seed = 10 time = 4097.74s
+#############################################
+pegasus = 79
+28,失败!  seed = 1 time = 1079.19s
+28,失败!  seed = 2 time = 1111.43s
+28,失败!  seed = 3 time = 1079.27s
+28,失败!  seed = 4 time = 1107.72s
+28,失败!  seed = 5 time = 1151.2s
+28,失败!  seed = 6 time = 1018.24s
+28,失败!  seed = 7 time = 1061.92s
+28,失败!  seed = 8 time = 1062.04s
+28,失败!  seed = 9 time = 1079.82s
+28,失败!  seed = 10 time = 1076.18s
+#############################################
+pegasus = 80
+28,失败!  seed = 1 time = 3318.95s
+28,失败!  seed = 2 time = 3721.93s
+28,失败!  seed = 3 time = 3549.05s
+28,失败!  seed = 4 time = 3766.04s
+28,失败!  seed = 5 time = 3268.43s
+28,失败!  seed = 6 time = 3367.47s
+28,失败!  seed = 7 time = 3723.12s
+28,失败!  seed = 8 time = 3336.85s
+28,失败!  seed = 9 time = 3472.41s
+28,失败!  seed = 10 time = 3270.08s
+#############################################
+pegasus = 81
+28,失败!  seed = 1 time = 3026.28s
+28,失败!  seed = 2 time = 3126.68s
+28,失败!  seed = 3 time = 3371.38s
+28,失败!  seed = 4 time = 3248.49s
+28,失败!  seed = 5 time = 3478.19s
+28,失败!  seed = 6 time = 1053.9s
+28,失败!  seed = 7 time = 3010.72s
+28,失败!  seed = 8 time = 2962.0s
+28,失败!  seed = 9 time = 3377.87s
+28,失败!  seed = 10 time = 3419.11s
+#############################################
+pegasus = 82
+28,成功!  seed = 1 time = 2543.42s
+#############################################
+29,失败!  seed = 1 time = 1023.03s
+29,失败!  seed = 2 time = 1053.24s
+29,失败!  seed = 3 time = 1021.15s
+29,失败!  seed = 4 time = 3075.74s
+29,失败!  seed = 5 time = 3148.12s
+29,失败!  seed = 6 time = 3734.36s
+29,失败!  seed = 7 time = 3136.38s
+29,失败!  seed = 8 time = 3733.88s
+29,失败!  seed = 9 time = 3435.51s
+29,失败!  seed = 10 time = 3206.86s
+#############################################
+pegasus = 83
+29,失败!  seed = 1 time = 3810.03s
+29,成功!  seed = 2 time = 2519.65s
+#############################################
+30,失败!  seed = 1 time = 1085.86s
+30,失败!  seed = 2 time = 1085.25s
+30,失败!  seed = 3 time = 1117.89s
+30,失败!  seed = 4 time = 1084.36s
+30,失败!  seed = 5 time = 1125.98s
+30,失败!  seed = 6 time = 1091.63s
+30,失败!  seed = 7 time = 1093.99s
+30,失败!  seed = 8 time = 1088.32s
+30,失败!  seed = 9 time = 1071.67s
+30,失败!  seed = 10 time = 1090.35s
+#############################################
+pegasus = 84
+30,失败!  seed = 1 time = 1144.39s
+30,失败!  seed = 2 time = 1107.51s
+30,失败!  seed = 3 time = 1131.28s
+30,失败!  seed = 4 time = 1113.87s
+30,失败!  seed = 5 time = 1134.57s
+30,失败!  seed = 6 time = 1098.71s
+30,失败!  seed = 7 time = 1092.12s
+30,失败!  seed = 8 time = 1097.38s
+30,失败!  seed = 9 time = 1096.32s
+30,失败!  seed = 10 time = 1135.7s
+#############################################
+pegasus = 85
+30,失败!  seed = 1 time = 1153.53s
+30,失败!  seed = 2 time = 1149.41s
+30,失败!  seed = 3 time = 1180.73s
+30,失败!  seed = 4 time = 1154.05s
+30,失败!  seed = 5 time = 1196.52s
+30,失败!  seed = 6 time = 1126.21s
+30,失败!  seed = 7 time = 1123.26s
+30,失败!  seed = 8 time = 1146.13s
+30,失败!  seed = 9 time = 1178.01s
+30,失败!  seed = 10 time = 1175.11s
+#############################################
+pegasus = 86
+30,失败!  seed = 1 time = 1211.67s
+30,失败!  seed = 2 time = 1171.68s
+30,失败!  seed = 3 time = 1207.37s
+30,失败!  seed = 4 time = 1211.72s
+30,失败!  seed = 5 time = 1168.63s
+30,失败!  seed = 6 time = 1191.19s
+30,失败!  seed = 7 time = 1226.95s
+30,失败!  seed = 8 time = 1221.26s
+30,失败!  seed = 9 time = 1189.28s
+30,失败!  seed = 10 time = 1193.14s
+#############################################
+pegasus = 87
+30,失败!  seed = 1 time = 1255.99s
+30,失败!  seed = 2 time = 1356.55s
+30,失败!  seed = 3 time = 1382.01s
+30,失败!  seed = 4 time = 1411.48s
+30,失败!  seed = 5 time = 1455.4s
+30,失败!  seed = 6 time = 1458.1s
+30,失败!  seed = 7 time = 1442.69s
+30,失败!  seed = 8 time = 1436.88s
+30,失败!  seed = 9 time = 1395.47s
+30,失败!  seed = 10 time = 1459.0s
+#############################################
+pegasus = 88
+30,失败!  seed = 1 time = 1443.17s
+30,失败!  seed = 2 time = 1444.81s
+30,失败!  seed = 3 time = 1465.73s
+30,失败!  seed = 4 time = 1430.84s
+30,失败!  seed = 5 time = 1470.89s
+30,失败!  seed = 6 time = 1396.48s
+30,失败!  seed = 7 time = 1318.49s
+30,失败!  seed = 8 time = 1411.46s
+30,失败!  seed = 9 time = 1362.18s
+30,失败!  seed = 10 time = 1309.71s
+#############################################
+pegasus = 89
+30,失败!  seed = 1 time = 1401.92s
+30,失败!  seed = 2 time = 1436.3s
+30,失败!  seed = 3 time = 1428.3s
+30,失败!  seed = 4 time = 1425.75s
+30,失败!  seed = 5 time = 1416.97s
+30,失败!  seed = 6 time = 1387.28s
+30,失败!  seed = 7 time = 1380.9s
+30,失败!  seed = 8 time = 1360.36s
+30,失败!  seed = 9 time = 1428.28s
+30,失败!  seed = 10 time = 1409.6s
+#############################################
+pegasus = 90
+30,失败!  seed = 1 time = 1380.17s
+30,失败!  seed = 2 time = 1438.63s
+30,失败!  seed = 3 time = 1424.47s
+30,失败!  seed = 4 time = 1368.73s
+30,失败!  seed = 5 time = 1459.12s
+30,失败!  seed = 6 time = 1482.0s
+30,失败!  seed = 7 time = 1431.01s
+30,失败!  seed = 8 time = 1486.68s
+30,失败!  seed = 9 time = 1448.56s
+30,失败!  seed = 10 time = 1411.6s
+#############################################
+pegasus = 91
+30,失败!  seed = 1 time = 1446.06s
+30,失败!  seed = 2 time = 1504.2s
+30,失败!  seed = 3 time = 1451.04s
+30,失败!  seed = 4 time = 1439.57s
+30,失败!  seed = 5 time = 1454.85s
+30,失败!  seed = 6 time = 1429.23s
+30,失败!  seed = 7 time = 1493.03s
+30,失败!  seed = 8 time = 1437.39s
+30,失败!  seed = 9 time = 1477.54s
+30,失败!  seed = 10 time = 1463.57s
+#############################################
+pegasus = 92
+30,失败!  seed = 1 time = 1476.69s
+30,失败!  seed = 2 time = 1494.46s
+30,失败!  seed = 3 time = 1511.91s
+30,失败!  seed = 4 time = 1450.63s
+30,失败!  seed = 5 time = 1457.76s
+30,失败!  seed = 6 time = 1496.1s
+30,失败!  seed = 7 time = 1513.74s
+30,失败!  seed = 8 time = 1563.8s
+30,失败!  seed = 9 time = 1453.01s
+30,失败!  seed = 10 time = 1510.1s
+#############################################
+pegasus = 93
+30,失败!  seed = 1 time = 1557.16s
+30,失败!  seed = 2 time = 1652.73s
+30,失败!  seed = 3 time = 1552.1s
+30,失败!  seed = 4 time = 1519.02s
+30,失败!  seed = 5 time = 1533.72s
+30,失败!  seed = 6 time = 1543.16s
+30,失败!  seed = 7 time = 1491.95s
+30,失败!  seed = 8 time = 1505.62s
+30,失败!  seed = 9 time = 1599.88s
+30,失败!  seed = 10 time = 1600.57s
+#############################################
+pegasus = 94
+30,失败!  seed = 1 time = 1539.23s
+30,失败!  seed = 2 time = 1649.13s
+30,失败!  seed = 3 time = 1589.79s
+30,失败!  seed = 4 time = 1621.94s
+30,失败!  seed = 5 time = 1584.53s
+30,失败!  seed = 6 time = 1569.76s
+30,失败!  seed = 7 time = 1639.21s
+30,失败!  seed = 8 time = 1521.57s
+30,失败!  seed = 9 time = 1604.73s
+30,失败!  seed = 10 time = 1570.31s
+#############################################
+pegasus = 95
+30,失败!  seed = 1 time = 1720.4s
+30,失败!  seed = 2 time = 1631.68s
+30,失败!  seed = 3 time = 1582.6s
+30,失败!  seed = 4 time = 1594.03s
+30,失败!  seed = 5 time = 1669.8s
+30,失败!  seed = 6 time = 1538.06s
+30,失败!  seed = 7 time = 1533.38s
+30,失败!  seed = 8 time = 1467.8s
+30,失败!  seed = 9 time = 1472.2s
+30,失败!  seed = 10 time = 1491.47s
+#############################################
+pegasus = 96
+30,失败!  seed = 1 time = 1536.4s
+30,失败!  seed = 2 time = 1552.9s
+30,失败!  seed = 3 time = 1502.43s
+30,失败!  seed = 4 time = 1520.37s
+30,失败!  seed = 5 time = 1514.39s
+30,失败!  seed = 6 time = 1499.76s
+30,失败!  seed = 7 time = 1518.87s
+30,失败!  seed = 8 time = 1527.66s
+30,失败!  seed = 9 time = 1512.16s
+30,失败!  seed = 10 time = 1537.04s
+#############################################
+pegasus = 97
+30,失败!  seed = 1 time = 1547.68s
+30,失败!  seed = 2 time = 1552.99s
+30,失败!  seed = 3 time = 1567.99s
+30,失败!  seed = 4 time = 1548.9s
+30,失败!  seed = 5 time = 1534.76s
+30,失败!  seed = 6 time = 1518.38s
+30,失败!  seed = 7 time = 1586.4s
+30,失败!  seed = 8 time = 1520.63s
+30,失败!  seed = 9 time = 1525.52s
+30,失败!  seed = 10 time = 1573.77s
+#############################################
+pegasus = 98
+30,失败!  seed = 1 time = 1576.74s
+30,失败!  seed = 2 time = 1538.33s
+30,失败!  seed = 3 time = 1566.63s
+30,失败!  seed = 4 time = 1594.38s
+30,失败!  seed = 5 time = 1576.12s
+30,失败!  seed = 6 time = 1601.26s
+30,失败!  seed = 7 time = 1498.51s
+30,失败!  seed = 8 time = 1511.05s
+30,失败!  seed = 9 time = 1589.52s
+30,失败!  seed = 10 time = 1595.06s
+#############################################
+pegasus = 99
+30,失败!  seed = 1 time = 1630.06s
+30,失败!  seed = 2 time = 1587.57s
+30,失败!  seed = 3 time = 1617.21s
+30,失败!  seed = 4 time = 1549.74s
+30,失败!  seed = 5 time = 1539.76s
+30,失败!  seed = 6 time = 1598.76s
+30,失败!  seed = 7 time = 1634.79s
+30,失败!  seed = 8 time = 1582.82s
+30,失败!  seed = 9 time = 1618.47s
+30,失败!  seed = 10 time = 1601.98s
+#############################################
+pegasus = 100
+30,失败!  seed = 1 time = 1626.83s
+30,失败!  seed = 2 time = 1661.67s
+30,失败!  seed = 3 time = 1649.14s
+30,失败!  seed = 4 time = 1675.63s
+30,失败!  seed = 5 time = 1652.43s
+30,失败!  seed = 6 time = 1671.71s
+30,失败!  seed = 7 time = 1665.53s
+30,失败!  seed = 8 time = 1671.43s
+30,失败!  seed = 9 time = 1575.98s
+30,失败!  seed = 10 time = 1592.23s
+#############################################
+pegasus = 101
+30,失败!  seed = 1 time = 1699.35s
+30,失败!  seed = 2 time = 1595.06s
+30,失败!  seed = 3 time = 1618.28s
+30,失败!  seed = 4 time = 1572.64s
+30,失败!  seed = 5 time = 1717.0s
+30,失败!  seed = 6 time = 1605.32s
+30,失败!  seed = 7 time = 1658.58s
+30,失败!  seed = 8 time = 1705.32s
+30,失败!  seed = 9 time = 1646.31s
+30,失败!  seed = 10 time = 1684.25s
+#############################################
+pegasus = 102
+30,失败!  seed = 1 time = 1658.96s
+30,失败!  seed = 2 time = 1687.57s
+30,失败!  seed = 3 time = 1723.25s
+30,失败!  seed = 4 time = 1672.62s
+30,失败!  seed = 5 time = 1676.58s
+30,失败!  seed = 6 time = 1636.12s
+30,失败!  seed = 7 time = 1727.29s
+30,失败!  seed = 8 time = 1707.62s
+30,失败!  seed = 9 time = 1699.09s
+30,失败!  seed = 10 time = 1678.72s
+#############################################
+pegasus = 103
+30,失败!  seed = 1 time = 1720.77s
+30,失败!  seed = 2 time = 1756.63s
+30,失败!  seed = 3 time = 1732.94s
+30,失败!  seed = 4 time = 1737.77s
+30,失败!  seed = 5 time = 1746.07s
+30,失败!  seed = 6 time = 1735.34s
+30,失败!  seed = 7 time = 1671.46s
+30,失败!  seed = 8 time = 1835.83s
+30,失败!  seed = 9 time = 1761.89s
+30,失败!  seed = 10 time = 1811.55s
+#############################################
+pegasus = 104
+30,失败!  seed = 1 time = 1793.85s
+30,失败!  seed = 2 time = 1729.55s
+30,失败!  seed = 3 time = 1837.85s
+30,失败!  seed = 4 time = 1812.03s
+30,失败!  seed = 5 time = 1853.89s
+30,失败!  seed = 6 time = 1822.81s
+30,失败!  seed = 7 time = 1762.79s
+30,失败!  seed = 8 time = 1785.11s
+30,失败!  seed = 9 time = 1829.32s
+30,失败!  seed = 10 time = 1729.44s
+#############################################
+pegasus = 105
+30,失败!  seed = 1 time = 1777.64s
+30,失败!  seed = 2 time = 1852.86s
+30,失败!  seed = 3 time = 1843.09s
+30,失败!  seed = 4 time = 1865.14s
+30,失败!  seed = 5 time = 1883.96s
+30,失败!  seed = 6 time = 1885.79s
+30,失败!  seed = 7 time = 1832.29s
+30,失败!  seed = 8 time = 1825.72s
+30,失败!  seed = 9 time = 1842.72s
+30,失败!  seed = 10 time = 1808.93s
+#############################################
+pegasus = 106
+30,失败!  seed = 1 time = 1867.07s
+30,失败!  seed = 2 time = 1820.59s
+30,失败!  seed = 3 time = 1934.78s
+30,失败!  seed = 4 time = 1876.91s
+30,失败!  seed = 5 time = 1877.08s
+30,失败!  seed = 6 time = 1789.79s
+30,失败!  seed = 7 time = 1897.29s
+30,失败!  seed = 8 time = 1814.77s
+30,失败!  seed = 9 time = 1811.41s
+30,失败!  seed = 10 time = 1792.97s
+#############################################
+pegasus = 107
+30,失败!  seed = 1 time = 1911.84s
+30,失败!  seed = 2 time = 1813.4s
+30,失败!  seed = 3 time = 1957.52s
+30,失败!  seed = 4 time = 1888.64s
+30,失败!  seed = 5 time = 1820.63s
+30,失败!  seed = 6 time = 1951.7s
+30,失败!  seed = 7 time = 1994.13s
+30,失败!  seed = 8 time = 1855.91s
+30,失败!  seed = 9 time = 1949.71s
+30,失败!  seed = 10 time = 1879.72s
+#############################################
+pegasus = 108
+30,失败!  seed = 1 time = 1860.85s
+30,失败!  seed = 2 time = 1883.93s
+30,失败!  seed = 3 time = 1918.36s
+30,失败!  seed = 4 time = 1951.16s
+30,失败!  seed = 5 time = 2040.13s
+30,失败!  seed = 6 time = 1933.15s
+30,失败!  seed = 7 time = 2001.87s
+30,失败!  seed = 8 time = 1917.58s
+30,失败!  seed = 9 time = 1985.66s
+30,失败!  seed = 10 time = 1955.04s
+#############################################
+pegasus = 109
+30,失败!  seed = 1 time = 1998.94s
+30,失败!  seed = 2 time = 2099.35s
+30,失败!  seed = 3 time = 2032.04s
+30,失败!  seed = 4 time = 1923.98s
+30,失败!  seed = 5 time = 2018.01s
+30,失败!  seed = 6 time = 2039.11s
+30,失败!  seed = 7 time = 1937.88s
+30,失败!  seed = 8 time = 2089.36s
+30,失败!  seed = 9 time = 2026.41s
+30,失败!  seed = 10 time = 2063.51s
+#############################################
+pegasus = 110
+30,失败!  seed = 1 time = 2111.88s
+30,失败!  seed = 2 time = 2037.78s
+30,失败!  seed = 3 time = 2075.81s
+30,失败!  seed = 4 time = 2115.18s
+30,失败!  seed = 5 time = 2061.45s
+30,失败!  seed = 6 time = 2003.77s
+30,失败!  seed = 7 time = 2060.48s
+30,失败!  seed = 8 time = 2021.7s
+30,失败!  seed = 9 time = 2063.6s
+30,失败!  seed = 10 time = 2059.43s
+#############################################
+pegasus = 111
+30,失败!  seed = 1 time = 2032.77s
+30,失败!  seed = 2 time = 2095.78s
+30,失败!  seed = 3 time = 2086.1s
+30,失败!  seed = 4 time = 2093.01s
+30,失败!  seed = 5 time = 2083.98s
+30,失败!  seed = 6 time = 2014.33s
+30,失败!  seed = 7 time = 2081.07s
+30,失败!  seed = 8 time = 2113.71s
+30,失败!  seed = 9 time = 2069.65s
+30,失败!  seed = 10 time = 2090.77s
+#############################################
+pegasus = 112
+30,失败!  seed = 1 time = 2091.63s
+30,失败!  seed = 2 time = 2098.09s
+30,失败!  seed = 3 time = 2047.56s
+30,失败!  seed = 4 time = 2081.28s
+30,失败!  seed = 5 time = 2148.76s
+30,失败!  seed = 6 time = 2152.27s
+30,失败!  seed = 7 time = 2108.65s
+30,失败!  seed = 8 time = 2153.07s
+30,失败!  seed = 9 time = 2135.84s
+30,失败!  seed = 10 time = 2001.87s
+#############################################
+pegasus = 113
+30,失败!  seed = 1 time = 2195.95s
+30,失败!  seed = 2 time = 2147.25s
+30,失败!  seed = 3 time = 2220.34s
+30,失败!  seed = 4 time = 2149.15s
+30,失败!  seed = 5 time = 2149.39s
+30,失败!  seed = 6 time = 2140.32s
+30,失败!  seed = 7 time = 2167.4s
+30,失败!  seed = 8 time = 2118.79s
+30,失败!  seed = 9 time = 2154.03s
+30,失败!  seed = 10 time = 2184.49s
+#############################################
+pegasus = 114
+30,失败!  seed = 1 time = 2263.69s
+30,失败!  seed = 2 time = 2224.13s
+30,失败!  seed = 3 time = 2186.67s
+30,失败!  seed = 4 time = 2167.41s
+30,失败!  seed = 5 time = 2210.25s
+30,失败!  seed = 6 time = 2197.98s
+30,失败!  seed = 7 time = 2185.14s
+30,失败!  seed = 8 time = 2139.28s
+30,失败!  seed = 9 time = 2155.4s
+30,失败!  seed = 10 time = 2194.91s
+#############################################
+pegasus = 115
+30,失败!  seed = 1 time = 2197.92s
+30,失败!  seed = 2 time = 2249.15s
+30,失败!  seed = 3 time = 2230.55s
+30,失败!  seed = 4 time = 2217.29s
+30,失败!  seed = 5 time = 2122.36s
+30,失败!  seed = 6 time = 2110.03s
+30,失败!  seed = 7 time = 2222.66s
+30,失败!  seed = 8 time = 2175.75s
+30,失败!  seed = 9 time = 2236.96s
+30,失败!  seed = 10 time = 2254.46s
+#############################################
+pegasus = 116
+30,失败!  seed = 1 time = 2236.86s
+30,失败!  seed = 2 time = 2274.37s
+30,失败!  seed = 3 time = 2259.22s
+30,失败!  seed = 4 time = 2249.72s
+30,失败!  seed = 5 time = 2294.96s
+30,失败!  seed = 6 time = 2161.07s
+30,失败!  seed = 7 time = 2323.45s
+30,失败!  seed = 8 time = 2151.81s
+30,失败!  seed = 9 time = 2281.25s
+30,失败!  seed = 10 time = 2221.19s
+#############################################
+pegasus = 117
+30,失败!  seed = 1 time = 2362.41s
+30,失败!  seed = 2 time = 2409.35s
+30,失败!  seed = 3 time = 2314.36s
+30,失败!  seed = 4 time = 2296.53s
+30,失败!  seed = 5 time = 2326.58s
+30,失败!  seed = 6 time = 2295.38s
+30,失败!  seed = 7 time = 2308.47s
+30,失败!  seed = 8 time = 2334.86s
+30,失败!  seed = 9 time = 2374.4s
+30,失败!  seed = 10 time = 2284.32s
+#############################################
+pegasus = 118
+30,失败!  seed = 1 time = 2412.29s
+30,失败!  seed = 2 time = 2415.1s
+30,失败!  seed = 3 time = 2410.75s
+30,失败!  seed = 4 time = 2355.88s
+30,失败!  seed = 5 time = 2394.72s
+30,失败!  seed = 6 time = 2280.24s
+30,失败!  seed = 7 time = 2327.89s
+30,失败!  seed = 8 time = 2428.37s
+30,失败!  seed = 9 time = 2452.58s
+30,失败!  seed = 10 time = 2356.51s
+#############################################
+pegasus = 119
+30,失败!  seed = 1 time = 2364.67s
+30,失败!  seed = 2 time = 2496.55s
+30,失败!  seed = 3 time = 2423.85s
+30,失败!  seed = 4 time = 2408.73s
+30,失败!  seed = 5 time = 2302.21s
+30,失败!  seed = 6 time = 2296.92s
+30,失败!  seed = 7 time = 2300.18s
+30,失败!  seed = 8 time = 2339.46s
+30,失败!  seed = 9 time = 2433.62s
+30,失败!  seed = 10 time = 2505.51s
+#############################################
+pegasus = 120
+30,失败!  seed = 1 time = 2518.47s
+30,失败!  seed = 2 time = 2490.21s
+30,失败!  seed = 3 time = 2538.44s
+30,失败!  seed = 4 time = 2453.29s
+30,失败!  seed = 5 time = 2544.54s
+30,失败!  seed = 6 time = 2363.54s
+30,失败!  seed = 7 time = 2450.02s
+30,失败!  seed = 8 time = 2453.22s
+30,失败!  seed = 9 time = 2499.47s
+30,失败!  seed = 10 time = 2456.14s
+#############################################
+pegasus = 121
+30,失败!  seed = 1 time = 2531.9s
+30,失败!  seed = 2 time = 2496.24s
+30,失败!  seed = 3 time = 2507.93s
+30,失败!  seed = 4 time = 2518.0s
+30,失败!  seed = 5 time = 2584.43s
+30,失败!  seed = 6 time = 2583.05s
+30,失败!  seed = 7 time = 2358.22s
+30,失败!  seed = 8 time = 2575.11s
+30,失败!  seed = 9 time = 2543.93s
+30,失败!  seed = 10 time = 2500.01s
+#############################################
+pegasus = 122
+30,失败!  seed = 1 time = 2447.7s
+30,失败!  seed = 2 time = 2565.42s
+30,失败!  seed = 3 time = 2421.99s
+30,失败!  seed = 4 time = 2604.0s
+30,失败!  seed = 5 time = 2491.8s
+30,失败!  seed = 6 time = 2510.09s
+30,失败!  seed = 7 time = 2614.14s
+30,失败!  seed = 8 time = 2489.01s
+30,失败!  seed = 9 time = 2561.07s
+30,失败!  seed = 10 time = 2445.72s
+#############################################
+pegasus = 123
+30,失败!  seed = 1 time = 2650.82s
+30,失败!  seed = 2 time = 2576.56s
+30,失败!  seed = 3 time = 2525.5s
+30,失败!  seed = 4 time = 2621.15s
+30,失败!  seed = 5 time = 2630.09s
+30,失败!  seed = 6 time = 2795.43s
+30,失败!  seed = 7 time = 2559.83s
+30,失败!  seed = 8 time = 2607.12s
+30,失败!  seed = 9 time = 2520.34s
+30,失败!  seed = 10 time = 2673.01s
+#############################################
+pegasus = 124
+30,失败!  seed = 1 time = 2640.24s
+30,失败!  seed = 2 time = 2646.19s
+30,失败!  seed = 3 time = 2610.18s
+30,失败!  seed = 4 time = 2605.96s
+30,失败!  seed = 5 time = 2536.82s
+30,失败!  seed = 6 time = 2688.67s
+30,失败!  seed = 7 time = 2469.61s
+30,失败!  seed = 8 time = 2540.62s
+30,失败!  seed = 9 time = 2670.14s
+30,失败!  seed = 10 time = 2478.05s
+#############################################
+pegasus = 125
+30,失败!  seed = 1 time = 2679.35s
+30,失败!  seed = 2 time = 2711.78s
+30,失败!  seed = 3 time = 2583.56s
+30,失败!  seed = 4 time = 2751.01s
+30,失败!  seed = 5 time = 2710.67s
+30,失败!  seed = 6 time = 2692.64s
+30,失败!  seed = 7 time = 2786.37s
+30,失败!  seed = 8 time = 2607.62s
+30,失败!  seed = 9 time = 2717.81s
+30,失败!  seed = 10 time = 2792.39s
+#############################################
+pegasus = 126
+30,失败!  seed = 1 time = 2703.36s
+30,失败!  seed = 2 time = 2640.22s
+30,失败!  seed = 3 time = 2713.96s
+30,失败!  seed = 4 time = 2712.68s
+30,失败!  seed = 5 time = 2691.46s
+30,失败!  seed = 6 time = 2749.68s
+30,失败!  seed = 7 time = 2803.26s
+30,失败!  seed = 8 time = 2708.87s
+30,失败!  seed = 9 time = 2761.01s
+30,失败!  seed = 10 time = 2670.08s
+#############################################
+pegasus = 127
+30,失败!  seed = 1 time = 2802.82s
+30,失败!  seed = 2 time = 2820.66s
+30,失败!  seed = 3 time = 2826.12s
+30,失败!  seed = 4 time = 2762.72s
+30,失败!  seed = 5 time = 2825.74s
+30,失败!  seed = 6 time = 2809.9s
+30,失败!  seed = 7 time = 2822.0s
+30,失败!  seed = 8 time = 2862.15s
+30,失败!  seed = 9 time = 2759.8s
+30,失败!  seed = 10 time = 2840.58s
+#############################################
+pegasus = 128
+30,失败!  seed = 1 time = 2803.84s
+30,失败!  seed = 2 time = 2972.66s
+30,失败!  seed = 3 time = 3179.12s
+30,失败!  seed = 4 time = 4175.24s
+30,失败!  seed = 5 time = 5343.56s
+30,失败!  seed = 6 time = 4704.04s
+30,失败!  seed = 7 time = 5058.42s
+30,失败!  seed = 8 time = 4550.63s
+30,失败!  seed = 9 time = 4785.5s
+30,失败!  seed = 10 time = 4933.84s
+#############################################
+pegasus = 129
+30,失败!  seed = 1 time = 4964.06s
+30,失败!  seed = 2 time = 4940.42s
+30,失败!  seed = 3 time = 4743.47s
+30,失败!  seed = 4 time = 5049.1s
+30,失败!  seed = 5 time = 4071.94s
+30,失败!  seed = 6 time = 4273.57s
+30,失败!  seed = 7 time = 3994.3s
+30,失败!  seed = 8 time = 4891.09s
+30,失败!  seed = 9 time = 5375.65s
+30,失败!  seed = 10 time = 3736.98s
+#############################################
+pegasus = 130
+30,失败!  seed = 1 time = 3018.08s
+30,失败!  seed = 2 time = 3136.53s
+30,失败!  seed = 3 time = 3159.39s
+30,失败!  seed = 4 time = 3129.77s
+30,失败!  seed = 5 time = 3006.45s
+30,失败!  seed = 6 time = 3685.69s
+30,失败!  seed = 7 time = 5707.42s
+30,失败!  seed = 8 time = 6648.89s
+30,失败!  seed = 9 time = 7045.11s
+30,失败!  seed = 10 time = 6308.94s
+#############################################
+pegasus = 131
+30,失败!  seed = 1 time = 5433.97s
+30,失败!  seed = 2 time = 5429.4s
+30,失败!  seed = 3 time = 5565.21s
+30,失败!  seed = 4 time = 5143.89s
+30,失败!  seed = 5 time = 4424.75s
+30,失败!  seed = 6 time = 4988.19s
+30,失败!  seed = 7 time = 5834.36s
+30,失败!  seed = 8 time = 6250.65s
+30,失败!  seed = 9 time = 6554.81s
+30,失败!  seed = 10 time = 6821.76s
+#############################################
+pegasus = 132
+30,失败!  seed = 1 time = 5880.32s
+30,失败!  seed = 2 time = 6434.59s
+30,失败!  seed = 3 time = 6168.3s
+30,失败!  seed = 4 time = 6040.94s
+30,失败!  seed = 5 time = 5509.07s
+30,失败!  seed = 6 time = 5517.93s
+30,失败!  seed = 7 time = 5366.84s
+30,失败!  seed = 8 time = 5298.78s
+30,失败!  seed = 9 time = 5916.14s
+30,失败!  seed = 10 time = 5173.36s
+#############################################
+pegasus = 133
+30,失败!  seed = 1 time = 6130.7s
+30,失败!  seed = 2 time = 6276.65s
+30,失败!  seed = 3 time = 6211.25s
+30,失败!  seed = 4 time = 6099.74s
+30,失败!  seed = 5 time = 5713.17s
+30,失败!  seed = 6 time = 4816.73s
+30,失败!  seed = 7 time = 4579.77s
+30,失败!  seed = 8 time = 5324.58s
+30,失败!  seed = 9 time = 5085.22s
+30,失败!  seed = 10 time = 4984.01s
+#############################################
+pegasus = 134
+30,失败!  seed = 1 time = 5418.53s
+30,失败!  seed = 2 time = 4782.23s
+30,失败!  seed = 3 time = 5247.2s
+30,失败!  seed = 4 time = 5292.68s
+30,失败!  seed = 5 time = 5879.66s
+30,失败!  seed = 6 time = 5722.57s
+30,失败!  seed = 7 time = 7064.1s
+30,失败!  seed = 8 time = 8206.11s
+30,失败!  seed = 9 time = 8394.33s
+30,失败!  seed = 10 time = 10107.39s
+#############################################
+pegasus = 135
+30,失败!  seed = 1 time = 8439.13s
+30,失败!  seed = 2 time = 10266.51s
+30,失败!  seed = 3 time = 11050.65s
+30,失败!  seed = 4 time = 8707.06s
+30,失败!  seed = 5 time = 10050.49s
+30,失败!  seed = 6 time = 10683.03s
+30,失败!  seed = 7 time = 9260.23s
+30,失败!  seed = 8 time = 9158.83s
+30,失败!  seed = 9 time = 9585.94s
+30,失败!  seed = 10 time = 8596.0s
+#############################################
+pegasus = 136
+30,失败!  seed = 1 time = 9397.07s
+30,失败!  seed = 2 time = 8890.04s
+30,失败!  seed = 3 time = 8619.61s
+30,失败!  seed = 4 time = 8972.43s
+30,失败!  seed = 5 time = 10078.01s
+30,失败!  seed = 6 time = 10075.35s
+30,失败!  seed = 7 time = 8463.33s
+30,失败!  seed = 8 time = 7609.33s
+30,失败!  seed = 9 time = 7791.98s
+30,失败!  seed = 10 time = 7482.9s
+#############################################
+pegasus = 137
+30,失败!  seed = 1 time = 8177.23s
+30,失败!  seed = 2 time = 7489.37s
+30,失败!  seed = 3 time = 8260.2s
+30,失败!  seed = 4 time = 7079.33s
+30,失败!  seed = 5 time = 7035.32s
+30,失败!  seed = 6 time = 7335.75s
+30,失败!  seed = 7 time = 6432.15s
+30,失败!  seed = 8 time = 6667.61s
+30,失败!  seed = 9 time = 5443.0s
+30,失败!  seed = 10 time = 6879.04s
+#############################################
+pegasus = 138
+30,失败!  seed = 1 time = 6959.59s
+30,失败!  seed = 2 time = 8721.45s
+30,失败!  seed = 3 time = 8231.26s
+30,失败!  seed = 4 time = 7314.34s
+30,失败!  seed = 5 time = 7190.77s
+30,失败!  seed = 6 time = 8440.64s
+30,失败!  seed = 7 time = 8319.0s
+30,失败!  seed = 8 time = 8456.27s
+30,失败!  seed = 9 time = 8251.01s
+30,失败!  seed = 10 time = 8395.55s
+#############################################
+pegasus = 139
+30,失败!  seed = 1 time = 7515.38s
+30,失败!  seed = 2 time = 6744.49s
+30,失败!  seed = 3 time = 7997.68s
+30,失败!  seed = 4 time = 7372.07s
+30,失败!  seed = 5 time = 7964.99s
+30,失败!  seed = 6 time = 9075.42s
+30,失败!  seed = 7 time = 8516.09s
+30,失败!  seed = 8 time = 8783.02s
+30,失败!  seed = 9 time = 8746.8s
+30,失败!  seed = 10 time = 9257.3s
+#############################################
+pegasus = 140
+30,失败!  seed = 1 time = 9219.86s
+30,失败!  seed = 2 time = 9307.32s
+30,失败!  seed = 3 time = 7847.77s
+30,失败!  seed = 4 time = 4837.22s
+30,失败!  seed = 5 time = 5924.65s
+30,失败!  seed = 6 time = 5138.01s
+30,失败!  seed = 7 time = 3705.99s

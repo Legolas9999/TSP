@@ -714,3 +714,791 @@ zephyr = 63
 27,失败!  seed = 5 time = 1343.83s
 27,失败!  seed = 6 time = 1456.1s
 27,失败!  seed = 7 time = 1386.98s
+27,失败!  seed = 8 time = 1474.82s
+27,失败!  seed = 9 time = 1612.21s
+27,失败!  seed = 10 time = 1516.45s
+#############################################
+
+zephyr = 64
+27,失败!  seed = 1 time = 1628.59s
+27,失败!  seed = 2 time = 1540.43s
+27,失败!  seed = 3 time = 1581.24s
+27,失败!  seed = 4 time = 1590.54s
+27,失败!  seed = 5 time = 1481.91s
+27,失败!  seed = 6 time = 1505.88s
+27,失败!  seed = 7 time = 1536.58s
+27,失败!  seed = 8 time = 1891.39s
+27,失败!  seed = 9 time = 1828.9s
+27,失败!  seed = 10 time = 1540.6s
+#############################################
+
+zephyr = 65
+27,失败!  seed = 1 time = 1649.49s
+27,失败!  seed = 2 time = 1519.2s
+27,失败!  seed = 3 time = 1598.07s
+27,失败!  seed = 4 time = 1683.09s
+27,失败!  seed = 5 time = 1645.75s
+27,失败!  seed = 6 time = 1633.69s
+27,失败!  seed = 7 time = 1616.42s
+27,失败!  seed = 8 time = 1555.33s
+27,失败!  seed = 9 time = 1610.77s
+27,失败!  seed = 10 time = 1521.78s
+#############################################
+
+zephyr = 66
+27,失败!  seed = 1 time = 1512.57s
+27,失败!  seed = 2 time = 1488.47s
+27,失败!  seed = 3 time = 1566.49s
+27,失败!  seed = 4 time = 1519.81s
+27,失败!  seed = 5 time = 1597.24s
+27,失败!  seed = 6 time = 1518.25s
+27,失败!  seed = 7 time = 1538.64s
+27,失败!  seed = 8 time = 1458.91s
+27,失败!  seed = 9 time = 1729.45s
+27,失败!  seed = 10 time = 1740.08s
+#############################################
+
+zephyr = 67
+27,失败!  seed = 1 time = 1890.41s
+27,失败!  seed = 2 time = 2392.68s
+27,失败!  seed = 3 time = 2466.47s
+27,失败!  seed = 4 time = 2103.48s
+27,失败!  seed = 5 time = 2169.27s
+27,失败!  seed = 6 time = 2519.33s
+27,失败!  seed = 7 time = 2347.36s
+27,失败!  seed = 8 time = 2356.11s
+27,失败!  seed = 9 time = 2246.09s
+27,失败!  seed = 10 time = 1804.76s
+#############################################
+
+zephyr = 68
+27,失败!  seed = 1 time = 1772.66s
+27,失败!  seed = 2 time = 1775.55s
+27,失败!  seed = 3 time = 2089.84s
+27,失败!  seed = 4 time = 1843.22s
+27,失败!  seed = 5 time = 2236.49s
+27,失败!  seed = 6 time = 3576.28s
+27,失败!  seed = 7 time = 3515.42s
+27,失败!  seed = 8 time = 3677.81s
+27,失败!  seed = 9 time = 2479.54s
+27,失败!  seed = 10 time = 1851.13s
+#############################################
+
+zephyr = 69
+27,失败!  seed = 1 time = 1979.61s
+27,失败!  seed = 2 time = 2074.48s
+27,失败!  seed = 3 time = 2043.26s
+27,失败!  seed = 4 time = 2094.82s
+27,失败!  seed = 5 time = 2305.34s
+27,失败!  seed = 6 time = 2148.79s
+27,失败!  seed = 7 time = 2152.0s
+27,失败!  seed = 8 time = 2230.05s
+27,失败!  seed = 9 time = 1987.25s
+27,失败!  seed = 10 time = 2147.05s
+#############################################
+
+zephyr = 70
+27,失败!  seed = 1 time = 2268.67s
+27,失败!  seed = 2 time = 2233.43s
+27,失败!  seed = 3 time = 2333.02s
+27,失败!  seed = 4 time = 1972.66s
+27,失败!  seed = 5 time = 1984.4s
+27,失败!  seed = 6 time = 1844.1s
+27,失败!  seed = 7 time = 2044.79s
+27,失败!  seed = 8 time = 2351.54s
+27,失败!  seed = 9 time = 2181.68s
+27,失败!  seed = 10 time = 2067.44s
+#############################################
+
+zephyr = 71
+27,失败!  seed = 1 time = 2490.49s
+27,失败!  seed = 2 time = 2105.35s
+27,失败!  seed = 3 time = 2421.7s
+27,失败!  seed = 4 time = 2060.41s
+27,失败!  seed = 5 time = 2236.12s
+27,失败!  seed = 6 time = 2146.9s
+27,失败!  seed = 7 time = 2277.44s
+27,失败!  seed = 8 time = 2278.51s
+27,失败!  seed = 9 time = 2516.97s
+27,失败!  seed = 10 time = 1930.95s
+#############################################
+
+zephyr = 72
+27,失败!  seed = 1 time = 1857.53s
+27,失败!  seed = 2 time = 1844.32s
+27,失败!  seed = 3 time = 1737.79s
+27,失败!  seed = 4 time = 1803.18s
+27,失败!  seed = 5 time = 1904.22s
+27,失败!  seed = 6 time = 1773.08s
+27,失败!  seed = 7 time = 1882.48s
+27,失败!  seed = 8 time = 1807.25s
+27,失败!  seed = 9 time = 1680.91s
+27,失败!  seed = 10 time = 1576.26s
+#############################################
+
+zephyr = 73
+27,失败!  seed = 1 time = 1644.77s
+27,失败!  seed = 2 time = 1645.86s
+27,失败!  seed = 3 time = 1628.41s
+27,失败!  seed = 4 time = 1630.32s
+27,失败!  seed = 5 time = 1632.05s
+27,失败!  seed = 6 time = 1668.01s
+27,失败!  seed = 7 time = 1694.46s
+27,失败!  seed = 8 time = 1610.75s
+27,失败!  seed = 9 time = 1627.3s
+27,失败!  seed = 10 time = 1641.19s
+#############################################
+
+zephyr = 74
+27,失败!  seed = 1 time = 1688.35s
+27,失败!  seed = 2 time = 1679.99s
+27,失败!  seed = 3 time = 1704.08s
+27,失败!  seed = 4 time = 1721.13s
+27,失败!  seed = 5 time = 1602.5s
+27,失败!  seed = 6 time = 1660.51s
+27,失败!  seed = 7 time = 1738.73s
+27,失败!  seed = 8 time = 1715.45s
+27,失败!  seed = 9 time = 1640.7s
+27,失败!  seed = 10 time = 1518.21s
+#############################################
+
+zephyr = 75
+27,失败!  seed = 1 time = 1517.87s
+27,失败!  seed = 2 time = 1562.27s
+27,失败!  seed = 3 time = 1607.24s
+27,失败!  seed = 4 time = 1621.76s
+27,失败!  seed = 5 time = 1587.98s
+27,失败!  seed = 6 time = 1563.17s
+27,失败!  seed = 7 time = 1596.47s
+27,失败!  seed = 8 time = 1529.64s
+27,失败!  seed = 9 time = 1631.75s
+27,失败!  seed = 10 time = 1675.28s
+#############################################
+
+zephyr = 76
+27,失败!  seed = 1 time = 1679.18s
+27,失败!  seed = 2 time = 1629.83s
+27,失败!  seed = 3 time = 1626.38s
+27,失败!  seed = 4 time = 1660.32s
+27,失败!  seed = 5 time = 1627.58s
+27,失败!  seed = 6 time = 1632.66s
+27,失败!  seed = 7 time = 1678.55s
+27,失败!  seed = 8 time = 1644.2s
+27,失败!  seed = 9 time = 1563.43s
+27,失败!  seed = 10 time = 1623.49s
+#############################################
+
+zephyr = 77
+27,失败!  seed = 1 time = 1666.93s
+27,失败!  seed = 2 time = 1629.55s
+27,失败!  seed = 3 time = 1560.33s
+27,失败!  seed = 4 time = 1520.78s
+27,失败!  seed = 5 time = 1529.79s
+27,失败!  seed = 6 time = 1541.02s
+27,失败!  seed = 7 time = 1559.1s
+27,失败!  seed = 8 time = 1517.38s
+27,失败!  seed = 9 time = 1575.97s
+27,失败!  seed = 10 time = 1529.95s
+#############################################
+
+zephyr = 78
+27,失败!  seed = 1 time = 1641.99s
+27,失败!  seed = 2 time = 1657.27s
+27,失败!  seed = 3 time = 1659.57s
+27,失败!  seed = 4 time = 1565.42s
+27,失败!  seed = 5 time = 1628.18s
+27,失败!  seed = 6 time = 1549.93s
+27,失败!  seed = 7 time = 1618.59s
+27,失败!  seed = 8 time = 1627.52s
+27,失败!  seed = 9 time = 1630.42s
+27,失败!  seed = 10 time = 1673.03s
+#############################################
+
+zephyr = 79
+27,失败!  seed = 1 time = 1660.82s
+27,失败!  seed = 2 time = 1652.96s
+27,失败!  seed = 3 time = 1617.31s
+27,失败!  seed = 4 time = 1617.78s
+27,失败!  seed = 5 time = 1628.21s
+27,失败!  seed = 6 time = 1704.32s
+27,失败!  seed = 7 time = 1647.98s
+27,失败!  seed = 8 time = 1617.24s
+27,失败!  seed = 9 time = 1693.35s
+27,失败!  seed = 10 time = 1679.03s
+#############################################
+
+zephyr = 80
+27,失败!  seed = 1 time = 1748.07s
+27,失败!  seed = 2 time = 1711.28s
+27,失败!  seed = 3 time = 1651.04s
+27,失败!  seed = 4 time = 1721.63s
+27,失败!  seed = 5 time = 1697.31s
+27,失败!  seed = 6 time = 1722.63s
+27,失败!  seed = 7 time = 1705.62s
+27,失败!  seed = 8 time = 1779.18s
+27,失败!  seed = 9 time = 1730.77s
+27,失败!  seed = 10 time = 1755.13s
+#############################################
+
+zephyr = 81
+27,失败!  seed = 1 time = 1756.13s
+27,失败!  seed = 2 time = 1719.5s
+27,失败!  seed = 3 time = 1799.51s
+27,失败!  seed = 4 time = 1805.97s
+27,失败!  seed = 5 time = 1794.55s
+27,失败!  seed = 6 time = 1795.93s
+27,失败!  seed = 7 time = 1770.37s
+27,失败!  seed = 8 time = 2036.48s
+27,失败!  seed = 9 time = 2057.8s
+27,失败!  seed = 10 time = 1979.51s
+#############################################
+
+zephyr = 82
+27,失败!  seed = 1 time = 2086.88s
+27,失败!  seed = 2 time = 2077.44s
+27,失败!  seed = 3 time = 2166.35s
+27,失败!  seed = 4 time = 2114.32s
+27,失败!  seed = 5 time = 2115.16s
+27,失败!  seed = 6 time = 2147.91s
+27,失败!  seed = 7 time = 2072.55s
+27,失败!  seed = 8 time = 1946.33s
+27,失败!  seed = 9 time = 2023.61s
+27,失败!  seed = 10 time = 1962.66s
+#############################################
+
+zephyr = 83
+27,失败!  seed = 1 time = 2048.3s
+27,失败!  seed = 2 time = 2113.44s
+27,失败!  seed = 3 time = 2059.51s
+27,失败!  seed = 4 time = 1919.23s
+27,失败!  seed = 5 time = 2094.73s
+27,失败!  seed = 6 time = 2065.51s
+27,失败!  seed = 7 time = 1960.57s
+27,失败!  seed = 8 time = 2022.13s
+27,失败!  seed = 9 time = 2003.98s
+27,失败!  seed = 10 time = 1999.63s
+#############################################
+
+zephyr = 84
+27,失败!  seed = 1 time = 2167.7s
+27,失败!  seed = 2 time = 2074.59s
+27,失败!  seed = 3 time = 2117.02s
+27,失败!  seed = 4 time = 2054.28s
+27,失败!  seed = 5 time = 2144.17s
+27,失败!  seed = 6 time = 2116.1s
+27,失败!  seed = 7 time = 2103.19s
+27,失败!  seed = 8 time = 2125.98s
+27,失败!  seed = 9 time = 2015.06s
+27,失败!  seed = 10 time = 2145.39s
+#############################################
+
+zephyr = 85
+27,失败!  seed = 1 time = 2085.49s
+27,失败!  seed = 2 time = 2150.07s
+27,失败!  seed = 3 time = 2107.0s
+27,失败!  seed = 4 time = 2122.7s
+27,失败!  seed = 5 time = 2172.53s
+27,失败!  seed = 6 time = 2157.73s
+27,失败!  seed = 7 time = 2138.47s
+27,失败!  seed = 8 time = 2058.97s
+27,失败!  seed = 9 time = 2162.73s
+27,失败!  seed = 10 time = 2208.74s
+#############################################
+
+zephyr = 86
+27,失败!  seed = 1 time = 2252.71s
+27,失败!  seed = 2 time = 2144.62s
+27,失败!  seed = 3 time = 2167.19s
+27,失败!  seed = 4 time = 2147.09s
+27,失败!  seed = 5 time = 2188.58s
+27,失败!  seed = 6 time = 2186.34s
+27,失败!  seed = 7 time = 2140.67s
+27,失败!  seed = 8 time = 2214.24s
+27,失败!  seed = 9 time = 2172.66s
+27,失败!  seed = 10 time = 2063.32s
+#############################################
+
+zephyr = 87
+27,失败!  seed = 1 time = 2237.68s
+27,失败!  seed = 2 time = 2270.38s
+27,失败!  seed = 3 time = 2342.02s
+27,失败!  seed = 4 time = 2310.46s
+27,失败!  seed = 5 time = 2329.84s
+27,失败!  seed = 6 time = 2179.45s
+27,失败!  seed = 7 time = 2139.72s
+27,失败!  seed = 8 time = 2079.68s
+27,失败!  seed = 9 time = 2124.63s
+27,失败!  seed = 10 time = 2030.4s
+#############################################
+
+zephyr = 88
+27,失败!  seed = 1 time = 2052.74s
+27,失败!  seed = 2 time = 2125.59s
+27,失败!  seed = 3 time = 2123.44s
+27,失败!  seed = 4 time = 2073.73s
+27,失败!  seed = 5 time = 2120.03s
+27,失败!  seed = 6 time = 2123.24s
+27,失败!  seed = 7 time = 2155.56s
+27,失败!  seed = 8 time = 2062.95s
+27,失败!  seed = 9 time = 2156.14s
+27,失败!  seed = 10 time = 2111.99s
+#############################################
+
+zephyr = 89
+27,失败!  seed = 1 time = 2168.92s
+27,失败!  seed = 2 time = 2230.69s
+27,失败!  seed = 3 time = 2138.85s
+27,失败!  seed = 4 time = 2139.9s
+27,失败!  seed = 5 time = 2130.91s
+27,失败!  seed = 6 time = 2158.24s
+27,失败!  seed = 7 time = 2159.94s
+27,失败!  seed = 8 time = 2138.2s
+27,失败!  seed = 9 time = 2117.99s
+27,失败!  seed = 10 time = 2140.3s
+#############################################
+
+zephyr = 90
+27,失败!  seed = 1 time = 2231.18s
+27,失败!  seed = 2 time = 2242.93s
+27,失败!  seed = 3 time = 2081.15s
+27,失败!  seed = 4 time = 2222.89s
+27,失败!  seed = 5 time = 2152.87s
+27,失败!  seed = 6 time = 2203.39s
+27,失败!  seed = 7 time = 2176.69s
+27,失败!  seed = 8 time = 2225.3s
+27,失败!  seed = 9 time = 2146.02s
+27,失败!  seed = 10 time = 2204.48s
+#############################################
+
+zephyr = 91
+27,失败!  seed = 1 time = 2261.77s
+27,失败!  seed = 2 time = 2292.35s
+27,失败!  seed = 3 time = 2227.42s
+27,失败!  seed = 4 time = 2233.6s
+27,失败!  seed = 5 time = 2229.85s
+27,失败!  seed = 6 time = 2229.5s
+27,失败!  seed = 7 time = 2262.68s
+27,失败!  seed = 8 time = 2217.19s
+27,失败!  seed = 9 time = 2227.75s
+27,失败!  seed = 10 time = 2142.48s
+#############################################
+
+zephyr = 92
+27,失败!  seed = 1 time = 2240.5s
+27,失败!  seed = 2 time = 2240.26s
+27,失败!  seed = 3 time = 2305.94s
+27,失败!  seed = 4 time = 2317.18s
+27,失败!  seed = 5 time = 2243.53s
+27,失败!  seed = 6 time = 2281.59s
+27,失败!  seed = 7 time = 2299.62s
+27,失败!  seed = 8 time = 2228.76s
+27,失败!  seed = 9 time = 2216.1s
+27,失败!  seed = 10 time = 2268.24s
+#############################################
+
+zephyr = 93
+27,失败!  seed = 1 time = 2344.22s
+27,失败!  seed = 2 time = 2353.26s
+27,失败!  seed = 3 time = 2346.19s
+27,失败!  seed = 4 time = 2388.89s
+27,失败!  seed = 5 time = 2328.08s
+27,失败!  seed = 6 time = 2378.13s
+27,失败!  seed = 7 time = 2371.19s
+27,失败!  seed = 8 time = 2298.15s
+27,失败!  seed = 9 time = 2367.5s
+27,失败!  seed = 10 time = 2385.85s
+#############################################
+
+zephyr = 94
+27,失败!  seed = 1 time = 2340.21s
+27,失败!  seed = 2 time = 2323.48s
+27,失败!  seed = 3 time = 2410.26s
+27,失败!  seed = 4 time = 2447.3s
+27,失败!  seed = 5 time = 2474.12s
+27,失败!  seed = 6 time = 2345.45s
+27,失败!  seed = 7 time = 2448.33s
+27,失败!  seed = 8 time = 2406.8s
+27,失败!  seed = 9 time = 2401.14s
+27,失败!  seed = 10 time = 2399.51s
+#############################################
+
+zephyr = 95
+27,失败!  seed = 1 time = 2418.46s
+27,失败!  seed = 2 time = 2496.25s
+27,失败!  seed = 3 time = 2446.15s
+27,失败!  seed = 4 time = 2430.02s
+27,失败!  seed = 5 time = 2422.11s
+27,失败!  seed = 6 time = 2387.76s
+27,失败!  seed = 7 time = 2450.7s
+27,失败!  seed = 8 time = 2560.38s
+27,失败!  seed = 9 time = 2496.8s
+27,失败!  seed = 10 time = 2493.87s
+#############################################
+
+zephyr = 96
+27,失败!  seed = 1 time = 2400.4s
+27,失败!  seed = 2 time = 2418.96s
+27,失败!  seed = 3 time = 2508.26s
+27,失败!  seed = 4 time = 2524.64s
+27,失败!  seed = 5 time = 2480.44s
+27,失败!  seed = 6 time = 2525.64s
+27,失败!  seed = 7 time = 2467.24s
+27,失败!  seed = 8 time = 2402.02s
+27,失败!  seed = 9 time = 2608.21s
+27,失败!  seed = 10 time = 2514.71s
+#############################################
+
+zephyr = 97
+27,失败!  seed = 1 time = 2451.9s
+27,失败!  seed = 2 time = 2449.58s
+27,失败!  seed = 3 time = 2613.31s
+27,失败!  seed = 4 time = 2543.95s
+27,失败!  seed = 5 time = 2599.98s
+27,失败!  seed = 6 time = 2507.92s
+27,失败!  seed = 7 time = 2682.27s
+27,失败!  seed = 8 time = 2480.31s
+27,失败!  seed = 9 time = 2684.65s
+27,失败!  seed = 10 time = 2701.84s
+#############################################
+
+zephyr = 98
+27,失败!  seed = 1 time = 2555.58s
+27,失败!  seed = 2 time = 2707.2s
+27,失败!  seed = 3 time = 2530.58s
+27,失败!  seed = 4 time = 2694.15s
+27,失败!  seed = 5 time = 2649.36s
+27,失败!  seed = 6 time = 2701.31s
+27,失败!  seed = 7 time = 2728.9s
+27,失败!  seed = 8 time = 2504.1s
+27,失败!  seed = 9 time = 2649.06s
+27,失败!  seed = 10 time = 2651.23s
+#############################################
+
+zephyr = 99
+27,失败!  seed = 1 time = 2637.73s
+27,失败!  seed = 2 time = 2720.63s
+27,失败!  seed = 3 time = 2701.71s
+27,失败!  seed = 4 time = 2746.34s
+27,失败!  seed = 5 time = 2586.29s
+27,失败!  seed = 6 time = 2764.89s
+27,失败!  seed = 7 time = 2748.31s
+27,失败!  seed = 8 time = 2693.6s
+27,失败!  seed = 9 time = 2750.97s
+27,失败!  seed = 10 time = 2681.24s
+#############################################
+
+zephyr = 100
+27,失败!  seed = 1 time = 2694.11s
+27,失败!  seed = 2 time = 2660.82s
+27,失败!  seed = 3 time = 2711.19s
+27,失败!  seed = 4 time = 2733.17s
+27,失败!  seed = 5 time = 2754.69s
+27,失败!  seed = 6 time = 2791.03s
+27,失败!  seed = 7 time = 2833.46s
+27,失败!  seed = 8 time = 2734.2s
+27,失败!  seed = 9 time = 2676.86s
+27,失败!  seed = 10 time = 2711.33s
+#############################################
+
+zephyr = 101
+27,失败!  seed = 1 time = 2801.18s
+27,失败!  seed = 2 time = 2716.83s
+27,失败!  seed = 3 time = 2876.62s
+27,失败!  seed = 4 time = 2737.03s
+27,失败!  seed = 5 time = 2873.27s
+27,失败!  seed = 6 time = 2805.94s
+27,失败!  seed = 7 time = 2738.59s
+27,失败!  seed = 8 time = 2793.71s
+27,失败!  seed = 9 time = 2810.22s
+27,失败!  seed = 10 time = 2830.04s
+#############################################
+
+zephyr = 102
+27,失败!  seed = 1 time = 2838.77s
+27,失败!  seed = 2 time = 2991.47s
+27,失败!  seed = 3 time = 2881.94s
+27,失败!  seed = 4 time = 2848.49s
+27,失败!  seed = 5 time = 2855.55s
+27,失败!  seed = 6 time = 2847.4s
+27,失败!  seed = 7 time = 2816.5s
+27,失败!  seed = 8 time = 2805.45s
+27,失败!  seed = 9 time = 2977.0s
+27,失败!  seed = 10 time = 2815.59s
+#############################################
+
+zephyr = 103
+27,失败!  seed = 1 time = 3043.34s
+27,失败!  seed = 2 time = 2945.21s
+27,失败!  seed = 3 time = 2910.44s
+27,失败!  seed = 4 time = 2869.84s
+27,失败!  seed = 5 time = 3036.88s
+27,失败!  seed = 6 time = 3055.41s
+27,失败!  seed = 7 time = 2946.8s
+27,失败!  seed = 8 time = 3030.13s
+27,失败!  seed = 9 time = 2791.92s
+27,失败!  seed = 10 time = 2857.48s
+#############################################
+
+zephyr = 104
+27,失败!  seed = 1 time = 3024.73s
+27,失败!  seed = 2 time = 3058.38s
+27,失败!  seed = 3 time = 2865.29s
+27,失败!  seed = 4 time = 3106.66s
+27,失败!  seed = 5 time = 3015.36s
+27,失败!  seed = 6 time = 2903.92s
+27,失败!  seed = 7 time = 3012.66s
+27,失败!  seed = 8 time = 2940.41s
+27,失败!  seed = 9 time = 2993.29s
+27,失败!  seed = 10 time = 2839.03s
+#############################################
+
+zephyr = 105
+27,失败!  seed = 1 time = 2963.69s
+27,失败!  seed = 2 time = 3000.8s
+27,失败!  seed = 3 time = 3139.85s
+27,失败!  seed = 4 time = 3055.43s
+27,失败!  seed = 5 time = 2943.53s
+27,失败!  seed = 6 time = 3009.31s
+27,失败!  seed = 7 time = 3154.0s
+27,失败!  seed = 8 time = 3070.58s
+27,失败!  seed = 9 time = 3056.03s
+27,失败!  seed = 10 time = 3024.57s
+#############################################
+
+zephyr = 106
+27,失败!  seed = 1 time = 3153.08s
+27,失败!  seed = 2 time = 3209.72s
+27,失败!  seed = 3 time = 3156.55s
+27,失败!  seed = 4 time = 3211.04s
+27,失败!  seed = 5 time = 2981.59s
+27,失败!  seed = 6 time = 3167.0s
+27,失败!  seed = 7 time = 3178.02s
+27,失败!  seed = 8 time = 3162.69s
+27,失败!  seed = 9 time = 3021.9s
+27,失败!  seed = 10 time = 3165.26s
+#############################################
+
+zephyr = 107
+27,失败!  seed = 1 time = 3087.88s
+27,失败!  seed = 2 time = 2990.46s
+27,失败!  seed = 3 time = 3231.53s
+27,失败!  seed = 4 time = 3158.14s
+27,失败!  seed = 5 time = 3060.25s
+27,失败!  seed = 6 time = 3294.39s
+27,失败!  seed = 7 time = 3219.77s
+27,失败!  seed = 8 time = 3145.28s
+27,失败!  seed = 9 time = 3240.86s
+27,失败!  seed = 10 time = 2980.06s
+#############################################
+
+zephyr = 108
+27,失败!  seed = 1 time = 3193.85s
+27,失败!  seed = 2 time = 3297.25s
+27,失败!  seed = 3 time = 3235.25s
+27,失败!  seed = 4 time = 3165.42s
+27,失败!  seed = 5 time = 3345.47s
+27,失败!  seed = 6 time = 3325.91s
+27,失败!  seed = 7 time = 3149.24s
+27,失败!  seed = 8 time = 3149.17s
+27,失败!  seed = 9 time = 3251.32s
+27,失败!  seed = 10 time = 3363.24s
+#############################################
+
+zephyr = 109
+27,失败!  seed = 1 time = 3327.95s
+27,失败!  seed = 2 time = 3426.19s
+27,失败!  seed = 3 time = 3427.02s
+27,失败!  seed = 4 time = 3278.17s
+27,失败!  seed = 5 time = 3345.82s
+27,失败!  seed = 6 time = 3465.29s
+27,失败!  seed = 7 time = 3102.66s
+27,失败!  seed = 8 time = 3269.21s
+27,失败!  seed = 9 time = 3207.92s
+27,失败!  seed = 10 time = 3388.67s
+#############################################
+
+zephyr = 110
+27,失败!  seed = 1 time = 3279.71s
+27,失败!  seed = 2 time = 3223.44s
+27,失败!  seed = 3 time = 3306.21s
+27,失败!  seed = 4 time = 3405.52s
+27,失败!  seed = 5 time = 3398.49s
+27,失败!  seed = 6 time = 3162.65s
+27,失败!  seed = 7 time = 3518.32s
+27,失败!  seed = 8 time = 3431.1s
+27,失败!  seed = 9 time = 3354.19s
+27,失败!  seed = 10 time = 3345.26s
+#############################################
+
+zephyr = 111
+27,失败!  seed = 1 time = 3421.79s
+27,失败!  seed = 2 time = 3481.38s
+27,失败!  seed = 3 time = 3444.74s
+27,失败!  seed = 4 time = 3364.69s
+27,失败!  seed = 5 time = 3551.82s
+27,失败!  seed = 6 time = 3412.22s
+27,失败!  seed = 7 time = 3431.12s
+27,失败!  seed = 8 time = 3477.34s
+27,失败!  seed = 9 time = 3395.52s
+27,失败!  seed = 10 time = 3470.66s
+#############################################
+
+zephyr = 112
+27,失败!  seed = 1 time = 3517.8s
+27,失败!  seed = 2 time = 3613.95s
+27,失败!  seed = 3 time = 3350.8s
+27,失败!  seed = 4 time = 3477.79s
+27,失败!  seed = 5 time = 3597.73s
+27,失败!  seed = 6 time = 3538.72s
+27,失败!  seed = 7 time = 3678.06s
+27,失败!  seed = 8 time = 5340.06s
+27,失败!  seed = 9 time = 5648.81s
+27,失败!  seed = 10 time = 5575.1s
+#############################################
+
+zephyr = 113
+27,失败!  seed = 1 time = 5963.18s
+27,失败!  seed = 2 time = 6012.67s
+27,失败!  seed = 3 time = 5902.72s
+27,失败!  seed = 4 time = 5291.51s
+27,失败!  seed = 5 time = 5856.9s
+27,失败!  seed = 6 time = 5606.88s
+27,失败!  seed = 7 time = 5417.81s
+27,失败!  seed = 8 time = 5823.43s
+27,失败!  seed = 9 time = 5548.81s
+27,失败!  seed = 10 time = 5965.27s
+#############################################
+
+zephyr = 114
+27,失败!  seed = 1 time = 5541.85s
+27,失败!  seed = 2 time = 4463.6s
+27,失败!  seed = 3 time = 3796.45s
+27,失败!  seed = 4 time = 3849.88s
+27,失败!  seed = 5 time = 3839.11s
+27,失败!  seed = 6 time = 4373.49s
+27,失败!  seed = 7 time = 6622.07s
+27,失败!  seed = 8 time = 7197.93s
+27,失败!  seed = 9 time = 6959.69s
+27,失败!  seed = 10 time = 7626.98s
+#############################################
+
+zephyr = 115
+27,失败!  seed = 1 time = 7255.39s
+27,失败!  seed = 2 time = 7626.66s
+27,失败!  seed = 3 time = 7992.22s
+27,失败!  seed = 4 time = 7478.73s
+27,失败!  seed = 5 time = 7805.11s
+27,失败!  seed = 6 time = 7285.54s
+27,失败!  seed = 7 time = 7032.41s
+27,失败!  seed = 8 time = 7425.12s
+27,失败!  seed = 9 time = 7477.6s
+27,失败!  seed = 10 time = 7622.99s
+#############################################
+
+zephyr = 116
+27,失败!  seed = 1 time = 7695.54s
+27,失败!  seed = 2 time = 7123.99s
+27,失败!  seed = 3 time = 6893.84s
+27,失败!  seed = 4 time = 6973.81s
+27,失败!  seed = 5 time = 7432.0s
+27,失败!  seed = 6 time = 7813.26s
+27,失败!  seed = 7 time = 7506.3s
+27,失败!  seed = 8 time = 8499.44s
+27,失败!  seed = 9 time = 8826.76s
+27,失败!  seed = 10 time = 6254.95s
+#############################################
+
+zephyr = 117
+27,失败!  seed = 1 time = 5786.22s
+27,失败!  seed = 2 time = 5855.22s
+27,失败!  seed = 3 time = 5861.92s
+27,失败!  seed = 4 time = 5560.69s
+27,失败!  seed = 5 time = 6209.43s
+27,失败!  seed = 6 time = 5693.35s
+27,失败!  seed = 7 time = 5486.93s
+27,失败!  seed = 8 time = 5619.35s
+27,失败!  seed = 9 time = 5831.58s
+27,失败!  seed = 10 time = 6832.86s
+#############################################
+
+zephyr = 118
+27,失败!  seed = 1 time = 7425.29s
+27,失败!  seed = 2 time = 7903.69s
+27,失败!  seed = 3 time = 6440.46s
+27,失败!  seed = 4 time = 6859.97s
+27,失败!  seed = 5 time = 6099.3s
+27,失败!  seed = 6 time = 6225.37s
+27,失败!  seed = 7 time = 5972.25s
+27,失败!  seed = 8 time = 6402.4s
+27,失败!  seed = 9 time = 6622.8s
+27,失败!  seed = 10 time = 6911.5s
+#############################################
+
+zephyr = 119
+27,失败!  seed = 1 time = 6594.99s
+27,失败!  seed = 2 time = 6625.54s
+27,失败!  seed = 3 time = 6368.22s
+27,失败!  seed = 4 time = 6041.58s
+27,失败!  seed = 5 time = 6905.78s
+27,失败!  seed = 6 time = 6792.48s
+27,失败!  seed = 7 time = 6673.59s
+27,失败!  seed = 8 time = 6906.15s
+27,失败!  seed = 9 time = 6877.26s
+27,失败!  seed = 10 time = 6766.3s
+#############################################
+
+zephyr = 120
+27,失败!  seed = 1 time = 7519.0s
+27,失败!  seed = 2 time = 8761.31s
+27,失败!  seed = 3 time = 10509.78s
+27,失败!  seed = 4 time = 10155.11s
+27,失败!  seed = 5 time = 9646.49s
+27,失败!  seed = 6 time = 9378.18s
+27,失败!  seed = 7 time = 8706.36s
+27,失败!  seed = 8 time = 8664.03s
+27,失败!  seed = 9 time = 7856.47s
+27,失败!  seed = 10 time = 9098.83s
+#############################################
+
+zephyr = 121
+27,失败!  seed = 1 time = 6828.24s
+27,失败!  seed = 2 time = 7748.48s
+27,失败!  seed = 3 time = 7669.24s
+27,失败!  seed = 4 time = 7536.75s
+27,失败!  seed = 5 time = 8523.48s
+27,失败!  seed = 6 time = 7147.52s
+27,失败!  seed = 7 time = 8762.75s
+27,失败!  seed = 8 time = 9307.41s
+27,失败!  seed = 9 time = 7402.54s
+27,失败!  seed = 10 time = 8773.2s
+#############################################
+
+zephyr = 122
+27,失败!  seed = 1 time = 9952.49s
+27,失败!  seed = 2 time = 9663.98s
+27,失败!  seed = 3 time = 9974.28s
+27,失败!  seed = 4 time = 8996.27s
+27,失败!  seed = 5 time = 9055.84s
+27,失败!  seed = 6 time = 8353.09s
+27,失败!  seed = 7 time = 9393.72s
+27,失败!  seed = 8 time = 9406.29s
+27,失败!  seed = 9 time = 10413.29s
+27,失败!  seed = 10 time = 8084.77s
+#############################################
+
+zephyr = 123
+27,失败!  seed = 1 time = 8291.23s
+27,失败!  seed = 2 time = 9105.25s
+27,失败!  seed = 3 time = 8748.42s
+27,失败!  seed = 4 time = 8903.19s
+27,失败!  seed = 5 time = 8960.97s
+27,失败!  seed = 6 time = 8917.01s
+27,失败!  seed = 7 time = 8909.11s
+27,失败!  seed = 8 time = 8032.17s
+27,失败!  seed = 9 time = 5955.09s
+27,失败!  seed = 10 time = 5146.61s
+#############################################
+
+zephyr = 124
+27,失败!  seed = 1 time = 4593.79s
+27,失败!  seed = 2 time = 4323.73s
