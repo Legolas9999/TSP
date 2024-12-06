@@ -1,0 +1,28 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_test/solution/random112.sol /home/chongjiu/concorde_test/mat/random112.tsp
+Host: ubuntu  Current process id: 1969843
+Using random seed 1733472354
+Problem Name: random112
+Problem Type: TSP
+Number of Nodes: 112
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 843 (from tour)
+  LP Value  1: 820.666667  (0.01 seconds)
+  LP Value  2: 830.438889  (0.02 seconds)
+  LP Value  3: 840.023810  (0.06 seconds)
+  LP Value  4: 841.000000  (0.08 seconds)
+  LP Value  5: 841.696737  (0.10 seconds)
+  LP Value  6: 842.816514  (0.13 seconds)
+  LP Value  7: 843.000000  (0.15 seconds)
+recomputing rownorms ...
+  LP Value  8: 843.000000  (0.16 seconds)
+New lower bound: 843.000000
+Final lower bound 843.000000, upper bound 843.000000
+Exact lower bound: 843.000000
+DIFF: 0.000000
+Final LP has 214 rows, 253 columns, 2556 nonzeros
+Optimal Solution: 843.00
+Number of bbnodes: 1
+Total Running Time: 0.23 (seconds)
+
+Standard Error:

@@ -1,0 +1,27 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_test/solution/random187.sol /home/chongjiu/concorde_test/mat/random187.tsp
+Host: ubuntu  Current process id: 1909479
+Using random seed 1733470523
+Problem Name: random187
+Problem Type: TSP
+Number of Nodes: 187
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 1024 (from tour)
+  LP Value  1: 977.500000  (0.01 seconds)
+  LP Value  2: 1011.000000  (0.04 seconds)
+  LP Value  3: 1020.409091  (0.09 seconds)
+  LP Value  4: 1022.250000  (0.13 seconds)
+  LP Value  5: 1022.666667  (0.21 seconds)
+  LP Value  6: 1023.000000  (0.29 seconds)
+  LP Value  7: 1023.000000  (0.42 seconds)
+New lower bound: 1023.000000
+New upperbound from x-heuristic: 1023.00
+Final lower bound 1023.000000, upper bound 1023.000000
+Exact lower bound: 1023.000000
+DIFF: 0.000000
+Final LP has 292 rows, 478 columns, 2820 nonzeros
+Optimal Solution: 1023.00
+Number of bbnodes: 1
+Total Running Time: 0.53 (seconds)
+
+Standard Error:

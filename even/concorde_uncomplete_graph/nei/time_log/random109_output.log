@@ -1,0 +1,47 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_test/solution/random109.sol /home/chongjiu/concorde_test/mat/random109.tsp
+Host: ubuntu  Current process id: 1982625
+Using random seed 1733472715
+Problem Name: random109
+Problem Type: TSP
+Number of Nodes: 109
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 808 (from tour)
+  LP Value  1: 764.500000  (0.01 seconds)
+  LP Value  2: 795.500000  (0.02 seconds)
+  LP Value  3: 798.750000  (0.04 seconds)
+  LP Value  4: 800.500000  (0.05 seconds)
+  LP Value  5: 801.218750  (0.07 seconds)
+  LP Value  6: 802.000000  (0.10 seconds)
+  LP Value  7: 803.800000  (0.12 seconds)
+  LP Value  8: 804.344444  (0.14 seconds)
+  LP Value  9: 805.030000  (0.18 seconds)
+  LP Value 10: 805.421053  (0.21 seconds)
+  LP Value 11: 805.937500  (0.24 seconds)
+  LP Value 12: 806.388889  (0.29 seconds)
+  LP Value 13: 806.420000  (0.42 seconds)
+New lower bound: 806.420000
+Final lower bound 806.420000, upper bound 808.000000
+Exact lower bound: 806.419444
+DIFF: 0.000556
+Time for Total: 0.43 seconds (0.43 total in 1 calls)
+Final LP has 197 rows, 228 columns, 2586 nonzeros
+LOWER BOUND: 806.420000   ACTIVE NODES: 1
+
+Task 0: Branching on node 0
+BBnode 0 split into 1 (807.50X) 2 (807.00) (0.09 seconds)
+Child 0 is pruned
+LOWER BOUND: 807.000000   ACTIVE NODES: 1
+
+Task 1: Cutting on node 2
+New upperbound from x-heuristic: 807.00
+TOUR FOUND - upperbound is 807.00
+Writing Pool: 164 cuts
+BBnode 2 (now 3) can be pruned: upperbound 807.00 (0.01 seconds)
+
+Task 2: Exit
+Optimal Solution: 807.00
+Number of bbnodes: 3
+Total Running Time: 0.60 (seconds)  Branching Time: 0.11 (seconds)
+
+Standard Error:

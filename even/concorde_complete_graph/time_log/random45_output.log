@@ -1,0 +1,22 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_test/solution/random45.sol /home/chongjiu/concorde_test/mat/random45.tsp
+Host: ubuntu  Current process id: 1907534
+Using random seed 1733470479
+Problem Name: random45
+Problem Type: TSP
+Number of Nodes: 45
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 526 (from tour)
+  LP Value  1: 502.500000  (0.00 seconds)
+  LP Value  2: 524.000000  (0.01 seconds)
+  LP Value  3: 526.000000  (0.01 seconds)
+New lower bound: 526.000000
+Final lower bound 526.000000, upper bound 526.000000
+Exact lower bound: 526.000000
+DIFF: 0.000000
+Final LP has 68 rows, 144 columns, 637 nonzeros
+Optimal Solution: 526.00
+Number of bbnodes: 1
+Total Running Time: 0.02 (seconds)
+
+Standard Error:

@@ -1,0 +1,24 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_test/solution/random27.sol /home/chongjiu/concorde_test/mat/random27.tsp
+Host: ubuntu  Current process id: 1907482
+Using random seed 1733470478
+Problem Name: random27
+Problem Type: TSP
+Number of Nodes: 27
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 434 (from tour)
+  LP Value  1: 380.000000  (0.00 seconds)
+  LP Value  2: 430.000000  (0.00 seconds)
+recomputing rownorms ...
+  LP Value  3: 430.000000  (0.00 seconds)
+New lower bound: 430.000000
+New upperbound from x-heuristic: 430.00
+Final lower bound 430.000000, upper bound 430.000000
+Exact lower bound: 430.000000
+DIFF: 0.000000
+Final LP has 36 rows, 71 columns, 202 nonzeros
+Optimal Solution: 430.00
+Number of bbnodes: 1
+Total Running Time: 0.01 (seconds)
+
+Standard Error:

@@ -1,0 +1,24 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_test/solution/random71.sol /home/chongjiu/concorde_test/mat/random71.tsp
+Host: ubuntu  Current process id: 1969549
+Using random seed 1733472348
+Problem Name: random71
+Problem Type: TSP
+Number of Nodes: 71
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 669 (from tour)
+  LP Value  1: 655.500000  (0.00 seconds)
+  LP Value  2: 667.428571  (0.01 seconds)
+  LP Value  3: 669.000000  (0.02 seconds)
+recomputing rownorms ...
+  LP Value  4: 669.000000  (0.02 seconds)
+New lower bound: 669.000000
+Final lower bound 669.000000, upper bound 669.000000
+Exact lower bound: 669.000000
+DIFF: 0.000000
+Final LP has 99 rows, 150 columns, 604 nonzeros
+Optimal Solution: 669.00
+Number of bbnodes: 1
+Total Running Time: 0.05 (seconds)
+
+Standard Error:

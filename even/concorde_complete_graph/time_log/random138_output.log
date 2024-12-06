@@ -1,0 +1,35 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_test/solution/random138.sol /home/chongjiu/concorde_test/mat/random138.tsp
+Host: ubuntu  Current process id: 1908447
+Using random seed 1733470498
+Problem Name: random138
+Problem Type: TSP
+Number of Nodes: 138
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 864 (from tour)
+  LP Value  1: 813.500000  (0.02 seconds)
+  LP Value  2: 847.750000  (0.03 seconds)
+  LP Value  3: 858.150000  (0.07 seconds)
+  LP Value  4: 861.500000  (0.12 seconds)
+  LP Value  5: 862.444444  (0.15 seconds)
+  LP Value  6: 863.000000  (0.24 seconds)
+  LP Value  7: 863.000000  (0.28 seconds)
+New lower bound: 863.000000
+Final lower bound 863.000000, upper bound 864.000000
+Exact lower bound: 863.000000
+DIFF: 0.000000
+Time for Total: 0.29 seconds (0.29 total in 1 calls)
+Final LP has 234 rows, 277 columns, 2229 nonzeros
+LOWER BOUND: 863.000000   ACTIVE NODES: 1
+
+Task 0: Branching on node 0
+BBnode 0 split into 1 (864.00X) 2 (863.62X) (0.08 seconds)
+Child 0 is pruned
+Child 1 is pruned
+
+Task 1: Exit
+Optimal Solution: 864.00
+Number of bbnodes: 3
+Total Running Time: 0.44 (seconds)  Branching Time: 0.08 (seconds)
+
+Standard Error:

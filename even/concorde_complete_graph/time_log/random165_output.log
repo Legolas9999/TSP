@@ -1,0 +1,26 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_test/solution/random165.sol /home/chongjiu/concorde_test/mat/random165.tsp
+Host: ubuntu  Current process id: 1908980
+Using random seed 1733470511
+Problem Name: random165
+Problem Type: TSP
+Number of Nodes: 165
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 954 (from tour)
+  LP Value  1: 903.583333  (0.01 seconds)
+  LP Value  2: 949.857143  (0.04 seconds)
+  LP Value  3: 952.803030  (0.06 seconds)
+  LP Value  4: 953.851852  (0.09 seconds)
+  LP Value  5: 954.000000  (0.10 seconds)
+recomputing rownorms ...
+  LP Value  6: 954.000000  (0.10 seconds)
+New lower bound: 954.000000
+Final lower bound 954.000000, upper bound 954.000000
+Exact lower bound: 954.000000
+DIFF: 0.000000
+Final LP has 238 rows, 455 columns, 2087 nonzeros
+Optimal Solution: 954.00
+Number of bbnodes: 1
+Total Running Time: 0.18 (seconds)
+
+Standard Error:

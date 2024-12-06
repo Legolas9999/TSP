@@ -1,0 +1,61 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_test/solution/random192.sol /home/chongjiu/concorde_test/mat/random192.tsp
+Host: ubuntu  Current process id: 1909625
+Using random seed 1733470526
+Problem Name: random192
+Problem Type: TSP
+Number of Nodes: 192
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 1062 (from tour)
+  LP Value  1: 1027.000000  (0.03 seconds)
+  LP Value  2: 1048.222222  (0.05 seconds)
+  LP Value  3: 1053.750000  (0.09 seconds)
+  LP Value  4: 1056.000000  (0.14 seconds)
+  LP Value  5: 1057.105882  (0.20 seconds)
+  LP Value  6: 1057.500000  (0.25 seconds)
+  LP Value  7: 1057.626506  (0.29 seconds)
+  LP Value  8: 1058.108916  (0.33 seconds)
+  LP Value  9: 1058.542040  (0.36 seconds)
+  LP Value 10: 1058.833333  (0.45 seconds)
+  LP Value 11: 1059.000000  (0.59 seconds)
+  LP Value 12: 1059.333333  (0.64 seconds)
+  LP Value 13: 1059.454376  (0.87 seconds)
+  LP Value 14: 1059.692093  (1.08 seconds)
+  LP Value 15: 1059.790165  (1.47 seconds)
+  LP Value 16: 1059.852989  (1.64 seconds)
+  LP Value 17: 1059.870061  (1.86 seconds)
+New lower bound: 1059.870061
+Final lower bound 1059.870061, upper bound 1062.000000
+Exact lower bound: 1059.870061
+DIFF: 0.000000
+Time for Total: 1.88 seconds (1.88 total in 1 calls)
+Final LP has 326 rows, 448 columns, 4758 nonzeros
+LOWER BOUND: 1059.870061   ACTIVE NODES: 1
+
+Task 0: Branching on node 0
+BBnode 0 split into 1 (1060.38) 2 (1060.00) (0.16 seconds)
+LOWER BOUND: 1060.000000   ACTIVE NODES: 2
+
+Task 1: Cutting on node 2
+recomputing rownorms ...
+Writing Pool: 421 cuts
+BBnode 2 (now 3) done cutting: lowerbound 1060.82 (0.61 seconds)
+LOWER BOUND: 1060.377778   ACTIVE NODES: 2
+
+Task 2: Cutting on node 1
+New upperbound from x-heuristic: 1061.00
+TOUR FOUND - upperbound is 1061.00
+Writing Pool: 438 cuts
+BBnode 1 (now 4) can be pruned: upperbound 1061.00 (0.10 seconds)
+LOWER BOUND: 1060.818182   ACTIVE NODES: 1
+
+Task 3: Branching on node 3
+Do not branch, the lp is within 1.0 of the upperbound
+BBnode 3 is pruned - no branching (0.00 seconds)
+
+Task 4: Exit
+Optimal Solution: 1061.00
+Number of bbnodes: 3
+Total Running Time: 2.84 (seconds)  Branching Time: 0.87 (seconds)
+
+Standard Error:

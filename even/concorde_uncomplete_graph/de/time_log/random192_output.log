@@ -1,0 +1,48 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_test/solution/random192.sol /home/chongjiu/concorde_test/mat/random192.tsp
+Host: ubuntu  Current process id: 1971823
+Using random seed 1733472403
+Problem Name: random192
+Problem Type: TSP
+Number of Nodes: 192
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 1062 (from tour)
+  LP Value  1: 1034.833333  (0.02 seconds)
+  LP Value  2: 1049.300000  (0.05 seconds)
+  LP Value  3: 1056.428571  (0.09 seconds)
+  LP Value  4: 1057.187500  (0.12 seconds)
+  LP Value  5: 1057.500000  (0.15 seconds)
+  LP Value  6: 1057.821051  (0.17 seconds)
+  LP Value  7: 1058.493056  (0.20 seconds)
+  LP Value  8: 1058.866667  (0.23 seconds)
+  LP Value  9: 1059.295597  (0.26 seconds)
+  LP Value 10: 1059.823319  (0.32 seconds)
+  LP Value 11: 1060.000000  (0.37 seconds)
+  LP Value 12: 1060.113272  (1.19 seconds)
+  LP Value 13: 1060.442798  (1.23 seconds)
+  LP Value 14: 1060.604545  (1.42 seconds)
+  LP Value 15: 1060.666667  (1.63 seconds)
+  LP Value 16: 1060.747923  (1.82 seconds)
+  LP Value 17: 1060.782764  (2.35 seconds)
+  LP Value 18: 1060.854369  (2.54 seconds)
+  LP Value 19: 1060.867719  (2.73 seconds)
+  LP Value 20: 1060.869159  (2.89 seconds)
+New lower bound: 1060.869159
+Final lower bound 1060.869159, upper bound 1062.000000
+Exact lower bound: 1060.869159
+DIFF: 0.000000
+Time for Total: 2.91 seconds (2.91 total in 1 calls)
+Final LP has 309 rows, 367 columns, 3235 nonzeros
+LOWER BOUND: 1060.869159   ACTIVE NODES: 1
+
+Task 0: Branching on node 0
+BBnode 0 split into 1 (1061.33X) 2 (1061.14X) (0.15 seconds)
+Child 0 is pruned
+Child 1 is pruned
+
+Task 1: Exit
+Optimal Solution: 1062.00
+Number of bbnodes: 3
+Total Running Time: 3.19 (seconds)  Branching Time: 0.15 (seconds)
+
+Standard Error:

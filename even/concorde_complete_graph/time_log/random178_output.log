@@ -1,0 +1,30 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_test/solution/random178.sol /home/chongjiu/concorde_test/mat/random178.tsp
+Host: ubuntu  Current process id: 1909288
+Using random seed 1733470519
+Problem Name: random178
+Problem Type: TSP
+Number of Nodes: 178
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 1025 (from tour)
+  LP Value  1: 975.500000  (0.01 seconds)
+  LP Value  2: 1011.250000  (0.05 seconds)
+  LP Value  3: 1018.007663  (0.09 seconds)
+  LP Value  4: 1018.645833  (0.13 seconds)
+  LP Value  5: 1019.657895  (0.18 seconds)
+  LP Value  6: 1020.437151  (0.21 seconds)
+  LP Value  7: 1020.645314  (0.27 seconds)
+  LP Value  8: 1021.000000  (0.30 seconds)
+recomputing rownorms ...
+  LP Value  9: 1021.000000  (0.30 seconds)
+New lower bound: 1021.000000
+New upperbound from x-heuristic: 1021.00
+Final lower bound 1021.000000, upper bound 1021.000000
+Exact lower bound: 1021.000000
+DIFF: 0.000000
+Final LP has 260 rows, 489 columns, 2359 nonzeros
+Optimal Solution: 1021.00
+Number of bbnodes: 1
+Total Running Time: 0.40 (seconds)
+
+Standard Error:

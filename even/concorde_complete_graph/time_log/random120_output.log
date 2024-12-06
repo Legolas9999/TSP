@@ -1,0 +1,58 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_test/solution/random120.sol /home/chongjiu/concorde_test/mat/random120.tsp
+Host: ubuntu  Current process id: 1908022
+Using random seed 1733470488
+Problem Name: random120
+Problem Type: TSP
+Number of Nodes: 120
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 829 (from tour)
+  LP Value  1: 773.000000  (0.02 seconds)
+  LP Value  2: 819.375000  (0.04 seconds)
+  LP Value  3: 822.000000  (0.06 seconds)
+  LP Value  4: 822.812500  (0.09 seconds)
+  LP Value  5: 823.921053  (0.11 seconds)
+  LP Value  6: 824.260870  (0.14 seconds)
+  LP Value  7: 824.666667  (0.16 seconds)
+  LP Value  8: 824.953630  (0.19 seconds)
+  LP Value  9: 825.000000  (0.22 seconds)
+  LP Value 10: 825.333333  (0.26 seconds)
+  LP Value 11: 825.670617  (0.29 seconds)
+  LP Value 12: 826.000000  (0.32 seconds)
+  LP Value 13: 826.296286  (0.38 seconds)
+  LP Value 14: 826.333333  (0.45 seconds)
+  LP Value 15: 826.333333  (0.51 seconds)
+New lower bound: 826.333333
+Final lower bound 826.333333, upper bound 829.000000
+Exact lower bound: 826.333333
+DIFF: 0.000000
+Time for Total: 0.53 seconds (0.53 total in 1 calls)
+Final LP has 215 rows, 295 columns, 3188 nonzeros
+LOWER BOUND: 826.333333   ACTIVE NODES: 1
+
+Task 0: Branching on node 0
+BBnode 0 split into 1 (827.00) 2 (827.23) (0.13 seconds)
+LOWER BOUND: 827.000000   ACTIVE NODES: 2
+
+Task 1: Cutting on node 1
+Writing Pool: 211 cuts
+BBnode 1 (now 3) done cutting: lowerbound 827.50 (0.09 seconds)
+LOWER BOUND: 827.229167   ACTIVE NODES: 2
+
+Task 2: Cutting on node 2
+New upperbound from x-heuristic: 828.00
+TOUR FOUND - upperbound is 828.00
+Writing Pool: 222 cuts
+BBnode 2 (now 4) can be pruned: upperbound 828.00 (0.05 seconds)
+LOWER BOUND: 827.500000   ACTIVE NODES: 1
+
+Task 3: Branching on node 3
+Do not branch, the lp is within 1.0 of the upperbound
+BBnode 3 is pruned - no branching (0.00 seconds)
+
+Task 4: Exit
+Optimal Solution: 828.00
+Number of bbnodes: 3
+Total Running Time: 0.85 (seconds)  Branching Time: 0.27 (seconds)
+
+Standard Error:

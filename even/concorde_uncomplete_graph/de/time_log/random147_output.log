@@ -1,0 +1,31 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_test/solution/random147.sol /home/chongjiu/concorde_test/mat/random147.tsp
+Host: ubuntu  Current process id: 1970505
+Using random seed 1733472371
+Problem Name: random147
+Problem Type: TSP
+Number of Nodes: 147
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 960 (from tour)
+  LP Value  1: 921.750000  (0.01 seconds)
+  LP Value  2: 946.000000  (0.03 seconds)
+  LP Value  3: 952.642857  (0.07 seconds)
+  LP Value  4: 956.223577  (0.11 seconds)
+  LP Value  5: 957.818182  (0.16 seconds)
+  LP Value  6: 958.250000  (0.19 seconds)
+  LP Value  7: 958.644693  (0.22 seconds)
+  LP Value  8: 958.984199  (0.25 seconds)
+  LP Value  9: 959.290654  (0.33 seconds)
+  LP Value 10: 959.658333  (0.36 seconds)
+  LP Value 11: 959.765125  (0.50 seconds)
+  LP Value 12: 960.000000  (0.53 seconds)
+New lower bound: 960.000000
+Final lower bound 960.000000, upper bound 960.000000
+Exact lower bound: 960.000000
+DIFF: 0.000000
+Final LP has 235 rows, 330 columns, 3477 nonzeros
+Optimal Solution: 960.00
+Number of bbnodes: 1
+Total Running Time: 0.62 (seconds)
+
+Standard Error:

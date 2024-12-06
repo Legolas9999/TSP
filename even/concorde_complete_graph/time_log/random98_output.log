@@ -1,0 +1,47 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_test/solution/random98.sol /home/chongjiu/concorde_test/mat/random98.tsp
+Host: ubuntu  Current process id: 1907801
+Using random seed 1733470483
+Problem Name: random98
+Problem Type: TSP
+Number of Nodes: 98
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 764 (from tour)
+  LP Value  1: 731.000000  (0.00 seconds)
+  LP Value  2: 755.000000  (0.01 seconds)
+  LP Value  3: 761.000000  (0.01 seconds)
+  LP Value  4: 761.687500  (0.02 seconds)
+  LP Value  5: 762.410256  (0.04 seconds)
+  LP Value  6: 763.000000  (0.05 seconds)
+  LP Value  7: 763.000000  (0.06 seconds)
+New lower bound: 763.000000
+Final lower bound 763.000000, upper bound 764.000000
+Exact lower bound: 763.000000
+DIFF: 0.000000
+Time for Total: 0.07 seconds (0.07 total in 1 calls)
+Final LP has 150 rows, 180 columns, 1437 nonzeros
+LOWER BOUND: 763.000000   ACTIVE NODES: 1
+
+Task 0: Branching on node 0
+BBnode 0 split into 1 (763.00) 2 (763.00) (0.00 seconds)
+LOWER BOUND: 763.000000   ACTIVE NODES: 2
+
+Task 1: Cutting on node 1
+infeas_recover ...
+phase 1 addbad_variables
+LP is now feasible
+Recovered a feasible LP
+Writing Pool: 47 cuts
+BBnode 1 (now 3) can be pruned: upperbound 764.00 (0.02 seconds)
+LOWER BOUND: 763.000000   ACTIVE NODES: 1
+
+Task 2: Cutting on node 2
+Writing Pool: 55 cuts
+BBnode 2 (now 4) can be pruned: upperbound 764.00 (0.01 seconds)
+
+Task 3: Exit
+Optimal Solution: 764.00
+Number of bbnodes: 3
+Total Running Time: 0.14 (seconds)  Branching Time: 0.04 (seconds)
+
+Standard Error:

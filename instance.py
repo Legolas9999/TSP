@@ -962,8 +962,8 @@ def edges_add_nei3(cities_coord):
     return edges_to_connect
 
 # 从seg文件读取length
-def read_seg(num):
-    with open(f"even/even_uncomplete_graph/seg/tour/random{num}.txt", "r") as file:
+def read_LKH_length_and_tour(num, method):
+    with open(f"even/even_uncomplete_graph_new/{method}/tour/random{num}.txt", "r") as file:
 
         result = file.readlines()
         # 读取tour
@@ -979,31 +979,14 @@ def read_seg(num):
     tour = list(map(lambda x: int(x) - 1, tour))
     return length, tour
     
-# 从nei文件读取length
-def read_nei(num):
-    with open(f"even/even_uncomplete_graph/nei/tour/random{num}.txt", "r") as file:
-        #first_line = file.readline().strip()  # 读取第一行并去除两边的空白字符
-        #length = int(first_line.rsplit('.', 2)[1])
 
-        result = file.readlines()
-        # 读取tour
-        tour = result[6:-2]
 
-        # 获取最优路径长度
-        length = int(result[0].rsplit('.', 2)[1])
-
-        #first_line = file.readline().strip()  # 读取第一行并去除两边的空白字符
-        #length = int(first_line.rsplit('.', 2)[1])
-
-    # 格式转换，去除换行符
-    tour = list(map(lambda x: int(x) - 1, tour))
-    return length, tour
 
 
 # 画出最佳路径图
 def optimal_tour_graph(num_city):
     # 从文件读取最佳路径
-    with open(f"even/even_complete_graph/tour/random{num_city}.txt", "r") as file:
+    with open(f"even/even_complete_graph_new/tour/random{num_city}.txt", "r") as file:
         result = file.readlines()
         # 读取tour
         tour = result[6:-2]
@@ -1084,6 +1067,7 @@ def read_json(n):
 
 
 # 基于原有距离矩阵生成missing edges的距离矩阵，用最大距离
+# 返回 0：用最大值代替   1：减去最大值
 def creat_dis_mat_missing_edges(n, G_add_edges, dis_mat_for_qubo, max_distance):
     # 完全图的边
     complete_edges = [{i, j} for i in range(n) for j in range(i + 1, n)]
@@ -1102,7 +1086,7 @@ def creat_dis_mat_missing_edges(n, G_add_edges, dis_mat_for_qubo, max_distance):
 
     # -----------除对角线外同时减去最大距离
     # 复制数组以保持原数组不变
-    #dis_mat_for_qubo = dis_mat.copy()
+    dis_mat_missing = dis_mat_for_qubo.copy()
 
     # 获取对角线掩码矩阵
     diag_mask = np.eye(dis_mat_for_qubo.shape[0], dtype=bool)
@@ -1110,7 +1094,7 @@ def creat_dis_mat_missing_edges(n, G_add_edges, dis_mat_for_qubo, max_distance):
     # 对所有非对角线的元素减去相同的值，例如减去2
     dis_mat_for_qubo[~diag_mask] -= max_distance
 
-    return dis_mat_for_qubo
+    return dis_mat_missing, dis_mat_for_qubo
 
 
 # 基于原有距离矩阵生成missing edges的距离矩阵，用999999
@@ -1209,8 +1193,8 @@ class instance:
         # 最优路径图
         result = optimal_tour_graph(self.n)
         self.graph_optimal = result[0]
-        # self.optimal_tour = result[1]
-        # self.optimal_length = result[2]
+        self.optimal_tour = result[1]
+        self.optimal_length = result[2]
         # self.optimal_lambda = lambda_based_on_optimal(self.optimal_tour, self.mat)
         # # ---------------------------------------------
         # 普通的delauny
@@ -1328,7 +1312,7 @@ class instance:
         # self.mat_missing_edges_de, self.mat_missing_edges_de_for_qubo = creat_dis_mat_missing_edges(
         #     self.n, self.graph_de, self.mat.copy(), self.max_distance
         # )
-        self.mat_missing_edges_de_for_qubo = creat_dis_mat_missing_edges(
+        self.mat_missing_edges_de, self.mat_missing_edges_de_for_qubo = creat_dis_mat_missing_edges(
             self.n, self.graph_de, self.mat.copy(), self.max_distance
         )
         ##########################
@@ -1353,7 +1337,7 @@ class instance:
         # self.mat_missing_edges_de_seg1_seg2_seg3, self.mat_missing_edges_de_seg1_seg2_seg3_for_qubo = creat_dis_mat_missing_edges(
         #     self.n, self.graph_de_seg1_seg2_seg3, self.mat.copy(), self.max_distance
         # )
-        self.mat_missing_edges_de_seg1_seg2_seg3_for_qubo = creat_dis_mat_missing_edges(
+        self.mat_missing_edges_de_seg1_seg2_seg3, self.mat_missing_edges_de_seg1_seg2_seg3_for_qubo = creat_dis_mat_missing_edges(
             self.n, self.graph_de_seg1_seg2_seg3, self.mat.copy(), self.max_distance
         )
 
@@ -1370,7 +1354,7 @@ class instance:
         # self.mat_missing_edges_de_nei2_nei3, self.mat_missing_edges_de_nei2_nei3_for_qubo = creat_dis_mat_missing_edges(
         #     self.n, self.graph_de_nei2_nei3, self.mat.copy(), self.max_distance
         # )
-        self.mat_missing_edges_de_nei2_nei3_for_qubo = creat_dis_mat_missing_edges(
+        self.mat_missing_edges_de_nei2_nei3, self.mat_missing_edges_de_nei2_nei3_for_qubo = creat_dis_mat_missing_edges(
             self.n, self.graph_de_nei2_nei3, self.mat.copy(), self.max_distance
         )
 
@@ -1378,13 +1362,18 @@ class instance:
 
         # # ---------------------------------------------
         # # 分别读取非完全图的length和tour
-        # result = read_seg(self.n)
-        # self.mat_missing_edges_seg_length = result[0]
-        # self.seg_tour = result[1]
+        result = read_LKH_length_and_tour(self.n, 'de')
+        self.LKH_de_length = result[0]
+        self.LKH_de_tour = result[1]
 
-        # result = read_nei(self.n)
-        # self.mat_missing_edges_nei_length = result[0]
-        # self.nei_tour = result[1]
+
+        result = read_LKH_length_and_tour(self.n, 'seg')
+        self.LKH_seg_length = result[0]
+        self.LKH_seg_tour = result[1]
+
+        result = read_LKH_length_and_tour(self.n, 'nei')
+        self.LKH_nei_length = result[0]
+        self.LKH_nei_tour = result[1]
 
         # # ---------------------------------------------
         # # 统计非完全图矩阵中最大距离出现的次数 对称矩阵除以2
@@ -1862,20 +1851,19 @@ def get_time_value():
 
             
 
-def main():
+def write_mat_concorde():
     for i in range(5, 201):
         ins = instance(i)
-        with open(f"even/concorde_complete_graph/mat/random{ins.n}.tsp",'w') as file:
-            file.write(
-                f"NAME: random{ins.n}\r\
-TYPE: TSP\r\
-DIMENSION: {ins.n}\r\
-EDGE_WEIGHT_TYPE: EXPLICIT\r\
-EDGE_WEIGHT_FORMAT: FULL_MATRIX\r\
-EDGE_WEIGHT_SECTION\r"
-            )
+        with open(f"even/concorde_uncomplete_graph/seg/mat/random{ins.n}.tsp",'w') as file:
+            file.write(f"NAME: random{ins.n}"+ "\n")
+            file.write("TYPE: TSP"+ "\n")
+            file.write(f"DIMENSION: {ins.n}"+ "\n")
+            file.write("EDGE_WEIGHT_TYPE: EXPLICIT"+ "\n")
+            file.write("EDGE_WEIGHT_FORMAT: FULL_MATRIX"+ "\n")
+            file.write("EDGE_WEIGHT_SECTION"+ "\n")
 
-            temp = ins.mat.astype(int)
+
+            temp = ins.mat_missing_edges_de_seg1_seg2_seg3.astype(int)
 
             # 写完整矩阵
             for row in temp:
@@ -1965,6 +1953,12 @@ def embed_test():
                 break
 
 
+
+
+def main():
+    for i in range(5, 201):
+        ins = instance(i)
+        print(ins.optimal_length)
 
 
 

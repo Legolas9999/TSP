@@ -1,0 +1,45 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_test/solution/random126.sol /home/chongjiu/concorde_test/mat/random126.tsp
+Host: ubuntu  Current process id: 1970073
+Using random seed 1733472360
+Problem Name: random126
+Problem Type: TSP
+Number of Nodes: 126
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 863 (from tour)
+  LP Value  1: 834.500000  (0.00 seconds)
+  LP Value  2: 848.000000  (0.02 seconds)
+  LP Value  3: 854.700000  (0.05 seconds)
+  LP Value  4: 857.453333  (0.09 seconds)
+  LP Value  5: 858.700000  (0.11 seconds)
+  LP Value  6: 859.227679  (0.14 seconds)
+  LP Value  7: 860.009804  (0.15 seconds)
+  LP Value  8: 860.409091  (0.17 seconds)
+  LP Value  9: 861.056604  (0.20 seconds)
+  LP Value 10: 861.454545  (0.23 seconds)
+  LP Value 11: 861.857143  (0.28 seconds)
+  LP Value 12: 861.944444  (0.38 seconds)
+  LP Value 13: 861.952077  (0.47 seconds)
+New lower bound: 861.952077
+Final lower bound 861.952077, upper bound 863.000000
+Exact lower bound: 861.952077
+DIFF: 0.000000
+Time for Total: 0.49 seconds (0.49 total in 1 calls)
+Final LP has 199 rows, 235 columns, 2536 nonzeros
+LOWER BOUND: 861.952077   ACTIVE NODES: 1
+
+Task 0: Branching on node 0
+BBnode 0 split into 1 (862.00) 2 (863.33X) (0.09 seconds)
+Child 1 is pruned
+LOWER BOUND: 862.000000   ACTIVE NODES: 1
+
+Task 1: Cutting on node 1
+Writing Pool: 158 cuts
+BBnode 1 (now 3) can be pruned: upperbound 863.00 (0.02 seconds)
+
+Task 2: Exit
+Optimal Solution: 863.00
+Number of bbnodes: 3
+Total Running Time: 0.69 (seconds)  Branching Time: 0.11 (seconds)
+
+Standard Error:

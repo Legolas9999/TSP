@@ -1,0 +1,12 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_test/solution/random8.sol /home/chongjiu/concorde_test/mat/random8.tsp
+Host: ubuntu  Current process id: 1987640
+Using random seed 1733472850
+Problem Name: random8
+Problem Type: TSP
+Number of Nodes: 8
+Explicit Lengths (CC_MATRIXNORM)
+Optimal Solution: 246.00
+Total Running Time: 0.00 (seconds)
+
+Standard Error:

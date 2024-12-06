@@ -1,0 +1,21 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_test/solution/random25.sol /home/chongjiu/concorde_test/mat/random25.tsp
+Host: ubuntu  Current process id: 1907478
+Using random seed 1733470478
+Problem Name: random25
+Problem Type: TSP
+Number of Nodes: 25
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 361 (from tour)
+  LP Value  1: 312.000000  (0.00 seconds)
+  LP Value  2: 361.000000  (0.00 seconds)
+New lower bound: 361.000000
+Final lower bound 361.000000, upper bound 361.000000
+Exact lower bound: 361.000000
+DIFF: 0.000000
+Final LP has 33 rows, 75 columns, 206 nonzeros
+Optimal Solution: 361.00
+Number of bbnodes: 1
+Total Running Time: 0.01 (seconds)
+
+Standard Error:

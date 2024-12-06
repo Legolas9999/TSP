@@ -1,0 +1,25 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_test/solution/random145.sol /home/chongjiu/concorde_test/mat/random145.tsp
+Host: ubuntu  Current process id: 1983302
+Using random seed 1733472730
+Problem Name: random145
+Problem Type: TSP
+Number of Nodes: 145
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 899 (from tour)
+  LP Value  1: 866.000000  (0.01 seconds)
+  LP Value  2: 883.500000  (0.02 seconds)
+  LP Value  3: 896.261905  (0.04 seconds)
+  LP Value  4: 898.000000  (0.07 seconds)
+  LP Value  5: 899.000000  (0.12 seconds)
+  LP Value  6: 899.000000  (0.12 seconds)
+New lower bound: 899.000000
+Final lower bound 899.000000, upper bound 899.000000
+Exact lower bound: 899.000000
+DIFF: 0.000000
+Final LP has 257 rows, 389 columns, 3976 nonzeros
+Optimal Solution: 899.00
+Number of bbnodes: 1
+Total Running Time: 0.21 (seconds)
+
+Standard Error:

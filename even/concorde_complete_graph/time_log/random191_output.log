@@ -1,0 +1,63 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_test/solution/random191.sol /home/chongjiu/concorde_test/mat/random191.tsp
+Host: ubuntu  Current process id: 1909537
+Using random seed 1733470524
+Problem Name: random191
+Problem Type: TSP
+Number of Nodes: 191
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 1050 (from tour)
+  LP Value  1: 1008.500000  (0.02 seconds)
+  LP Value  2: 1034.000000  (0.06 seconds)
+  LP Value  3: 1044.185162  (0.10 seconds)
+  LP Value  4: 1046.250000  (0.15 seconds)
+  LP Value  5: 1047.000000  (0.20 seconds)
+  LP Value  6: 1047.000000  (0.23 seconds)
+  LP Value  7: 1047.601286  (0.27 seconds)
+  LP Value  8: 1047.878768  (0.32 seconds)
+  LP Value  9: 1048.106481  (0.40 seconds)
+  LP Value 10: 1048.277778  (0.68 seconds)
+  LP Value 11: 1048.397016  (0.89 seconds)
+  LP Value 12: 1048.488889  (1.13 seconds)
+  LP Value 13: 1048.627412  (1.27 seconds)
+  LP Value 14: 1048.511450  (1.51 seconds)
+New lower bound: 1048.511450
+Final lower bound 1048.511450, upper bound 1050.000000
+Exact lower bound: 1048.511450
+DIFF: 0.000000
+Time for Total: 1.53 seconds (1.53 total in 1 calls)
+Final LP has 313 rows, 397 columns, 4669 nonzeros
+LOWER BOUND: 1048.511450   ACTIVE NODES: 1
+
+Task 0: Branching on node 0
+BBnode 0 split into 1 (1049.00) 2 (1048.94) (0.14 seconds)
+LOWER BOUND: 1048.940678   ACTIVE NODES: 2
+
+Task 1: Cutting on node 2
+Writing Pool: 314 cuts
+BBnode 2 (now 3) done cutting: lowerbound 1049.00 (0.17 seconds)
+LOWER BOUND: 1049.000000   ACTIVE NODES: 2
+
+Task 2: Branching on node 3
+BBnode 3 split into 4 (1049.00) 5 (1050.85X) (0.18 seconds)
+Child 1 is pruned
+LOWER BOUND: 1049.000000   ACTIVE NODES: 2
+
+Task 3: Cutting on node 4
+New upperbound from x-heuristic: 1049.00
+TOUR FOUND - upperbound is 1049.00
+Writing Pool: 314 cuts
+BBnode 4 (now 6) can be pruned: upperbound 1049.00 (0.02 seconds)
+LOWER BOUND: 1049.000000   ACTIVE NODES: 1
+
+Task 4: Cutting on node 1
+Do not cut, the lp is within 1.0 of the upperbound
+Writing Pool: 314 cuts
+BBnode 1 (now 7) can be pruned: upperbound 1049.00 (0.00 seconds)
+
+Task 5: Exit
+Optimal Solution: 1049.00
+Number of bbnodes: 5
+Total Running Time: 2.15 (seconds)  Branching Time: 0.51 (seconds)
+
+Standard Error:

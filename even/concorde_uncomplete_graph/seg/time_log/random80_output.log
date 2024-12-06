@@ -1,0 +1,23 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_test/solution/random80.sol /home/chongjiu/concorde_test/mat/random80.tsp
+Host: ubuntu  Current process id: 1987895
+Using random seed 1733472853
+Problem Name: random80
+Problem Type: TSP
+Number of Nodes: 80
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 661 (from tour)
+  LP Value  1: 635.500000  (0.00 seconds)
+  LP Value  2: 657.857143  (0.01 seconds)
+  LP Value  3: 660.803571  (0.02 seconds)
+  LP Value  4: 661.000000  (0.03 seconds)
+New lower bound: 661.000000
+Final lower bound 661.000000, upper bound 661.000000
+Exact lower bound: 661.000000
+DIFF: 0.000000
+Final LP has 130 rows, 269 columns, 1623 nonzeros
+Optimal Solution: 661.00
+Number of bbnodes: 1
+Total Running Time: 0.06 (seconds)
+
+Standard Error:

@@ -1,0 +1,26 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_test/solution/random194.sol /home/chongjiu/concorde_test/mat/random194.tsp
+Host: ubuntu  Current process id: 1909739
+Using random seed 1733470530
+Problem Name: random194
+Problem Type: TSP
+Number of Nodes: 194
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 1050 (from tour)
+  LP Value  1: 1018.000000  (0.02 seconds)
+  LP Value  2: 1040.611111  (0.04 seconds)
+  LP Value  3: 1043.750000  (0.07 seconds)
+  LP Value  4: 1049.833333  (0.11 seconds)
+  LP Value  5: 1050.000000  (0.11 seconds)
+recomputing rownorms ...
+  LP Value  6: 1050.000000  (0.11 seconds)
+New lower bound: 1050.000000
+Final lower bound 1050.000000, upper bound 1050.000000
+Exact lower bound: 1050.000000
+DIFF: 0.000000
+Final LP has 268 rows, 515 columns, 2217 nonzeros
+Optimal Solution: 1050.00
+Number of bbnodes: 1
+Total Running Time: 0.21 (seconds)
+
+Standard Error:

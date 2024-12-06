@@ -1,0 +1,32 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_test/solution/random175.sol /home/chongjiu/concorde_test/mat/random175.tsp
+Host: ubuntu  Current process id: 1971306
+Using random seed 1733472390
+Problem Name: random175
+Problem Type: TSP
+Number of Nodes: 175
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 1043 (from tour)
+  LP Value  1: 1026.000000  (0.02 seconds)
+  LP Value  2: 1032.250000  (0.03 seconds)
+  LP Value  3: 1037.500000  (0.04 seconds)
+  LP Value  4: 1038.500000  (0.07 seconds)
+  LP Value  5: 1039.000000  (0.08 seconds)
+  LP Value  6: 1039.750000  (0.11 seconds)
+  LP Value  7: 1041.250000  (0.14 seconds)
+  LP Value  8: 1041.666667  (0.19 seconds)
+  LP Value  9: 1041.751724  (0.25 seconds)
+  LP Value 10: 1042.089744  (0.30 seconds)
+  LP Value 11: 1042.500000  (0.34 seconds)
+  LP Value 12: 1042.864865  (0.40 seconds)
+  LP Value 13: 1043.000000  (0.47 seconds)
+New lower bound: 1043.000000
+Final lower bound 1043.000000, upper bound 1043.000000
+Exact lower bound: 1043.000000
+DIFF: 0.000000
+Final LP has 310 rows, 386 columns, 6015 nonzeros
+Optimal Solution: 1043.00
+Number of bbnodes: 1
+Total Running Time: 0.61 (seconds)
+
+Standard Error:

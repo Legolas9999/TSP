@@ -1,0 +1,46 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_test/solution/random137.sol /home/chongjiu/concorde_test/mat/random137.tsp
+Host: ubuntu  Current process id: 1908425
+Using random seed 1733470498
+Problem Name: random137
+Problem Type: TSP
+Number of Nodes: 137
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 907 (from tour)
+  LP Value  1: 873.500000  (0.00 seconds)
+  LP Value  2: 897.166667  (0.01 seconds)
+  LP Value  3: 900.500000  (0.03 seconds)
+  LP Value  4: 903.600000  (0.05 seconds)
+  LP Value  5: 904.500000  (0.07 seconds)
+  LP Value  6: 905.000000  (0.09 seconds)
+  LP Value  7: 905.178082  (0.15 seconds)
+  LP Value  8: 905.333333  (0.19 seconds)
+  LP Value  9: 905.483146  (0.30 seconds)
+  LP Value 10: 905.500000  (0.34 seconds)
+  LP Value 11: 905.562500  (0.37 seconds)
+  LP Value 12: 905.625000  (0.41 seconds)
+recomputing rownorms ...
+  LP Value 13: 905.625000  (0.44 seconds)
+New lower bound: 905.625000
+Final lower bound 905.625000, upper bound 907.000000
+Exact lower bound: 905.625000
+DIFF: 0.000000
+Time for Total: 0.45 seconds (0.45 total in 1 calls)
+Final LP has 224 rows, 282 columns, 2711 nonzeros
+LOWER BOUND: 905.625000   ACTIVE NODES: 1
+
+Task 0: Branching on node 0
+BBnode 0 split into 1 (906.00) 2 (906.33X) (0.08 seconds)
+Child 1 is pruned
+LOWER BOUND: 906.000000   ACTIVE NODES: 1
+
+Task 1: Cutting on node 1
+Writing Pool: 153 cuts
+BBnode 1 (now 3) can be pruned: upperbound 907.00 (0.02 seconds)
+
+Task 2: Exit
+Optimal Solution: 907.00
+Number of bbnodes: 3
+Total Running Time: 0.60 (seconds)  Branching Time: 0.10 (seconds)
+
+Standard Error:

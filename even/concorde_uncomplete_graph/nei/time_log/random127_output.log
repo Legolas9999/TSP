@@ -1,0 +1,29 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_test/solution/random127.sol /home/chongjiu/concorde_test/mat/random127.tsp
+Host: ubuntu  Current process id: 1982898
+Using random seed 1733472721
+Problem Name: random127
+Problem Type: TSP
+Number of Nodes: 127
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 825 (from tour)
+  LP Value  1: 794.000000  (0.01 seconds)
+  LP Value  2: 819.625000  (0.03 seconds)
+  LP Value  3: 823.000000  (0.06 seconds)
+  LP Value  4: 823.572917  (0.09 seconds)
+  LP Value  5: 824.388235  (0.12 seconds)
+  LP Value  6: 824.750000  (0.15 seconds)
+  LP Value  7: 824.962343  (0.19 seconds)
+  LP Value  8: 825.000000  (0.23 seconds)
+recomputing rownorms ...
+  LP Value  9: 825.000000  (0.23 seconds)
+New lower bound: 825.000000
+Final lower bound 825.000000, upper bound 825.000000
+Exact lower bound: 825.000000
+DIFF: 0.000000
+Final LP has 210 rows, 351 columns, 2655 nonzeros
+Optimal Solution: 825.00
+Number of bbnodes: 1
+Total Running Time: 0.32 (seconds)
+
+Standard Error:

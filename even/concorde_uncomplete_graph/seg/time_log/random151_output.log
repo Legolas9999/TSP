@@ -1,0 +1,25 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_test/solution/random151.sol /home/chongjiu/concorde_test/mat/random151.tsp
+Host: ubuntu  Current process id: 1989033
+Using random seed 1733472879
+Problem Name: random151
+Problem Type: TSP
+Number of Nodes: 151
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 942 (from tour)
+  LP Value  1: 893.500000  (0.01 seconds)
+  LP Value  2: 928.333333  (0.05 seconds)
+  LP Value  3: 936.886905  (0.07 seconds)
+  LP Value  4: 939.762712  (0.14 seconds)
+  LP Value  5: 941.690821  (0.20 seconds)
+  LP Value  6: 942.000000  (0.22 seconds)
+New lower bound: 942.000000
+Final lower bound 942.000000, upper bound 942.000000
+Exact lower bound: 942.000000
+DIFF: 0.000000
+Final LP has 263 rows, 449 columns, 5244 nonzeros
+Optimal Solution: 942.00
+Number of bbnodes: 1
+Total Running Time: 0.34 (seconds)
+
+Standard Error:

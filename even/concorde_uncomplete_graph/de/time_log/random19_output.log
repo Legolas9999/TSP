@@ -1,0 +1,21 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_test/solution/random19.sol /home/chongjiu/concorde_test/mat/random19.tsp
+Host: ubuntu  Current process id: 1969382
+Using random seed 1733472347
+Problem Name: random19
+Problem Type: TSP
+Number of Nodes: 19
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 345 (from tour)
+  LP Value  1: 310.000000  (0.00 seconds)
+  LP Value  2: 345.000000  (0.00 seconds)
+New lower bound: 345.000000
+Final lower bound 345.000000, upper bound 345.000000
+Exact lower bound: 345.000000
+DIFF: 0.000000
+Final LP has 22 rows, 41 columns, 106 nonzeros
+Optimal Solution: 345.00
+Number of bbnodes: 1
+Total Running Time: 0.00 (seconds)
+
+Standard Error:

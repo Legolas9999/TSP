@@ -1,0 +1,27 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_test/solution/random132.sol /home/chongjiu/concorde_test/mat/random132.tsp
+Host: ubuntu  Current process id: 1908373
+Using random seed 1733470496
+Problem Name: random132
+Problem Type: TSP
+Number of Nodes: 132
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 880 (from tour)
+  LP Value  1: 840.000000  (0.01 seconds)
+  LP Value  2: 872.750000  (0.05 seconds)
+  LP Value  3: 874.000000  (0.07 seconds)
+  LP Value  4: 874.876289  (0.09 seconds)
+  LP Value  5: 875.000000  (0.11 seconds)
+recomputing rownorms ...
+  LP Value  6: 875.000000  (0.11 seconds)
+New lower bound: 875.000000
+New upperbound from x-heuristic: 875.00
+Final lower bound 875.000000, upper bound 875.000000
+Exact lower bound: 875.000000
+DIFF: 0.000000
+Final LP has 201 rows, 319 columns, 1555 nonzeros
+Optimal Solution: 875.00
+Number of bbnodes: 1
+Total Running Time: 0.18 (seconds)
+
+Standard Error:

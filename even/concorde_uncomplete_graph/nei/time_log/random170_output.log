@@ -1,0 +1,33 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_test/solution/random170.sol /home/chongjiu/concorde_test/mat/random170.tsp
+Host: ubuntu  Current process id: 1983891
+Using random seed 1733472744
+Problem Name: random170
+Problem Type: TSP
+Number of Nodes: 170
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 970 (from tour)
+  LP Value  1: 939.416667  (0.01 seconds)
+  LP Value  2: 953.750000  (0.03 seconds)
+  LP Value  3: 964.335859  (0.08 seconds)
+  LP Value  4: 965.666667  (0.12 seconds)
+  LP Value  5: 965.927852  (0.15 seconds)
+  LP Value  6: 966.520000  (0.17 seconds)
+  LP Value  7: 966.750000  (0.25 seconds)
+  LP Value  8: 966.916667  (0.39 seconds)
+  LP Value  9: 967.000000  (0.43 seconds)
+  LP Value 10: 967.141461  (0.60 seconds)
+  LP Value 11: 967.195815  (0.77 seconds)
+  LP Value 12: 967.315789  (0.92 seconds)
+  LP Value 13: 967.330882  (1.05 seconds)
+New lower bound: 967.330882
+New upperbound from x-heuristic: 968.00
+Final lower bound 967.330882, upper bound 968.000000
+Exact lower bound: 967.330882
+DIFF: 0.000000
+Final LP has 261 rows, 447 columns, 3019 nonzeros
+Optimal Solution: 968.00
+Number of bbnodes: 1
+Total Running Time: 1.18 (seconds)
+
+Standard Error:

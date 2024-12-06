@@ -1,0 +1,33 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_test/solution/random52.sol /home/chongjiu/concorde_test/mat/random52.tsp
+Host: ubuntu  Current process id: 1907554
+Using random seed 1733470479
+Problem Name: random52
+Problem Type: TSP
+Number of Nodes: 52
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 604 (from tour)
+  LP Value  1: 566.500000  (0.00 seconds)
+  LP Value  2: 590.000000  (0.00 seconds)
+  LP Value  3: 600.133333  (0.02 seconds)
+  LP Value  4: 603.000000  (0.03 seconds)
+  LP Value  5: 603.000000  (0.05 seconds)
+New lower bound: 603.000000
+Final lower bound 603.000000, upper bound 604.000000
+Exact lower bound: 603.000000
+DIFF: 0.000000
+Time for Total: 0.05 seconds (0.05 total in 1 calls)
+Final LP has 120 rows, 106 columns, 1706 nonzeros
+LOWER BOUND: 603.000000   ACTIVE NODES: 1
+
+Task 0: Branching on node 0
+BBnode 0 split into 1 (604.00X) 2 (603.83X) (0.02 seconds)
+Child 0 is pruned
+Child 1 is pruned
+
+Task 1: Exit
+Optimal Solution: 604.00
+Number of bbnodes: 3
+Total Running Time: 0.10 (seconds)  Branching Time: 0.02 (seconds)
+
+Standard Error:

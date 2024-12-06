@@ -1,0 +1,26 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_test/solution/random176.sol /home/chongjiu/concorde_test/mat/random176.tsp
+Host: ubuntu  Current process id: 1909262
+Using random seed 1733470518
+Problem Name: random176
+Problem Type: TSP
+Number of Nodes: 176
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 1027 (from tour)
+  LP Value  1: 988.000000  (0.02 seconds)
+  LP Value  2: 1017.750000  (0.05 seconds)
+  LP Value  3: 1022.413043  (0.12 seconds)
+  LP Value  4: 1026.000000  (0.17 seconds)
+  LP Value  5: 1026.000000  (0.23 seconds)
+  LP Value  6: 1026.000000  (0.24 seconds)
+New lower bound: 1026.000000
+New upperbound from x-heuristic: 1026.00
+Final lower bound 1026.000000, upper bound 1026.000000
+Exact lower bound: 1026.000000
+DIFF: 0.000000
+Final LP has 282 rows, 460 columns, 2877 nonzeros
+Optimal Solution: 1026.00
+Number of bbnodes: 1
+Total Running Time: 0.35 (seconds)
+
+Standard Error:
