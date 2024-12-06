@@ -1863,9 +1863,29 @@ def get_time_value():
             
 
 def main():
-    import dwave_networkx as dnx
-    g = dnx.zephyr_graph(16)
-    print(g.number_of_nodes())
+    for i in range(5, 201):
+        ins = instance(i)
+        with open(f"even/concorde_complete_graph/mat/random{ins.n}.tsp",'w') as file:
+            file.write(
+                f"NAME: random{ins.n}\r\
+TYPE: TSP\r\
+DIMENSION: {ins.n}\r\
+EDGE_WEIGHT_TYPE: EXPLICIT\r\
+EDGE_WEIGHT_FORMAT: FULL_MATRIX\r\
+EDGE_WEIGHT_SECTION\r"
+            )
+
+            temp = ins.mat.astype(int)
+
+            # 写完整矩阵
+            for row in temp:
+                file.write(" ".join(map(str, row)) + "\n")
+        
+            # 写入 EOF
+            file.write("EOF\n")
+
+        
+
         
 
 
@@ -1954,7 +1974,7 @@ if __name__ == "__main__":
     # print(ins.mat)
     # print(ins.mat_missing_edges_de_for_qubo)
 
-    check()
+    main()
 
     
     #print(os.urandom(4))
