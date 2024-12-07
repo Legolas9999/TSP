@@ -85,60 +85,7 @@ def dis_mat(coord):
     return mat
 
 
-# 根据完全图计算lambda
-def iterate_for_complete_lamuda(n:int, dis_mat) -> int:
-    # 先创建城市列表
-    city_list = [i for i in range(n)]
-
-    # 每个城市的lambda  -> list
-    lambda_list_for_every_city = []
-    # 每个城市最大lambda时左右城市索引列表
-    max_lambda_left_right_list = []
-
-    #以索引的方式遍历每个城市
-    for node in range(n):
-        #等待组合的列表(去除本身)
-        combination_list = list(filter(lambda x: x != node, city_list))
-       
-        # 生成所有长度为2的组合
-        combs = list(combinations(combination_list, 2))
-
-        #该点的最大lambda
-        max_lambda = 0
-
-        # 保存lambda最大时左右城市
-        left_city = None
-        right_city = None
-
-        # 遍历该点的所有组合
-        for comb in combs:
-            temp = 0.5*(dis_mat[comb[0], node] + dis_mat[node, comb[1]])
-            if temp > max_lambda:
-                max_lambda = temp
-                left_city = comb[0]
-                right_city = comb[1]
-
-        
-        # 存入当前点的最大lambda
-        lambda_list_for_every_city.append(max_lambda)
-        # 存入最大lambda时左右城市索引
-        max_lambda_left_right_list.append((left_city, right_city))
-
-
-    #向下取整处理
-    lambda_list_for_every_city = list(map(lambda x : math.floor(x) + 1, lambda_list_for_every_city))
-
-    ### 检查check
-    temp_max = max(lambda_list_for_every_city)
-    max_counter = lambda_list_for_every_city.count(temp_max)
-    temp_index = lambda_list_for_every_city.index(temp_max)
-
-
-    return max(lambda_list_for_every_city), lambda_list_for_every_city, (n*(n-1))/2, (max_lambda_left_right_list[temp_index][0], temp_index, max_lambda_left_right_list[temp_index][1])
-
-
-
-# 通过delaunay计算lamuda，返回元组 0：最大lamuda  1：每个城市最大lamuda列表  2:lamuda最大时左右城市列表
+# 根据写入的参数添加边
 def delaunay(
     #dis_mat, 
     cities_coord, seg1=None, seg2=None, seg3=None, nei2=None, nei3=None
@@ -175,62 +122,6 @@ def delaunay(
     if nei3 is not None:
         G.add_edges_from(nei3)
 
-    # 画出三角分割(如果增加了边就不是三角分割)
-    # pos = {i: cities_coord[i] for i in range(cities_coord.shape[0])}
-    # nx.draw(G,pos, with_labels=True, node_size=300, node_color='skyblue')
-    # plt.show()
-
-    ######################计算lamuda######################
-    # # 记录每个城市的最大lamuda
-    # max_lamuda = []
-
-    # # 记录每个城市最大lamuda时左右城市索引
-    # left_and_right_index_for_every_city = []
-
-    # # 遍历每个节点城市，i为城市索引
-    # for i in range(cities_coord.shape[0]):
-    #     # 生成组合列表
-    #     neighbors = list(combinations(list(G.neighbors(i)), 2))
-
-    #     # 当前最大lamuda
-    #     temp_max = 0
-
-    #     # 当前最大lamuda左右组合,元组
-    #     temp_left_right = ()
-
-    #     # 遍历每个组合，计算lamuda
-    #     for neighbor in neighbors:
-
-    #         # 根据矩阵计算
-    #         current_lamuda = 0.5 * (dis_mat[i, neighbor[0]] + dis_mat[i, neighbor[1]])
-
-    #         # 向下取整!!!!
-    #         current_lamuda = math.floor(current_lamuda)
-
-    #         # 保存最大lamuda
-    #         if current_lamuda > temp_max:
-    #             temp_max = current_lamuda
-    #             # 并且保存当前组合
-    #             temp_left_right = neighbor
-
-    #     # 保存
-    #     max_lamuda.append(temp_max)
-    #     # 保存左右索引
-    #     left_and_right_index_for_every_city.append(temp_left_right)
-
-    # # 不能刚好等于，要稍微大一点
-    # max_lamuda = [temp + 1 for temp in max_lamuda]
-
-
-    # #####检查部分
-    # temp_max = max(max_lamuda)
-    # temp_index = max_lamuda.index(temp_max)
-    ######################计算lamuda######################
-
-    # 之前需要计算lambda的return
-    # return max(max_lamuda), max_lamuda, G, G.number_of_edges(), (left_and_right_index_for_every_city[temp_index][0], temp_index, left_and_right_index_for_every_city[temp_index][1])
-
-    # 现在不关心lambda，只返回加边后的图
     return G
 
 
@@ -412,7 +303,7 @@ def edges_add_seg1_new(cities_coord):
     return edges_to_connect
 
 
-# 两个线段加边
+# 两个线段加边 seg2
 def edges_add_seg2(cities_coord):
     # 创建Voronoi 图
     vor = Voronoi(cities_coord)
@@ -555,7 +446,7 @@ def edges_add_seg2(cities_coord):
     return edges_to_connect
 
 
-# 三个线段加边
+# 三个线段加边 seg3
 def edges_add_seg3(cities_coord):
     # 创建 Voronoi 图
     vor = Voronoi(cities_coord)
@@ -725,7 +616,7 @@ def edges_add_seg3(cities_coord):
     return edges_to_connect
 
 
-# 再次基于voronoi加边，邻居的邻居
+# 再次基于voronoi加边，邻居的邻居  应该是逻辑有问题
 def edges_add_nei2_error(cities_coord):
     vor = Voronoi(cities_coord)
 
@@ -786,7 +677,7 @@ def edges_add_nei2_error(cities_coord):
     edge_to_connect = list(map(lambda x: tuple(x), edge_to_connect))
     return edge_to_connect
 
-
+# nei2
 def edges_add_nei2(cities_coord):
     vor = Voronoi(cities_coord)
 
@@ -867,9 +758,6 @@ def edges_add_nei2(cities_coord):
                 edges_to_connect.append(edge)
         
     return edges_to_connect
-
-
-
 
 
 # nei3
@@ -961,32 +849,26 @@ def edges_add_nei3(cities_coord):
 
     return edges_to_connect
 
-# 从文件读取length,针对uncomplete
-def read_LKH_length_and_tour(num, method):
-    with open(f"even/even_uncomplete_graph_new/{method}/tour/random{num}.txt", "r") as file:
+# 从文件读取LKH的结果
+def read_LKH_result(num, method):
+    '''
+    函数说明:
+    这里读取的是LKH的结果
+    num: 城市个数
+    method: 使用的是哪一种TSP问题(4种)  complete|de|seg|nei  其中complete代表最优解
 
-        result = file.readlines()
-        # 读取tour
-        tour = result[6:-2]
-
-        # 获取最优路径长度
-        length = int(result[0].rsplit('.', 2)[1])
-
-        #first_line = file.readline().strip()  # 读取第一行并去除两边的空白字符
-        #length = int(first_line.rsplit('.', 2)[1])
-
-    # 格式转换，去除换行符
-    tour = list(map(lambda x: int(x) - 1, tour))
-    return length, tour
-    
+    返回：
+    G, tour, length
+    '''
+    if method == 'complete':
+        path = f"even/LKH_complete_graph/tour/random{num}.txt"
+    else:
+        path = f"even/LKH_uncomplete_graph/{method}/tour/random{num}.txt"
 
 
 
-
-# 画出最佳路径图
-def read_LKH_optimal_tour_graph(num_city):
     # 从文件读取最佳路径
-    with open(f"even/even_complete_graph_new/tour/random{num_city}.txt", "r") as file:
+    with open(path, "r") as file:
         result = file.readlines()
         # 读取tour
         tour = result[6:-2]
@@ -994,18 +876,75 @@ def read_LKH_optimal_tour_graph(num_city):
         # 获取最优路径长度
         length = int(result[0].rsplit('.', 2)[1])
 
-    # 格式转换，去除换行符
+    # 格式转换，去除换行符(LKH的结果从1开始)
     tour = list(map(lambda x: int(x) - 1, tour))
 
-    # 创建图
+    # 创建LKH得到的最优路径图
     G = nx.Graph()
 
     # 添加边
-    edges = [(tour[i], tour[(i + 1) % num_city]) for i in range(num_city)]
+    edges = [(tour[i], tour[(i + 1) % num]) for i in range(num)]
     G.add_edges_from(edges)
 
     return G, tour, length
+    
 
+def read_concorde_result(num, method):
+    '''
+    函数说明:
+    这里读取的是concorde的结果(concorde的结果从0开始)
+    num: 城市个数
+    method: 使用的是哪一种TSP问题(4种)  complete|de|seg|nei  其中complete代表最优解
+
+    返回：
+    G, tour, length, time
+    '''
+    # 是否是完全图
+    if method == 'complete':
+        tour_path = f"even/concorde_complete_graph/solution/random{num}.sol"
+        log_path = f"even/concorde_complete_graph/time_log/random{num}_output.log"
+    else:
+        tour_path = f"even/concorde_uncomplete_graph/{method}/solution/random{num}.sol"
+        log_path = f"even/concorde_uncomplete_graph/{method}/time_log/random{num}_output.log"
+
+
+
+    # 从文件读取最佳路径
+    with open(tour_path, "r") as file:
+
+        # 打开文件并读取所有行
+        lines = file.readlines()
+
+        # 跳过第一行，因为它是城市的总数
+        tour = []
+
+        # 从第二行开始读取城市序号
+        for line in lines[1:]:
+            # 分割每一行，转换为整数，然后添加到列表中
+            tour.extend(map(int, line.strip().split()))
+
+
+    # 从log文件中提取solution和运行时间
+    with open(log_path, 'r') as file:
+        content = file.read()
+
+        # 使用正则表达式查找Optimal Solution(length)和Total Running Time
+        length_match = re.search(r"Optimal Solution: (\d+\.\d+)", content)
+        total_running_time_match = re.search(r"Total Running Time: (\d+\.\d+)", content)
+
+        # 提取并打印结果
+        length = length_match.group(1) if length_match else "Not found"
+        running_time = total_running_time_match.group(1) if total_running_time_match else "Not found"
+
+
+    # 创建LKH得到的最优路径图
+    G = nx.Graph()
+
+    # 添加边
+    edges = [(tour[i], tour[(i + 1) % num]) for i in range(num)]
+    G.add_edges_from(edges)
+
+    return G, tour, int(float(length)), running_time
 
 # 判断是否是子图，只考虑边(最优路径图，添加边的图)
 def is_subgraph(G_optimal, G_add_edges):
@@ -1034,36 +973,6 @@ def is_subgraph2(G_optimal, G_add_de):
     return len(not_in_set) == 0, not_in_set
 
 
-# 生成包含各类数据的字典以供查阅,并且dump到json
-def creat_dump_data_dic():
-    dic = {}
-    for i in range(5, 201):
-        print(i)
-        ins = instance(i)
-        dic[f"{i}"] = {
-            "de_edges": ins.de_edges,
-            "de_seg1_seg2_seg3_edges": ins.de_seg1_seg2_seg3_edges,
-            "de_nei2_nei3_edges": ins.de_nei2_nei3_edges,
-            "de_lambda": ins.de_lambda,
-            "de_seg1_seg2_seg3_lambda": ins.de_seg1_seg2_seg3_lambda,
-            "de_nei2_nei3_lambda": ins.de_nei2_nei3_lambda,
-            "de_is_subgraph": is_subgraph(ins.graph_optimal_tour, ins.graph_de)[0],
-            "de_seg1_seg2_seg3_is_subgraph": is_subgraph(
-                ins.graph_optimal_tour, ins.graph_de_seg1_seg2_seg3
-            )[0],
-            "de_nei2_nei3_is_subgraph": is_subgraph(
-                ins.graph_optimal_tour, ins.graph_de_nei2_nei3
-            )[0],
-        }
-
-    json.dump(dic, open("gaussain_graph_data.json", "w"), indent=4)
-
-
-# 读取数据json
-def read_json(n):
-    with open(f"gurobi_optimal_tour_log/solution_log/random{n}.json", "r") as file:
-        dic = json.load(file)
-    return np.array(dic['solution_mat'])
 
 
 # 基于原有距离矩阵生成missing edges的距离矩阵，用最大距离
@@ -1097,38 +1006,7 @@ def creat_dis_mat_missing_edges(n, G_add_edges, dis_mat_for_qubo, max_distance):
     return dis_mat_missing, dis_mat_for_qubo
 
 
-# 基于原有距离矩阵生成missing edges的距离矩阵，用999999
-def missing_edges(n, G_add_edges):
-    # 完全图的边
-    complete_edges = [{i, j} for i in range(n) for j in range(i + 1, n)]
 
-    # 存在的边
-    exist_edges = list(map(lambda x: set(x), G_add_edges.edges()))
-
-    # 求基于完全图消失的边
-    missing_edges = list(filter(lambda x: x not in exist_edges, complete_edges))
-
-    return missing_edges
-
-
-# 比较最优路径是否一致，完全图的最优路径 和 非完全图的最优路径
-def compare_tour(n):
-
-    with open(f"gaussian/gaussian_complete_graph/tour/random{n}.txt", "r") as file:
-        content = file.readlines()
-        tour_complete = content[6:-2]
-        tour_complete_energy = int(content[0].rsplit('.', 2)[1])
-
-    with open(f"gaussian/gaussian_uncomplete_graph/de_nei2_nei3/tour/random{n}.txt", "r") as file:
-        content = file.readlines()
-        tour_missing = content[6:-2]
-        tour_missing_energy = int(content[0].rsplit('.', 2)[1])
-
-    tour_complete = list(map(lambda x: int(x), tour_complete))
-    tour_missing = list(map(lambda x: int(x), tour_missing))
-
-    # print(tour_complete,tour_missing)
-    return tour_complete == tour_missing , tour_complete_energy, tour_missing_energy
 
 def uniform_coord(n):
     # 随机数种子选取 确保每次生成的一致
@@ -1136,29 +1014,6 @@ def uniform_coord(n):
     coord = np.random.random((n, 2)) * 100
 
     return coord
-
-
-
-# 输入最佳路径图
-def lambda_based_on_optimal(tour, mat):
-    n = len(tour)
-    lambda_list = []
-    for i, city in enumerate(tour):
-        node_right = tour[(i + 1) % n]
-        node_left = tour[i - 1]
-
-        # 求当前节点的lambda
-        current_lambda = (mat[node_left, city] + mat[city, node_right]) / 2
-        current_lambda = math.floor(current_lambda)
-
-        # 添加到list
-        lambda_list.append(current_lambda)
-
-    # 取最大值 并 +1
-    max_lambda = max(lambda_list) + 1
-
-    return max_lambda
-
 
 
 class instance:
@@ -1172,225 +1027,69 @@ class instance:
         self.mat = dis_mat(self.coord)
         #最大城市间距离
         self.max_distance = int(np.max(self.mat))
-        # # ---------------------------------------------
-        # # # 城市坐标 正态分布
-        # # self.g_coord = gaussian_coord(self.n)
-        # # # 距离矩阵
-        # # self.g_mat = dis_mat(self.g_coord)
-        # # ---------------------------------------------
-        # # 为了画图的参数
+        # ---------------------------------------------
+        # 为了画图的参数
         # self.graph_pos = {i: self.coord[i] for i in range(self.n)}
+        # ---------------------------------------------
+        # 对应的完全图
+        # self.graph_complete = nx.complete_graph(self.n)  # 对应的图
         # # ---------------------------------------------
-        # # 基于完全图
-        # result = iterate_for_complete_lamuda(self.n, self.mat)
-        # self.complete_lambda = result[0]  #完全图下的lambda
-        # self.complete_lambda_list = result[1]
-        self.graph_complete = nx.complete_graph(self.n)  # 对应的图
-        # self.complete_edges = result[2]
-        # self.left_city_right_complete = result[3] # 所选取到的最大lambda时的组合
-
-        # # ---------------------------------------------
-        # 最优路径图
-        result = read_LKH_optimal_tour_graph(self.n)
-        self.LKH_graph_optimal = result[0]
-        self.LKH_optimal_tour = result[1]
-        self.LKH_optimal_length = result[2]
-        # self.optimal_lambda = lambda_based_on_optimal(self.optimal_tour, self.mat)
-        # # ---------------------------------------------
-        # 普通的delauny
-        # result = delaunay(self.mat, self.coord)
-        # self.de_lambda = result[0]
-        # self.de_lambda_list = result[1]
-        # self.graph_de = result[2]  # 德劳内三角分割图
-        # self.de_edges = result[3]
-        # self.left_city_right_de = result[4]
-        self.graph_de = delaunay(self.coord)
-        # # ---------------------------------------------
-        # 基于de + seg1 
-        # result = delaunay(
-        #     self.mat,
-        #     self.coord,
-        #     seg1=edges_add_seg1(self.coord)
-        # )
-        # self.de_seg1_lambda = result[0]
-        # self.de_seg1_lambda_list = result[1]
-        # self.graph_de_seg1 = result[2]  # 对应的图
-        # self.de_seg1_edges = result[3]
-        # self.graph_de_seg1 = delaunay(
-        #     self.coord,
-        #     seg1=edges_add_seg1(self.coord)
-        # )
-        # # ---------------------------------------------  
-        # 基于de + seg1 + seg2
-        # result = delaunay(
-        #     self.mat,
-        #     self.coord,
-        #     seg1=edges_add_seg1(self.coord),
-        #     seg2=edges_add_seg2(self.coord)
-        # )
-        # self.de_seg1_seg2_lambda = result[0]
-        # self.de_seg1_seg2_lambda_list = result[1]
-        # self.graph_de_seg1_seg2 = result[2]  # 对应的图
-        # self.de_seg1_seg2_edges = result[3]
-
-        # self.graph_de_seg1_seg2 = delaunay(
-        #     self.coord,
-        #     seg1=edges_add_seg1(self.coord),
-        #     seg2=edges_add_seg2(self.coord)
-        # )
-        # # ---------------------------------------------
-        # 基于de + seg1 + seg2 + seg3
-        # result = delaunay(
-        #     self.mat,
+        # 普通的delauny三角分割
+        # self.graph_de = delaunay(self.coord)
+        # # -----------------------------------------------
+        # # 基于de + seg1 + seg2 + seg3
+        # self.graph_de_seg1_seg2_seg3 = delaunay(
         #     self.coord,
         #     seg1=edges_add_seg1(self.coord),
         #     seg2=edges_add_seg2(self.coord),
         #     seg3=edges_add_seg3(self.coord)
-        # )
-        # self.de_seg1_seg2_seg3_lambda = result[0]
-        # self.de_seg1_seg2_seg3_lambda_list = result[1]
-        # self.graph_de_seg1_seg2_seg3 = result[2]  # 对应的图
-        # self.de_seg1_seg2_seg3_edges = result[3]
-        # self.left_city_right_seg = result[4]
-
-        self.graph_de_seg1_seg2_seg3 = delaunay(
-            self.coord,
-            seg1=edges_add_seg1(self.coord),
-            seg2=edges_add_seg2(self.coord),
-            seg3=edges_add_seg3(self.coord)
-        )
-        # # ---------------------------------------------
-        # 基于de + nei2 
-        # result = delaunay(
-        #     self.mat,
-        #     self.coord,
-        #     nei2=edges_add_nei2(self.coord)
-        # )
-        # self.de_nei2_lambda = result[0]
-        # self.de_nei2_lambda_list = result[1]
-        # self.graph_de_nei2 = result[2]  # 加邻居的邻居
-        # self.de_nei2_edges = result[3]
-        # self.left_city_right_nei2 = result[4]
-
-        # self.graph_de_nei2 = delaunay(
-        #     self.coord,
-        #     nei2=edges_add_nei2(self.coord)
-        # )
+        # )        
         # # ---------------------------------------------
         # 基于de + nei2 + nei3
-        # result = delaunay(
-        #     self.mat,
-        #     self.coord,
-        #     nei2=edges_add_nei2(self.coord),
-        #     nei3=edges_add_nei3(self.coord)
-        # )
-        # self.de_nei2_nei3_lambda = result[0]
-        # self.de_nei2_nei3_lambda_list = result[1]
-        # self.graph_de_nei2_nei3 = result[2]  # 加邻居的邻居
-        # self.de_nei2_nei3_edges = result[3]
-        # self.left_city_right_nei = result[4]
-
         self.graph_de_nei2_nei3 = delaunay(
             self.coord,
             nei2=edges_add_nei2(self.coord),
             nei3=edges_add_nei3(self.coord)
         )
         # # ---------------------------------------------
-
-
-
-
-        # # ---------------------------------------------
         # 基于非完全图的距离矩阵
         # Python中的可变类型在作为参数传递给函数时，因为传递的是对象的引用而不是其副本。
         # 当你在函数内部修改这些可变对象时，外部的原始对象也会被修改。
 
         # 返回：0:把不存在的边替换为最大距离     1:除对角线外减去最大距离
-
         ##########################
-        # de
+        # # delaunay三角分割
         # self.mat_missing_edges_de, self.mat_missing_edges_de_for_qubo = creat_dis_mat_missing_edges(
         #     self.n, self.graph_de, self.mat.copy(), self.max_distance
         # )
-        self.mat_missing_edges_de, self.mat_missing_edges_de_for_qubo = creat_dis_mat_missing_edges(
-            self.n, self.graph_de, self.mat.copy(), self.max_distance
-        )
-        ##########################
-
-        # de + seg1
-        # self.mat_missing_edges_de_seg1, self.mat_missing_edges_de_seg1_for_qubo = creat_dis_mat_missing_edges(
-        #     self.n, self.graph_de_seg1, self.mat.copy(), self.max_distance
-        # )
-        # self.mat_missing_edges_de_seg1_for_qubo = creat_dis_mat_missing_edges(
-        #     self.n, self.graph_de_seg1, self.mat.copy(), self.max_distance
-        # )
-
-        # de + seg1 + seg2
-        # self.mat_missing_edges_de_seg1_seg2, self.mat_missing_edges_de_seg1_seg2_for_qubo = creat_dis_mat_missing_edges(
-        #     self.n, self.graph_de_seg1_seg2, self.mat.copy(), self.max_distance
-        # )
-        # self.mat_missing_edges_de_seg1_seg2_for_qubo = creat_dis_mat_missing_edges(
-        #     self.n, self.graph_de_seg1_seg2, self.mat.copy(), self.max_distance
-        # )
-
+        # ##########################
         # de + seg1 + seg2 + seg3
         # self.mat_missing_edges_de_seg1_seg2_seg3, self.mat_missing_edges_de_seg1_seg2_seg3_for_qubo = creat_dis_mat_missing_edges(
         #     self.n, self.graph_de_seg1_seg2_seg3, self.mat.copy(), self.max_distance
         # )
-        self.mat_missing_edges_de_seg1_seg2_seg3, self.mat_missing_edges_de_seg1_seg2_seg3_for_qubo = creat_dis_mat_missing_edges(
-            self.n, self.graph_de_seg1_seg2_seg3, self.mat.copy(), self.max_distance
-        )
 
-        #######################
-        # de + nei2
-        # self.mat_missing_edges_de_nei2, self.mat_missing_edges_de_nei2_for_qubo = creat_dis_mat_missing_edges(
-        #     self.n, self.graph_de_nei2, self.mat.copy(), self.max_distance
-        # )
-        # self.mat_missing_edges_de_nei2_for_qubo = creat_dis_mat_missing_edges(
-        #     self.n, self.graph_de_nei2, self.mat.copy(), self.max_distance
-        # )
-
+        # #######################
         # de + nei2 + nei3
-        # self.mat_missing_edges_de_nei2_nei3, self.mat_missing_edges_de_nei2_nei3_for_qubo = creat_dis_mat_missing_edges(
-        #     self.n, self.graph_de_nei2_nei3, self.mat.copy(), self.max_distance
-        # )
         self.mat_missing_edges_de_nei2_nei3, self.mat_missing_edges_de_nei2_nei3_for_qubo = creat_dis_mat_missing_edges(
             self.n, self.graph_de_nei2_nei3, self.mat.copy(), self.max_distance
         )
-
         #######################
-
-        # # ---------------------------------------------
-        # # 分别读取非完全图uncomplete的length和tour
-        result = read_LKH_length_and_tour(self.n, 'de')
-        self.LKH_de_length = result[0]
-        self.LKH_de_tour = result[1]
-
-
-        result = read_LKH_length_and_tour(self.n, 'seg')
-        self.LKH_seg_length = result[0]
-        self.LKH_seg_tour = result[1]
-
-        result = read_LKH_length_and_tour(self.n, 'nei')
-        self.LKH_nei_length = result[0]
-        self.LKH_nei_tour = result[1]
-
-        # # ---------------------------------------------
         # # 统计非完全图矩阵中最大距离出现的次数 对称矩阵除以2
         # # 并计算可以削减的二次项个数
-        # self.num_quadratic_eliminated_seg = 2 * self.n * int(np.count_nonzero(self.mat_missing_edges_seg == self.max_distance) / 2)
-        
-        # self.num_quadratic_eliminated_nei = 2 * self.n * int(np.count_nonzero(self.mat_missing_edges_nei == self.max_distance) / 2)
 
-        # self.num_quadratic_com = (self.n ** 2 *(self.n - 1)) + (int(np.count_nonzero(self.mat)) * self.n)
-        
+        # 完全图的二次项个数
+        # self.num_quadratic_complete = (self.n ** 2 *(self.n - 1)) * 2
+  
+        # de的二次项个数
         # self.num_quadratic_de = (self.n ** 2 *(self.n - 1)) + (int(np.count_nonzero(self.mat_missing_edges_de_for_qubo)) * self.n)
         
+        # seg的二次项个数
         # self.num_quadratic_de_seg1_seg2_seg3 = (self.n ** 2 *(self.n - 1)) + (int(np.count_nonzero(self.mat_missing_edges_de_seg1_seg2_seg3_for_qubo)) * self.n)
         
-        # self.num_quadratic_de_nei2_nei3 = (self.n ** 2 *(self.n - 1)) + (int(np.count_nonzero(self.mat_missing_edges_de_nei2_nei3_for_qubo)) * self.n)
+        # nei的二次项个数
+        self.num_quadratic_de_nei2_nei3 = (self.n ** 2 *(self.n - 1)) + (int(np.count_nonzero(self.mat_missing_edges_de_nei2_nei3_for_qubo)) * self.n)
         
-        # self.num_quadratic_total = (self.n ** 2 *(self.n - 1)) * 2
+        
 
     # 写入坐标
     def write_coord(self):
@@ -1403,7 +1102,7 @@ class instance:
     # 写入矩阵
     def write_mat(self):
         # 写参数
-        with open(f"even/even_uncomplete_graph_new/de/mat/random{self.n}.tsp", "w") as file:
+        with open(f"even/even_uncomplete_graph/de/mat/random{self.n}.tsp", "w") as file:
             file.write(
                 f"NAME: random{self.n}\r\
 TYPE: TSP\r\
@@ -1461,176 +1160,6 @@ TOUR_FILE = even/even_uncomplete_graph_new/de/tour/random{self.n}.txt"
     def static_LKH():
         subprocess.run(["LKH-2.exe", f"so_big_ins/random10000.par"])
 
-    # 用gurobi最优化
-    def gurobi(self, lambda_value, lambda_list=None):
-
-        # 创建模型
-        model = gp.Model(f"TSP_QUBO_test_{self.n}")
-
-        # 创建二进制变量
-        x = {}
-        for i in range(self.n):
-            for j in range(self.n):
-                x[i, j] = model.addVar(vtype=gp.GRB.BINARY, name=f"x_{i}_{j}")
-
-        # 目标函数（使用QUBO形式）
-        obj_expr = 0
-        for i in range(self.n):
-            for j in range(self.n):
-                d_ij = self.mat[i, j]
-                for t in range(self.n):
-                    obj_expr += d_ij * x[i, t] * x[j, (t + 1) % self.n]
-
-        # 城市惩罚系数为一个值
-        if lambda_list == None:
-            # 直接添加约束到obj，城市约束
-            for i in range(self.n):
-                obj_expr += self.lambda_value * (
-                    (sum(x[i, t] for t in range(self.n)) - 1) ** 2
-                )
-
-        # 城市惩罚系数为列表
-        else:
-            # 列表形式，城市约束
-            for i in range(self.n):
-                obj_expr += self.de_lambda_list[i] * (
-                    (sum(x[i, t] for t in range(self.n)) - 1) ** 2
-                )
-
-        # 直接添加约束到obj，时间约束
-        for t in range(self.n):
-            obj_expr += self.lambda_value * (
-                (sum(x[i, t] for i in range(self.n)) - 1) ** 2
-            )
-
-        # 目标函数最小化
-        model.setObjective(obj_expr, gp.GRB.MINIMIZE)
-
-        # 设置求解器时间参数
-        model.Params.TimeLimit = 7200
-
-        # 设置cutoff，达到最优解就停止
-        model.setParam('Cutoff', self.optimal_length)
-
-        # 设置日志文件名
-        log_file = f"gurobi_optimal_tour_log/gurobi_log/random{self.n}.log"
-
-        # 设置求解器参数，将日志输出到文件
-        model.Params.LogFile = log_file
-
-        # 优化
-        model.optimize()
-
-        # 检查可行性
-        # 到达时间限制  或者找到最优解（似乎可以不用这个条件）
-        # if model.status == gp.GRB.TIME_LIMIT or model.status == gp.GRB.OPTIMAL:
-
-        # 记录打破的制约的个数
-        un_city = 0
-        un_time = 0
-
-        # 检查城市约束是否满足
-        for i in range(self.n):
-            if sum(x[i, t].x for t in range(self.n)) != 1:
-                un_city += 1
-
-        # 检查时间约束是否满足
-        for t in range(self.n):
-            if sum(x[i, t].x for i in range(self.n)) != 1:
-                un_time += 1
-
-        # 记录
-        with open(f"gurobi_optimal_tour_log/gurobi_log/random{self.n}.log", "a") as file:
-            file.write(f"\rcity broken:{un_city},time broken:{un_time}\r")
-
-        # 记录当前的变量矩阵
-        solution_mat = np.full((self.n, self.n), 2)
-        for i in range(self.n):
-            for j in range(self.n):
-                solution_mat[i, j] = int(x[i, j].x)
-
-
-        dic = {}
-        solution_mat_list = solution_mat.tolist()
-        # ndarray不能直接写入json
-        dic['solution_mat'] = solution_mat_list
-        dic['best_solution'] = model.ObjVal
-
-        json.dump(dic, open(f"gurobi_optimal_tour_log/solution_log/random{self.n}.json", "w"), indent=4)
-
-
-
-
-    def get_solution_mat(self):
-        # 从json中读取当前解的矩阵
-        with open(f"gurobi_optimal_tour_log/solution_log/random{self.n}.json", "r") as file:
-            dic = json.load(file)
-            array = np.array(dic['solution_mat'])
-        return array
-
-
-
-    # 用gurobi解TSP
-    def gurobi_LKH(self):
-        # 创建模型
-        model = gp.Model(f"TSP_QUBO_test_{self.n}")
-
-        # 创建二进制变量
-        x = {}
-        for i in range(self.n):
-            for j in range(self.n):
-                x[i, j] = model.addVar(vtype=gp.GRB.BINARY, name=f"x_{i}_{j}")
-
-        # 目标函数（使用QUBO形式）
-        obj_expr = 0
-        for i in range(self.n):
-            for j in range(self.n):
-                d_ij = self.mat[i, j]
-                for t in range(self.n):
-                    obj_expr += d_ij * x[i, t] * x[j, (t + 1) % self.n]
-        pass
-
-        # 添加约束，城市约束
-        city_constraints = {}
-        for i in range(self.n):
-            city_constraints[i] = model.addConstr(
-                gp.quicksum(x[i, t] for t in range(self.n)) == 1,
-                name=f"city_constraint_{i}",
-            )
-
-        # 添加约束，时间约束
-        time_constraints = {}
-        for t in range(self.n):
-            time_constraints[t] = model.addConstr(
-                gp.quicksum(x[i, t] for i in range(self.n)) == 1,
-                name=f"time_constraint_{t}",
-            )
-
-        # 目标函数最小化
-        model.setObjective(obj_expr, gp.GRB.MINIMIZE)
-
-        # 设置求解器时间参数
-        model.Params.TimeLimit = 100
-
-        # 设置日志文件名
-        log_file = f"log/random{self.n}.log"
-
-        # 设置求解器参数，将日志输出到文件
-        model.Params.LogFile = log_file
-
-        # 优化
-        model.optimize()
-
-        if model.status == gp.GRB.OPTIMAL:
-            print("最短路径长度:", model.objVal)
-            print("最短路径:")
-            tour = []
-
-            for j in range(self.n):
-                for i in range(self.n):
-                    if x[i, j].x == 1:
-                        tour.append(i + 1)
-            print(tour)
 
     # 如果不是子图画出没有包含的边
     def draw_not_subgraph(self):
@@ -1653,117 +1182,17 @@ TOUR_FILE = even/even_uncomplete_graph_new/de/tour/random{self.n}.txt"
         else:
             return None
 
-    # 根据nei，创建tsp的qubo模型(索引从0开始)
-    def tsp_nei_qubo_model(self):
-
-        # n
-        # liner: n^2
-        # quadratic（上三角）: 2n^2(n-1) 项
-
-
-        # 距离矩阵（假设对称距离）
-        # self.n = 4
-        # self.mat = np.array([
-        #     [0, 1, 2, 3],
-        #     [1, 0, 4, 5],
-        #     [2, 4, 0, 6],
-        #     [3, 5, 6, 0]
-        # ])
-        # self.max_distance = 6
-    
-
-
-    
-        # 创建二进制变量 x[i, t]，表示城市 i 是否在路径的第 t 位置上
-        tsp_x = Array.create('x', shape=(self.n, self.n), vartype='BINARY')
-
-        # 约束1：每个城市必须且只能被访问一次
-        H_city = sum((sum(tsp_x[i, t] for t in range(self.n)) - 1) ** 2 for i in range(self.n))
-
-        # 约束2：每次只能访问一个城市
-        H_time = sum((sum(tsp_x[i, t] for i in range(self.n)) - 1) ** 2 for t in range(self.n))
-
-        # 目标函数：最小化路径的总距离
-        H_obj = sum(self.mat_missing_edges_nei_for_qubo[i, j] * tsp_x[i, t] * tsp_x[j, (t+1) % self.n] for i in range(self.n) for j in range(self.n) for t in range(self.n))
-
-        # 总哈密顿量：目标函数 + 约束条件
-        H = H_obj + self.max_distance * (H_city + H_time)
-
-        # 编译模型
-        model = H.compile()
-
-        # 转换为 QUBO
-        qubo, offset = model.to_qubo()
-
-        # # 检查
-
-        # cnt_liner = 0
-        # cnt_quadratic = 0
-        # for key, val in sorted(qubo.items()):
-        #     # 一次项
-        #     if key[0] == key[1]:
-        #         cnt_liner += 1
-
-        #     # 二次项
-        #     else:
-        #         cnt_quadratic += 1
-        # print(cnt_quadratic)
-
-        return qubo
-    
-    # 根据seg，创建tsp的qubo模型
-    def tsp_seg_qubo_model(self):
-    
-        # 创建二进制变量 x[i, t]，表示城市 i 是否在路径的第 t 位置上
-        tsp_x = Array.create('x', shape=(self.n, self.n), vartype='BINARY')
-
-        # 约束1：每个城市必须且只能被访问一次
-        H_city = sum((sum(tsp_x[i, t] for t in range(self.n)) - 1) ** 2 for i in range(self.n))
-
-        # 约束2：每次只能访问一个城市
-        H_time = sum((sum(tsp_x[i, t] for i in range(self.n)) - 1) ** 2 for t in range(self.n))
-
-        # 目标函数：最小化路径的总距离
-        H_obj = sum(self.mat_missing_edges_seg_for_qubo[i, j] * tsp_x[i, t] * tsp_x[j, (t+1) % self.n] for i in range(self.n) for j in range(self.n) for t in range(self.n))
-
-        # 总哈密顿量：目标函数 + 约束条件
-        H = H_obj + self.max_distance * (H_city + H_time)
-
-        # 编译模型
-        model = H.compile()
-
-        # 转换为 QUBO
-        qubo, offset = model.to_qubo()
-
-        return qubo
-    
-    # 根据完全图，创建tsp模型
-    def tsp_complete_qubo_model(self):
-    
-        # 创建二进制变量 x[i, t]，表示城市 i 是否在路径的第 t 位置上
-        tsp_x = Array.create('x', shape=(self.n, self.n), vartype='BINARY')
-
-        # 约束1：每个城市必须且只能被访问一次
-        H_city = sum((sum(tsp_x[i, t] for t in range(self.n)) - 1) ** 2 for i in range(self.n))
-
-        # 约束2：每次只能访问一个城市
-        H_time = sum((sum(tsp_x[i, t] for i in range(self.n)) - 1) ** 2 for t in range(self.n))
-
-        # 目标函数：最小化路径的总距离
-        H_obj = sum(self.mat[i, j] * tsp_x[i, t] * tsp_x[j, (t+1) % self.n] for i in range(self.n) for j in range(self.n) for t in range(self.n))
-
-        # 总哈密顿量：目标函数 + 约束条件
-        H = H_obj + self.max_distance * (H_city + H_time)
-
-        # 编译模型
-        model = H.compile()
-
-        # 转换为 QUBO
-        qubo, offset = model.to_qubo()
-
-        return qubo
 
     def tsp_qubo_model(self, mat_index):
+        '''
+        函数说明：根据不同的距离矩阵创建tsp的qubo模型
+
+        mat_index:  
+        0.de    
+        1.de+seg1+seg2+seg3   
+        2.de+nei2+nei3   
+        3.complete
+        '''
         # 创建二进制变量 x[i, t]，表示城市 i 是否在路径的第 t 位置上
         tsp_x = Array.create('x', shape=(self.n, self.n), vartype='BINARY')
 
@@ -1776,15 +1205,12 @@ TOUR_FILE = even/even_uncomplete_graph_new/de/tour/random{self.n}.txt"
         # 目标函数：最小化路径的总距离
         # 方法  
         # 0.de    
-        # 1.de+seg1  2.de+seg1+seg2   3.de+seg1+seg2+seg3   
-        # 4.de+nei2  5.de+nei2+nei3   
-        # 6.complete
+        # 1.de+seg1+seg2+seg3   
+        # 2.de+nei2+nei3   
+        # 3.complete
         mat_group = [
             self.mat_missing_edges_de_for_qubo,
-            self.mat_missing_edges_de_seg1_for_qubo,
-            self.mat_missing_edges_de_seg1_seg2_for_qubo,
             self.mat_missing_edges_de_seg1_seg2_seg3_for_qubo,
-            self.mat_missing_edges_de_nei2_for_qubo,
             self.mat_missing_edges_de_nei2_nei3_for_qubo,
             self.mat          
             ]
@@ -1799,7 +1225,7 @@ TOUR_FILE = even/even_uncomplete_graph_new/de/tour/random{self.n}.txt"
         model = H.compile()
 
         # 转换为 QUBO
-        qubo, offset = model.to_qubo()
+        qubo, _ = model.to_qubo()
 
         return qubo
         
@@ -1821,7 +1247,7 @@ def check():
 def get_time_value():
     for i in range(5, 201):
         # 文件路径
-        file_path = f"even/even_uncomplete_graph_new/nei/time_log/random{i}.txt"
+        file_path = f"even/LKH_uncomplete_graph/nei/time_log/random{i}.txt"
 
         # 正则表达式匹配时间项
         time_pattern = r"(Time\.(min|avg|max|total) = [\d\.]+ sec\.)"
@@ -1881,16 +1307,13 @@ def embed_test():
     ############################
     # 方法  method
     # 0.de    
-    # 1.de+seg1  2.de+seg1+seg2   3.de+seg1+seg2+seg3   
-    # 4.de+nei2  5.de+nei2+nei3   
-    # 6.complete
+    # 1.de+seg1+seg2+seg3   
+    # 2.de+nei2+nei3   
+    # 3.complete
 
     method_lst = [
         'de',
-        'de_seg1',
-        'de_seg1_seg2',
         'de_seg1_seg2_seg3',
-        'de_nei2',
         'de_nei2_nei3',
         'complete'
     ]
@@ -1933,7 +1356,7 @@ def embed_test():
     for add in range(0, 301):
     ################################
 
-        with open(f'embed_result3/{topology}/{topology}_{method}.txt', "a+", encoding="utf-8") as file:
+        with open(f'embed_result/{topology}/{topology}_{method}.txt', "a+", encoding="utf-8") as file:
             print(f"{topology} = {initial + add}", file = file)
 
         for i in range(max_size, 201):
@@ -1958,7 +1381,10 @@ def embed_test():
 def main():
     for i in range(5, 201):
         ins = instance(i)
-        print(ins.optimal_length)
+        print(ins.num_quadratic_de_nei2_nei3)
+        
+
+
 
 
 
@@ -1970,8 +1396,7 @@ if __name__ == "__main__":
 
     main()
 
-    
-    #print(os.urandom(4))
+
 
    
 

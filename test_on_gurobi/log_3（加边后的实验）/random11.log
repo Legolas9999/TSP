@@ -1,50 +1,0 @@
-
-Gurobi 11.0.0 (linux64) logging started Sat Apr 13 18:31:47 2024
-
-Set parameter LogFile to value "log_3/random11.log"
-Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (linux64 - "Ubuntu 22.04.3 LTS")
-
-CPU model: Intel(R) Xeon(R) Platinum 8358 CPU @ 2.60GHz, instruction set [SSE2|AVX|AVX2|AVX512]
-Thread count: 64 physical cores, 64 logical processors, using up to 32 threads
-
-Optimize a model with 0 rows, 121 columns and 0 nonzeros
-Model fingerprint: 0x9f5e994e
-Model has 2541 quadratic objective terms
-Variable types: 0 continuous, 121 integer (121 binary)
-Coefficient statistics:
-  Matrix range     [0e+00, 0e+00]
-  Objective range  [3e+02, 3e+02]
-  QObjective range [1e+01, 3e+02]
-  Bounds range     [1e+00, 1e+00]
-  RHS range        [0e+00, 0e+00]
-Found heuristic solution: objective 1760.0000000
-Found heuristic solution: objective 402.0000000
-Found heuristic solution: objective 355.0000000
-Presolve time: 0.03s
-Presolved: 0 rows, 121 columns, 0 nonzeros
-Presolved model has 2541 quadratic objective terms
-Variable types: 0 continuous, 121 integer (121 binary)
-
-Root relaxation: objective -1.704861e+03, 120 iterations, 0.00 seconds (0.00 work units)
-
-    Nodes    |    Current Node    |     Objective Bounds      |     Work
- Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
-
-     0     0 -1704.8606    0  119  355.00000 -1704.8606   580%     -    0s
-     0     0 -1704.8606    0  119  355.00000 -1704.8606   580%     -    0s
-     0     2 -1704.8606    0  119  355.00000 -1704.8606   580%     -    0s
-H   42    64                     347.0000000 -1421.4441   510%   9.8    0s
-H   96   128                     323.0000000 -1419.0235   539%   7.9    0s
-H  116   128                     318.0000000 -1419.0235   546%   7.3    0s
-
-Cutting planes:
-  RLT: 144
-
-Explored 7254 nodes (82209 simplex iterations) in 1.53 seconds (1.17 work units)
-Thread count was 32 (of 64 available processors)
-
-Solution count 6: 318 323 347 ... 1760
-
-Optimal solution found (tolerance 1.00e-04)
-Best objective 3.180000000000e+02, best bound 3.180000000000e+02, gap 0.0000%
-city broken:0,time broken:0[0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0][0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0][0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0][0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0][0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0][1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0][0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0][0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0][0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0][0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1][0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0]

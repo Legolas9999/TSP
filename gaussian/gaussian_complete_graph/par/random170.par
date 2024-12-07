@@ -1,1 +1,0 @@
-PROBLEM_FILE = gaussian/gaussian_complete_graph/mat/random170.tspINITIAL_PERIOD = 1000MAX_CANDIDATES = 4MAX_TRIALS = 1000MOVE_TYPE = 6PATCHING_C = 6PATCHING_A = 5RECOMBINATION = GPX2RUNS = 10TOUR_FILE = gaussian/gaussian_complete_graph/tour/random170.txt

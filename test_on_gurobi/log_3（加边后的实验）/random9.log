@@ -1,52 +1,0 @@
-
-Gurobi 11.0.0 (linux64) logging started Sat Apr 13 18:31:28 2024
-
-Set parameter LogFile to value "log_3/random9.log"
-Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (linux64 - "Ubuntu 22.04.3 LTS")
-
-CPU model: Intel(R) Xeon(R) Platinum 8358 CPU @ 2.60GHz, instruction set [SSE2|AVX|AVX2|AVX512]
-Thread count: 64 physical cores, 64 logical processors, using up to 32 threads
-
-Optimize a model with 0 rows, 81 columns and 0 nonzeros
-Model fingerprint: 0x199e7e17
-Model has 1377 quadratic objective terms
-Variable types: 0 continuous, 81 integer (81 binary)
-Coefficient statistics:
-  Matrix range     [0e+00, 0e+00]
-  Objective range  [4e+02, 4e+02]
-  QObjective range [3e+01, 4e+02]
-  Bounds range     [1e+00, 1e+00]
-  RHS range        [0e+00, 0e+00]
-Found heuristic solution: objective 1782.0000000
-Found heuristic solution: objective 489.0000000
-Found heuristic solution: objective 444.0000000
-Found heuristic solution: objective 401.0000000
-Found heuristic solution: objective 359.0000000
-Presolve time: 0.01s
-Presolved: 0 rows, 81 columns, 0 nonzeros
-Presolved model has 1377 quadratic objective terms
-Variable types: 0 continuous, 81 integer (81 binary)
-Found heuristic solution: objective 325.0000000
-
-Root relaxation: objective -6.541872e+02, 79 iterations, 0.00 seconds (0.00 work units)
-
-    Nodes    |    Current Node    |     Objective Bounds      |     Work
- Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
-
-     0     0 -654.18719    0   79  325.00000 -654.18719   301%     -    0s
-     0     0 -654.18230    0   79  325.00000 -654.18230   301%     -    0s
-     0     2 -652.33758    0   79  325.00000 -652.33758   301%     -    0s
-H   59    64                     318.0000000 -513.12093   261%  10.0    0s
-H   99   125                     307.0000000 -507.41124   265%   8.8    0s
-
-Cutting planes:
-  RLT: 64
-
-Explored 4253 nodes (27560 simplex iterations) in 0.72 seconds (0.48 work units)
-Thread count was 32 (of 64 available processors)
-
-Solution count 8: 307 318 325 ... 1782
-
-Optimal solution found (tolerance 1.00e-04)
-Best objective 3.070000000000e+02, best bound 3.070000000000e+02, gap 0.0000%
-city broken:0,time broken:0[0, 0, 0, 0, 0, 1, 0, 0, 0][1, 0, 0, 0, 0, 0, 0, 0, 0][0, 0, 0, 0, 0, 0, 0, 1, 0][0, 0, 0, 0, 0, 0, 0, 0, 1][0, 0, 0, 0, 0, 0, 1, 0, 0][0, 0, 0, 0, 1, 0, 0, 0, 0][0, 1, 0, 0, 0, 0, 0, 0, 0][0, 0, 0, 1, 0, 0, 0, 0, 0][0, 0, 1, 0, 0, 0, 0, 0, 0]
