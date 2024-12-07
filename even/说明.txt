@@ -1,1 +1,7 @@
 加了new的是加了time_log记录时间的！
+
+even_complete_graph_new 和  even_uncomplete_graph_new是用LKH来解决的
+
+其他的
+
+concorde_complete_graph 和 concorde_uncomplete_graph 是用 concorde来解决的

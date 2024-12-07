@@ -961,7 +961,7 @@ def edges_add_nei3(cities_coord):
 
     return edges_to_connect
 
-# 从seg文件读取length
+# 从文件读取length,针对uncomplete
 def read_LKH_length_and_tour(num, method):
     with open(f"even/even_uncomplete_graph_new/{method}/tour/random{num}.txt", "r") as file:
 
@@ -984,7 +984,7 @@ def read_LKH_length_and_tour(num, method):
 
 
 # 画出最佳路径图
-def optimal_tour_graph(num_city):
+def read_LKH_optimal_tour_graph(num_city):
     # 从文件读取最佳路径
     with open(f"even/even_complete_graph_new/tour/random{num_city}.txt", "r") as file:
         result = file.readlines()
@@ -1191,10 +1191,10 @@ class instance:
 
         # # ---------------------------------------------
         # 最优路径图
-        result = optimal_tour_graph(self.n)
-        self.graph_optimal = result[0]
-        self.optimal_tour = result[1]
-        self.optimal_length = result[2]
+        result = read_LKH_optimal_tour_graph(self.n)
+        self.LKH_graph_optimal = result[0]
+        self.LKH_optimal_tour = result[1]
+        self.LKH_optimal_length = result[2]
         # self.optimal_lambda = lambda_based_on_optimal(self.optimal_tour, self.mat)
         # # ---------------------------------------------
         # 普通的delauny
@@ -1361,7 +1361,7 @@ class instance:
         #######################
 
         # # ---------------------------------------------
-        # # 分别读取非完全图的length和tour
+        # # 分别读取非完全图uncomplete的length和tour
         result = read_LKH_length_and_tour(self.n, 'de')
         self.LKH_de_length = result[0]
         self.LKH_de_tour = result[1]
