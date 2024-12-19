@@ -924,17 +924,15 @@ def read_concorde_result(num, method):
             tour.extend(map(int, line.strip().split()))
 
 
-    # 从log文件中提取solution和运行时间
+    # 从log文件中只提取solution
     with open(log_path, 'r') as file:
         content = file.read()
 
-        # 使用正则表达式查找Optimal Solution(length)和Total Running Time
+        # 使用正则表达式查找Optimal Solution(length)
         length_match = re.search(r"Optimal Solution: (\d+\.\d+)", content)
-        total_running_time_match = re.search(r"Total Running Time: (\d+\.\d+)", content)
 
         # 提取并打印结果
         length = length_match.group(1) if length_match else "Not found"
-        running_time = total_running_time_match.group(1) if total_running_time_match else "Not found"
 
 
     # 创建LKH得到的最优路径图
@@ -944,7 +942,7 @@ def read_concorde_result(num, method):
     edges = [(tour[i], tour[(i + 1) % num]) for i in range(num)]
     G.add_edges_from(edges)
 
-    return G, tour, int(float(length)), running_time
+    return G, tour, int(float(length))
 
 # 判断是否是子图，只考虑边(最优路径图，添加边的图)
 def is_subgraph(G_optimal, G_add_edges):
@@ -1029,7 +1027,7 @@ class instance:
         self.max_distance = int(np.max(self.mat))
         # ---------------------------------------------
         # 为了画图的参数
-        # self.graph_pos = {i: self.coord[i] for i in range(self.n)}
+        self.graph_pos = {i: self.coord[i] for i in range(self.n)}
         # ---------------------------------------------
         # 对应的完全图
         # self.graph_complete = nx.complete_graph(self.n)  # 对应的图
@@ -1377,15 +1375,51 @@ def embed_test():
 
 
 
+def compare_graph(G1, G2):
+    """
+    return: 路径一样true， 不一样false
+    """
+
+    for node in range(len(G1.nodes)):
+        if set(G1.neighbors(node)) != set(G2.neighbors(node)):
+            return False
+    else:
+        return True
+
+
 
 def main():
-    for i in range(5, 201):
+    for i in range(25, 26):
         ins = instance(i)
-        print(ins.num_quadratic_de_nei2_nei3)
-        
+        LKH_graph, LKH_tour, LKH_length = read_LKH_result(i, 'complete')
+        concorde_graph, concorde_tour, concorde_length = read_concorde_result(i, 'complete')
+
+
+        print(i, LKH_length, concorde_length)
 
 
 
+        # fig, axes = plt.subplots(1, 2, figsize=(12, 6))  # 1 行 2 列的子图
+
+        # # 绘制第一张图
+        # nx.draw(
+        #     LKH_graph, ins.graph_pos, 
+        #     ax=axes[0],  # 指定子图
+        #     with_labels=True, node_size=300, node_color="skyblue", width=0.5
+        # )
+        # axes[0].set_title("LKH Graph")
+
+        # # 绘制第二张图
+        # nx.draw(
+        #     concorde_graph, ins.graph_pos, 
+        #     ax=axes[1],  # 指定子图
+        #     with_labels=True, node_size=300, node_color="skyblue", width=0.5
+        # )
+        # axes[1].set_title("Concorde Graph")
+
+        # # 调整布局并显示
+        # plt.tight_layout()
+        # plt.show()
 
 
 if __name__ == "__main__":
