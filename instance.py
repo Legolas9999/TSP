@@ -1027,7 +1027,7 @@ class instance:
         self.max_distance = int(np.max(self.mat))
         # ---------------------------------------------
         # 为了画图的参数
-        self.graph_pos = {i: self.coord[i] for i in range(self.n)}
+        # self.graph_pos = {i: self.coord[i] for i in range(self.n)}
         # ---------------------------------------------
         # 对应的完全图
         # self.graph_complete = nx.complete_graph(self.n)  # 对应的图
@@ -1035,14 +1035,14 @@ class instance:
         # 普通的delauny三角分割
         # self.graph_de = delaunay(self.coord)
         # # -----------------------------------------------
-        # # 基于de + seg1 + seg2 + seg3
+        # 基于de + seg1 + seg2 + seg3
         # self.graph_de_seg1_seg2_seg3 = delaunay(
         #     self.coord,
         #     seg1=edges_add_seg1(self.coord),
         #     seg2=edges_add_seg2(self.coord),
         #     seg3=edges_add_seg3(self.coord)
         # )        
-        # # ---------------------------------------------
+        # # # ---------------------------------------------
         # 基于de + nei2 + nei3
         self.graph_de_nei2_nei3 = delaunay(
             self.coord,
@@ -1068,9 +1068,9 @@ class instance:
 
         # #######################
         # de + nei2 + nei3
-        self.mat_missing_edges_de_nei2_nei3, self.mat_missing_edges_de_nei2_nei3_for_qubo = creat_dis_mat_missing_edges(
-            self.n, self.graph_de_nei2_nei3, self.mat.copy(), self.max_distance
-        )
+        # self.mat_missing_edges_de_nei2_nei3, self.mat_missing_edges_de_nei2_nei3_for_qubo = creat_dis_mat_missing_edges(
+        #     self.n, self.graph_de_nei2_nei3, self.mat.copy(), self.max_distance
+        # )
         #######################
         # # 统计非完全图矩阵中最大距离出现的次数 对称矩阵除以2
         # # 并计算可以削减的二次项个数
@@ -1085,7 +1085,7 @@ class instance:
         # self.num_quadratic_de_seg1_seg2_seg3 = (self.n ** 2 *(self.n - 1)) + (int(np.count_nonzero(self.mat_missing_edges_de_seg1_seg2_seg3_for_qubo)) * self.n)
         
         # nei的二次项个数
-        self.num_quadratic_de_nei2_nei3 = (self.n ** 2 *(self.n - 1)) + (int(np.count_nonzero(self.mat_missing_edges_de_nei2_nei3_for_qubo)) * self.n)
+        # self.num_quadratic_de_nei2_nei3 = (self.n ** 2 *(self.n - 1)) + (int(np.count_nonzero(self.mat_missing_edges_de_nei2_nei3_for_qubo)) * self.n)
         
         
 
@@ -1374,7 +1374,7 @@ def embed_test():
                 break
 
 
-
+# 使用图比较两个回路是否一致
 def compare_graph(G1, G2):
     """
     return: 路径一样true， 不一样false
@@ -1389,13 +1389,20 @@ def compare_graph(G1, G2):
 
 
 def main():
-    for i in range(25, 26):
+    for i in range(5, 201):
         ins = instance(i)
-        LKH_graph, LKH_tour, LKH_length = read_LKH_result(i, 'complete')
-        concorde_graph, concorde_tour, concorde_length = read_concorde_result(i, 'complete')
 
 
-        print(i, LKH_length, concorde_length)
+
+        #LKH_optimal_graph, LKH_optimal_tour, LKH_optimal_length = read_LKH_result(i, 'complete')
+        # concorde_graph, concorde_tour, concorde_length = read_concorde_result(i, 'complete')
+
+        method = 'nei'
+
+        concorde_xianzhi_graph, concorde_xianzhi_tour, concorde_xianzhi_length = read_concorde_result(i, method)
+        # concorde_xianzhi = read_concorde_result(i, m)[2]
+
+        print(i, is_subgraph(concorde_xianzhi_graph, ins.graph_de_nei2_nei3))
 
 
 
