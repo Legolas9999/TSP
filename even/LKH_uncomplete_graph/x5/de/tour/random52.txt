@@ -1,0 +1,60 @@
+NAME : random52.606.tour
+COMMENT : Length = 606
+COMMENT : Found by LKH [Keld Helsgaun] Mon Dec 30 21:03:00 2024
+TYPE : TOUR
+DIMENSION : 52
+TOUR_SECTION
+1
+20
+37
+44
+36
+33
+42
+5
+8
+15
+7
+29
+48
+26
+30
+13
+25
+9
+50
+47
+32
+51
+6
+43
+16
+22
+41
+27
+31
+39
+23
+10
+52
+17
+45
+35
+14
+4
+3
+2
+28
+12
+40
+46
+18
+24
+38
+19
+11
+21
+49
+34
+-1
+EOF

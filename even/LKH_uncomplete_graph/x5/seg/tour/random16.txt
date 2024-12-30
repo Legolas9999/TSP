@@ -1,0 +1,24 @@
+NAME : random16.304.tour
+COMMENT : Length = 304
+COMMENT : Found by LKH [Keld Helsgaun] Mon Dec 30 21:12:08 2024
+TYPE : TOUR
+DIMENSION : 16
+TOUR_SECTION
+1
+10
+8
+3
+13
+2
+6
+4
+7
+12
+9
+14
+15
+11
+5
+16
+-1
+EOF

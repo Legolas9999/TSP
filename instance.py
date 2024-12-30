@@ -980,7 +980,7 @@ def is_subgraph2(G_optimal, G_add_de):
 
 # 基于原有距离矩阵生成missing edges的距离矩阵，用最大距离
 # 返回 0：用最大值代替   1：减去最大值
-def creat_dis_mat_missing_edges(n, G_add_edges, dis_mat_for_qubo, max_distance, multiple):
+def creat_dis_mat_missing_edges(n, G_add_edges, dis_mat_for_qubo, max_distance, multiple=1):
     # 完全图的边
     complete_edges = [{i, j} for i in range(n) for j in range(i + 1, n)]
 
@@ -1023,59 +1023,59 @@ class instance:
     def __init__(self, n):
         # 城市个数
         self.n = n
-        # ---------------------------------------------
-        # 城市坐标 平均分布
-        self.coord = uniform_coord(self.n)
-        # 距离矩阵
-        self.mat = dis_mat(self.coord)
-        #最大城市间距离
-        self.max_distance = int(np.max(self.mat))
-        # ---------------------------------------------
-        # 为了画图的参数
-        # self.graph_pos = {i: self.coord[i] for i in range(self.n)}
-        # ---------------------------------------------
-        # 对应的完全图
-        # self.graph_complete = nx.complete_graph(self.n)  # 对应的图
         # # ---------------------------------------------
-        # 普通的delauny三角分割
-        self.graph_de = delaunay(self.coord)
-        # # -----------------------------------------------
-        # 基于de + seg1 + seg2 + seg3
-        self.graph_de_seg1_seg2_seg3 = delaunay(
-            self.coord,
-            seg1=edges_add_seg1(self.coord),
-            seg2=edges_add_seg2(self.coord),
-            seg3=edges_add_seg3(self.coord)
-        )        
+        # # 城市坐标 平均分布
+        # self.coord = uniform_coord(self.n)
+        # # 距离矩阵
+        # self.mat = dis_mat(self.coord)
+        # #最大城市间距离
+        # self.max_distance = int(np.max(self.mat))
+        # # ---------------------------------------------
+        # # 为了画图的参数
+        # # self.graph_pos = {i: self.coord[i] for i in range(self.n)}
+        # # ---------------------------------------------
+        # # 对应的完全图
+        # # self.graph_complete = nx.complete_graph(self.n)  # 对应的图
         # # # ---------------------------------------------
-        # 基于de + nei2 + nei3
-        self.graph_de_nei2_nei3 = delaunay(
-            self.coord,
-            nei2=edges_add_nei2(self.coord),
-            nei3=edges_add_nei3(self.coord)
-        )
-        # # ---------------------------------------------
-        # 基于非完全图的距离矩阵
-        # Python中的可变类型在作为参数传递给函数时，因为传递的是对象的引用而不是其副本。
-        # 当你在函数内部修改这些可变对象时，外部的原始对象也会被修改。
-        multiple = 5
-        # 返回：0:把不存在的边替换为最大距离     1:除对角线外减去最大距离
-        ##########################
-        # delaunay三角分割
-        self.mat_missing_edges_de, self.mat_missing_edges_de_for_qubo = creat_dis_mat_missing_edges(
-            self.n, self.graph_de, self.mat.copy(), self.max_distance, multiple
-        )
-        ##########################
-        # de + seg1 + seg2 + seg3
-        self.mat_missing_edges_de_seg1_seg2_seg3, self.mat_missing_edges_de_seg1_seg2_seg3_for_qubo = creat_dis_mat_missing_edges(
-            self.n, self.graph_de_seg1_seg2_seg3, self.mat.copy(), self.max_distance, multiple
-        )
+        # # 普通的delauny三角分割
+        # self.graph_de = delaunay(self.coord)
+        # # # -----------------------------------------------
+        # # 基于de + seg1 + seg2 + seg3
+        # self.graph_de_seg1_seg2_seg3 = delaunay(
+        #     self.coord,
+        #     seg1=edges_add_seg1(self.coord),
+        #     seg2=edges_add_seg2(self.coord),
+        #     seg3=edges_add_seg3(self.coord)
+        # )        
+        # # # # ---------------------------------------------
+        # # 基于de + nei2 + nei3
+        # self.graph_de_nei2_nei3 = delaunay(
+        #     self.coord,
+        #     nei2=edges_add_nei2(self.coord),
+        #     nei3=edges_add_nei3(self.coord)
+        # )
+        # # # ---------------------------------------------
+        # # 基于非完全图的距离矩阵
+        # # Python中的可变类型在作为参数传递给函数时，因为传递的是对象的引用而不是其副本。
+        # # 当你在函数内部修改这些可变对象时，外部的原始对象也会被修改。
+        # # multiple = 10
+        # # 返回：0:把不存在的边替换为最大距离     1:除对角线外减去最大距离
+        # ##########################
+        # # delaunay三角分割
+        # self.mat_missing_edges_de, self.mat_missing_edges_de_for_qubo = creat_dis_mat_missing_edges(
+        #     self.n, self.graph_de, self.mat.copy(), self.max_distance, multiple
+        # )
+        # ##########################
+        # # de + seg1 + seg2 + seg3
+        # self.mat_missing_edges_de_seg1_seg2_seg3, self.mat_missing_edges_de_seg1_seg2_seg3_for_qubo = creat_dis_mat_missing_edges(
+        #     self.n, self.graph_de_seg1_seg2_seg3, self.mat.copy(), self.max_distance, multiple
+        # )
 
-        #######################
-        # de + nei2 + nei3
-        self.mat_missing_edges_de_nei2_nei3, self.mat_missing_edges_de_nei2_nei3_for_qubo = creat_dis_mat_missing_edges(
-            self.n, self.graph_de_nei2_nei3, self.mat.copy(), self.max_distance, multiple
-        )
+        # #######################
+        # # de + nei2 + nei3
+        # self.mat_missing_edges_de_nei2_nei3, self.mat_missing_edges_de_nei2_nei3_for_qubo = creat_dis_mat_missing_edges(
+        #     self.n, self.graph_de_nei2_nei3, self.mat.copy(), self.max_distance, multiple
+        # )
         #######################
         # # 统计非完全图矩阵中最大距离出现的次数 对称矩阵除以2
         # # 并计算可以削减的二次项个数
@@ -1119,7 +1119,7 @@ EDGE_WEIGHT_SECTION\r"
             for i in range(self.n):
                 for j in range(self.n):
                     if i <= j:
-                        file.write(str(self.mat_missing_edges_de[i, j])[:-2] + "\r")
+                        file.write(str(self.mat_missing_edges_de_nei2_nei3[i, j])[:-2] + "\r")
 
             file.write("EOF")
 
@@ -1146,10 +1146,10 @@ TOUR_FILE = even/LKH_uncomplete_graph/x{multiple}/{method}/tour/random{self.n}.t
         os.system(f'echo.|LKH-2.exe even/even_complete_graph_new/par/random{self.n}.par')
 
     # 把控制台输出信息直接写入log文件
-    def LKH_test(self):
-        with open(f"even/even_uncomplete_graph_new/de/time_log/random{self.n}.txt", "w", encoding="utf-8") as log:
+    def LKH_test(self, mul, method):
+        with open(f"even/LKH_uncomplete_graph/x{mul}/{method}/time_log/random{self.n}.txt", "w", encoding="utf-8") as log:
             process = subprocess.Popen(
-            ["LKH-2.exe", f"even/even_uncomplete_graph_new/de/par/random{self.n}.par"],
+            ["LKH-2.exe", f"even/LKH_uncomplete_graph/x{mul}/{method}/par/random{self.n}.par"],
             stdin=subprocess.PIPE,
             stdout=log
         )
@@ -1270,10 +1270,10 @@ def get_time_value():
 
             
 
-def write_mat_concorde():
+def write_mat_concorde(mul, method):
     for i in range(5, 201):
         ins = instance(i)
-        with open(f"even/concorde_uncomplete_graph/seg/mat/random{ins.n}.tsp",'w') as file:
+        with open(f"even/concorde_uncomplete_graph/x{mul}/{method}/mat/random{ins.n}.tsp",'w') as file:
             file.write(f"NAME: random{ins.n}"+ "\n")
             file.write("TYPE: TSP"+ "\n")
             file.write(f"DIMENSION: {ins.n}"+ "\n")
@@ -1282,7 +1282,7 @@ def write_mat_concorde():
             file.write("EDGE_WEIGHT_SECTION"+ "\n")
 
 
-            temp = ins.mat_missing_edges_de_seg1_seg2_seg3.astype(int)
+            temp = ins.mat_missing_edges_de_nei2_nei3.astype(int)
 
             # 写完整矩阵
             for row in temp:
@@ -1423,8 +1423,7 @@ def main():
 def check():
     for i in range(5,201):
         ins = instance(i)
-        ins.write_mat('de', 5)
-        ins.write_par('de', 5)
+        ins.LKH_test(10, 'nei')
         print(i)
     pass
 

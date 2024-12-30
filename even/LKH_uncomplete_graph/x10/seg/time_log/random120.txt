@@ -1,0 +1,9 @@
+PARAMETER_FILE = even/LKH_uncomplete_graph/x10/seg/par/random120.par
+PROBLEM_FILE = even/LKH_uncomplete_graph/x10/seg/mat/random120.tsp
+Successes/Runs = 0/10
+Cost.min = 828, Cost.avg = 828.10, Cost.max = 829
+Gap.min = 0.0000%, Gap.avg = 0.0121%, Gap.max = 0.1208%
+Trials.min = 1000, Trials.avg = 1000.0, Trials.max = 1000
+Time.min = 1.85 sec., Time.avg = 3.34 sec., Time.max = 4.22 sec.
+Time.total = 33.49 sec.
+请按任意键继续. . . 

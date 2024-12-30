@@ -1,0 +1,43 @@
+NAME : random35.465.tour
+COMMENT : Length = 465
+COMMENT : Found by LKH [Keld Helsgaun] Mon Dec 30 21:12:12 2024
+TYPE : TOUR
+DIMENSION : 35
+TOUR_SECTION
+1
+4
+21
+10
+20
+7
+17
+3
+6
+15
+35
+12
+13
+29
+25
+2
+23
+11
+22
+30
+33
+34
+9
+8
+18
+27
+24
+32
+14
+19
+16
+26
+5
+28
+31
+-1
+EOF

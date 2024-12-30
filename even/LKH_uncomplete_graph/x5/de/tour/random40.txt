@@ -1,0 +1,48 @@
+NAME : random40.534.tour
+COMMENT : Length = 534
+COMMENT : Found by LKH [Keld Helsgaun] Mon Dec 30 21:02:47 2024
+TYPE : TOUR
+DIMENSION : 40
+TOUR_SECTION
+1
+9
+30
+20
+3
+19
+16
+2
+10
+38
+34
+22
+29
+13
+27
+6
+26
+7
+5
+23
+25
+12
+14
+35
+4
+36
+15
+37
+39
+8
+40
+24
+21
+17
+31
+32
+11
+33
+28
+18
+-1
+EOF
