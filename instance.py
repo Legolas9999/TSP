@@ -850,11 +850,12 @@ def edges_add_nei3(cities_coord):
     return edges_to_connect
 
 # 从文件读取LKH的结果
-def read_LKH_result(num, method):
+def read_LKH_result(num, method, multiple=None):
     '''
     函数说明:
     这里读取的是LKH的结果
     num: 城市个数
+    multiple: 倍数
     method: 使用的是哪一种TSP问题(4种)  complete|de|seg|nei  其中complete代表最优解
 
     返回：
@@ -863,7 +864,7 @@ def read_LKH_result(num, method):
     if method == 'complete':
         path = f"even/LKH_complete_graph/tour/random{num}.txt"
     else:
-        path = f"even/LKH_uncomplete_graph/{method}/tour/random{num}.txt"
+        path = f"even/LKH_uncomplete_graph/x{multiple}/{method}/tour/random{num}.txt"
 
 
 
@@ -889,7 +890,7 @@ def read_LKH_result(num, method):
     return G, tour, length
     
 
-def read_concorde_result(num, method):
+def read_concorde_result(num, method, multiple=None):
     '''
     函数说明:
     这里读取的是concorde的结果(concorde的结果从0开始)
@@ -904,8 +905,8 @@ def read_concorde_result(num, method):
         tour_path = f"even/concorde_complete_graph/solution/random{num}.sol"
         log_path = f"even/concorde_complete_graph/time_log/random{num}_output.log"
     else:
-        tour_path = f"even/concorde_uncomplete_graph/{method}/solution/random{num}.sol"
-        log_path = f"even/concorde_uncomplete_graph/{method}/time_log/random{num}_output.log"
+        tour_path = f"even/concorde_uncomplete_graph/x{multiple}/{method}/solution/random{num}.sol"
+        log_path = f"even/concorde_uncomplete_graph/x{multiple}/{method}/time_log/random{num}_output.log"
 
 
 
@@ -946,6 +947,10 @@ def read_concorde_result(num, method):
 
 # 判断是否是子图，只考虑边(最优路径图，添加边的图)
 def is_subgraph(G_optimal, G_add_edges):
+    '''
+    G_optimal: 小图
+    G_add_edges: 大图
+    '''
 
     # 边的格式转换
     G_optimal_edge_list = list(map(lambda x: set(x), list(G_optimal.edges)))
@@ -975,7 +980,7 @@ def is_subgraph2(G_optimal, G_add_de):
 
 # 基于原有距离矩阵生成missing edges的距离矩阵，用最大距离
 # 返回 0：用最大值代替   1：减去最大值
-def creat_dis_mat_missing_edges(n, G_add_edges, dis_mat_for_qubo, max_distance):
+def creat_dis_mat_missing_edges(n, G_add_edges, dis_mat_for_qubo, max_distance, multiple):
     # 完全图的边
     complete_edges = [{i, j} for i in range(n) for j in range(i + 1, n)]
 
@@ -988,8 +993,8 @@ def creat_dis_mat_missing_edges(n, G_add_edges, dis_mat_for_qubo, max_distance):
     # 创建基于消失边的距离矩阵
     for edge in missing_edges:
         temp = list(edge)
-        dis_mat_for_qubo[temp[0], temp[1]] = max_distance
-        dis_mat_for_qubo[temp[1], temp[0]] = max_distance
+        dis_mat_for_qubo[temp[0], temp[1]] = multiple * max_distance
+        dis_mat_for_qubo[temp[1], temp[0]] = multiple * max_distance
 
     # -----------除对角线外同时减去最大距离
     # 复制数组以保持原数组不变
@@ -1033,15 +1038,15 @@ class instance:
         # self.graph_complete = nx.complete_graph(self.n)  # 对应的图
         # # ---------------------------------------------
         # 普通的delauny三角分割
-        # self.graph_de = delaunay(self.coord)
+        self.graph_de = delaunay(self.coord)
         # # -----------------------------------------------
         # 基于de + seg1 + seg2 + seg3
-        # self.graph_de_seg1_seg2_seg3 = delaunay(
-        #     self.coord,
-        #     seg1=edges_add_seg1(self.coord),
-        #     seg2=edges_add_seg2(self.coord),
-        #     seg3=edges_add_seg3(self.coord)
-        # )        
+        self.graph_de_seg1_seg2_seg3 = delaunay(
+            self.coord,
+            seg1=edges_add_seg1(self.coord),
+            seg2=edges_add_seg2(self.coord),
+            seg3=edges_add_seg3(self.coord)
+        )        
         # # # ---------------------------------------------
         # 基于de + nei2 + nei3
         self.graph_de_nei2_nei3 = delaunay(
@@ -1053,24 +1058,24 @@ class instance:
         # 基于非完全图的距离矩阵
         # Python中的可变类型在作为参数传递给函数时，因为传递的是对象的引用而不是其副本。
         # 当你在函数内部修改这些可变对象时，外部的原始对象也会被修改。
-
+        multiple = 5
         # 返回：0:把不存在的边替换为最大距离     1:除对角线外减去最大距离
         ##########################
-        # # delaunay三角分割
-        # self.mat_missing_edges_de, self.mat_missing_edges_de_for_qubo = creat_dis_mat_missing_edges(
-        #     self.n, self.graph_de, self.mat.copy(), self.max_distance
-        # )
-        # ##########################
+        # delaunay三角分割
+        self.mat_missing_edges_de, self.mat_missing_edges_de_for_qubo = creat_dis_mat_missing_edges(
+            self.n, self.graph_de, self.mat.copy(), self.max_distance, multiple
+        )
+        ##########################
         # de + seg1 + seg2 + seg3
-        # self.mat_missing_edges_de_seg1_seg2_seg3, self.mat_missing_edges_de_seg1_seg2_seg3_for_qubo = creat_dis_mat_missing_edges(
-        #     self.n, self.graph_de_seg1_seg2_seg3, self.mat.copy(), self.max_distance
-        # )
+        self.mat_missing_edges_de_seg1_seg2_seg3, self.mat_missing_edges_de_seg1_seg2_seg3_for_qubo = creat_dis_mat_missing_edges(
+            self.n, self.graph_de_seg1_seg2_seg3, self.mat.copy(), self.max_distance, multiple
+        )
 
-        # #######################
+        #######################
         # de + nei2 + nei3
-        # self.mat_missing_edges_de_nei2_nei3, self.mat_missing_edges_de_nei2_nei3_for_qubo = creat_dis_mat_missing_edges(
-        #     self.n, self.graph_de_nei2_nei3, self.mat.copy(), self.max_distance
-        # )
+        self.mat_missing_edges_de_nei2_nei3, self.mat_missing_edges_de_nei2_nei3_for_qubo = creat_dis_mat_missing_edges(
+            self.n, self.graph_de_nei2_nei3, self.mat.copy(), self.max_distance, multiple
+        )
         #######################
         # # 统计非完全图矩阵中最大距离出现的次数 对称矩阵除以2
         # # 并计算可以削减的二次项个数
@@ -1098,9 +1103,9 @@ class instance:
                 file.write(f"{self.coord[i,0]} {self.coord[i,1]}\r")
 
     # 写入矩阵
-    def write_mat(self):
+    def write_mat(self, method ,multiple):
         # 写参数
-        with open(f"even/even_uncomplete_graph/de/mat/random{self.n}.tsp", "w") as file:
+        with open(f"even/LKH_uncomplete_graph/x{multiple}/{method}/mat/random{self.n}.tsp", "w") as file:
             file.write(
                 f"NAME: random{self.n}\r\
 TYPE: TSP\r\
@@ -1114,15 +1119,15 @@ EDGE_WEIGHT_SECTION\r"
             for i in range(self.n):
                 for j in range(self.n):
                     if i <= j:
-                        file.write(str(self.mat_missing_edges_de_for_qubo[i, j])[:-2] + "\r")
+                        file.write(str(self.mat_missing_edges_de[i, j])[:-2] + "\r")
 
             file.write("EOF")
 
     # 写入参数文件
-    def write_par(self):
-        with open(f"even/even_uncomplete_graph_new/de/par/random{self.n}.par", "w") as file:
+    def write_par(self, method, multiple):
+        with open(f"even/LKH_uncomplete_graph/x{multiple}/{method}/par/random{self.n}.par", "w") as file:
             file.write(
-                f"PROBLEM_FILE = even/even_uncomplete_graph_new/de/mat/random{self.n}.tsp\r\
+                f"PROBLEM_FILE = even/LKH_uncomplete_graph/x{multiple}/{method}/mat/random{self.n}.tsp\r\
 INITIAL_PERIOD = 1000\r\
 MAX_CANDIDATES = 4\r\
 MAX_TRIALS = 1000\r\
@@ -1132,7 +1137,7 @@ PATCHING_A = 5\r\
 RECOMBINATION = GPX2\r\
 RUNS = 10\r\
 TRACE_LEVEL = 0\r\
-TOUR_FILE = even/even_uncomplete_graph_new/de/tour/random{self.n}.txt"
+TOUR_FILE = even/LKH_uncomplete_graph/x{multiple}/{method}/tour/random{self.n}.txt"
             )
 
     # LKH
@@ -1228,16 +1233,6 @@ TOUR_FILE = even/even_uncomplete_graph_new/de/tour/random{self.n}.txt"
         return qubo
         
 
-
-
-
-def check():
-    for i in range(5, 201):
-        ins = instance(i)
-        if is_subgraph(ins.graph_optimal, ins.graph_de_nei2_nei3)[0]:
-            print(1)
-        else:
-            print(0)
 
 
 
@@ -1402,9 +1397,16 @@ def main():
         # else:
         #     print(0)
 
+        mul = 1
         method = 'nei'
-        LKH_xianzhi_graph, LKH_xianzhi_tour, LKH_xianzhi_length = read_LKH_result(i, method)
-        concorde_xianzhi_graph, concorde_xianzhi_tour, concorde_xianzhi_length = read_concorde_result(i, method)
+        # LKH_xianzhi_graph, LKH_xianzhi_tour, LKH_xianzhi_length = read_LKH_result(i, method, mul)
+        concorde_xianzhi_graph, concorde_xianzhi_tour, concorde_xianzhi_length = read_concorde_result(i, method, mul)
+
+        if is_subgraph(concorde_xianzhi_graph, ins.graph_de_nei2_nei3)[0]:
+
+            print(1)
+        else:
+            print(0)
 
         
 
@@ -1416,27 +1418,15 @@ def main():
 
 
 
-        # fig, axes = plt.subplots(1, 2, figsize=(12, 6))  # 1 行 2 列的子图
 
-        # # 绘制第一张图
-        # nx.draw(
-        #     LKH_graph, ins.graph_pos, 
-        #     ax=axes[0],  # 指定子图
-        #     with_labels=True, node_size=300, node_color="skyblue", width=0.5
-        # )
-        # axes[0].set_title("LKH Graph")
 
-        # # 绘制第二张图
-        # nx.draw(
-        #     concorde_graph, ins.graph_pos, 
-        #     ax=axes[1],  # 指定子图
-        #     with_labels=True, node_size=300, node_color="skyblue", width=0.5
-        # )
-        # axes[1].set_title("Concorde Graph")
-
-        # # 调整布局并显示
-        # plt.tight_layout()
-        # plt.show()
+def check():
+    for i in range(5,201):
+        ins = instance(i)
+        ins.write_mat('de', 5)
+        ins.write_par('de', 5)
+        print(i)
+    pass
 
 
 if __name__ == "__main__":
@@ -1445,7 +1435,7 @@ if __name__ == "__main__":
     # print(ins.mat)
     # print(ins.mat_missing_edges_de_for_qubo)
 
-    main()
+    check()
 
 
 

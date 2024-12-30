@@ -1,0 +1,21 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_test/solution/random30.sol /home/chongjiu/concorde_test/mat/random30.tsp
+Host: ubuntu  Current process id: 1969408
+Using random seed 1733472347
+Problem Name: random30
+Problem Type: TSP
+Number of Nodes: 30
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 470 (from tour)
+  LP Value  1: 467.000000  (0.00 seconds)
+  LP Value  2: 470.000000  (0.00 seconds)
+New lower bound: 470.000000
+Final lower bound 470.000000, upper bound 470.000000
+Exact lower bound: 470.000000
+DIFF: 0.000000
+Final LP has 33 rows, 59 columns, 148 nonzeros
+Optimal Solution: 470.00
+Number of bbnodes: 1
+Total Running Time: 0.01 (seconds)
+
+Standard Error:

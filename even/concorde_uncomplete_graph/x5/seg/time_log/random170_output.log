@@ -1,0 +1,40 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_test/solution/random170.sol /home/chongjiu/concorde_test/mat/random170.tsp
+Host: ubuntu  Current process id: 1989491
+Using random seed 1733472890
+Problem Name: random170
+Problem Type: TSP
+Number of Nodes: 170
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 970 (from tour)
+  LP Value  1: 939.125000  (0.01 seconds)
+  LP Value  2: 959.875000  (0.03 seconds)
+  LP Value  3: 965.058172  (0.08 seconds)
+  LP Value  4: 966.378834  (0.13 seconds)
+  LP Value  5: 966.762199  (0.17 seconds)
+  LP Value  6: 966.992958  (0.20 seconds)
+  LP Value  7: 967.000000  (0.24 seconds)
+New lower bound: 967.000000
+New upperbound from x-heuristic: 968.00
+Final lower bound 967.000000, upper bound 968.000000
+Exact lower bound: 967.000000
+DIFF: 0.000000
+Time for Total: 0.26 seconds (0.26 total in 1 calls)
+Final LP has 281 rows, 321 columns, 3308 nonzeros
+LOWER BOUND: 967.000000   ACTIVE NODES: 1
+
+Task 0: Branching on node 0
+BBnode 0 split into 1 (967.33X) 2 (967.00) (0.00 seconds)
+Child 0 is pruned
+LOWER BOUND: 967.000000   ACTIVE NODES: 1
+
+Task 1: Cutting on node 2
+Writing Pool: 135 cuts
+BBnode 2 (now 3) can be pruned: upperbound 968.00 (0.04 seconds)
+
+Task 2: Exit
+Optimal Solution: 968.00
+Number of bbnodes: 3
+Total Running Time: 0.42 (seconds)  Branching Time: 0.04 (seconds)
+
+Standard Error:

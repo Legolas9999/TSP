@@ -1,0 +1,28 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_test/solution/random128.sol /home/chongjiu/concorde_test/mat/random128.tsp
+Host: ubuntu  Current process id: 1970117
+Using random seed 1733472361
+Problem Name: random128
+Problem Type: TSP
+Number of Nodes: 128
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 852 (from tour)
+  LP Value  1: 821.500000  (0.01 seconds)
+  LP Value  2: 842.358974  (0.03 seconds)
+  LP Value  3: 845.593750  (0.06 seconds)
+  LP Value  4: 847.628205  (0.09 seconds)
+  LP Value  5: 850.000000  (0.12 seconds)
+  LP Value  6: 850.625000  (0.16 seconds)
+  LP Value  7: 851.000000  (0.26 seconds)
+  LP Value  8: 851.000000  (0.30 seconds)
+New lower bound: 851.000000
+New upperbound from x-heuristic: 851.00
+Final lower bound 851.000000, upper bound 851.000000
+Exact lower bound: 851.000000
+DIFF: 0.000000
+Final LP has 252 rows, 279 columns, 2621 nonzeros
+Optimal Solution: 851.00
+Number of bbnodes: 1
+Total Running Time: 0.41 (seconds)
+
+Standard Error:

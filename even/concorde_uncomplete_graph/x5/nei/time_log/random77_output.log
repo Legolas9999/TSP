@@ -1,0 +1,23 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_test/solution/random77.sol /home/chongjiu/concorde_test/mat/random77.tsp
+Host: ubuntu  Current process id: 1982382
+Using random seed 1733472711
+Problem Name: random77
+Problem Type: TSP
+Number of Nodes: 77
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 679 (from tour)
+  LP Value  1: 666.000000  (0.00 seconds)
+  LP Value  2: 676.466667  (0.01 seconds)
+  LP Value  3: 678.500000  (0.01 seconds)
+  LP Value  4: 679.000000  (0.01 seconds)
+New lower bound: 679.000000
+Final lower bound 679.000000, upper bound 679.000000
+Exact lower bound: 679.000000
+DIFF: 0.000000
+Final LP has 105 rows, 182 columns, 748 nonzeros
+Optimal Solution: 679.00
+Number of bbnodes: 1
+Total Running Time: 0.04 (seconds)
+
+Standard Error:

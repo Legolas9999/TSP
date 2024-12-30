@@ -1,0 +1,24 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_test/solution/random72.sol /home/chongjiu/concorde_test/mat/random72.tsp
+Host: ubuntu  Current process id: 1982353
+Using random seed 1733472710
+Problem Name: random72
+Problem Type: TSP
+Number of Nodes: 72
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 666 (from tour)
+  LP Value  1: 625.500000  (0.00 seconds)
+  LP Value  2: 661.375000  (0.02 seconds)
+  LP Value  3: 665.000000  (0.03 seconds)
+  LP Value  4: 665.000000  (0.04 seconds)
+New lower bound: 665.000000
+New upperbound from x-heuristic: 665.00
+Final lower bound 665.000000, upper bound 665.000000
+Exact lower bound: 665.000000
+DIFF: 0.000000
+Final LP has 125 rows, 225 columns, 1792 nonzeros
+Optimal Solution: 665.00
+Number of bbnodes: 1
+Total Running Time: 0.08 (seconds)
+
+Standard Error:

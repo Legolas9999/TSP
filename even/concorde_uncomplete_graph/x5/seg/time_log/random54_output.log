@@ -1,0 +1,25 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_test/solution/random54.sol /home/chongjiu/concorde_test/mat/random54.tsp
+Host: ubuntu  Current process id: 1987774
+Using random seed 1733472851
+Problem Name: random54
+Problem Type: TSP
+Number of Nodes: 54
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 562 (from tour)
+  LP Value  1: 512.750000  (0.00 seconds)
+  LP Value  2: 549.000000  (0.01 seconds)
+  LP Value  3: 561.333333  (0.02 seconds)
+  LP Value  4: 562.000000  (0.02 seconds)
+recomputing rownorms ...
+  LP Value  5: 562.000000  (0.02 seconds)
+New lower bound: 562.000000
+Final lower bound 562.000000, upper bound 562.000000
+Exact lower bound: 562.000000
+DIFF: 0.000000
+Final LP has 79 rows, 241 columns, 1042 nonzeros
+Optimal Solution: 562.00
+Number of bbnodes: 1
+Total Running Time: 0.06 (seconds)
+
+Standard Error:

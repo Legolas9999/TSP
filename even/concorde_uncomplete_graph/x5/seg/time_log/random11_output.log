@@ -1,0 +1,21 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_test/solution/random11.sol /home/chongjiu/concorde_test/mat/random11.tsp
+Host: ubuntu  Current process id: 1987646
+Using random seed 1733472850
+Problem Name: random11
+Problem Type: TSP
+Number of Nodes: 11
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 318 (from tour)
+  LP Value  1: 280.000000  (0.00 seconds)
+  LP Value  2: 318.000000  (0.00 seconds)
+New lower bound: 318.000000
+Final lower bound 318.000000, upper bound 318.000000
+Exact lower bound: 318.000000
+DIFF: 0.000000
+Final LP has 13 rows, 30 columns, 69 nonzeros
+Optimal Solution: 318.00
+Number of bbnodes: 1
+Total Running Time: 0.00 (seconds)
+
+Standard Error:

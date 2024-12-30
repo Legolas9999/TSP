@@ -1,0 +1,28 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_test/solution/random38.sol /home/chongjiu/concorde_test/mat/random38.tsp
+Host: ubuntu  Current process id: 1982231
+Using random seed 1733472709
+Problem Name: random38
+Problem Type: TSP
+Number of Nodes: 38
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 483 (from tour)
+Basic dual change required, but no candidate edges
+  LP Value  1: 464.000000  (0.00 seconds)
+  LP Value  2: 479.000000  (0.00 seconds)
+  LP Value  3: 483.000000  (0.00 seconds)
+New lower bound: 483.000000
+Final lower bound 483.000000, upper bound 483.000000
+Exact lower bound: 483.000000
+DIFF: 0.000000
+Final LP has 52 rows, 156 columns, 482 nonzeros
+Optimal Solution: 483.00
+Number of bbnodes: 1
+Total Running Time: 0.02 (seconds)
+
+Standard Error:
+ERROR: No dual change in basis finding code
+Did not find a basic optimal solution
+Fractional matching routine failed
+Warning: restarting running timer Miscellaneous
+No warmstart, stumbling on anyway

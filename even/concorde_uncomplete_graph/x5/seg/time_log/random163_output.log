@@ -1,0 +1,32 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_test/solution/random163.sol /home/chongjiu/concorde_test/mat/random163.tsp
+Host: ubuntu  Current process id: 1989266
+Using random seed 1733472884
+Problem Name: random163
+Problem Type: TSP
+Number of Nodes: 163
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 988 (from tour)
+  LP Value  1: 950.500000  (0.02 seconds)
+  LP Value  2: 977.250000  (0.04 seconds)
+  LP Value  3: 982.500000  (0.10 seconds)
+  LP Value  4: 985.130952  (0.14 seconds)
+  LP Value  5: 986.039474  (0.18 seconds)
+  LP Value  6: 986.493274  (0.22 seconds)
+  LP Value  7: 986.736111  (0.29 seconds)
+  LP Value  8: 987.000000  (0.45 seconds)
+  LP Value  9: 987.400000  (0.50 seconds)
+  LP Value 10: 987.438340  (0.67 seconds)
+  LP Value 11: 987.612527  (0.81 seconds)
+  LP Value 12: 987.666667  (0.96 seconds)
+  LP Value 13: 987.666667  (1.06 seconds)
+New lower bound: 987.666667
+Final lower bound 987.666667, upper bound 988.000000
+Exact lower bound: 987.666667
+DIFF: 0.000000
+Final LP has 296 rows, 449 columns, 3606 nonzeros
+Optimal Solution: 988.00
+Number of bbnodes: 1
+Total Running Time: 1.19 (seconds)
+
+Standard Error:

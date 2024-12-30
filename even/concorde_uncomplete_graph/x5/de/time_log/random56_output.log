@@ -1,0 +1,21 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_test/solution/random56.sol /home/chongjiu/concorde_test/mat/random56.tsp
+Host: ubuntu  Current process id: 1969491
+Using random seed 1733472347
+Problem Name: random56
+Problem Type: TSP
+Number of Nodes: 56
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 615 (from tour)
+  LP Value  1: 586.000000  (0.00 seconds)
+  LP Value  2: 615.000000  (0.01 seconds)
+New lower bound: 615.000000
+Final lower bound 615.000000, upper bound 615.000000
+Exact lower bound: 615.000000
+DIFF: 0.000000
+Final LP has 73 rows, 112 columns, 860 nonzeros
+Optimal Solution: 615.00
+Number of bbnodes: 1
+Total Running Time: 0.03 (seconds)
+
+Standard Error:

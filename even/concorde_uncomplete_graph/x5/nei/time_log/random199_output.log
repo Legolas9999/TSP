@@ -1,0 +1,116 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_test/solution/random199.sol /home/chongjiu/concorde_test/mat/random199.tsp
+Host: ubuntu  Current process id: 1984635
+Using random seed 1733472762
+Problem Name: random199
+Problem Type: TSP
+Number of Nodes: 199
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 1083 (from tour)
+  LP Value  1: 1035.500000  (0.02 seconds)
+  LP Value  2: 1063.750000  (0.06 seconds)
+  LP Value  3: 1075.625000  (0.10 seconds)
+  LP Value  4: 1076.568966  (0.17 seconds)
+  LP Value  5: 1078.220779  (0.25 seconds)
+  LP Value  6: 1078.772727  (0.31 seconds)
+  LP Value  7: 1079.188094  (0.40 seconds)
+  LP Value  8: 1079.547817  (0.51 seconds)
+  LP Value  9: 1079.750000  (0.80 seconds)
+  LP Value 10: 1080.149757  (0.89 seconds)
+  LP Value 11: 1080.326590  (1.27 seconds)
+  LP Value 12: 1080.500000  (1.54 seconds)
+  LP Value 13: 1080.500769  (1.84 seconds)
+New lower bound: 1080.500769
+Final lower bound 1080.500769, upper bound 1083.000000
+Exact lower bound: 1080.500769
+DIFF: 0.000000
+Time for Total: 1.86 seconds (1.86 total in 1 calls)
+Final LP has 357 rows, 471 columns, 6800 nonzeros
+LOWER BOUND: 1080.500769   ACTIVE NODES: 1
+
+Task 0: Branching on node 0
+BBnode 0 split into 1 (1080.61) 2 (1080.60) (0.21 seconds)
+LOWER BOUND: 1080.600925   ACTIVE NODES: 2
+
+Task 1: Cutting on node 2
+Writing Pool: 355 cuts
+BBnode 2 (now 3) done cutting: lowerbound 1080.73 (0.58 seconds)
+LOWER BOUND: 1080.605882   ACTIVE NODES: 2
+
+Task 2: Cutting on node 1
+Writing Pool: 398 cuts
+BBnode 1 (now 4) done cutting: lowerbound 1081.42 (0.48 seconds)
+LOWER BOUND: 1080.729730   ACTIVE NODES: 2
+
+Task 3: Branching on node 3
+BBnode 3 split into 5 (1081.00) 6 (1081.01) (0.26 seconds)
+LOWER BOUND: 1080.998949   ACTIVE NODES: 3
+
+Task 4: Cutting on node 5
+Writing Pool: 462 cuts
+BBnode 5 (now 7) done cutting: lowerbound 1081.24 (0.80 seconds)
+LOWER BOUND: 1081.008403   ACTIVE NODES: 3
+
+Task 5: Cutting on node 6
+Writing Pool: 497 cuts
+BBnode 6 (now 8) done cutting: lowerbound 1081.29 (0.43 seconds)
+LOWER BOUND: 1081.243639   ACTIVE NODES: 3
+
+Task 6: Branching on node 7
+BBnode 7 split into 9 (1081.49) 10 (1082.25X) (0.27 seconds)
+Child 1 is pruned
+LOWER BOUND: 1081.287983   ACTIVE NODES: 3
+
+Task 7: Branching on node 8
+BBnode 8 split into 11 (1081.60) 12 (1082.24X) (0.20 seconds)
+Child 1 is pruned
+LOWER BOUND: 1081.416667   ACTIVE NODES: 3
+
+Task 8: Branching on node 4
+BBnode 4 split into 13 (1081.67) 14 (1081.75) (0.21 seconds)
+LOWER BOUND: 1081.492063   ACTIVE NODES: 4
+
+Task 9: Cutting on node 9
+Writing Pool: 529 cuts
+BBnode 9 (now 15) done cutting: lowerbound 1081.61 (0.38 seconds)
+LOWER BOUND: 1081.600000   ACTIVE NODES: 4
+
+Task 10: Cutting on node 11
+Writing Pool: 568 cuts
+BBnode 11 (now 16) done cutting: lowerbound 1081.83 (0.56 seconds)
+LOWER BOUND: 1081.611111   ACTIVE NODES: 4
+
+Task 11: Branching on node 15
+BBnode 15 split into 17 (1082.20X) 18 (1082.00) (0.26 seconds)
+Child 0 is pruned
+LOWER BOUND: 1081.670184   ACTIVE NODES: 4
+
+Task 12: Cutting on node 13
+New upperbound from x-heuristic: 1082.00
+TOUR FOUND - upperbound is 1082.00
+Writing Pool: 615 cuts
+BBnode 13 (now 19) can be pruned: upperbound 1082.00 (0.36 seconds)
+LOWER BOUND: 1081.750000   ACTIVE NODES: 3
+
+Task 13: Cutting on node 14
+Do not cut, the lp is within 1.0 of the upperbound
+Writing Pool: 615 cuts
+BBnode 14 (now 20) can be pruned: upperbound 1082.00 (0.00 seconds)
+LOWER BOUND: 1081.833333   ACTIVE NODES: 2
+
+Task 14: Branching on node 16
+Do not branch, the lp is within 1.0 of the upperbound
+BBnode 16 is pruned - no branching (0.00 seconds)
+LOWER BOUND: 1082.000000   ACTIVE NODES: 1
+
+Task 15: Cutting on node 18
+Do not cut, the lp is within 1.0 of the upperbound
+Writing Pool: 615 cuts
+BBnode 18 (now 23) can be pruned: upperbound 1082.00 (0.00 seconds)
+
+Task 16: Exit
+Optimal Solution: 1082.00
+Number of bbnodes: 13
+Total Running Time: 6.98 (seconds)  Branching Time: 4.99 (seconds)
+
+Standard Error:

@@ -1,0 +1,33 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_test/solution/random121.sol /home/chongjiu/concorde_test/mat/random121.tsp
+Host: ubuntu  Current process id: 1969997
+Using random seed 1733472358
+Problem Name: random121
+Problem Type: TSP
+Number of Nodes: 121
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 850 (from tour)
+  LP Value  1: 816.000000  (0.01 seconds)
+  LP Value  2: 845.700000  (0.03 seconds)
+  LP Value  3: 847.916667  (0.04 seconds)
+  LP Value  4: 848.633333  (0.06 seconds)
+  LP Value  5: 849.148148  (0.07 seconds)
+  LP Value  6: 849.333333  (0.09 seconds)
+  LP Value  7: 849.541667  (0.11 seconds)
+  LP Value  8: 849.722222  (0.17 seconds)
+  LP Value  9: 849.800000  (0.62 seconds)
+  LP Value 10: 849.875000  (0.78 seconds)
+  LP Value 11: 849.949525  (0.86 seconds)
+  LP Value 12: 850.000000  (0.90 seconds)
+recomputing rownorms ...
+  LP Value 13: 850.000000  (0.93 seconds)
+New lower bound: 850.000000
+Final lower bound 850.000000, upper bound 850.000000
+Exact lower bound: 850.000000
+DIFF: 0.000000
+Final LP has 212 rows, 258 columns, 2107 nonzeros
+Optimal Solution: 850.00
+Number of bbnodes: 1
+Total Running Time: 1.03 (seconds)
+
+Standard Error:

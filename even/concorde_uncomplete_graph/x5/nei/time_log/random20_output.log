@@ -1,0 +1,22 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_test/solution/random20.sol /home/chongjiu/concorde_test/mat/random20.tsp
+Host: ubuntu  Current process id: 1982185
+Using random seed 1733472708
+Problem Name: random20
+Problem Type: TSP
+Number of Nodes: 20
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 360 (from tour)
+  LP Value  1: 293.000000  (0.00 seconds)
+  LP Value  2: 358.000000  (0.00 seconds)
+  LP Value  3: 360.000000  (0.00 seconds)
+New lower bound: 360.000000
+Final lower bound 360.000000, upper bound 360.000000
+Exact lower bound: 360.000000
+DIFF: 0.000000
+Final LP has 28 rows, 80 columns, 216 nonzeros
+Optimal Solution: 360.00
+Number of bbnodes: 1
+Total Running Time: 0.00 (seconds)
+
+Standard Error:

@@ -1,0 +1,53 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_test/solution/random191.sol /home/chongjiu/concorde_test/mat/random191.tsp
+Host: ubuntu  Current process id: 1990019
+Using random seed 1733472902
+Problem Name: random191
+Problem Type: TSP
+Number of Nodes: 191
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 1052 (from tour)
+  LP Value  1: 1013.416667  (0.02 seconds)
+  LP Value  2: 1035.232143  (0.06 seconds)
+  LP Value  3: 1039.708333  (0.10 seconds)
+  LP Value  4: 1044.636364  (0.15 seconds)
+  LP Value  5: 1047.035714  (0.21 seconds)
+  LP Value  6: 1047.300000  (0.25 seconds)
+  LP Value  7: 1047.714286  (0.29 seconds)
+  LP Value  8: 1048.000000  (0.36 seconds)
+  LP Value  9: 1048.177355  (0.50 seconds)
+  LP Value 10: 1048.625000  (0.77 seconds)
+  LP Value 11: 1048.704545  (0.98 seconds)
+  LP Value 12: 1048.744624  (1.16 seconds)
+  LP Value 13: 1048.750000  (1.29 seconds)
+New lower bound: 1048.750000
+New upperbound from x-heuristic: 1051.00
+Final lower bound 1048.750000, upper bound 1051.000000
+Exact lower bound: 1048.750000
+DIFF: 0.000000
+Time for Total: 1.32 seconds (1.32 total in 1 calls)
+Final LP has 332 rows, 424 columns, 4640 nonzeros
+LOWER BOUND: 1048.750000   ACTIVE NODES: 1
+
+Task 0: Branching on node 0
+BBnode 0 split into 1 (1049.20) 2 (1049.00) (0.19 seconds)
+LOWER BOUND: 1049.000000   ACTIVE NODES: 2
+
+Task 1: Cutting on node 2
+New upperbound from x-heuristic: 1049.00
+TOUR FOUND - upperbound is 1049.00
+Writing Pool: 284 cuts
+BBnode 2 (now 3) can be pruned: upperbound 1049.00 (0.08 seconds)
+LOWER BOUND: 1049.200000   ACTIVE NODES: 1
+
+Task 2: Cutting on node 1
+Do not cut, the lp is within 1.0 of the upperbound
+Writing Pool: 284 cuts
+BBnode 1 (now 4) can be pruned: upperbound 1049.00 (0.00 seconds)
+
+Task 3: Exit
+Optimal Solution: 1049.00
+Number of bbnodes: 3
+Total Running Time: 1.75 (seconds)  Branching Time: 0.27 (seconds)
+
+Standard Error:

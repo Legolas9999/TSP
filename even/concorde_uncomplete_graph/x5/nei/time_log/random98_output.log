@@ -1,0 +1,30 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_test/solution/random98.sol /home/chongjiu/concorde_test/mat/random98.tsp
+Host: ubuntu  Current process id: 1982534
+Using random seed 1733472713
+Problem Name: random98
+Problem Type: TSP
+Number of Nodes: 98
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 764 (from tour)
+  LP Value  1: 723.500000  (0.00 seconds)
+  LP Value  2: 755.666667  (0.01 seconds)
+  LP Value  3: 761.000000  (0.02 seconds)
+  LP Value  4: 762.049180  (0.02 seconds)
+  LP Value  5: 762.500000  (0.03 seconds)
+  LP Value  6: 763.000000  (0.04 seconds)
+  LP Value  7: 763.080357  (0.11 seconds)
+  LP Value  8: 763.517857  (0.12 seconds)
+  LP Value  9: 763.666667  (0.34 seconds)
+  LP Value 10: 763.907015  (0.37 seconds)
+  LP Value 11: 764.000000  (0.38 seconds)
+New lower bound: 764.000000
+Final lower bound 764.000000, upper bound 764.000000
+Exact lower bound: 764.000000
+DIFF: 0.000000
+Final LP has 177 rows, 279 columns, 2585 nonzeros
+Optimal Solution: 764.00
+Number of bbnodes: 1
+Total Running Time: 0.41 (seconds)
+
+Standard Error:
