@@ -1,0 +1,24 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_uncomplete_graph/x5/de/solution/random106.sol /home/chongjiu/concorde_uncomplete_graph/x5/de/mat/random106.tsp
+Host: ubuntu  Current process id: 3468183
+Using random seed 1735573757
+Problem Name: random106
+Problem Type: TSP
+Number of Nodes: 106
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 784 (from tour)
+  LP Value  1: 756.750000  (0.01 seconds)
+  LP Value  2: 780.000000  (0.02 seconds)
+  LP Value  3: 783.375723  (0.04 seconds)
+  LP Value  4: 783.833333  (0.06 seconds)
+  LP Value  5: 784.000000  (0.07 seconds)
+New lower bound: 784.000000
+Final lower bound 784.000000, upper bound 784.000000
+Exact lower bound: 784.000000
+DIFF: 0.000000
+Final LP has 183 rows, 221 columns, 1504 nonzeros
+Optimal Solution: 784.00
+Number of bbnodes: 1
+Total Running Time: 0.12 (seconds)
+
+Standard Error:

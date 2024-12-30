@@ -1,0 +1,30 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_uncomplete_graph/x10/de/solution/random94.sol /home/chongjiu/concorde_uncomplete_graph/x10/de/mat/random94.tsp
+Host: ubuntu  Current process id: 3473165
+Using random seed 1735574149
+Problem Name: random94
+Problem Type: TSP
+Number of Nodes: 94
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 708 (from tour)
+  LP Value  1: 674.500000  (0.01 seconds)
+  LP Value  2: 701.750000  (0.02 seconds)
+  LP Value  3: 705.500000  (0.03 seconds)
+  LP Value  4: 706.035714  (0.04 seconds)
+  LP Value  5: 706.368421  (0.06 seconds)
+  LP Value  6: 706.821429  (0.09 seconds)
+  LP Value  7: 707.317568  (0.10 seconds)
+  LP Value  8: 707.749559  (0.12 seconds)
+  LP Value  9: 708.000000  (0.13 seconds)
+recomputing rownorms ...
+  LP Value 10: 708.000000  (0.13 seconds)
+New lower bound: 708.000000
+Final lower bound 708.000000, upper bound 708.000000
+Exact lower bound: 708.000000
+DIFF: 0.000000
+Final LP has 156 rows, 220 columns, 1311 nonzeros
+Optimal Solution: 708.00
+Number of bbnodes: 1
+Total Running Time: 0.18 (seconds)
+
+Standard Error:

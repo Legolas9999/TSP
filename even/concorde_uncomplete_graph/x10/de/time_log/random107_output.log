@@ -1,0 +1,27 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_uncomplete_graph/x10/de/solution/random107.sol /home/chongjiu/concorde_uncomplete_graph/x10/de/mat/random107.tsp
+Host: ubuntu  Current process id: 3473210
+Using random seed 1735574151
+Problem Name: random107
+Problem Type: TSP
+Number of Nodes: 107
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 807 (from tour)
+  LP Value  1: 786.500000  (0.01 seconds)
+  LP Value  2: 794.681818  (0.02 seconds)
+  LP Value  3: 803.000000  (0.02 seconds)
+  LP Value  4: 803.833333  (0.04 seconds)
+  LP Value  5: 805.200000  (0.05 seconds)
+  LP Value  6: 806.333333  (0.07 seconds)
+  LP Value  7: 806.625000  (0.09 seconds)
+  LP Value  8: 807.000000  (0.10 seconds)
+New lower bound: 807.000000
+Final lower bound 807.000000, upper bound 807.000000
+Exact lower bound: 807.000000
+DIFF: 0.000000
+Final LP has 165 rows, 225 columns, 1368 nonzeros
+Optimal Solution: 807.00
+Number of bbnodes: 1
+Total Running Time: 0.16 (seconds)
+
+Standard Error:

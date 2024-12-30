@@ -1,0 +1,24 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_uncomplete_graph/x10/seg/solution/random84.sol /home/chongjiu/concorde_uncomplete_graph/x10/seg/mat/random84.tsp
+Host: ubuntu  Current process id: 3476023
+Using random seed 1735574217
+Problem Name: random84
+Problem Type: TSP
+Number of Nodes: 84
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 711 (from tour)
+  LP Value  1: 670.500000  (0.01 seconds)
+  LP Value  2: 703.333333  (0.02 seconds)
+  LP Value  3: 711.000000  (0.04 seconds)
+recomputing rownorms ...
+  LP Value  4: 711.000000  (0.04 seconds)
+New lower bound: 711.000000
+Final lower bound 711.000000, upper bound 711.000000
+Exact lower bound: 711.000000
+DIFF: 0.000000
+Final LP has 133 rows, 261 columns, 1453 nonzeros
+Optimal Solution: 711.00
+Number of bbnodes: 1
+Total Running Time: 0.07 (seconds)
+
+Standard Error:

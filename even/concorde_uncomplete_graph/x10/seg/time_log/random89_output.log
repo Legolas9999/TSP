@@ -1,0 +1,28 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_uncomplete_graph/x10/seg/solution/random89.sol /home/chongjiu/concorde_uncomplete_graph/x10/seg/mat/random89.tsp
+Host: ubuntu  Current process id: 3476033
+Using random seed 1735574218
+Problem Name: random89
+Problem Type: TSP
+Number of Nodes: 89
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 763 (from tour)
+  LP Value  1: 734.500000  (0.00 seconds)
+  LP Value  2: 752.500000  (0.01 seconds)
+  LP Value  3: 756.500000  (0.01 seconds)
+  LP Value  4: 759.390741  (0.03 seconds)
+  LP Value  5: 761.544444  (0.05 seconds)
+  LP Value  6: 762.000000  (0.06 seconds)
+recomputing rownorms ...
+  LP Value  7: 762.000000  (0.06 seconds)
+New lower bound: 762.000000
+New upperbound from x-heuristic: 762.00
+Final lower bound 762.000000, upper bound 762.000000
+Exact lower bound: 762.000000
+DIFF: 0.000000
+Final LP has 158 rows, 288 columns, 1857 nonzeros
+Optimal Solution: 762.00
+Number of bbnodes: 1
+Total Running Time: 0.10 (seconds)
+
+Standard Error:

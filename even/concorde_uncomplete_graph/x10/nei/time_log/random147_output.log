@@ -1,0 +1,31 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_uncomplete_graph/x10/nei/solution/random147.sol /home/chongjiu/concorde_uncomplete_graph/x10/nei/mat/random147.tsp
+Host: ubuntu  Current process id: 3477253
+Using random seed 1735574311
+Problem Name: random147
+Problem Type: TSP
+Number of Nodes: 147
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 957 (from tour)
+  LP Value  1: 924.000000  (0.01 seconds)
+  LP Value  2: 943.756410  (0.04 seconds)
+  LP Value  3: 949.972458  (0.06 seconds)
+  LP Value  4: 952.500000  (0.09 seconds)
+  LP Value  5: 954.722222  (0.12 seconds)
+  LP Value  6: 955.211009  (0.16 seconds)
+  LP Value  7: 955.517222  (0.24 seconds)
+  LP Value  8: 956.076531  (0.27 seconds)
+  LP Value  9: 956.421053  (0.29 seconds)
+  LP Value 10: 956.615385  (0.41 seconds)
+  LP Value 11: 956.871972  (0.58 seconds)
+  LP Value 12: 957.000000  (0.63 seconds)
+New lower bound: 957.000000
+Final lower bound 957.000000, upper bound 957.000000
+Exact lower bound: 957.000000
+DIFF: 0.000000
+Final LP has 275 rows, 370 columns, 4840 nonzeros
+Optimal Solution: 957.00
+Number of bbnodes: 1
+Total Running Time: 0.68 (seconds)
+
+Standard Error:

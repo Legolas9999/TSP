@@ -1,0 +1,57 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_uncomplete_graph/x5/de/solution/random163.sol /home/chongjiu/concorde_uncomplete_graph/x5/de/mat/random163.tsp
+Host: ubuntu  Current process id: 3469120
+Using random seed 1735573786
+Problem Name: random163
+Problem Type: TSP
+Number of Nodes: 163
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 992 (from tour)
+  LP Value  1: 948.000000  (0.01 seconds)
+  LP Value  2: 977.692308  (0.02 seconds)
+  LP Value  3: 984.075000  (0.05 seconds)
+  LP Value  4: 985.416667  (0.09 seconds)
+  LP Value  5: 988.128537  (0.13 seconds)
+  LP Value  6: 988.535714  (0.17 seconds)
+  LP Value  7: 988.939822  (0.19 seconds)
+  LP Value  8: 989.174495  (0.34 seconds)
+  LP Value  9: 989.524477  (0.38 seconds)
+  LP Value 10: 989.757785  (0.50 seconds)
+  LP Value 11: 989.838235  (0.63 seconds)
+  LP Value 12: 990.028902  (0.79 seconds)
+  LP Value 13: 990.091553  (0.92 seconds)
+  LP Value 14: 990.161246  (1.06 seconds)
+  LP Value 15: 990.175381  (1.21 seconds)
+New lower bound: 990.175381
+Final lower bound 990.175381, upper bound 992.000000
+Exact lower bound: 990.175381
+DIFF: 0.000000
+Time for Total: 1.23 seconds (1.23 total in 1 calls)
+Final LP has 294 rows, 342 columns, 3417 nonzeros
+LOWER BOUND: 990.175381   ACTIVE NODES: 1
+
+Task 0: Branching on node 0
+BBnode 0 split into 1 (990.61) 2 (990.85) (0.14 seconds)
+LOWER BOUND: 990.611511   ACTIVE NODES: 2
+
+Task 1: Cutting on node 1
+Writing Pool: 371 cuts
+BBnode 1 (now 3) done cutting: lowerbound 991.09 (0.56 seconds)
+LOWER BOUND: 990.853333   ACTIVE NODES: 2
+
+Task 2: Cutting on node 2
+Writing Pool: 377 cuts
+BBnode 2 (now 4) can be pruned: upperbound 992.00 (0.03 seconds)
+LOWER BOUND: 991.092732   ACTIVE NODES: 1
+
+Task 3: Branching on node 3
+BBnode 3 split into 5 (991.71X) 6 (991.42X) (0.12 seconds)
+Child 0 is pruned
+Child 1 is pruned
+
+Task 4: Exit
+Optimal Solution: 992.00
+Number of bbnodes: 5
+Total Running Time: 2.17 (seconds)  Branching Time: 0.84 (seconds)
+
+Standard Error:

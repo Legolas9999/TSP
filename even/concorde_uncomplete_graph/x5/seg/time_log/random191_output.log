@@ -1,0 +1,34 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_uncomplete_graph/x5/seg/solution/random191.sol /home/chongjiu/concorde_uncomplete_graph/x5/seg/mat/random191.tsp
+Host: ubuntu  Current process id: 3470661
+Using random seed 1735573911
+Problem Name: random191
+Problem Type: TSP
+Number of Nodes: 191
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 1049 (from tour)
+  LP Value  1: 1018.250000  (0.01 seconds)
+  LP Value  2: 1037.750000  (0.04 seconds)
+  LP Value  3: 1043.760000  (0.08 seconds)
+  LP Value  4: 1044.942029  (0.11 seconds)
+  LP Value  5: 1045.792000  (0.13 seconds)
+  LP Value  6: 1046.273437  (0.16 seconds)
+  LP Value  7: 1047.031579  (0.19 seconds)
+  LP Value  8: 1047.588235  (0.27 seconds)
+  LP Value  9: 1047.750000  (0.40 seconds)
+  LP Value 10: 1048.129032  (0.44 seconds)
+  LP Value 11: 1048.236842  (0.61 seconds)
+  LP Value 12: 1048.447128  (0.79 seconds)
+  LP Value 13: 1048.491063  (0.95 seconds)
+  LP Value 14: 1048.540332  (1.13 seconds)
+  LP Value 15: 1048.571429  (1.22 seconds)
+New lower bound: 1048.571429
+Final lower bound 1048.571429, upper bound 1049.000000
+Exact lower bound: 1048.571429
+DIFF: 0.000000
+Final LP has 321 rows, 518 columns, 5286 nonzeros
+Optimal Solution: 1049.00
+Number of bbnodes: 1
+Total Running Time: 1.37 (seconds)
+
+Standard Error:

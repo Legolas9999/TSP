@@ -1,0 +1,22 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_uncomplete_graph/x10/seg/solution/random80.sol /home/chongjiu/concorde_uncomplete_graph/x10/seg/mat/random80.tsp
+Host: ubuntu  Current process id: 3476010
+Using random seed 1735574217
+Problem Name: random80
+Problem Type: TSP
+Number of Nodes: 80
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 661 (from tour)
+  LP Value  1: 635.500000  (0.00 seconds)
+  LP Value  2: 656.166667  (0.01 seconds)
+  LP Value  3: 661.000000  (0.02 seconds)
+New lower bound: 661.000000
+Final lower bound 661.000000, upper bound 661.000000
+Exact lower bound: 661.000000
+DIFF: 0.000000
+Final LP has 131 rows, 194 columns, 1668 nonzeros
+Optimal Solution: 661.00
+Number of bbnodes: 1
+Total Running Time: 0.05 (seconds)
+
+Standard Error:

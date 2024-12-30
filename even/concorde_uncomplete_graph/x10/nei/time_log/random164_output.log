@@ -1,0 +1,34 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_uncomplete_graph/x10/nei/solution/random164.sol /home/chongjiu/concorde_uncomplete_graph/x10/nei/mat/random164.tsp
+Host: ubuntu  Current process id: 3477347
+Using random seed 1735574319
+Problem Name: random164
+Problem Type: TSP
+Number of Nodes: 164
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 968 (from tour)
+  LP Value  1: 943.000000  (0.02 seconds)
+  LP Value  2: 960.500000  (0.05 seconds)
+  LP Value  3: 962.976471  (0.08 seconds)
+  LP Value  4: 963.413502  (0.10 seconds)
+  LP Value  5: 964.031021  (0.12 seconds)
+  LP Value  6: 964.500000  (0.15 seconds)
+  LP Value  7: 965.000000  (0.18 seconds)
+  LP Value  8: 965.427165  (0.23 seconds)
+  LP Value  9: 965.973684  (0.27 seconds)
+  LP Value 10: 966.391447  (0.36 seconds)
+  LP Value 11: 966.800000  (0.50 seconds)
+  LP Value 12: 966.911765  (0.59 seconds)
+  LP Value 13: 967.182400  (0.72 seconds)
+  LP Value 14: 967.257092  (0.82 seconds)
+  LP Value 15: 967.278689  (0.91 seconds)
+New lower bound: 967.278689
+Final lower bound 967.278689, upper bound 968.000000
+Exact lower bound: 967.278688
+DIFF: 0.000000
+Final LP has 253 rows, 435 columns, 3326 nonzeros
+Optimal Solution: 968.00
+Number of bbnodes: 1
+Total Running Time: 1.01 (seconds)
+
+Standard Error:

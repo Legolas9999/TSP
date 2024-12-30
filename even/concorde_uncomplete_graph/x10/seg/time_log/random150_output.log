@@ -1,0 +1,36 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_uncomplete_graph/x10/seg/solution/random150.sol /home/chongjiu/concorde_uncomplete_graph/x10/seg/mat/random150.tsp
+Host: ubuntu  Current process id: 3476328
+Using random seed 1735574239
+Problem Name: random150
+Problem Type: TSP
+Number of Nodes: 150
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 922 (from tour)
+  LP Value  1: 881.250000  (0.01 seconds)
+  LP Value  2: 905.083333  (0.03 seconds)
+  LP Value  3: 915.425926  (0.05 seconds)
+  LP Value  4: 918.052448  (0.08 seconds)
+  LP Value  5: 918.916667  (0.11 seconds)
+  LP Value  6: 919.459016  (0.14 seconds)
+  LP Value  7: 919.969697  (0.17 seconds)
+  LP Value  8: 920.000000  (0.21 seconds)
+  LP Value  9: 920.309524  (0.24 seconds)
+  LP Value 10: 920.587007  (0.30 seconds)
+  LP Value 11: 920.753571  (0.79 seconds)
+  LP Value 12: 920.858014  (0.88 seconds)
+  LP Value 13: 920.923261  (0.98 seconds)
+  LP Value 14: 921.000000  (1.03 seconds)
+recomputing rownorms ...
+  LP Value 15: 921.000000  (1.03 seconds)
+New lower bound: 920.906000
+New upperbound from x-heuristic: 921.00
+Final lower bound 920.906000, upper bound 921.000000
+Exact lower bound: 920.906000
+DIFF: 0.000000
+Final LP has 310 rows, 411 columns, 4421 nonzeros
+Optimal Solution: 921.00
+Number of bbnodes: 1
+Total Running Time: 1.13 (seconds)
+
+Standard Error:

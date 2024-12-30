@@ -1,0 +1,27 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_uncomplete_graph/x5/seg/solution/random143.sol /home/chongjiu/concorde_uncomplete_graph/x5/seg/mat/random143.tsp
+Host: ubuntu  Current process id: 3470371
+Using random seed 1735573888
+Problem Name: random143
+Problem Type: TSP
+Number of Nodes: 143
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 907 (from tour)
+  LP Value  1: 872.500000  (0.01 seconds)
+  LP Value  2: 899.458333  (0.02 seconds)
+  LP Value  3: 904.666667  (0.03 seconds)
+  LP Value  4: 906.300000  (0.06 seconds)
+  LP Value  5: 906.699029  (0.09 seconds)
+  LP Value  6: 907.000000  (0.10 seconds)
+recomputing rownorms ...
+  LP Value  7: 907.000000  (0.10 seconds)
+New lower bound: 907.000000
+Final lower bound 907.000000, upper bound 907.000000
+Exact lower bound: 907.000000
+DIFF: 0.000000
+Final LP has 214 rows, 362 columns, 1617 nonzeros
+Optimal Solution: 907.00
+Number of bbnodes: 1
+Total Running Time: 0.20 (seconds)
+
+Standard Error:

@@ -1,0 +1,23 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_uncomplete_graph/x10/de/solution/random154.sol /home/chongjiu/concorde_uncomplete_graph/x10/de/mat/random154.tsp
+Host: ubuntu  Current process id: 3473595
+Using random seed 1735574172
+Problem Name: random154
+Problem Type: TSP
+Number of Nodes: 154
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 976 (from tour)
+  LP Value  1: 949.500000  (0.00 seconds)
+  LP Value  2: 974.000000  (0.01 seconds)
+  LP Value  3: 975.875000  (0.02 seconds)
+  LP Value  4: 976.000000  (0.02 seconds)
+New lower bound: 976.000000
+Final lower bound 976.000000, upper bound 976.000000
+Exact lower bound: 976.000000
+DIFF: 0.000000
+Final LP has 208 rows, 315 columns, 1092 nonzeros
+Optimal Solution: 976.00
+Number of bbnodes: 1
+Total Running Time: 0.10 (seconds)
+
+Standard Error:

@@ -1,0 +1,24 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_uncomplete_graph/x5/de/solution/random174.sol /home/chongjiu/concorde_uncomplete_graph/x5/de/mat/random174.tsp
+Host: ubuntu  Current process id: 3469257
+Using random seed 1735573799
+Problem Name: random174
+Problem Type: TSP
+Number of Nodes: 174
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 1027 (from tour)
+  LP Value  1: 1017.000000  (0.02 seconds)
+  LP Value  2: 1024.375000  (0.04 seconds)
+  LP Value  3: 1025.000000  (0.06 seconds)
+  LP Value  4: 1026.583333  (0.09 seconds)
+  LP Value  5: 1027.000000  (0.13 seconds)
+New lower bound: 1027.000000
+Final lower bound 1027.000000, upper bound 1027.000000
+Exact lower bound: 1027.000000
+DIFF: 0.000000
+Final LP has 258 rows, 337 columns, 2084 nonzeros
+Optimal Solution: 1027.00
+Number of bbnodes: 1
+Total Running Time: 0.24 (seconds)
+
+Standard Error:

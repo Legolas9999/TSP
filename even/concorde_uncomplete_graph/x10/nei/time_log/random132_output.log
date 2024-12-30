@@ -1,0 +1,25 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_uncomplete_graph/x10/nei/solution/random132.sol /home/chongjiu/concorde_uncomplete_graph/x10/nei/mat/random132.tsp
+Host: ubuntu  Current process id: 3477164
+Using random seed 1735574305
+Problem Name: random132
+Problem Type: TSP
+Number of Nodes: 132
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 875 (from tour)
+  LP Value  1: 828.000000  (0.00 seconds)
+  LP Value  2: 871.687500  (0.02 seconds)
+  LP Value  3: 873.863636  (0.03 seconds)
+  LP Value  4: 874.187500  (0.03 seconds)
+  LP Value  5: 874.741379  (0.04 seconds)
+  LP Value  6: 875.000000  (0.05 seconds)
+New lower bound: 875.000000
+Final lower bound 875.000000, upper bound 875.000000
+Exact lower bound: 875.000000
+DIFF: 0.000000
+Final LP has 187 rows, 344 columns, 1498 nonzeros
+Optimal Solution: 875.00
+Number of bbnodes: 1
+Total Running Time: 0.11 (seconds)
+
+Standard Error:

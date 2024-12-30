@@ -1,0 +1,33 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_uncomplete_graph/x10/nei/solution/random158.sol /home/chongjiu/concorde_uncomplete_graph/x10/nei/mat/random158.tsp
+Host: ubuntu  Current process id: 3477316
+Using random seed 1735574316
+Problem Name: random158
+Problem Type: TSP
+Number of Nodes: 158
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 895 (from tour)
+  LP Value  1: 854.500000  (0.01 seconds)
+  LP Value  2: 884.835092  (0.04 seconds)
+  LP Value  3: 890.267309  (0.10 seconds)
+  LP Value  4: 892.671492  (0.14 seconds)
+  LP Value  5: 892.948018  (0.17 seconds)
+  LP Value  6: 893.195700  (0.20 seconds)
+  LP Value  7: 893.375000  (0.24 seconds)
+  LP Value  8: 893.749190  (0.27 seconds)
+  LP Value  9: 893.930909  (0.30 seconds)
+  LP Value 10: 894.000000  (0.37 seconds)
+  LP Value 11: 894.250000  (0.41 seconds)
+  LP Value 12: 894.294118  (0.46 seconds)
+recomputing rownorms ...
+  LP Value 13: 894.294118  (0.51 seconds)
+New lower bound: 894.205882
+Final lower bound 894.205882, upper bound 895.000000
+Exact lower bound: 894.205882
+DIFF: 0.000000
+Final LP has 268 rows, 471 columns, 3897 nonzeros
+Optimal Solution: 895.00
+Number of bbnodes: 1
+Total Running Time: 0.59 (seconds)
+
+Standard Error:

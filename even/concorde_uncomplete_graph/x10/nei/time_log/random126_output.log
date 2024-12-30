@@ -1,0 +1,54 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_uncomplete_graph/x10/nei/solution/random126.sol /home/chongjiu/concorde_uncomplete_graph/x10/nei/mat/random126.tsp
+Host: ubuntu  Current process id: 3477105
+Using random seed 1735574300
+Problem Name: random126
+Problem Type: TSP
+Number of Nodes: 126
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 863 (from tour)
+  LP Value  1: 829.625000  (0.01 seconds)
+  LP Value  2: 848.562500  (0.03 seconds)
+  LP Value  3: 855.905405  (0.06 seconds)
+  LP Value  4: 859.320513  (0.11 seconds)
+  LP Value  5: 859.888889  (0.13 seconds)
+  LP Value  6: 860.400000  (0.31 seconds)
+  LP Value  7: 860.971014  (0.34 seconds)
+  LP Value  8: 861.349206  (1.42 seconds)
+  LP Value  9: 861.903582  (1.58 seconds)
+  LP Value 10: 861.986780  (1.70 seconds)
+  LP Value 11: 862.000000  (1.73 seconds)
+New lower bound: 862.000000
+Final lower bound 862.000000, upper bound 863.000000
+Exact lower bound: 862.000000
+DIFF: 0.000000
+Time for Total: 1.74 seconds (1.74 total in 1 calls)
+Final LP has 237 rows, 269 columns, 5431 nonzeros
+LOWER BOUND: 862.000000   ACTIVE NODES: 1
+
+Task 0: Branching on node 0
+BBnode 0 split into 1 (862.00) 2 (862.00) (0.00 seconds)
+LOWER BOUND: 862.000000   ACTIVE NODES: 2
+
+Task 1: Cutting on node 2
+Writing Pool: 231 cuts
+BBnode 2 (now 3) can be pruned: upperbound 863.00 (0.02 seconds)
+LOWER BOUND: 862.000663   ACTIVE NODES: 1
+
+Task 2: Cutting on node 1
+recomputing rownorms ...
+Writing Pool: 246 cuts
+BBnode 1 (now 4) done cutting: lowerbound 862.05 (0.41 seconds)
+LOWER BOUND: 862.051724   ACTIVE NODES: 1
+
+Task 3: Branching on node 4
+BBnode 4 split into 5 (863.30X) 6 (863.20X) (0.12 seconds)
+Child 0 is pruned
+Child 1 is pruned
+
+Task 4: Exit
+Optimal Solution: 863.00
+Number of bbnodes: 5
+Total Running Time: 2.36 (seconds)  Branching Time: 0.56 (seconds)
+
+Standard Error:

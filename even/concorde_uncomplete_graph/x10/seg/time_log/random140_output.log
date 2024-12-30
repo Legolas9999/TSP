@@ -1,0 +1,30 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_uncomplete_graph/x10/seg/solution/random140.sol /home/chongjiu/concorde_uncomplete_graph/x10/seg/mat/random140.tsp
+Host: ubuntu  Current process id: 3476272
+Using random seed 1735574236
+Problem Name: random140
+Problem Type: TSP
+Number of Nodes: 140
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 890 (from tour)
+  LP Value  1: 855.222222  (0.02 seconds)
+  LP Value  2: 880.589286  (0.04 seconds)
+  LP Value  3: 885.391667  (0.06 seconds)
+  LP Value  4: 887.437500  (0.09 seconds)
+  LP Value  5: 888.333333  (0.13 seconds)
+  LP Value  6: 888.592920  (0.16 seconds)
+  LP Value  7: 888.887850  (0.19 seconds)
+  LP Value  8: 889.000000  (0.22 seconds)
+recomputing rownorms ...
+  LP Value  9: 889.000000  (0.22 seconds)
+New lower bound: 889.000000
+New upperbound from x-heuristic: 889.00
+Final lower bound 889.000000, upper bound 889.000000
+Exact lower bound: 889.000000
+DIFF: -0.000000
+Final LP has 228 rows, 406 columns, 2665 nonzeros
+Optimal Solution: 889.00
+Number of bbnodes: 1
+Total Running Time: 0.30 (seconds)
+
+Standard Error:

@@ -1,0 +1,42 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_uncomplete_graph/x10/de/solution/random130.sol /home/chongjiu/concorde_uncomplete_graph/x10/de/mat/random130.tsp
+Host: ubuntu  Current process id: 3473315
+Using random seed 1735574159
+Problem Name: random130
+Problem Type: TSP
+Number of Nodes: 130
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 868 (from tour)
+  LP Value  1: 812.500000  (0.01 seconds)
+  LP Value  2: 853.928571  (0.03 seconds)
+  LP Value  3: 860.500000  (0.05 seconds)
+  LP Value  4: 862.333333  (0.07 seconds)
+  LP Value  5: 863.267857  (0.10 seconds)
+  LP Value  6: 864.079710  (0.12 seconds)
+  LP Value  7: 864.916667  (0.14 seconds)
+  LP Value  8: 865.375000  (0.16 seconds)
+  LP Value  9: 865.694767  (0.30 seconds)
+  LP Value 10: 866.000000  (0.36 seconds)
+  LP Value 11: 866.250000  (1.59 seconds)
+  LP Value 12: 866.374212  (1.76 seconds)
+  LP Value 13: 866.451039  (1.86 seconds)
+  LP Value 14: 866.267074  (1.99 seconds)
+New lower bound: 866.267074
+Final lower bound 866.267074, upper bound 868.000000
+Exact lower bound: 866.461793
+DIFF: -0.194718
+Time for Total: 2.01 seconds (2.01 total in 1 calls)
+Final LP has 236 rows, 262 columns, 3051 nonzeros
+LOWER BOUND: 866.267074   ACTIVE NODES: 1
+
+Task 0: Branching on node 0
+BBnode 0 split into 1 (867.71X) 2 (867.68X) (0.10 seconds)
+Child 0 is pruned
+Child 1 is pruned
+
+Task 1: Exit
+Optimal Solution: 868.00
+Number of bbnodes: 3
+Total Running Time: 2.18 (seconds)  Branching Time: 0.10 (seconds)
+
+Standard Error:

@@ -1,0 +1,25 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_uncomplete_graph/x5/de/solution/random52.sol /home/chongjiu/concorde_uncomplete_graph/x5/de/mat/random52.tsp
+Host: ubuntu  Current process id: 3466661
+Using random seed 1735573751
+Problem Name: random52
+Problem Type: TSP
+Number of Nodes: 52
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 606 (from tour)
+  LP Value  1: 578.666667  (0.00 seconds)
+  LP Value  2: 603.833333  (0.01 seconds)
+  LP Value  3: 605.000000  (0.02 seconds)
+  LP Value  4: 605.613065  (0.02 seconds)
+  LP Value  5: 605.857143  (0.03 seconds)
+  LP Value  6: 606.000000  (0.06 seconds)
+New lower bound: 606.000000
+Final lower bound 606.000000, upper bound 606.000000
+Exact lower bound: 606.000000
+DIFF: 0.000000
+Final LP has 98 rows, 107 columns, 1162 nonzeros
+Optimal Solution: 606.00
+Number of bbnodes: 1
+Total Running Time: 0.08 (seconds)
+
+Standard Error:

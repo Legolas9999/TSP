@@ -1,0 +1,31 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_uncomplete_graph/x10/de/solution/random193.sol /home/chongjiu/concorde_uncomplete_graph/x10/de/mat/random193.tsp
+Host: ubuntu  Current process id: 3475668
+Using random seed 1735574196
+Problem Name: random193
+Problem Type: TSP
+Number of Nodes: 193
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 1044 (from tour)
+  LP Value  1: 1018.125000  (0.01 seconds)
+  LP Value  2: 1031.825000  (0.03 seconds)
+  LP Value  3: 1036.725000  (0.07 seconds)
+  LP Value  4: 1039.582418  (0.12 seconds)
+  LP Value  5: 1040.666667  (0.18 seconds)
+  LP Value  6: 1041.171733  (0.22 seconds)
+  LP Value  7: 1041.374324  (0.35 seconds)
+  LP Value  8: 1041.660000  (0.86 seconds)
+  LP Value  9: 1042.000000  (0.90 seconds)
+recomputing rownorms ...
+  LP Value 10: 1042.000000  (0.90 seconds)
+New lower bound: 1042.000000
+New upperbound from x-heuristic: 1042.00
+Final lower bound 1042.000000, upper bound 1042.000000
+Exact lower bound: 1042.000000
+DIFF: 0.000000
+Final LP has 305 rows, 517 columns, 3796 nonzeros
+Optimal Solution: 1042.00
+Number of bbnodes: 1
+Total Running Time: 1.04 (seconds)
+
+Standard Error:

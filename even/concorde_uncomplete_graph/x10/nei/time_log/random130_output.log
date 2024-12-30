@@ -1,0 +1,32 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_uncomplete_graph/x10/nei/solution/random130.sol /home/chongjiu/concorde_uncomplete_graph/x10/nei/mat/random130.tsp
+Host: ubuntu  Current process id: 3477145
+Using random seed 1735574304
+Problem Name: random130
+Problem Type: TSP
+Number of Nodes: 130
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 864 (from tour)
+  LP Value  1: 822.000000  (0.00 seconds)
+  LP Value  2: 851.166667  (0.02 seconds)
+  LP Value  3: 854.625000  (0.05 seconds)
+  LP Value  4: 859.500000  (0.08 seconds)
+  LP Value  5: 860.496024  (0.11 seconds)
+  LP Value  6: 861.058824  (0.14 seconds)
+  LP Value  7: 861.502793  (0.16 seconds)
+  LP Value  8: 862.542636  (0.20 seconds)
+  LP Value  9: 862.902342  (0.30 seconds)
+  LP Value 10: 863.000000  (0.34 seconds)
+  LP Value 11: 863.141667  (0.57 seconds)
+  LP Value 12: 863.333333  (0.71 seconds)
+  LP Value 13: 863.351293  (0.84 seconds)
+New lower bound: 863.351293
+Final lower bound 863.351293, upper bound 864.000000
+Exact lower bound: 863.351293
+DIFF: 0.000000
+Final LP has 228 rows, 344 columns, 3843 nonzeros
+Optimal Solution: 864.00
+Number of bbnodes: 1
+Total Running Time: 0.91 (seconds)
+
+Standard Error:

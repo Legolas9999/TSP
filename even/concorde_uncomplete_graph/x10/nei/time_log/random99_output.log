@@ -1,0 +1,23 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_uncomplete_graph/x10/nei/solution/random99.sol /home/chongjiu/concorde_uncomplete_graph/x10/nei/mat/random99.tsp
+Host: ubuntu  Current process id: 3477005
+Using random seed 1735574294
+Problem Name: random99
+Problem Type: TSP
+Number of Nodes: 99
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 763 (from tour)
+  LP Value  1: 737.000000  (0.01 seconds)
+  LP Value  2: 756.400000  (0.02 seconds)
+  LP Value  3: 762.000000  (0.03 seconds)
+  LP Value  4: 763.000000  (0.05 seconds)
+New lower bound: 763.000000
+Final lower bound 763.000000, upper bound 763.000000
+Exact lower bound: 763.000000
+DIFF: 0.000000
+Final LP has 167 rows, 244 columns, 1994 nonzeros
+Optimal Solution: 763.00
+Number of bbnodes: 1
+Total Running Time: 0.08 (seconds)
+
+Standard Error:

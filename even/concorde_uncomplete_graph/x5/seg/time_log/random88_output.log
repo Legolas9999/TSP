@@ -1,0 +1,28 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_uncomplete_graph/x5/seg/solution/random88.sol /home/chongjiu/concorde_uncomplete_graph/x5/seg/mat/random88.tsp
+Host: ubuntu  Current process id: 3470128
+Using random seed 1735573870
+Problem Name: random88
+Problem Type: TSP
+Number of Nodes: 88
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 734 (from tour)
+  LP Value  1: 680.000000  (0.01 seconds)
+  LP Value  2: 724.000000  (0.02 seconds)
+  LP Value  3: 729.000000  (0.04 seconds)
+  LP Value  4: 732.333333  (0.06 seconds)
+  LP Value  5: 732.761050  (0.07 seconds)
+  LP Value  6: 733.773973  (0.09 seconds)
+  LP Value  7: 734.000000  (0.10 seconds)
+recomputing rownorms ...
+  LP Value  8: 734.000000  (0.10 seconds)
+New lower bound: 734.000000
+Final lower bound 734.000000, upper bound 734.000000
+Exact lower bound: 734.000000
+DIFF: 0.000000
+Final LP has 152 rows, 282 columns, 2384 nonzeros
+Optimal Solution: 734.00
+Number of bbnodes: 1
+Total Running Time: 0.14 (seconds)
+
+Standard Error:

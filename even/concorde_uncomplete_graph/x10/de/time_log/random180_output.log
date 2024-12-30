@@ -1,0 +1,27 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_uncomplete_graph/x10/de/solution/random180.sol /home/chongjiu/concorde_uncomplete_graph/x10/de/mat/random180.tsp
+Host: ubuntu  Current process id: 3475599
+Using random seed 1735574187
+Problem Name: random180
+Problem Type: TSP
+Number of Nodes: 180
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 1069 (from tour)
+  LP Value  1: 1025.000000  (0.01 seconds)
+  LP Value  2: 1064.500000  (0.04 seconds)
+  LP Value  3: 1066.433333  (0.06 seconds)
+  LP Value  4: 1067.250000  (0.08 seconds)
+  LP Value  5: 1067.636364  (0.11 seconds)
+  LP Value  6: 1068.000000  (0.15 seconds)
+  LP Value  7: 1068.000000  (0.19 seconds)
+New lower bound: 1068.000000
+New upperbound from x-heuristic: 1068.00
+Final lower bound 1068.000000, upper bound 1068.000000
+Exact lower bound: 1068.000000
+DIFF: 0.000000
+Final LP has 333 rows, 374 columns, 3110 nonzeros
+Optimal Solution: 1068.00
+Number of bbnodes: 1
+Total Running Time: 0.32 (seconds)
+
+Standard Error:

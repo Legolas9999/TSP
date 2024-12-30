@@ -1,0 +1,27 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_uncomplete_graph/x10/seg/solution/random79.sol /home/chongjiu/concorde_uncomplete_graph/x10/seg/mat/random79.tsp
+Host: ubuntu  Current process id: 3476008
+Using random seed 1735574217
+Problem Name: random79
+Problem Type: TSP
+Number of Nodes: 79
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 725 (from tour)
+  LP Value  1: 687.750000  (0.01 seconds)
+  LP Value  2: 716.250000  (0.01 seconds)
+  LP Value  3: 719.750000  (0.01 seconds)
+  LP Value  4: 722.000000  (0.02 seconds)
+  LP Value  5: 723.000000  (0.02 seconds)
+recomputing rownorms ...
+  LP Value  6: 723.000000  (0.02 seconds)
+New lower bound: 723.000000
+New upperbound from x-heuristic: 723.00
+Final lower bound 723.000000, upper bound 723.000000
+Exact lower bound: 723.000000
+DIFF: 0.000000
+Final LP has 118 rows, 196 columns, 737 nonzeros
+Optimal Solution: 723.00
+Number of bbnodes: 1
+Total Running Time: 0.05 (seconds)
+
+Standard Error:

@@ -1,0 +1,33 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_uncomplete_graph/x5/de/solution/random175.sol /home/chongjiu/concorde_uncomplete_graph/x5/de/mat/random175.tsp
+Host: ubuntu  Current process id: 3469259
+Using random seed 1735573799
+Problem Name: random175
+Problem Type: TSP
+Number of Nodes: 175
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 1043 (from tour)
+  LP Value  1: 1026.000000  (0.01 seconds)
+  LP Value  2: 1033.833333  (0.03 seconds)
+  LP Value  3: 1036.000000  (0.06 seconds)
+  LP Value  4: 1039.500000  (0.10 seconds)
+  LP Value  5: 1040.277778  (0.12 seconds)
+  LP Value  6: 1040.875000  (0.14 seconds)
+  LP Value  7: 1041.187500  (0.15 seconds)
+  LP Value  8: 1041.416667  (0.18 seconds)
+  LP Value  9: 1041.697917  (0.20 seconds)
+  LP Value 10: 1041.973230  (0.25 seconds)
+  LP Value 11: 1042.264463  (0.31 seconds)
+  LP Value 12: 1042.537946  (0.34 seconds)
+  LP Value 13: 1042.789474  (0.36 seconds)
+  LP Value 14: 1043.000000  (0.39 seconds)
+New lower bound: 1043.000000
+Final lower bound 1043.000000, upper bound 1043.000000
+Exact lower bound: 1043.000000
+DIFF: 0.000000
+Final LP has 288 rows, 369 columns, 2746 nonzeros
+Optimal Solution: 1043.00
+Number of bbnodes: 1
+Total Running Time: 0.49 (seconds)
+
+Standard Error:

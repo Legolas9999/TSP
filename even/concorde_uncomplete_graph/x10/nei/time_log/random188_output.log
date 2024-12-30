@@ -1,0 +1,23 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_uncomplete_graph/x10/nei/solution/random188.sol /home/chongjiu/concorde_uncomplete_graph/x10/nei/mat/random188.tsp
+Host: ubuntu  Current process id: 3477508
+Using random seed 1735574334
+Problem Name: random188
+Problem Type: TSP
+Number of Nodes: 188
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 1046 (from tour)
+  LP Value  1: 999.500000  (0.00 seconds)
+  LP Value  2: 1041.000000  (0.02 seconds)
+  LP Value  3: 1045.312500  (0.03 seconds)
+  LP Value  4: 1046.000000  (0.03 seconds)
+New lower bound: 1046.000000
+Final lower bound 1046.000000, upper bound 1046.000000
+Exact lower bound: 1046.000000
+DIFF: 0.000000
+Final LP has 244 rows, 466 columns, 1659 nonzeros
+Optimal Solution: 1046.00
+Number of bbnodes: 1
+Total Running Time: 0.13 (seconds)
+
+Standard Error:

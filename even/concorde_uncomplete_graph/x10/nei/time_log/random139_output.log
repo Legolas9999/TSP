@@ -1,0 +1,30 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_uncomplete_graph/x10/nei/solution/random139.sol /home/chongjiu/concorde_uncomplete_graph/x10/nei/mat/random139.tsp
+Host: ubuntu  Current process id: 3477211
+Using random seed 1735574309
+Problem Name: random139
+Problem Type: TSP
+Number of Nodes: 139
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 893 (from tour)
+  LP Value  1: 830.333333  (0.01 seconds)
+  LP Value  2: 876.500000  (0.02 seconds)
+  LP Value  3: 885.318182  (0.04 seconds)
+  LP Value  4: 888.906250  (0.06 seconds)
+  LP Value  5: 889.875000  (0.09 seconds)
+  LP Value  6: 891.000000  (0.10 seconds)
+  LP Value  7: 891.538710  (0.12 seconds)
+  LP Value  8: 891.875000  (0.15 seconds)
+  LP Value  9: 892.353331  (0.19 seconds)
+  LP Value 10: 892.714286  (0.23 seconds)
+  LP Value 11: 893.000000  (0.34 seconds)
+New lower bound: 892.967118
+Final lower bound 892.967118, upper bound 893.000000
+Exact lower bound: 892.967118
+DIFF: 0.000000
+Final LP has 236 rows, 511 columns, 11858 nonzeros
+Optimal Solution: 893.00
+Number of bbnodes: 1
+Total Running Time: 0.42 (seconds)
+
+Standard Error:

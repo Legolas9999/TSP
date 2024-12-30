@@ -1,0 +1,28 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_uncomplete_graph/x5/seg/solution/random122.sol /home/chongjiu/concorde_uncomplete_graph/x5/seg/mat/random122.tsp
+Host: ubuntu  Current process id: 3470263
+Using random seed 1735573878
+Problem Name: random122
+Problem Type: TSP
+Number of Nodes: 122
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 871 (from tour)
+  LP Value  1: 835.166667  (0.01 seconds)
+  LP Value  2: 859.000000  (0.02 seconds)
+  LP Value  3: 864.500000  (0.03 seconds)
+  LP Value  4: 866.500000  (0.06 seconds)
+  LP Value  5: 868.597701  (0.11 seconds)
+  LP Value  6: 869.000000  (0.12 seconds)
+recomputing rownorms ...
+  LP Value  7: 869.000000  (0.12 seconds)
+New lower bound: 869.000000
+New upperbound from x-heuristic: 869.00
+Final lower bound 869.000000, upper bound 869.000000
+Exact lower bound: 869.000000
+DIFF: 0.000000
+Final LP has 210 rows, 333 columns, 2143 nonzeros
+Optimal Solution: 869.00
+Number of bbnodes: 1
+Total Running Time: 0.18 (seconds)
+
+Standard Error:

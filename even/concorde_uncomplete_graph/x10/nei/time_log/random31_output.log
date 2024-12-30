@@ -1,0 +1,22 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_uncomplete_graph/x10/nei/solution/random31.sol /home/chongjiu/concorde_uncomplete_graph/x10/nei/mat/random31.tsp
+Host: ubuntu  Current process id: 3476837
+Using random seed 1735574289
+Problem Name: random31
+Problem Type: TSP
+Number of Nodes: 31
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 450 (from tour)
+  LP Value  1: 403.500000  (0.00 seconds)
+  LP Value  2: 442.000000  (0.00 seconds)
+  LP Value  3: 450.000000  (0.00 seconds)
+New lower bound: 450.000000
+Final lower bound 450.000000, upper bound 450.000000
+Exact lower bound: 450.000000
+DIFF: 0.000000
+Final LP has 42 rows, 76 columns, 215 nonzeros
+Optimal Solution: 450.00
+Number of bbnodes: 1
+Total Running Time: 0.01 (seconds)
+
+Standard Error:

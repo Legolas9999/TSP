@@ -1,0 +1,23 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_uncomplete_graph/x5/seg/solution/random41.sol /home/chongjiu/concorde_uncomplete_graph/x5/seg/mat/random41.tsp
+Host: ubuntu  Current process id: 3470000
+Using random seed 1735573867
+Problem Name: random41
+Problem Type: TSP
+Number of Nodes: 41
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 496 (from tour)
+  LP Value  1: 467.500000  (0.00 seconds)
+  LP Value  2: 495.500000  (0.00 seconds)
+  LP Value  3: 495.809524  (0.00 seconds)
+  LP Value  4: 496.000000  (0.00 seconds)
+New lower bound: 496.000000
+Final lower bound 496.000000, upper bound 496.000000
+Exact lower bound: 496.000000
+DIFF: 0.000000
+Final LP has 57 rows, 114 columns, 498 nonzeros
+Optimal Solution: 496.00
+Number of bbnodes: 1
+Total Running Time: 0.01 (seconds)
+
+Standard Error:

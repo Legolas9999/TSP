@@ -1,0 +1,26 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_uncomplete_graph/x10/nei/solution/random124.sol /home/chongjiu/concorde_uncomplete_graph/x10/nei/mat/random124.tsp
+Host: ubuntu  Current process id: 3477089
+Using random seed 1735574299
+Problem Name: random124
+Problem Type: TSP
+Number of Nodes: 124
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 851 (from tour)
+  LP Value  1: 814.500000  (0.01 seconds)
+  LP Value  2: 835.500000  (0.02 seconds)
+  LP Value  3: 842.500000  (0.03 seconds)
+  LP Value  4: 848.000000  (0.04 seconds)
+  LP Value  5: 850.000000  (0.04 seconds)
+  LP Value  6: 850.466667  (0.05 seconds)
+  LP Value  7: 851.000000  (0.07 seconds)
+New lower bound: 851.000000
+Final lower bound 851.000000, upper bound 851.000000
+Exact lower bound: 851.000000
+DIFF: 0.000000
+Final LP has 174 rows, 308 columns, 1529 nonzeros
+Optimal Solution: 851.00
+Number of bbnodes: 1
+Total Running Time: 0.14 (seconds)
+
+Standard Error:

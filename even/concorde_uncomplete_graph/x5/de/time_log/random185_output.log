@@ -1,0 +1,24 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_uncomplete_graph/x5/de/solution/random185.sol /home/chongjiu/concorde_uncomplete_graph/x5/de/mat/random185.tsp
+Host: ubuntu  Current process id: 3469317
+Using random seed 1735573804
+Problem Name: random185
+Problem Type: TSP
+Number of Nodes: 185
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 1007 (from tour)
+  LP Value  1: 975.500000  (0.01 seconds)
+  LP Value  2: 999.888889  (0.04 seconds)
+  LP Value  3: 1005.666667  (0.08 seconds)
+  LP Value  4: 1006.152027  (0.13 seconds)
+  LP Value  5: 1007.000000  (0.14 seconds)
+New lower bound: 1007.000000
+Final lower bound 1007.000000, upper bound 1007.000000
+Exact lower bound: 1007.000000
+DIFF: 0.000000
+Final LP has 262 rows, 375 columns, 2772 nonzeros
+Optimal Solution: 1007.00
+Number of bbnodes: 1
+Total Running Time: 0.25 (seconds)
+
+Standard Error:

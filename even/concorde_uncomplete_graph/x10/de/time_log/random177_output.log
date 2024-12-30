@@ -1,0 +1,31 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_uncomplete_graph/x10/de/solution/random177.sol /home/chongjiu/concorde_uncomplete_graph/x10/de/mat/random177.tsp
+Host: ubuntu  Current process id: 3475558
+Using random seed 1735574185
+Problem Name: random177
+Problem Type: TSP
+Number of Nodes: 177
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 1039 (from tour)
+  LP Value  1: 1017.500000  (0.01 seconds)
+  LP Value  2: 1031.400000  (0.04 seconds)
+  LP Value  3: 1034.875000  (0.07 seconds)
+  LP Value  4: 1035.500000  (0.09 seconds)
+  LP Value  5: 1035.848485  (0.12 seconds)
+  LP Value  6: 1036.166667  (0.16 seconds)
+  LP Value  7: 1036.289617  (1.36 seconds)
+  LP Value  8: 1036.800000  (1.41 seconds)
+  LP Value  9: 1037.000000  (1.42 seconds)
+recomputing rownorms ...
+  LP Value 10: 1037.000000  (1.42 seconds)
+New lower bound: 1037.000000
+New upperbound from x-heuristic: 1037.00
+Final lower bound 1037.000000, upper bound 1037.000000
+Exact lower bound: 1037.000000
+DIFF: 0.000000
+Final LP has 276 rows, 387 columns, 2322 nonzeros
+Optimal Solution: 1037.00
+Number of bbnodes: 1
+Total Running Time: 1.53 (seconds)
+
+Standard Error:

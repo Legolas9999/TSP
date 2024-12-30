@@ -1,0 +1,12 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_uncomplete_graph/x10/de/solution/random6.sol /home/chongjiu/concorde_uncomplete_graph/x10/de/mat/random6.tsp
+Host: ubuntu  Current process id: 3472961
+Using random seed 1735574145
+Problem Name: random6
+Problem Type: TSP
+Number of Nodes: 6
+Explicit Lengths (CC_MATRIXNORM)
+Optimal Solution: 223.00
+Total Running Time: 0.00 (seconds)
+
+Standard Error:

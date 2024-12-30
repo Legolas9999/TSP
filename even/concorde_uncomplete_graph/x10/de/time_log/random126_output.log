@@ -1,0 +1,36 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_uncomplete_graph/x10/de/solution/random126.sol /home/chongjiu/concorde_uncomplete_graph/x10/de/mat/random126.tsp
+Host: ubuntu  Current process id: 3473291
+Using random seed 1735574157
+Problem Name: random126
+Problem Type: TSP
+Number of Nodes: 126
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 863 (from tour)
+  LP Value  1: 831.750000  (0.01 seconds)
+  LP Value  2: 852.000000  (0.03 seconds)
+  LP Value  3: 855.875000  (0.04 seconds)
+  LP Value  4: 857.452381  (0.06 seconds)
+  LP Value  5: 857.985714  (0.07 seconds)
+  LP Value  6: 858.538462  (0.08 seconds)
+  LP Value  7: 859.230088  (0.10 seconds)
+  LP Value  8: 859.770642  (0.12 seconds)
+  LP Value  9: 860.142857  (0.14 seconds)
+  LP Value 10: 860.500000  (0.16 seconds)
+  LP Value 11: 860.768862  (0.64 seconds)
+  LP Value 12: 861.129856  (0.66 seconds)
+  LP Value 13: 861.487179  (0.81 seconds)
+  LP Value 14: 861.800000  (1.21 seconds)
+  LP Value 15: 862.313015  (1.23 seconds)
+  LP Value 16: 862.477273  (1.31 seconds)
+  LP Value 17: 862.487500  (1.39 seconds)
+New lower bound: 862.487500
+Final lower bound 862.487500, upper bound 863.000000
+Exact lower bound: 862.487500
+DIFF: 0.000000
+Final LP has 205 rows, 293 columns, 2702 nonzeros
+Optimal Solution: 863.00
+Number of bbnodes: 1
+Total Running Time: 1.46 (seconds)
+
+Standard Error:

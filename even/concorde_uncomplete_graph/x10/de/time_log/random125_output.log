@@ -1,0 +1,24 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_uncomplete_graph/x10/de/solution/random125.sol /home/chongjiu/concorde_uncomplete_graph/x10/de/mat/random125.tsp
+Host: ubuntu  Current process id: 3473289
+Using random seed 1735574156
+Problem Name: random125
+Problem Type: TSP
+Number of Nodes: 125
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 895 (from tour)
+  LP Value  1: 878.285714  (0.01 seconds)
+  LP Value  2: 892.000000  (0.02 seconds)
+  LP Value  3: 893.823529  (0.03 seconds)
+  LP Value  4: 894.500000  (0.04 seconds)
+  LP Value  5: 895.000000  (0.05 seconds)
+New lower bound: 895.000000
+Final lower bound 895.000000, upper bound 895.000000
+Exact lower bound: 895.000000
+DIFF: 0.000000
+Final LP has 175 rows, 261 columns, 1233 nonzeros
+Optimal Solution: 895.00
+Number of bbnodes: 1
+Total Running Time: 0.14 (seconds)
+
+Standard Error:

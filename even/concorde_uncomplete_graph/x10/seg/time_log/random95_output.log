@@ -1,0 +1,26 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_uncomplete_graph/x10/seg/solution/random95.sol /home/chongjiu/concorde_uncomplete_graph/x10/seg/mat/random95.tsp
+Host: ubuntu  Current process id: 3476054
+Using random seed 1735574218
+Problem Name: random95
+Problem Type: TSP
+Number of Nodes: 95
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 780 (from tour)
+  LP Value  1: 730.500000  (0.00 seconds)
+  LP Value  2: 761.714286  (0.02 seconds)
+  LP Value  3: 773.000000  (0.03 seconds)
+  LP Value  4: 778.286275  (0.06 seconds)
+  LP Value  5: 780.000000  (0.07 seconds)
+recomputing rownorms ...
+  LP Value  6: 780.000000  (0.07 seconds)
+New lower bound: 780.000000
+Final lower bound 780.000000, upper bound 780.000000
+Exact lower bound: 780.000000
+DIFF: 0.000000
+Final LP has 167 rows, 355 columns, 2563 nonzeros
+Optimal Solution: 780.00
+Number of bbnodes: 1
+Total Running Time: 0.11 (seconds)
+
+Standard Error:

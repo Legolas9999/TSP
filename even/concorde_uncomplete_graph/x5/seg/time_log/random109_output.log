@@ -1,0 +1,37 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_uncomplete_graph/x5/seg/solution/random109.sol /home/chongjiu/concorde_uncomplete_graph/x5/seg/mat/random109.tsp
+Host: ubuntu  Current process id: 3470202
+Using random seed 1735573873
+Problem Name: random109
+Problem Type: TSP
+Number of Nodes: 109
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 808 (from tour)
+  LP Value  1: 768.500000  (0.01 seconds)
+  LP Value  2: 794.125000  (0.02 seconds)
+  LP Value  3: 799.750000  (0.03 seconds)
+  LP Value  4: 801.600000  (0.04 seconds)
+  LP Value  5: 803.013636  (0.06 seconds)
+  LP Value  6: 803.714286  (0.08 seconds)
+  LP Value  7: 804.250000  (0.09 seconds)
+  LP Value  8: 804.750000  (0.11 seconds)
+  LP Value  9: 805.209524  (0.39 seconds)
+  LP Value 10: 805.333333  (0.49 seconds)
+  LP Value 11: 805.500000  (0.57 seconds)
+  LP Value 12: 805.916667  (0.59 seconds)
+  LP Value 13: 806.075000  (0.68 seconds)
+  LP Value 14: 806.166667  (0.75 seconds)
+  LP Value 15: 806.250000  (0.79 seconds)
+  LP Value 16: 806.500000  (1.44 seconds)
+  LP Value 17: 806.500000  (1.48 seconds)
+New lower bound: 806.500000
+New upperbound from x-heuristic: 807.00
+Final lower bound 806.500000, upper bound 807.000000
+Exact lower bound: 806.500000
+DIFF: 0.000000
+Final LP has 197 rows, 308 columns, 2110 nonzeros
+Optimal Solution: 807.00
+Number of bbnodes: 1
+Total Running Time: 1.56 (seconds)
+
+Standard Error:

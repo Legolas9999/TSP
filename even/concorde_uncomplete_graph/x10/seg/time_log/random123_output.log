@@ -1,0 +1,26 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_uncomplete_graph/x10/seg/solution/random123.sol /home/chongjiu/concorde_uncomplete_graph/x10/seg/mat/random123.tsp
+Host: ubuntu  Current process id: 3476172
+Using random seed 1735574226
+Problem Name: random123
+Problem Type: TSP
+Number of Nodes: 123
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 876 (from tour)
+  LP Value  1: 846.000000  (0.00 seconds)
+  LP Value  2: 869.500000  (0.01 seconds)
+  LP Value  3: 873.863636  (0.03 seconds)
+  LP Value  4: 875.125000  (0.06 seconds)
+  LP Value  5: 875.500000  (0.07 seconds)
+  LP Value  6: 875.666667  (0.10 seconds)
+  LP Value  7: 876.000000  (0.11 seconds)
+New lower bound: 876.000000
+Final lower bound 876.000000, upper bound 876.000000
+Exact lower bound: 876.000000
+DIFF: 0.000000
+Final LP has 211 rows, 292 columns, 2332 nonzeros
+Optimal Solution: 876.00
+Number of bbnodes: 1
+Total Running Time: 0.18 (seconds)
+
+Standard Error:

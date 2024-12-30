@@ -1,0 +1,77 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_uncomplete_graph/x5/de/solution/random172.sol /home/chongjiu/concorde_uncomplete_graph/x5/de/mat/random172.tsp
+Host: ubuntu  Current process id: 3469192
+Using random seed 1735573792
+Problem Name: random172
+Problem Type: TSP
+Number of Nodes: 172
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 972 (from tour)
+  LP Value  1: 929.916667  (0.01 seconds)
+  LP Value  2: 957.500000  (0.02 seconds)
+  LP Value  3: 962.666667  (0.03 seconds)
+  LP Value  4: 964.333333  (0.05 seconds)
+  LP Value  5: 965.000000  (0.06 seconds)
+  LP Value  6: 965.307692  (0.08 seconds)
+  LP Value  7: 966.096970  (0.11 seconds)
+  LP Value  8: 966.603380  (0.31 seconds)
+  LP Value  9: 966.707792  (0.50 seconds)
+  LP Value 10: 967.000000  (0.55 seconds)
+  LP Value 11: 967.665659  (0.60 seconds)
+  LP Value 12: 968.118776  (0.75 seconds)
+  LP Value 13: 968.402148  (0.97 seconds)
+  LP Value 14: 968.656082  (1.15 seconds)
+  LP Value 15: 968.700595  (1.31 seconds)
+New lower bound: 968.662510
+Final lower bound 968.662510, upper bound 972.000000
+Exact lower bound: 968.662510
+DIFF: 0.000000
+Time for Total: 1.33 seconds (1.33 total in 1 calls)
+Final LP has 284 rows, 391 columns, 5438 nonzeros
+LOWER BOUND: 968.662510   ACTIVE NODES: 1
+
+Task 0: Branching on node 0
+BBnode 0 split into 1 (969.22) 2 (969.22) (0.15 seconds)
+LOWER BOUND: 969.222000   ACTIVE NODES: 2
+
+Task 1: Cutting on node 1
+Writing Pool: 416 cuts
+BBnode 1 (now 3) done cutting: lowerbound 970.92 (0.89 seconds)
+LOWER BOUND: 969.223485   ACTIVE NODES: 2
+
+Task 2: Cutting on node 2
+Writing Pool: 478 cuts
+BBnode 2 (now 4) done cutting: lowerbound 970.14 (1.52 seconds)
+LOWER BOUND: 970.135903   ACTIVE NODES: 2
+
+Task 3: Branching on node 4
+BBnode 4 split into 5 (970.58) 6 (970.71) (0.12 seconds)
+LOWER BOUND: 970.583333   ACTIVE NODES: 3
+
+Task 4: Cutting on node 5
+Writing Pool: 486 cuts
+BBnode 5 (now 7) can be pruned: upperbound 972.00 (0.04 seconds)
+LOWER BOUND: 970.714286   ACTIVE NODES: 2
+
+Task 5: Cutting on node 6
+Writing Pool: 519 cuts
+BBnode 6 (now 8) done cutting: lowerbound 970.80 (0.73 seconds)
+LOWER BOUND: 970.800725   ACTIVE NODES: 2
+
+Task 6: Branching on node 8
+BBnode 8 split into 9 (971.51X) 10 (971.18X) (0.16 seconds)
+Child 0 is pruned
+Child 1 is pruned
+LOWER BOUND: 970.920768   ACTIVE NODES: 1
+
+Task 7: Branching on node 3
+BBnode 3 split into 11 (971.61X) 12 (971.91X) (0.13 seconds)
+Child 0 is pruned
+Child 1 is pruned
+
+Task 8: Exit
+Optimal Solution: 972.00
+Number of bbnodes: 9
+Total Running Time: 5.18 (seconds)  Branching Time: 3.74 (seconds)
+
+Standard Error:

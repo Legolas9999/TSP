@@ -1,0 +1,31 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_uncomplete_graph/x5/seg/solution/random131.sol /home/chongjiu/concorde_uncomplete_graph/x5/seg/mat/random131.tsp
+Host: ubuntu  Current process id: 3470312
+Using random seed 1735573883
+Problem Name: random131
+Problem Type: TSP
+Number of Nodes: 131
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 905 (from tour)
+  LP Value  1: 875.500000  (0.00 seconds)
+  LP Value  2: 898.583333  (0.02 seconds)
+  LP Value  3: 902.583333  (0.03 seconds)
+  LP Value  4: 903.204861  (0.05 seconds)
+  LP Value  5: 903.478102  (0.06 seconds)
+  LP Value  6: 903.960784  (0.08 seconds)
+  LP Value  7: 904.032340  (0.13 seconds)
+  LP Value  8: 904.277009  (0.34 seconds)
+  LP Value  9: 904.482759  (0.42 seconds)
+  LP Value 10: 904.571429  (0.52 seconds)
+  LP Value 11: 904.634286  (0.58 seconds)
+  LP Value 12: 904.666667  (0.61 seconds)
+New lower bound: 904.666667
+Final lower bound 904.666667, upper bound 905.000000
+Exact lower bound: 904.666667
+DIFF: 0.000000
+Final LP has 214 rows, 321 columns, 2484 nonzeros
+Optimal Solution: 905.00
+Number of bbnodes: 1
+Total Running Time: 0.66 (seconds)
+
+Standard Error:

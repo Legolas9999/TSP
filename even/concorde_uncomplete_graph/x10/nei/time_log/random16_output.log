@@ -1,0 +1,28 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_uncomplete_graph/x10/nei/solution/random16.sol /home/chongjiu/concorde_uncomplete_graph/x10/nei/mat/random16.tsp
+Host: ubuntu  Current process id: 3476807
+Using random seed 1735574289
+Problem Name: random16
+Problem Type: TSP
+Number of Nodes: 16
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 304 (from tour)
+Basic dual change required, but no candidate edges
+  LP Value  1: 282.500000  (0.00 seconds)
+  LP Value  2: 299.000000  (0.00 seconds)
+  LP Value  3: 304.000000  (0.00 seconds)
+New lower bound: 304.000000
+Final lower bound 304.000000, upper bound 304.000000
+Exact lower bound: 304.000000
+DIFF: 0.000000
+Final LP has 18 rows, 45 columns, 106 nonzeros
+Optimal Solution: 304.00
+Number of bbnodes: 1
+Total Running Time: 0.00 (seconds)
+
+Standard Error:
+ERROR: No dual change in basis finding code
+Did not find a basic optimal solution
+Fractional matching routine failed
+Warning: restarting running timer Miscellaneous
+No warmstart, stumbling on anyway

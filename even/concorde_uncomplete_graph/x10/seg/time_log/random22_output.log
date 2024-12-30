@@ -1,0 +1,22 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_uncomplete_graph/x10/seg/solution/random22.sol /home/chongjiu/concorde_uncomplete_graph/x10/seg/mat/random22.tsp
+Host: ubuntu  Current process id: 3475881
+Using random seed 1735574214
+Problem Name: random22
+Problem Type: TSP
+Number of Nodes: 22
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 394 (from tour)
+  LP Value  1: 372.000000  (0.00 seconds)
+  LP Value  2: 389.000000  (0.00 seconds)
+  LP Value  3: 394.000000  (0.00 seconds)
+New lower bound: 394.000000
+Final lower bound 394.000000, upper bound 394.000000
+Exact lower bound: 394.000000
+DIFF: 0.000000
+Final LP has 33 rows, 52 columns, 203 nonzeros
+Optimal Solution: 394.00
+Number of bbnodes: 1
+Total Running Time: 0.01 (seconds)
+
+Standard Error:

@@ -1,0 +1,68 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_uncomplete_graph/x10/nei/solution/random199.sol /home/chongjiu/concorde_uncomplete_graph/x10/nei/mat/random199.tsp
+Host: ubuntu  Current process id: 3477597
+Using random seed 1735574343
+Problem Name: random199
+Problem Type: TSP
+Number of Nodes: 199
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 1083 (from tour)
+  LP Value  1: 1026.500000  (0.01 seconds)
+  LP Value  2: 1072.500000  (0.03 seconds)
+  LP Value  3: 1075.666667  (0.07 seconds)
+  LP Value  4: 1077.000000  (0.12 seconds)
+  LP Value  5: 1078.000000  (0.16 seconds)
+  LP Value  6: 1078.416667  (0.19 seconds)
+  LP Value  7: 1078.866279  (0.24 seconds)
+  LP Value  8: 1079.123457  (0.28 seconds)
+  LP Value  9: 1079.312291  (0.34 seconds)
+  LP Value 10: 1079.622807  (0.42 seconds)
+  LP Value 11: 1079.795148  (0.60 seconds)
+  LP Value 12: 1079.933333  (1.19 seconds)
+  LP Value 13: 1080.000000  (1.25 seconds)
+  LP Value 14: 1080.126667  (1.34 seconds)
+  LP Value 15: 1080.209843  (1.54 seconds)
+  LP Value 16: 1080.232177  (1.70 seconds)
+New lower bound: 1080.232177
+Final lower bound 1080.232177, upper bound 1083.000000
+Exact lower bound: 1080.232177
+DIFF: 0.000000
+Time for Total: 1.72 seconds (1.72 total in 1 calls)
+Final LP has 344 rows, 479 columns, 8033 nonzeros
+LOWER BOUND: 1080.232177   ACTIVE NODES: 1
+
+Task 0: Branching on node 0
+BBnode 0 split into 1 (1080.44) 2 (1080.76) (0.16 seconds)
+LOWER BOUND: 1080.441176   ACTIVE NODES: 2
+
+Task 1: Cutting on node 1
+Writing Pool: 494 cuts
+BBnode 1 (now 3) done cutting: lowerbound 1080.92 (1.64 seconds)
+LOWER BOUND: 1080.764196   ACTIVE NODES: 2
+
+Task 2: Cutting on node 2
+Writing Pool: 523 cuts
+BBnode 2 (now 4) can be pruned: upperbound 1083.00 (0.18 seconds)
+LOWER BOUND: 1080.920000   ACTIVE NODES: 1
+
+Task 3: Branching on node 3
+BBnode 3 split into 5 (1081.00) 6 (1081.00) (0.17 seconds)
+LOWER BOUND: 1081.000000   ACTIVE NODES: 2
+
+Task 4: Cutting on node 5
+New upperbound from x-heuristic: 1082.00
+TOUR FOUND - upperbound is 1082.00
+Writing Pool: 543 cuts
+BBnode 5 (now 7) can be pruned: upperbound 1082.00 (0.18 seconds)
+LOWER BOUND: 1081.000000   ACTIVE NODES: 1
+
+Task 5: Cutting on node 6
+Writing Pool: 567 cuts
+BBnode 6 (now 8) can be pruned: upperbound 1082.00 (0.06 seconds)
+
+Task 6: Exit
+Optimal Solution: 1082.00
+Number of bbnodes: 5
+Total Running Time: 4.20 (seconds)  Branching Time: 2.39 (seconds)
+
+Standard Error:

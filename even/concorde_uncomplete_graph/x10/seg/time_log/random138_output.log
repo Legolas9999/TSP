@@ -1,0 +1,29 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_uncomplete_graph/x10/seg/solution/random138.sol /home/chongjiu/concorde_uncomplete_graph/x10/seg/mat/random138.tsp
+Host: ubuntu  Current process id: 3476268
+Using random seed 1735574234
+Problem Name: random138
+Problem Type: TSP
+Number of Nodes: 138
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 867 (from tour)
+  LP Value  1: 798.750000  (0.01 seconds)
+  LP Value  2: 848.900000  (0.02 seconds)
+  LP Value  3: 859.466667  (0.06 seconds)
+  LP Value  4: 862.103520  (0.09 seconds)
+  LP Value  5: 862.791667  (0.12 seconds)
+  LP Value  6: 863.333333  (0.15 seconds)
+  LP Value  7: 863.500000  (0.46 seconds)
+  LP Value  8: 864.180984  (0.61 seconds)
+  LP Value  9: 864.000000  (0.66 seconds)
+New lower bound: 864.000000
+New upperbound from x-heuristic: 864.00
+Final lower bound 864.000000, upper bound 864.000000
+Exact lower bound: 864.000000
+DIFF: 0.000000
+Final LP has 254 rows, 408 columns, 3871 nonzeros
+Optimal Solution: 864.00
+Number of bbnodes: 1
+Total Running Time: 0.74 (seconds)
+
+Standard Error:

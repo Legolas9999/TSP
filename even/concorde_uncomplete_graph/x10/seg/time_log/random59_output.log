@@ -1,0 +1,23 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_uncomplete_graph/x10/seg/solution/random59.sol /home/chongjiu/concorde_uncomplete_graph/x10/seg/mat/random59.tsp
+Host: ubuntu  Current process id: 3475958
+Using random seed 1735574215
+Problem Name: random59
+Problem Type: TSP
+Number of Nodes: 59
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 601 (from tour)
+  LP Value  1: 569.000000  (0.00 seconds)
+  LP Value  2: 596.500000  (0.00 seconds)
+  LP Value  3: 600.500000  (0.01 seconds)
+  LP Value  4: 601.000000  (0.01 seconds)
+New lower bound: 601.000000
+Final lower bound 601.000000, upper bound 601.000000
+Exact lower bound: 601.000000
+DIFF: 0.000000
+Final LP has 80 rows, 184 columns, 881 nonzeros
+Optimal Solution: 601.00
+Number of bbnodes: 1
+Total Running Time: 0.03 (seconds)
+
+Standard Error:

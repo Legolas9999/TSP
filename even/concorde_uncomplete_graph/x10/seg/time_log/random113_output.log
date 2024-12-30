@@ -1,0 +1,23 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_uncomplete_graph/x10/seg/solution/random113.sol /home/chongjiu/concorde_uncomplete_graph/x10/seg/mat/random113.tsp
+Host: ubuntu  Current process id: 3476124
+Using random seed 1735574223
+Problem Name: random113
+Problem Type: TSP
+Number of Nodes: 113
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 837 (from tour)
+  LP Value  1: 801.000000  (0.01 seconds)
+  LP Value  2: 833.500000  (0.02 seconds)
+  LP Value  3: 835.255906  (0.04 seconds)
+  LP Value  4: 837.000000  (0.06 seconds)
+New lower bound: 837.000000
+Final lower bound 837.000000, upper bound 837.000000
+Exact lower bound: 837.000000
+DIFF: 0.000000
+Final LP has 172 rows, 302 columns, 3077 nonzeros
+Optimal Solution: 837.00
+Number of bbnodes: 1
+Total Running Time: 0.11 (seconds)
+
+Standard Error:

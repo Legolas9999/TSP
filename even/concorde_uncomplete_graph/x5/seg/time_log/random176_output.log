@@ -1,0 +1,27 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_uncomplete_graph/x5/seg/solution/random176.sol /home/chongjiu/concorde_uncomplete_graph/x5/seg/mat/random176.tsp
+Host: ubuntu  Current process id: 3470587
+Using random seed 1735573905
+Problem Name: random176
+Problem Type: TSP
+Number of Nodes: 176
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 1028 (from tour)
+  LP Value  1: 990.500000  (0.02 seconds)
+  LP Value  2: 1022.413043  (0.06 seconds)
+  LP Value  3: 1024.607143  (0.10 seconds)
+  LP Value  4: 1025.500000  (0.13 seconds)
+  LP Value  5: 1026.000000  (0.21 seconds)
+recomputing rownorms ...
+  LP Value  6: 1026.000000  (0.21 seconds)
+New lower bound: 1026.000000
+New upperbound from x-heuristic: 1026.00
+Final lower bound 1026.000000, upper bound 1026.000000
+Exact lower bound: 1026.000000
+DIFF: 0.000000
+Final LP has 301 rows, 460 columns, 3809 nonzeros
+Optimal Solution: 1026.00
+Number of bbnodes: 1
+Total Running Time: 0.33 (seconds)
+
+Standard Error:

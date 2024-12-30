@@ -1,0 +1,33 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_uncomplete_graph/x5/seg/solution/random133.sol /home/chongjiu/concorde_uncomplete_graph/x5/seg/mat/random133.tsp
+Host: ubuntu  Current process id: 3470332
+Using random seed 1735573883
+Problem Name: random133
+Problem Type: TSP
+Number of Nodes: 133
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 871 (from tour)
+  LP Value  1: 820.750000  (0.02 seconds)
+  LP Value  2: 851.250000  (0.03 seconds)
+  LP Value  3: 860.100000  (0.05 seconds)
+  LP Value  4: 864.070751  (0.09 seconds)
+  LP Value  5: 865.898119  (0.12 seconds)
+  LP Value  6: 867.000000  (0.16 seconds)
+  LP Value  7: 867.674781  (0.20 seconds)
+  LP Value  8: 868.199275  (0.23 seconds)
+  LP Value  9: 868.560081  (0.28 seconds)
+  LP Value 10: 868.906470  (0.38 seconds)
+  LP Value 11: 869.000000  (0.39 seconds)
+recomputing rownorms ...
+  LP Value 12: 869.000000  (0.40 seconds)
+New lower bound: 869.000000
+New upperbound from x-heuristic: 869.00
+Final lower bound 869.000000, upper bound 869.000000
+Exact lower bound: 869.000000
+DIFF: 0.000000
+Final LP has 256 rows, 379 columns, 3351 nonzeros
+Optimal Solution: 869.00
+Number of bbnodes: 1
+Total Running Time: 0.50 (seconds)
+
+Standard Error:

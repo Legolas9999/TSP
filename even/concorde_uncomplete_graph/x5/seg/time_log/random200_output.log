@@ -1,0 +1,30 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_uncomplete_graph/x5/seg/solution/random200.sol /home/chongjiu/concorde_uncomplete_graph/x5/seg/mat/random200.tsp
+Host: ubuntu  Current process id: 3470765
+Using random seed 1735573920
+Problem Name: random200
+Problem Type: TSP
+Number of Nodes: 200
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 1054 (from tour)
+  LP Value  1: 1011.500000  (0.02 seconds)
+  LP Value  2: 1046.166667  (0.04 seconds)
+  LP Value  3: 1051.233333  (0.08 seconds)
+  LP Value  4: 1053.000000  (0.14 seconds)
+  LP Value  5: 1053.333333  (0.60 seconds)
+  LP Value  6: 1053.500000  (0.66 seconds)
+  LP Value  7: 1053.850000  (0.77 seconds)
+  LP Value  8: 1053.925000  (0.89 seconds)
+  LP Value  9: 1054.000000  (1.01 seconds)
+recomputing rownorms ...
+  LP Value 10: 1054.000000  (1.01 seconds)
+New lower bound: 1054.000000
+Final lower bound 1054.000000, upper bound 1054.000000
+Exact lower bound: 1054.000000
+DIFF: 0.000000
+Final LP has 329 rows, 585 columns, 5408 nonzeros
+Optimal Solution: 1054.00
+Number of bbnodes: 1
+Total Running Time: 1.14 (seconds)
+
+Standard Error:

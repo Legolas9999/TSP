@@ -1,0 +1,23 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_uncomplete_graph/x10/seg/solution/random129.sol /home/chongjiu/concorde_uncomplete_graph/x10/seg/mat/random129.tsp
+Host: ubuntu  Current process id: 3476212
+Using random seed 1735574229
+Problem Name: random129
+Problem Type: TSP
+Number of Nodes: 129
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 900 (from tour)
+  LP Value  1: 880.500000  (0.01 seconds)
+  LP Value  2: 897.121951  (0.03 seconds)
+  LP Value  3: 899.891304  (0.06 seconds)
+  LP Value  4: 900.000000  (0.06 seconds)
+New lower bound: 900.000000
+Final lower bound 900.000000, upper bound 900.000000
+Exact lower bound: 900.000000
+DIFF: 0.000000
+Final LP has 200 rows, 310 columns, 1803 nonzeros
+Optimal Solution: 900.00
+Number of bbnodes: 1
+Total Running Time: 0.12 (seconds)
+
+Standard Error:

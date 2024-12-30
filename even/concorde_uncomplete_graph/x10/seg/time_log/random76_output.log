@@ -1,0 +1,27 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_uncomplete_graph/x10/seg/solution/random76.sol /home/chongjiu/concorde_uncomplete_graph/x10/seg/mat/random76.tsp
+Host: ubuntu  Current process id: 3476002
+Using random seed 1735574216
+Problem Name: random76
+Problem Type: TSP
+Number of Nodes: 76
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 663 (from tour)
+  LP Value  1: 613.500000  (0.00 seconds)
+  LP Value  2: 655.125000  (0.01 seconds)
+  LP Value  3: 660.428571  (0.02 seconds)
+  LP Value  4: 661.125000  (0.02 seconds)
+  LP Value  5: 662.500000  (0.03 seconds)
+  LP Value  6: 663.000000  (0.07 seconds)
+recomputing rownorms ...
+  LP Value  7: 663.000000  (0.07 seconds)
+New lower bound: 663.000000
+Final lower bound 663.000000, upper bound 663.000000
+Exact lower bound: 663.000000
+DIFF: 0.000000
+Final LP has 133 rows, 267 columns, 1506 nonzeros
+Optimal Solution: 663.00
+Number of bbnodes: 1
+Total Running Time: 0.13 (seconds)
+
+Standard Error:

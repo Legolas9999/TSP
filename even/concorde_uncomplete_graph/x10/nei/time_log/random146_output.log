@@ -1,0 +1,25 @@
+Standard Output:
+./concorde -o /home/chongjiu/concorde_uncomplete_graph/x10/nei/solution/random146.sol /home/chongjiu/concorde_uncomplete_graph/x10/nei/mat/random146.tsp
+Host: ubuntu  Current process id: 3477251
+Using random seed 1735574311
+Problem Name: random146
+Problem Type: TSP
+Number of Nodes: 146
+Explicit Lengths (CC_MATRIXNORM)
+Set initial upperbound to 926 (from tour)
+  LP Value  1: 912.000000  (0.01 seconds)
+  LP Value  2: 924.500000  (0.04 seconds)
+  LP Value  3: 925.200000  (0.05 seconds)
+  LP Value  4: 925.512195  (0.07 seconds)
+  LP Value  5: 925.785714  (0.14 seconds)
+  LP Value  6: 926.000000  (0.17 seconds)
+New lower bound: 926.000000
+Final lower bound 926.000000, upper bound 926.000000
+Exact lower bound: 926.000000
+DIFF: 0.000000
+Final LP has 237 rows, 372 columns, 5429 nonzeros
+Optimal Solution: 926.00
+Number of bbnodes: 1
+Total Running Time: 0.27 (seconds)
+
+Standard Error:
