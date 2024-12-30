@@ -1024,12 +1024,12 @@ class instance:
         # 城市个数
         self.n = n
         # # ---------------------------------------------
-        # # 城市坐标 平均分布
-        # self.coord = uniform_coord(self.n)
+        # 城市坐标 平均分布
+        self.coord = uniform_coord(self.n)
         # # 距离矩阵
-        # self.mat = dis_mat(self.coord)
+        self.mat = dis_mat(self.coord)
         # #最大城市间距离
-        # self.max_distance = int(np.max(self.mat))
+        self.max_distance = int(np.max(self.mat))
         # # ---------------------------------------------
         # # 为了画图的参数
         # # self.graph_pos = {i: self.coord[i] for i in range(self.n)}
@@ -1037,23 +1037,23 @@ class instance:
         # # 对应的完全图
         # # self.graph_complete = nx.complete_graph(self.n)  # 对应的图
         # # # ---------------------------------------------
-        # # 普通的delauny三角分割
+        # 普通的delauny三角分割
         # self.graph_de = delaunay(self.coord)
-        # # # -----------------------------------------------
-        # # 基于de + seg1 + seg2 + seg3
+        # # -----------------------------------------------
+        # 基于de + seg1 + seg2 + seg3
         # self.graph_de_seg1_seg2_seg3 = delaunay(
         #     self.coord,
         #     seg1=edges_add_seg1(self.coord),
         #     seg2=edges_add_seg2(self.coord),
         #     seg3=edges_add_seg3(self.coord)
         # )        
-        # # # # ---------------------------------------------
-        # # 基于de + nei2 + nei3
-        # self.graph_de_nei2_nei3 = delaunay(
-        #     self.coord,
-        #     nei2=edges_add_nei2(self.coord),
-        #     nei3=edges_add_nei3(self.coord)
-        # )
+        # # # ---------------------------------------------
+        # 基于de + nei2 + nei3
+        self.graph_de_nei2_nei3 = delaunay(
+            self.coord,
+            nei2=edges_add_nei2(self.coord),
+            nei3=edges_add_nei3(self.coord)
+        )
         # # # ---------------------------------------------
         # # 基于非完全图的距离矩阵
         # # Python中的可变类型在作为参数传递给函数时，因为传递的是对象的引用而不是其副本。
@@ -1389,7 +1389,7 @@ def main():
 
 
 
-        LKH_optimal_graph, LKH_optimal_tour, LKH_optimal_length = read_LKH_result(i, 'complete')
+        #LKH_optimal_graph, LKH_optimal_tour, LKH_optimal_length = read_LKH_result(i, 'complete')
         # concorde_optimal_graph, concorde_optimal_tour, concorde_optimal_length = read_concorde_result(i, 'complete')
 
         # if compare_graph(LKH_optimal_graph, concorde_optimal_graph):
@@ -1409,12 +1409,9 @@ def main():
             print(0)
 
         
+        # print(concorde_xianzhi_length)
 
 
-
-        # # concorde_xianzhi = read_concorde_result(i, m)[2]
-
-        # print(i, is_subgraph(concorde_xianzhi_graph, ins.graph_de_nei2_nei3))
 
 
 
@@ -1434,7 +1431,7 @@ if __name__ == "__main__":
     # print(ins.mat)
     # print(ins.mat_missing_edges_de_for_qubo)
 
-    check()
+    main()
 
 
 
