@@ -1394,15 +1394,25 @@ def main():
 
 
 
-        #LKH_optimal_graph, LKH_optimal_tour, LKH_optimal_length = read_LKH_result(i, 'complete')
-        # concorde_graph, concorde_tour, concorde_length = read_concorde_result(i, 'complete')
+        LKH_optimal_graph, LKH_optimal_tour, LKH_optimal_length = read_LKH_result(i, 'complete')
+        # concorde_optimal_graph, concorde_optimal_tour, concorde_optimal_length = read_concorde_result(i, 'complete')
+
+        # if compare_graph(LKH_optimal_graph, concorde_optimal_graph):
+        #     print(1)
+        # else:
+        #     print(0)
 
         method = 'nei'
-
+        LKH_xianzhi_graph, LKH_xianzhi_tour, LKH_xianzhi_length = read_LKH_result(i, method)
         concorde_xianzhi_graph, concorde_xianzhi_tour, concorde_xianzhi_length = read_concorde_result(i, method)
-        # concorde_xianzhi = read_concorde_result(i, m)[2]
 
-        print(i, is_subgraph(concorde_xianzhi_graph, ins.graph_de_nei2_nei3))
+        
+
+
+
+        # # concorde_xianzhi = read_concorde_result(i, m)[2]
+
+        # print(i, is_subgraph(concorde_xianzhi_graph, ins.graph_de_nei2_nei3))
 
 
 
