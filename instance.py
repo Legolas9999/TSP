@@ -1397,10 +1397,12 @@ def main():
         # else:
         #     print(0)
 
-        mul = 1
+        mul = 10
         method = 'nei'
         # LKH_xianzhi_graph, LKH_xianzhi_tour, LKH_xianzhi_length = read_LKH_result(i, method, mul)
         concorde_xianzhi_graph, concorde_xianzhi_tour, concorde_xianzhi_length = read_concorde_result(i, method, mul)
+
+
 
         if is_subgraph(concorde_xianzhi_graph, ins.graph_de_nei2_nei3)[0]:
 
