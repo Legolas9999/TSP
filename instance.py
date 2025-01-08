@@ -1038,15 +1038,15 @@ class instance:
         # # self.graph_complete = nx.complete_graph(self.n)  # 对应的图
         # # # ---------------------------------------------
         # 普通的delauny三角分割
-        # self.graph_de = delaunay(self.coord)
+        self.graph_de = delaunay(self.coord)
         # # -----------------------------------------------
         # 基于de + seg1 + seg2 + seg3
-        # self.graph_de_seg1_seg2_seg3 = delaunay(
-        #     self.coord,
-        #     seg1=edges_add_seg1(self.coord),
-        #     seg2=edges_add_seg2(self.coord),
-        #     seg3=edges_add_seg3(self.coord)
-        # )        
+        self.graph_de_seg1_seg2_seg3 = delaunay(
+            self.coord,
+            seg1=edges_add_seg1(self.coord),
+            seg2=edges_add_seg2(self.coord),
+            seg3=edges_add_seg3(self.coord)
+        )        
         # # # ---------------------------------------------
         # 基于de + nei2 + nei3
         self.graph_de_nei2_nei3 = delaunay(
@@ -1384,7 +1384,7 @@ def compare_graph(G1, G2):
 
 
 def main():
-    for i in range(5, 201):
+    for i in range(118, 119):
         ins = instance(i)
 
 
@@ -1397,21 +1397,21 @@ def main():
         # else:
         #     print(0)
 
-        mul = 10
+        mul = 1
         method = 'nei'
-        # LKH_xianzhi_graph, LKH_xianzhi_tour, LKH_xianzhi_length = read_LKH_result(i, method, mul)
+        LKH_xianzhi_graph, LKH_xianzhi_tour, LKH_xianzhi_length = read_LKH_result(i, method, mul)
         concorde_xianzhi_graph, concorde_xianzhi_tour, concorde_xianzhi_length = read_concorde_result(i, method, mul)
 
+        print(compare_graph(LKH_xianzhi_graph, concorde_xianzhi_graph))
 
-
-        if is_subgraph(concorde_xianzhi_graph, ins.graph_de_nei2_nei3)[0]:
+        if is_subgraph(concorde_xianzhi_graph, ins.graph_de_nei2_nei3)[0] and is_subgraph(LKH_xianzhi_graph, ins.graph_de_nei2_nei3)[0]:
 
             print(1)
         else:
             print(0)
 
         
-        # print(concorde_xianzhi_length)
+        print(LKH_xianzhi_length ,concorde_xianzhi_length)
 
 
 
@@ -1420,7 +1420,7 @@ def main():
 
 
 def check():
-    for i in range(5,201):
+    for i in range(118, 119):
         ins = instance(i)
         ins.LKH_test(10, 'nei')
         print(i)
