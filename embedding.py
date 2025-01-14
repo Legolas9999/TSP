@@ -57,7 +57,7 @@ def embed_tsp(qubo, n, add, topology:str, method:str):
 if __name__ == '__main__':
     pass
 
-    G = dnx.zephyr_graph(15)
-    dnx.draw_zephyr(G,node_size = 12, node_color = 'g',with_labels=False)
-    
+    G = dnx.chimera_graph(16)
+    dnx.draw_chimera(G,node_size = 12, node_color = 'g',with_labels=False)
+    print(G.number_of_edges())
     plt.show()
