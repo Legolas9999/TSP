@@ -15,30 +15,52 @@ sheet_name = 'LKH'  # 替换为你需要读取的工作表的名称
 # 读取特定工作表
 df = pd.read_excel(file_path, sheet_name=sheet_name, engine='openpyxl')
 
-# 假设工作表中的列名为 'X' 和 'Y'
+
+#############
+method = 'nei'
+n = 1
+##############
+
 x = df['index']
-y = df['de-com_10']
+y = df[f'{method}-com_{n}']
+
+if method == 'de':
+   
+    color = 'blue'
+    title = f'Delaunay-Complete({sheet_name},n={n})'
+
+elif method == 'seg':
+    color = 'green'
+    title = f'Seg-Complete({sheet_name},n={n})'
+
+elif method == 'nei':
+    color = 'orange'
+    title = f'Nei-Complete({sheet_name},n={n})'
 
 
 
-# 假设你的 Excel 列名为 'X' 和 'Y'
-# x = df['X']
-# y = df['Y']
 
-# 生成随机数据
-# n = 100
-# x = np.random.random(n) * 100  # 生成0到100之间的随机x坐标
-# y = np.random.random(n) * 100  # 生成0到100之间的随机y坐标
+##############################################
+
+
+
+# 创建图表，设置画面大小为10x6英寸
+fig, ax = plt.subplots(figsize=(10, 10))
 
 # 绘制散点图
-plt.scatter(x, y)
+ax.scatter(x, y, color=color)
 
-# delaunay
+# 设置图表标题和坐标轴标签
+ax.set_title(title, fontsize=30)
+ax.set_xlabel('instance(5~200)', fontsize=20)
+ax.set_ylabel('energy difference', fontsize=20)
+ax.tick_params(axis='both', which='major', labelsize=15)  # 设置主刻度标签的字号
 
-# 添加标题和轴标签
-plt.title('Delaunay-Complete')
-plt.xlabel('instance(5~200)')
-plt.ylabel('energy difference')
+# ax.set_title('Scatter Plot Example', fontsize=16, fontweight='bold', fontstyle='italic')
+# ax.set_xlabel('X coordinate', fontsize=14, fontweight='bold')
+# ax.set_ylabel('Y coordinate', fontsize=14, fontstyle='italic')
+
+
 
 # 显示图形
 plt.show()
