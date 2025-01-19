@@ -1038,15 +1038,15 @@ class instance:
         # # self.graph_complete = nx.complete_graph(self.n)  # 对应的图
         # # # ---------------------------------------------
         # 普通的delauny三角分割
-        self.graph_de = delaunay(self.coord)
+        # self.graph_de = delaunay(self.coord)
         # # -----------------------------------------------
         # 基于de + seg1 + seg2 + seg3
-        self.graph_de_seg1_seg2_seg3 = delaunay(
-            self.coord,
-            seg1=edges_add_seg1(self.coord),
-            seg2=edges_add_seg2(self.coord),
-            seg3=edges_add_seg3(self.coord)
-        )        
+        # self.graph_de_seg1_seg2_seg3 = delaunay(
+        #     self.coord,
+        #     seg1=edges_add_seg1(self.coord),
+        #     seg2=edges_add_seg2(self.coord),
+        #     seg3=edges_add_seg3(self.coord)
+        # )        
         # # # ---------------------------------------------
         # 基于de + nei2 + nei3
         self.graph_de_nei2_nei3 = delaunay(
@@ -1420,10 +1420,9 @@ def main():
 
 
 def check():
-    for i in range(118, 119):
-        ins = instance(i)
-        ins.LKH_test(10, 'nei')
-        print(i)
+    for n in range(5,201):
+        #ins = instance(i)
+        print(int((n*(n-1))/2))
     pass
 
 
@@ -1433,7 +1432,7 @@ if __name__ == "__main__":
     # print(ins.mat)
     # print(ins.mat_missing_edges_de_for_qubo)
 
-    main()
+    check()
 
 
 
