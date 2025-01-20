@@ -58,6 +58,6 @@ if __name__ == '__main__':
     pass
 
     G = dnx.chimera_graph(16)
+    embedding = find_embedding(qubo, G)
     dnx.draw_chimera(G,node_size = 12, node_color = 'g',with_labels=False)
-    print(G.number_of_edges())
     plt.show()

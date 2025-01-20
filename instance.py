@@ -1031,51 +1031,51 @@ class instance:
         # #最大城市间距离
         self.max_distance = int(np.max(self.mat))
         # # ---------------------------------------------
-        # # 为了画图的参数
-        # # self.graph_pos = {i: self.coord[i] for i in range(self.n)}
+        # 为了画图的参数
+        # self.graph_pos = {i: self.coord[i] for i in range(self.n)}
+        # ---------------------------------------------
+        # 对应的完全图
+        self.graph_complete = nx.complete_graph(self.n)  # 对应的图
         # # ---------------------------------------------
-        # # 对应的完全图
-        # # self.graph_complete = nx.complete_graph(self.n)  # 对应的图
-        # # # ---------------------------------------------
         # 普通的delauny三角分割
-        # self.graph_de = delaunay(self.coord)
-        # # -----------------------------------------------
+        self.graph_de = delaunay(self.coord)
+        # -----------------------------------------------
         # 基于de + seg1 + seg2 + seg3
-        # self.graph_de_seg1_seg2_seg3 = delaunay(
-        #     self.coord,
-        #     seg1=edges_add_seg1(self.coord),
-        #     seg2=edges_add_seg2(self.coord),
-        #     seg3=edges_add_seg3(self.coord)
-        # )        
-        # # # ---------------------------------------------
+        self.graph_de_seg1_seg2_seg3 = delaunay(
+            self.coord,
+            seg1=edges_add_seg1(self.coord),
+            seg2=edges_add_seg2(self.coord),
+            seg3=edges_add_seg3(self.coord)
+        )        
+        # # ---------------------------------------------
         # 基于de + nei2 + nei3
         self.graph_de_nei2_nei3 = delaunay(
             self.coord,
             nei2=edges_add_nei2(self.coord),
             nei3=edges_add_nei3(self.coord)
         )
-        # # # ---------------------------------------------
-        # # 基于非完全图的距离矩阵
-        # # Python中的可变类型在作为参数传递给函数时，因为传递的是对象的引用而不是其副本。
-        # # 当你在函数内部修改这些可变对象时，外部的原始对象也会被修改。
-        # # multiple = 10
-        # # 返回：0:把不存在的边替换为最大距离     1:除对角线外减去最大距离
-        # ##########################
-        # # delaunay三角分割
-        # self.mat_missing_edges_de, self.mat_missing_edges_de_for_qubo = creat_dis_mat_missing_edges(
-        #     self.n, self.graph_de, self.mat.copy(), self.max_distance, multiple
-        # )
-        # ##########################
-        # # de + seg1 + seg2 + seg3
-        # self.mat_missing_edges_de_seg1_seg2_seg3, self.mat_missing_edges_de_seg1_seg2_seg3_for_qubo = creat_dis_mat_missing_edges(
-        #     self.n, self.graph_de_seg1_seg2_seg3, self.mat.copy(), self.max_distance, multiple
-        # )
+        # # ---------------------------------------------
+        # 基于非完全图的距离矩阵
+        # Python中的可变类型在作为参数传递给函数时，因为传递的是对象的引用而不是其副本。
+        # 当你在函数内部修改这些可变对象时，外部的原始对象也会被修改。
+        multiple = 1
+        # 返回：0:把不存在的边替换为最大距离     1:除对角线外减去最大距离
+        ##########################
+        # delaunay三角分割
+        self.mat_missing_edges_de, self.mat_missing_edges_de_for_qubo = creat_dis_mat_missing_edges(
+            self.n, self.graph_de, self.mat.copy(), self.max_distance, multiple
+        )
+        ##########################
+        # de + seg1 + seg2 + seg3
+        self.mat_missing_edges_de_seg1_seg2_seg3, self.mat_missing_edges_de_seg1_seg2_seg3_for_qubo = creat_dis_mat_missing_edges(
+            self.n, self.graph_de_seg1_seg2_seg3, self.mat.copy(), self.max_distance, multiple
+        )
 
-        # #######################
-        # # de + nei2 + nei3
-        # self.mat_missing_edges_de_nei2_nei3, self.mat_missing_edges_de_nei2_nei3_for_qubo = creat_dis_mat_missing_edges(
-        #     self.n, self.graph_de_nei2_nei3, self.mat.copy(), self.max_distance, multiple
-        # )
+        #######################
+        # de + nei2 + nei3
+        self.mat_missing_edges_de_nei2_nei3, self.mat_missing_edges_de_nei2_nei3_for_qubo = creat_dis_mat_missing_edges(
+            self.n, self.graph_de_nei2_nei3, self.mat.copy(), self.max_distance, multiple
+        )
         #######################
         # # 统计非完全图矩阵中最大距离出现的次数 对称矩阵除以2
         # # 并计算可以削减的二次项个数
@@ -1420,10 +1420,21 @@ def main():
 
 
 def check():
-    for n in range(5,201):
-        #ins = instance(i)
-        print(int((n*(n-1))/2))
-    pass
+    from minorminer import find_embedding
+    import dwave_networkx as dnx
+    ins = instance(16)
+
+    qubo = ins.tsp_qubo_model(3)
+
+    chimera = dnx.zephyr_graph(15)
+
+    embedding = find_embedding(qubo, chimera) 
+
+    plt.figure(figsize=(12, 8))
+    dnx.draw_zephyr_embedding(chimera,emb = embedding, node_size = 10)
+
+    plt.show()
+
 
 
 if __name__ == "__main__":
